@@ -1,0 +1,133 @@
+name: PHPUnit
+
+on:
+  push:
+    branches:
+      - develop
+    paths:
+      - 'External/**'
+      - 'Internal/**'
+      - 'Projects/**'
+      - 'Settings/**'
+      - composer.json
+      - zerocore 
+      - '**.php'
+      - phpunit.xml.dist
+      - .github/workflows/test.yml
+  pull_request:
+    branches:
+      - develop
+    paths:
+      - 'External/**'
+      - 'Internal/**'
+      - 'Projects/**'
+      - 'Settings/**'
+      - composer.json
+      - zerocore 
+      - '**.php'
+      - phpunit.xml.dist
+      - .github/workflows/test.yml
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+    name: PHP ${{ matrix.php-versions }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        php-versions: ['7.4', '8.0', '8.1', '8.2']
+
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+          MYSQL_DATABASE: test 
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+        
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: test
+        ports:
+          - 5432:5432
+        options: --health-cmd=pg_isready --health-interval=10s --health-timeout=5s --health-retries=3
+      mssql:
+        image: mcr.microsoft.com/mssql/server:2019-CU10-ubuntu-20.04
+        env:
+          SA_PASSWORD: P@ssw0rd
+          ACCEPT_EULA: Y
+        ports:
+          - 1433:1433
+        options: --health-cmd="/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P P@ssw0rd -Q 'SELECT @@VERSION'" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - name: SQL Server Create Default Database
+        run: sqlcmd -S localhost -U sa -P P@ssw0rd -Q "CREATE DATABASE test"
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          tools: composer, pecl
+          extensions: imagick, sqlsrv-beta
+          coverage: xdebug
+        env:
+          update: true
+
+      - name: Install memcached driver
+        uses: niden/actions-memcached@v7
+
+      - name: Install redis driver
+        uses: getong/redis-action@v1
+        with:
+          redis password: 'zntest'
+
+      - name: Get composer cache directory
+        id: composercache
+        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.composercache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Install dependencies
+        run: |
+          composer update --ansi --no-interaction
+          php zerocore environment SMTP_PASSWORD ${{ secrets.SMTP_PASSWORD }}
+          composer create-project znframework/package-tests Internal/package-tests
+
+      - name: Check PHPUnit tests
+        run: script -e -c "Internal/package-composer/bin/phpunit -v"
+
+      - if: matrix.php-versions == '7.4'
+        name: Run coveralls
+        run: |
+          composer global require php-coveralls/php-coveralls:^2.4
+          php-coveralls --coverage_clover=build/logs/clover.xml -v
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COVERALLS_PARALLEL: true
+          COVERALLS_FLAG_NAME: PHP ${{ matrix.php-versions }}
+
+  coveralls-finish:
+    needs: [tests]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Coveralls Finished
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          parallel-finished: true
