@@ -1,2 +1,5 @@
 <?php 
-echo "okey";
+function demo() 
+{
+    return "okey";
+}
