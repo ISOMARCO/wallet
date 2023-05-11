@@ -19,7 +19,6 @@
     <a href="javascript:void(0)">Wallet</a>
   </div>
   <!-- /.login-logo -->
-  {{hash(uniqid(),'sha256')}}
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg"></p>
@@ -45,7 +44,7 @@
             <div class="icheck-primary">
               <input type="checkbox" id="remember">
               <label for="remember">
-                {{ML::select('RememberMe')}}
+                {{ML::select('RememberMe')}} {{hash(uniqid(),'sha256')}}
               </label>
             </div>
           </div>
