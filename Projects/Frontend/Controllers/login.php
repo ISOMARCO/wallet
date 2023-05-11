@@ -1,9 +1,9 @@
 <?php namespace Project\Controllers;
-use DB,DBTool;
+use ML;
 class login extends Controller
 {
     public function main()
     {
-        Masterpage::title("Login");
+        Masterpage::title(ML::select('SignIn'));
     }
 }

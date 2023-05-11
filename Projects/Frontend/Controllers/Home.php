@@ -4,7 +4,7 @@ class Home extends Controller
 {
     public function main(string ...$parameters)
     {
-        Masterpage::title('Welcome to The World of Simplicity2');
+        Masterpage::title('Welcome to The World of Simplicity');
     } 
     public function s404()
     {
