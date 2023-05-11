@@ -58,7 +58,7 @@
         'database'    => 'postgres',
         'user'        => 'postgres',
         'password'    => 'ismayil1200',
-        'port'        => '5432',
+        'port'        => '',
         'dsn'         => '',
         'server'      => '',
         'ssl'         => 
