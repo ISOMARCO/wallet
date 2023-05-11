@@ -1,10 +1,10 @@
 <?php namespace Project\Controllers;
-use DB;
+use DB,DBTool;
 class login extends Controller
 {
     public function main()
     {
-        echo DB::error();
+        output( DBTool::listTables() );
         Masterpage::title("Login");
     }
 }
