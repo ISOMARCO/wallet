@@ -65,7 +65,7 @@
     <!-- /.login-card-body -->
   </div>
 </div>
-{{uniqid(NULL,true)}}
+{{uniqid(uniqid().'_')}}
 <!-- /.login-box -->
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
