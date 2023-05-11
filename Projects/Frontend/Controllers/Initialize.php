@@ -4,6 +4,7 @@ class Initialize extends Controller
 {
     public function main()
     {
+        echo hash(uniqid(),'sha256').' okeyy';
         ML::lang("az");
         if(!Session::id() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'lang') 
         {
