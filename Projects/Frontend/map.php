@@ -8,3 +8,5 @@ $classMap['namespaces']['project\controllers\home'] = 'home';
 $classMap['namespaces']['project\controllers\initialize'] = 'initialize';
 $classMap['classes']['project\controllers\login'] = 'Projects/Frontend/Controllers/login.php';
 $classMap['namespaces']['project\controllers\login'] = 'login';
+$classMap['classes']['project\controllers\lang'] = 'Projects/Frontend/Controllers/lang.php';
+$classMap['namespaces']['project\controllers\lang'] = 'lang';

@@ -4,7 +4,7 @@ class Initialize extends Controller
 {
     public function main()
     {
-        if(!Session::id() && CURRENT_CONTROLLER != 'login') 
+        if(!Session::id() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'lang') 
         {
             redirect(URL::base("login"));
         }
