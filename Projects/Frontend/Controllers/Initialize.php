@@ -1,9 +1,10 @@
 <?php namespace Project\Controllers;
-use URL,Session,ML;
+use URL,Session,ML,Migration;
 class Initialize extends Controller
 {
     public function main()
     {
+        Migration::create('Users');
         ML::lang("az");
         if(!Session::id() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'lang') 
         {
