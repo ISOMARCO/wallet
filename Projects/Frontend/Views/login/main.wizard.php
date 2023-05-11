@@ -7,7 +7,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
   <!-- icheck bootstrap -->
   <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
@@ -49,17 +49,17 @@
             </div>
           </div>
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">{{ML::select('SignIn')}}</button>
+            <button type="submit" class="btn btn-primary btn-block">{{ML::select('SignIn')}} <i class="fa-solid fa-right-to-bracket"></i></button>
           </div>
           <!-- /.col -->
         </div>
       </form>
 
       <p class="mb-1">
-        <a href="forgot-password.html">{{ML::select('ForgotPassword')}}</a>
+        <a href="javascript:void(0)">{{ML::select('ForgotPassword')}}</a>
       </p>
       <p class="mb-0">
-        <a href="register.html" class="text-center">{{ML::select('Register')}}</a>
+        <a href="javascript:void(0)" class="text-center">{{ML::select('Register')}}</a>
       </p>
     </div>
     <!-- /.login-card-body -->
