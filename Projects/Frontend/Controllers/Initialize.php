@@ -5,7 +5,6 @@ class Initialize extends Controller
     public function main()
     {
         ML::lang("az");
-        exit("okey");
         if(!Session::id() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'lang') 
         {
             redirect(URL::base("login"));
