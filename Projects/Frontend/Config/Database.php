@@ -56,9 +56,9 @@
         'driver'      => 'Postgres',
         'host'        => 'localhost',
         'database'    => 'postgres',
-        'user'        => 'ismayil1200',
-        'password'    => '',
-        'port'        => '',
+        'user'        => 'postgres',
+        'password'    => 'ismayil1200',
+        'port'        => '5432',
         'dsn'         => '',
         'server'      => '',
         'ssl'         => 
