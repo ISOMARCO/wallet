@@ -1,10 +1,10 @@
 <?php namespace Project\Controllers;
-use ML,MigrateUsers;
+use DB,ML,MigrateUsers;
 class login extends Controller
 {
     public function main()
     {
-        #MigrateUsers::up();
+        DB::users()->row();
         #Masterpage::title(ML::select('SignIn'));
         
     }
