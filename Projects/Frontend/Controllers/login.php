@@ -5,7 +5,7 @@ class login extends Controller
     public function main()
     {
         MigrateUsers::up();
-        Masterpage::title(ML::select('SignIn'));
+        #Masterpage::title(ML::select('SignIn'));
         
     }
 }
