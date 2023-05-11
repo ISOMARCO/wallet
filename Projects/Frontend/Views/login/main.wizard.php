@@ -44,7 +44,7 @@
             <div class="icheck-primary">
               <input type="checkbox" id="remember">
               <label for="remember">
-                {{ML::select('RememberMe')}} {{hash(uniqid(),'sha256')}}
+                {{ML::select('RememberMe')}}
               </label>
             </div>
           </div>
