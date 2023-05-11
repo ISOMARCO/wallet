@@ -4,6 +4,6 @@ class lang extends Controller
 {
     public function main()
     {
-        echo ML::table();
+        output( ML::select('SignIn') );
     }
 }

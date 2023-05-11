@@ -1,1 +1,1 @@
-{"RememberMe":"Remember me"}
+{"RememberMe":"Remember me","SignIn":"Sign in"}

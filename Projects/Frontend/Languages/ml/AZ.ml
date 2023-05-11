@@ -1,1 +1,1 @@
-{"RememberMe":"Məni xatırla"}
+{"RememberMe":"Məni xatırla","SignIn":"Daxil ol"}
