@@ -1,14 +1,13 @@
 <?php namespace Project\Controllers;
-
+use URL,Session;
 class Initialize extends Controller
 {
-    /**
-     * The codes to run at startup.
-     * It enters the circuit before all controllers. 
-     * You can change this setting in Config/Starting.php file.
-     */
     public function main()
     {
+        if(!Session::id()) 
+        {
+            redirect(URL::base("login"));
+        }
         # The theme is activated.
         # Location: Resources/Themes/Default/
         Theme::active('Default');

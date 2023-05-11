@@ -1,3 +1,7 @@
-@view('Sections/header')
+@if(Session::id()):
+    @view('Sections/header')
+@endif  
 @view
-@view('Sections/footer')
+@if(Session::id()):
+    @view('Sections/footer')
+@endif
