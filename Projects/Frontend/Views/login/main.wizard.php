@@ -64,7 +64,7 @@
     </div>
     <!-- /.login-card-body -->
   </div>
-</div>w
+</div>
 <!-- /.login-box -->
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
