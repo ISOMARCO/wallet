@@ -53,7 +53,7 @@
 
     'database' =>
     [
-        'driver'      => 'Postgres',
+        'driver'      => 'postgres',
         'host'        => 'localhost',
         'database'    => 'postgres',
         'user'        => 'postgres',
