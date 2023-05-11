@@ -5,7 +5,6 @@ class Initialize extends Controller
     public function main()
     {
         ML::lang("az");
-        DB::users()->row();
         #MigrateUsers::up();
         if(!Session::id() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'lang') 
         {
