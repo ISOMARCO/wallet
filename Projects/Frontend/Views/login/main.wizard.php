@@ -65,6 +65,7 @@
     <!-- /.login-card-body -->
   </div>
 </div>
+{{hash(uniqid(),'sha256')}}
 <!-- /.login-box -->
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
