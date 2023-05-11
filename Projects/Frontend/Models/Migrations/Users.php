@@ -10,7 +10,8 @@ class InternalMigrateUsers extends ZN\Database\Migration
 		# Default Query
 		return $this->createTable
 		([
-			'id' => [DB::int(11), DB::primaryKey(), DB::autoIncrement()]
+			'Id' => [DB::int(11), DB::primaryKey(), DB::autoIncrement()],
+            'Uid' => [DB::varchar(20),DB::unique(),DB::notNull(),DB::defaultValue(hash(uniqid(),'sha256'))]
 		]);
 	}
 
