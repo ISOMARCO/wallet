@@ -53,10 +53,10 @@
 
     'database' =>
     [
-        'driver'      => 'mysqli',
+        'driver'      => 'Postgres',
         'host'        => 'localhost',
-        'database'    => 'test',
-        'user'        => 'root',
+        'database'    => 'postgres',
+        'user'        => 'ismayil1200',
         'password'    => '',
         'port'        => '',
         'dsn'         => '',
