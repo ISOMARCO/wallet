@@ -4,7 +4,7 @@ class login extends Controller
 {
     public function main()
     {
-        output( DB::table('Users')->tableName() );
+        output( DB::table('"Users"')->select()->stringQuery() );
         Masterpage::title(ML::select('SignIn'));
     }
 }
