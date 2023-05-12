@@ -31,7 +31,7 @@ trait Container
      * 
      * @return mixed
      */
-    public function __call($method, $parameters)
+    public $method, $parameters)
     {
         return self::call($method, $parameters);
     }
