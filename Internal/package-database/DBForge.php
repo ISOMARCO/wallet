@@ -40,7 +40,7 @@ class DBForge extends Connection
     public function __call($method, $parameters)
     {
         $split  = Datatype::splitUpperCase($originMethodName = $method);
-        $table  = '"'.$split[0].'"';
+        $table  = $split[0];
         $method = $split[1] ?? NULL;
 
         switch($method)
