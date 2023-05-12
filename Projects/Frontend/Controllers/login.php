@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use DBTool,ML;
+use DBTool,ML,MigrateUsers;
 class login extends Controller
 {
     public function main()
