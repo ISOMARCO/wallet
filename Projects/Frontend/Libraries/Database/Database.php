@@ -2,8 +2,12 @@
 
 class InternalDatabase 
 {
-    public function main()
+    public function __construct()
     {
         return 'okey';
+    }
+    public function main()
+    {
+        return 'main';
     }
 }
