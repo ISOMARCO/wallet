@@ -2,12 +2,13 @@
 
 class InternalDatabase 
 {
+    public $a = NULL;
     public function __construct()
     {
-        return 'okey';
+        $this->a = 'okey';
     }
     public function main()
     {
-        return 'main';
+        return 'main '.$this->a;
     }
 }
