@@ -5,7 +5,7 @@ class login extends Controller
     public function main()
     {
         //echo DB::insert('Users',['Name'=>'Ismayil','Surname'=>'Nagiyev','Username'=>'ISOMARCO2']);
-        echo DB::Users()->stringQuery();
+        output( DB::query('SELECT * FROM "Users"') );
         //output( DB::Users()->result() );
         Masterpage::title(ML::select('SignIn'));
     }
