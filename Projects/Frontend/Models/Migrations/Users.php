@@ -8,6 +8,7 @@ class InternalMigrateUsers extends ZN\Database\Migration
 	public function up()
 	{
 		# Default Query
+		return 'okey';
 		return $this->createTable
 		([
 			#'Id' => [DB::int(11), DB::primaryKey(), DB::autoIncrement()],
