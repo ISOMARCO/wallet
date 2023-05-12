@@ -6,7 +6,7 @@ class login extends Controller
     {
         #output( DB::select('"Name"')->Users()->stringQuery() );
         $val = "'Ismayil'";
-        output( DB::query('SELECT * FROM "Users" WHERE "Name" = '.$val)->stringQuery() );
+        output( DB::query('SELECT * FROM "Users" WHERE "Name" = '.$val)->result() );
         Masterpage::title(ML::select('SignIn'));
     }
 }
