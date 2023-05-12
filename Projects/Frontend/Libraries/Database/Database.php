@@ -5,10 +5,10 @@ class InternalDatabase
     public $a = NULL;
     public function __construct()
     {
-        $this->a = 'okey';
+        
     }
-    public function main()
+    public function select()
     {
-        return 'main '.$this->a;
+        
     }
 }
