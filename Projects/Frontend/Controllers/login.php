@@ -4,8 +4,8 @@ class login extends Controller
 {
     public function main()
     {
-        echo DB::Users()->stringQuery();
-        echo DB::Users()->tableName();
+        $tableName = DB::Users()->tableName();
+        echo str_replace($tableName,'"'.$tableName.'"',DB::Users()->stringQuery());
         Masterpage::title(ML::select('SignIn'));
     }
 }
