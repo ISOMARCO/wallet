@@ -1,6 +1,6 @@
 <?php 
 
-class Database 
+class InternalDatabase 
 {
     public function main()
     {
