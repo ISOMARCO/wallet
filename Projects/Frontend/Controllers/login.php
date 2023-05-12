@@ -4,7 +4,8 @@ class login extends Controller
 {
     public function main()
     {
-        echo MigrateUsers::up();
+        echo DB::defaultValue(hash(uniqid(),'sha256'));
+        #echo MigrateUsers::up();
         Masterpage::title(ML::select('SignIn'));
     }
 }
