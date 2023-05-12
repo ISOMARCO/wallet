@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use ML,Database;
+use ML,Library\Database\Database;
 class login extends Controller
 {
     public function main()
