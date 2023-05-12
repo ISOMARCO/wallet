@@ -4,7 +4,8 @@ class login extends Controller
 {
     public function main()
     {
-        output( DBTool::listTables() );
+        MigrateUsers::up();
+        #output( DBTool::listTables() );
         Masterpage::title(ML::select('SignIn'));
     }
 }
