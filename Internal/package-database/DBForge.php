@@ -37,10 +37,16 @@ class DBForge extends Connection
      * 
      * @param mixed
      */
+    protected $getTableName = NULL;
+    public function getTableName()
+    {
+        return $this->getTableName;
+    }
     public function __call($method, $parameters)
     {
         $split  = Datatype::splitUpperCase($originMethodName = $method);
         $table  = $split[0];
+        $this->getTableName = $table;
         $method = $split[1] ?? NULL;
 
         switch($method)
