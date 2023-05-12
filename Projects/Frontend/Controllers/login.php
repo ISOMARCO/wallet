@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use DB;
+#use DB;
 class login extends Controller
 {
     public function main()
