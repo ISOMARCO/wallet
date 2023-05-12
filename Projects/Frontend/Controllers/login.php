@@ -4,7 +4,7 @@ class login extends Controller
 {
     public function main()
     {
-        echo DB::serial(10);
+        echo DB::autoIncrement();
         Masterpage::title(ML::select('SignIn'));
     }
 }
