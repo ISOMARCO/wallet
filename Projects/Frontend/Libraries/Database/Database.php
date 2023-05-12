@@ -1,6 +1,6 @@
 <?php 
 
-class InternalDatabase 
+class InternalDatabase
 {
     public $a = NULL;
     public function __construct()
@@ -9,6 +9,6 @@ class InternalDatabase
     }
     public function select()
     {
-        
+
     }
 }

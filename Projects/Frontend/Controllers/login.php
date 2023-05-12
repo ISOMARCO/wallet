@@ -1,10 +1,11 @@
 <?php namespace Project\Controllers;
-use ML,Database;
+use ML,DB;
 class login extends Controller
 {
     public function main()
     {
-        echo Database::main();
+        echo DB::Users()->stringQuery();
+        echo DB::Users()->tableName();
         Masterpage::title(ML::select('SignIn'));
     }
 }
