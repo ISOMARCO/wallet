@@ -1,11 +1,10 @@
 <?php namespace Project\Controllers;
-use DBTool,ML,MigrateUsers;
+use DB;
 class login extends Controller
 {
     public function main()
     {
-        MigrateUsers::up();
-        #output( DBTool::listTables() );
+        output( DB::migrations()->result() );
         Masterpage::title(ML::select('SignIn'));
     }
 }
