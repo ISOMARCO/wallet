@@ -2882,7 +2882,7 @@ class DB extends Connection
         }
         else
         {
-            $this->$type .= $this->whereHaving('"'.$column.'"', $value, $logical ?: 'and');
+            $this->$type .= $this->whereHaving($column, $value, $logical ?: 'and');
         }
 
         return $this;
