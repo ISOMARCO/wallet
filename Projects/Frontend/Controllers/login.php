@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use ML,DB,MigrateUsers;
+use ML,MigrateUsers;
 class login extends Controller
 {
     public function main()
