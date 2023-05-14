@@ -97,7 +97,7 @@
             $(".login-box-msg").addClass("text-danger");
             $(".login-box-msg").text(e.error);
           }else {
-            
+            alert(e.success);
           }
         }
       });
