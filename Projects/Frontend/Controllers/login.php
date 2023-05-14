@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use ML,Post,Http,Session,loginM,DB,Cache;
+use ML,Post,Http,Session,loginM;
 class login extends Controller
 {
     public function main()
@@ -10,7 +10,6 @@ class login extends Controller
             exit;
         }
         Masterpage::title(ML::select('SignIn'));
-        output( Cache::select('userInfo_64611c9c5cf0c_64611c9c5cf0e') );
     }
     public function loginRequest()
     {
