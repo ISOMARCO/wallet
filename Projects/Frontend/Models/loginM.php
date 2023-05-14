@@ -12,7 +12,7 @@ class loginM extends Model
         if($query->totalRows())
         {
             $row = $query->row();
-            $cacheData = ['Name' => $row->Name,'Surname' => $row->Surname];
+            $cacheData = json_encode(['Name' => $row->Name,'Surname' => $row->Surname]);
             if($rememberMe)
             {
                 Cookie::insert( hash('sha256',md5('Email')),encrypt($email),(60*60*24*365) );
