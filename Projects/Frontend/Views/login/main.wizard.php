@@ -75,7 +75,7 @@
 <script>
   $(document).ready(function(){
     $("#email,#password").on("click",function(){
-      alert(this.tagName);
+      alert(this.val);
     });
   });
 </script>
