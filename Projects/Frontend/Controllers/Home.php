@@ -5,7 +5,7 @@ class Home extends Controller
     public function main(string ...$parameters)
     {
         Masterpage::title('Welcome to The World of Simplicity');
-        echo Cache::insert('example','Example Data',20);
+        output( Cache::selectAll() );
     } 
     public function exit()
     {
