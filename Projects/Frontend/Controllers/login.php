@@ -5,8 +5,6 @@ class login extends Controller
     public function main()
     {
         Masterpage::title(ML::select('SignIn'));
-        echo hash('sha256',md5('ismayil'));
-        echo '<br>'.uniqid(uniqid().'_');
     }
     public function loginRequest()
     {
