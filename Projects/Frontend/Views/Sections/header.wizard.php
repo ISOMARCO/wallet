@@ -177,10 +177,10 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-header">{{ML::select('Menu')}}</li>
           <li class="nav-item">
-            <a href="calendar.html" class="nav-link">
+            <a href="{{URL::base('home')}}" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>
-                Home
+                {{ML::select('Home')}}
                 <!-- <span class="badge badge-info right">2</span> -->
               </p>
             </a>
