@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use Cookie,Session,URL;
+use Cookie,Session,URL,Cache;
 class Home extends Controller
 {
     public function main(string ...$parameters)
