@@ -90,7 +90,7 @@
     $("#loginButton").on("click",function(){
       $.ajax({
         type: "post",
-        url: "{{URL::base('login/loginRequest')}}",
+        url: "https://wallet.iso.com.az/login",
         data: $("#loginForm").serialize(),
         dataType: "json",
         success: function(e){
