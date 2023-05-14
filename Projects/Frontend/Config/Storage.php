@@ -87,7 +87,7 @@
    
     'cache' =>
     [
-        'driver'         => 'file',
+        'driver'         => 'redis',
         'driverSettings' =>
         [
             'memcache' =>
