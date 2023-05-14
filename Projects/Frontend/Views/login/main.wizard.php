@@ -77,7 +77,7 @@
     $("#email,#password").on("keyup",function(){
       if($(this).val() == "")
       {
-        $(this).parent('.input-group').addClass("border-danger");
+        $(this).parent('.input-group').attr("placeholder","Doldurda");
       }
     });
   });
