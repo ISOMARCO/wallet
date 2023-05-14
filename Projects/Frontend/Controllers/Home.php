@@ -5,6 +5,7 @@ class Home extends Controller
     public function main(string ...$parameters)
     {
         Masterpage::title('Welcome to The World of Simplicity');
+        output(Cookie::selectAll());
     } 
     public function exit()
     {
