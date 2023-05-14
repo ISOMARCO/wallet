@@ -6,6 +6,6 @@ class login extends Controller
     {
         Masterpage::title(ML::select('SignIn'));
         echo MigrateUsers::up();
-        echo DB::defaultValue(0);
+        echo DB::defaultValue('0');
     }
 }
