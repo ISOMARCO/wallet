@@ -26,6 +26,10 @@ class Initialize extends Controller
                 redirect(URL::base("login"));
             }
         }
+        else 
+        {
+            redirect(URL::base('home'));
+        }
         Theme::active('Default');
         
         Masterpage::headPage('Sections/head')
