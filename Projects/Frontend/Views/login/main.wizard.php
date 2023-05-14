@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <style>
     .placeholder-color::-webkit-input-placeholder {
-      color: #b2cde0;
+      color: red;
     }
   </style>
 </head>
