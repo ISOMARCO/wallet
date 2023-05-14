@@ -22,7 +22,7 @@ class login extends Controller
             echo json_encode(['error' => ML::select('LoginNullError')]);
             exit;
         }
-        $login = loginM::login($email,$password);
+        $login = loginM::login($email,$password,$rememberMe);
         if(empty($login))
         {
             echo json_encode(['error' => ML::select('LoginAuthenticationError')]);
