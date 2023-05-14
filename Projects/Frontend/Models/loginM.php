@@ -13,7 +13,10 @@ class loginM extends Model
         }
         else
         {
-            
+            return DB::select('Uid','Username','Name','Surname','Lang','Role')->
+            where('Email',$email)->
+            where('Password',hash('sha256',md5($password)))->
+            Users()->row();
         }
     }
 }
