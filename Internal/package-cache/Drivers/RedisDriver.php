@@ -103,7 +103,7 @@ class RedisDriver extends DriverMappingAbstract
      */
     public function delete($key)
     {
-        return $this->redis->delete($key);
+        return $this->redis->del($key);
     }
 
     /**
