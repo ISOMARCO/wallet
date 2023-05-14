@@ -22,7 +22,7 @@
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg"></p>
-      <form action="" method="post">
+      <form method="post" id="loginForm">
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="{{ML::select('Email')}}" name="email">
           <div class="input-group-append">
@@ -72,5 +72,10 @@
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
+<script>
+  $(document.ready(function(){
+    alert('ok');
+  }));
+</script>
 </body>
 </html>
