@@ -5,7 +5,7 @@ class login extends Controller
     public function main()
     {
         Masterpage::title(ML::select('SignIn'));
-        echo URL::base('login/loginRequest');
+        echo URL::site('login/loginRequest');
         exit;
     }
     public function loginRequest()
