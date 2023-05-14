@@ -178,6 +178,15 @@
           <li class="nav-header">{{ML::select('Menu')}}</li>
           <li class="nav-item">
             <a href="calendar.html" class="nav-link">
+              <i class="fas fa-home"></i>
+              <p>
+                Home
+                <!-- <span class="badge badge-info right">2</span> -->
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="calendar.html" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Calendar
