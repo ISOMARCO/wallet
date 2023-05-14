@@ -7,5 +7,6 @@ class lang extends Controller
         ML::insert('en','Menu','Menu');
         ML::insert('az','Menu','Menyu');
         output(ML::selectAll());
+        exit;
     }
 }
