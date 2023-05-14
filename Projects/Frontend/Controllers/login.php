@@ -11,6 +11,9 @@ class login extends Controller
         Http::isAjax() or exit("Bad Request");
         $email = Post::email();
         $password = Post::password();
-        echo json_encode(['success'=>empty(trim($email))]);
+        if(empty($email) || empty($password))
+        {
+            echo json_encode(['error' => ''])
+        }
     }
 }
