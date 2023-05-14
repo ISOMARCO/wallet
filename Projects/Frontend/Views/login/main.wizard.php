@@ -97,7 +97,9 @@
             $(".login-box-msg").addClass("text-danger");
             $(".login-box-msg").text(e.error);
           }else {
-            alert(e.success);
+            $("#email,$password,#loginButton").attr("disabled","disabled");
+            $(".login-box-msg").addClass("text-success");
+            $(".login-box-msg").text(e.success);
           }
         }
       });
