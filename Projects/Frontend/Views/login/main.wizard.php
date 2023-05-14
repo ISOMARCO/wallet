@@ -24,7 +24,7 @@
       <p class="login-box-msg"></p>
       <form method="post" id="loginForm">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="{{ML::select('Email')}}" name="email">
+          <input type="email" class="form-control" id="email" placeholder="{{ML::select('Email')}}" name="email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="{{ML::select('Password')}}" name="password">
+          <input type="password" class="form-control" id="password" placeholder="{{ML::select('Password')}}" name="password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -74,7 +74,9 @@
 <script src="dist/js/adminlte.min.js"></script>
 <script>
   $(document).ready(function(){
-    alert('ok');
+    $("#email|#password").on("click",function(){
+      alert(this.val());
+    });
   });
 </script>
 </body>
