@@ -5,6 +5,7 @@ class Initialize extends Controller
     public function main()
     {
         ML::lang("az");
+        exit(Session::Uid());
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'lang') 
         {
             if(Cookie::select(hash('sha256',md5('Email'))) && Cookie::select(hash('sha256',md5('Password'))))
