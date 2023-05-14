@@ -73,9 +73,9 @@
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
 <script>
-  $(document.ready(function(){
+  $(document).ready(function(){
     alert('ok');
-  }));
+  });
 </script>
 </body>
 </html>
