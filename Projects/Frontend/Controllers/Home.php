@@ -7,7 +7,6 @@ class Home extends Controller
         Masterpage::title('Home');
         $arr = json_decode(Cache::select('userInfo_'.Session::Uid()));
         print_r($arr);
-        echo $arr['Name'];
     } 
     public function exit()
     {
