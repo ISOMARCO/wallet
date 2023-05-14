@@ -1,11 +1,10 @@
 <?php namespace Project\Controllers;
-use ML,Post,Http,MigrateUsers;
+use ML,Post,Http;
 class login extends Controller
 {
     public function main()
     {
         Masterpage::title(ML::select('SignIn'));
-        echo MigrateUsers::up();
     }
     public function loginRequest()
     {
