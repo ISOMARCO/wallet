@@ -13,6 +13,7 @@ class InternalMigrateUsers extends ZN\Database\Migration
 			'Id' => [DB::int(11),DB::primaryKey(), DB::autoIncrement(),DB::notNull()],
             'Uid' => [DB::varchar(20),DB::unique(),DB::notNull()],
 			'Username' => [DB::varchar(20),DB::unique(),DB::null()],
+			'Email' => [DB::varchar(40),DB::null(),DB::unique()]
 			'Name' => [DB::varchar(20),DB::null()],
 			'Surname' => [DB::varchar(20),DB::null()],
 			'Password' => [DB::varchar(200),DB::null()],
