@@ -9,8 +9,8 @@ class Initialize extends Controller
         {
             if(Cookie::select(hash('sha256',md5('Email'))) && Cookie::select(hash('sha256',md5('Password'))))
             {
-                #$login = loginM::login(Cookie::select(hash('sha256',md5('Email')),Cookie::select(hash('sha256',md5('Password'))));
-                /*if(empty($login))
+                $login = loginM::login(Cookie::select(hash('sha256',md5('Email')),Cookie::select(hash('sha256',md5('Password'))));
+                if(empty($login))
                 {
                     Cookie::delete( hash('sha256',md5('Email')) );
                     Cookie::delete( hash('sha256',md5('Password')) );
@@ -18,7 +18,7 @@ class Initialize extends Controller
                 else 
                 {
                     Session::insert('Uid',$login->Uid);
-                }*/
+                }
             }
             else 
             {
