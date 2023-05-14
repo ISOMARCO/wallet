@@ -14,6 +14,7 @@ class Initialize extends Controller
                 {
                     Cookie::delete( hash('sha256',md5('Email')) );
                     Cookie::delete( hash('sha256',md5('Password')) );
+                    redirect(URL::base("login"));
                 }
                 else 
                 {

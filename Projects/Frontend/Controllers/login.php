@@ -18,7 +18,7 @@ class login extends Controller
             exit;
         }
         $login = loginM::login($email,$password);
-        if(!empty($login))
+        if(empty($login))
         {
             echo json_encode(['error' => ML::select('LoginAuthenticationError')]);
             exit;
