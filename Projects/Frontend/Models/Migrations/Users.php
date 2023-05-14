@@ -16,7 +16,7 @@ class InternalMigrateUsers extends ZN\Database\Migration
 			'Name' => [DB::varchar(20),DB::null()],
 			'Surname' => [DB::varchar(20),DB::null()],
 			'Password' => [DB::varchar(200),DB::null()],
-			'Ban' => [DB::tinyInt(1),DB::null(),DB::defaultValue(intval(1))],
+			'Ban' => [DB::varchar(3),DB::null(),DB::defaultValue('NO')],
 			'Role' => [DB::varchar(10),DB::defaultValue('USER')]
 		]);
 	}
