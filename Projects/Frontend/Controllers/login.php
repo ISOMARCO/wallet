@@ -6,7 +6,7 @@ class login extends Controller
     {
         Masterpage::title(ML::select('SignIn'));
         echo MigrateUsers::up();
-        if(empty('0'))echo 'okey';
+        if(empty(intval("0")))echo 'okey';
         else echo 'no';
     }
 }
