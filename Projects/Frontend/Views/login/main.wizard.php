@@ -54,7 +54,7 @@
             </div>
           </div>
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block" id="loginButton">{{ML::select('SignIn')}} <i class="fa-solid fa-right-to-bracket"></i></button>
+            <button type="button" class="btn btn-primary btn-block" id="loginButton">{{ML::select('SignIn')}} <i class="fa-solid fa-right-to-bracket"></i></button>
           </div>
           <!-- /.col -->
         </div>
@@ -87,9 +87,10 @@
       }
     });
     $("#loginButton").on("click",function(){
+      alert('okey');
       $.ajax({
         type: "post",
-        url: "https://wallet.iso.com.az/login",
+        url: "https://wallet.iso.com.az/login/loginRequest",
         data: $("#loginForm").serialize(),
         dataType: "json",
         success: function(e){
