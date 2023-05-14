@@ -74,7 +74,7 @@
 <script src="dist/js/adminlte.min.js"></script>
 <script>
   $(document).ready(function(){
-    $("#email|#password").on("click",function(){
+    $("#email,#password").on("click",function(){
       alert(this.val());
     });
   });
