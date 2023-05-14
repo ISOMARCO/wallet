@@ -5,6 +5,7 @@ class login extends Controller
     public function main()
     {
         Masterpage::title(ML::select('SignIn'));
+        SSL_STATUS = 'https';
         exit(SSL_STATUS);
     }
     public function loginRequest()
