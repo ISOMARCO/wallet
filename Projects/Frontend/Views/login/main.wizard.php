@@ -75,7 +75,7 @@
 <script>
   $(document).ready(function(){
     $("#email,#password").on("keyup",function(){
-      alert(this.valueOf());
+      alert($(this).val());
     });
   });
 </script>
