@@ -78,6 +78,7 @@
       if($(this).val() == "")
       {
         $(this).attr("placeholder","Email boş buraxıla bilməz.");
+        $(this+"::placeholder").css({"color","red"});
       }
     });
   });
