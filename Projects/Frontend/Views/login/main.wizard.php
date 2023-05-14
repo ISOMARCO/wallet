@@ -47,8 +47,8 @@
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
-              <input type="checkbox" id="remember" name="remember">
-              <label for="remember">
+              <input type="checkbox" id="rememberMe" name="rememberMe">
+              <label for="rememberMe">
                 {{ML::select('RememberMe')}}
               </label>
             </div>
