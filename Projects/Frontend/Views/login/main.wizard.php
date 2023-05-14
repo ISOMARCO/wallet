@@ -77,7 +77,7 @@
     $("#email,#password").on("keyup",function(){
       if($(this).val() == "")
       {
-        $(this).parent('.input-group').attr("placeholder","Doldurda");
+        $(this).attr("placeholder","Email boş buraxıla bilməz.");
       }
     });
   });
