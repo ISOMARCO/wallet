@@ -12,12 +12,17 @@ class login extends Controller
         $email = Post::email();
         $password = Post::password();
         $rememberMe = Post::rememberMe();
-        echo json_encode(['success' => $rememberMe]);
         if(empty($email) || empty($password))
         {
             echo json_encode(['error' => ML::select('LoginNullError')]);
             exit;
         }
-
+        $login = loginM::login($email,$password);
+        if(!empty($login))
+        {
+            echo json_encode(['error' => ML::select('LoginAuthenticationError')]);
+            exit;
+        }
+        Session::insert('Uid',$login->Uid);
     }
 }
