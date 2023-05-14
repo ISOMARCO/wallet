@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use URL,Session,ML;
+use URL,Session,ML,Cookie,Session;
 class Initialize extends Controller
 {
     public function main()
@@ -7,7 +7,23 @@ class Initialize extends Controller
         ML::lang("az");
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'lang') 
         {
-            redirect(URL::base("login"));
+            if(Cookie::select(hash('sha256',md5('Email')) && Cookie::select(hash('sha256',md5('Password'))))
+            {
+                $login = loginM::login(Cookie::select(hash('sha256',md5('Email')),Cookie::select(hash('sha256',md5('Password'))));
+                if(empty($login))
+                {
+                    Cookie::delete( hash('sha256',md5('Email')) );
+                    Cookie::delete( hash('sha256',md5('Password')) );
+                }
+                else 
+                {
+                    Session::insert('Uid',$login->Uid);
+                }
+            }
+            else 
+            {
+                redirect(URL::base("login"));
+            }
         }
         Theme::active('Default');
         
