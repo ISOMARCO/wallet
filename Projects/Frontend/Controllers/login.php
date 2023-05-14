@@ -24,5 +24,6 @@ class login extends Controller
             exit;
         }
         Session::insert('Uid',$login->Uid);
+        echo json_encode(['success' => 'Successfully']);
     }
 }

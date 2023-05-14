@@ -100,6 +100,7 @@
             $("#email,$password,#loginButton").attr("disabled","disabled");
             $(".login-box-msg").addClass("text-success");
             $(".login-box-msg").text(e.success);
+            setTimeout(function(){window.location.href="{{URL::base('home')}}";},2500);
           }
         }
       });
