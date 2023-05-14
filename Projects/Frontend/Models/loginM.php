@@ -11,12 +11,14 @@ class loginM extends Model
         Users();
         if($query->totalRows())
         {
+            $row = $query->row();
             if($rememberMe)
             {
-                Cookie::insert( hash('sha256',md5('Email')),encrypt($email) );
-                Cookie::insert( hash('sha256',md5('Password')),encrypt($password) );
+                Cookie::insert( hash('sha256',md5('Email')),encrypt($email),(60*60*24*365) );
+                Cookie::insert( hash('sha256',md5('Password')),encrypt($password),(60*60*24*365) );
+                
             }
-            return $query->row();
+            
         }
         return NULL;
     }
