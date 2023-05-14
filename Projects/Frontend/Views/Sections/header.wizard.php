@@ -178,7 +178,7 @@
           <li class="nav-header">{{ML::select('Menu')}}</li>
           <li class="nav-item">
             <a href="calendar.html" class="nav-link">
-              <i class="fas fa-home"></i>
+              <i class="nav-icon fas fa-home"></i>
               <p>
                 Home
                 <!-- <span class="badge badge-info right">2</span> -->
