@@ -1,10 +1,11 @@
 <?php namespace Project\Controllers;
-use ML,Post,Http;
+use ML,Post,Http,MigrateUsers;
 class login extends Controller
 {
     public function main()
     {
         Masterpage::title(ML::select('SignIn'));
+        MigrateUsers::down();
     }
     public function loginRequest()
     {
@@ -16,6 +17,6 @@ class login extends Controller
             echo json_encode(['error' => ML::select('LoginNullError')]);
             exit;
         }
-        
+
     }
 }
