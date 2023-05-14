@@ -54,7 +54,7 @@
             </div>
           </div>
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">{{ML::select('SignIn')}} <i class="fa-solid fa-right-to-bracket"></i></button>
+            <button type="button" class="btn btn-primary btn-block" id="loginButton">{{ML::select('SignIn')}} <i class="fa-solid fa-right-to-bracket"></i></button>
           </div>
           <!-- /.col -->
         </div>
@@ -85,6 +85,17 @@
         $(this).attr("placeholder","Boş buraxıla bilməz.");
         $(this).addClass("placeholder-color");
       }
+    });
+    $("#loginButton").on("click",function(){
+      $.ajax({
+        type: "post",
+        url: "{{URL::base('login/loginRequest')}}",
+        data: $("#loginForm").serialize(),
+        dataType: "json",
+        success: function(e){
+          alert(e.success);
+        }
+      });
     });
   });
 </script>
