@@ -333,7 +333,7 @@ class ZN
         # In particular, it allows the URL library to automatically detect the http prefix.
         define('SSL_STATUS', 
         ( 
-            ( ! empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ) || $_SERVER['SERVER_PORT'] == 443 
+            ( ! empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ) || $_SERVER['SERVER_PORT'] == 443 || $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https'
             ? 'https' 
             : 'http' 
         ) . '://');
