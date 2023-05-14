@@ -11,6 +11,7 @@ class Home extends Controller
     public function exit()
     {
         Cookie::deleteAll();
+        Cache::delete('userInfo_'.Session::Uid());
         Session::deleteAll();
         redirect(URL::base('login'));
         exit;
