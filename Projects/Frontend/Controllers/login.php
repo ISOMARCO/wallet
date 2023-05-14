@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use ML,Post,Http,Session,loginM,DB;
+use ML,Post,Http,Session,loginM,DB,Cache;
 class login extends Controller
 {
     public function main()
