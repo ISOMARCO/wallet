@@ -82,7 +82,7 @@
     $("#email,#password").on("keyup",function(){
       if($(this).val() == "")
       {
-        $(this).attr("placeholder","Email boş buraxıla bilməz.");
+        $(this).attr("placeholder","Boş buraxıla bilməz.");
         $(this).addClass("placeholder-color");
       }
     });
