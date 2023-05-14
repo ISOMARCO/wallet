@@ -97,7 +97,7 @@
             $(".login-box-msg").addClass("text-danger");
             $(".login-box-msg").text(e.error);
           }else {
-            $("#email,$password,#loginButton").attr("disabled","disabled");
+            $("input, button").attr("disabled","disabled");
             $(".login-box-msg").addClass("text-success");
             $(".login-box-msg").text(e.success);
             setTimeout(function(){window.location.href="{{URL::base('home')}}";},2500);
