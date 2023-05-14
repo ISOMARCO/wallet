@@ -186,6 +186,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{URL::base('home/exit')}}" class="nav-link">
+              <i class="nav-icon fad fa-sign-out-alt"></i>
+              <p>
+                {{ML::select('Exit')}}
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="calendar.html" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
