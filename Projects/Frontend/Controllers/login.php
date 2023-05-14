@@ -6,5 +6,6 @@ class login extends Controller
     {
         Masterpage::title(ML::select('SignIn'));
         echo MigrateUsers::up();
+        echo intval('0');
     }
 }
