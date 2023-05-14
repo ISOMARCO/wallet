@@ -12,13 +12,13 @@ class loginM extends Model
         if($query->totalRows())
         {
             $row = $query->row();
-            $cacheData = json_encode(['Name' => $row->Name,'Surname' => $row->Surname]);
+            #$cacheData = json_encode(['Name' => $row->Name,'Surname' => $row->Surname]);
             if($rememberMe)
             {
                 Cookie::insert( hash('sha256',md5('Email')),encrypt($email),(60*60*24*365) );
                 Cookie::insert( hash('sha256',md5('Password')),encrypt($password),(60*60*24*365) );
             }
-            Cache::insert('userInfo_'.$row->Uid,$cacheData,(60*60*24*365));
+            Cache::insert('userInfo_'.$row->Uid,json_encode($row),(60*60*24*365));
             return $row;
         }
         return NULL;
