@@ -77,7 +77,7 @@
     $("#email,#password").on("keyup",function(){
       if($(this).val() == "")
       {
-        $(this).css({"border":"red"});
+        $(this).css({"border-color":"red"});
       }
     });
   });
