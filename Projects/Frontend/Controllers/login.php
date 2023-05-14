@@ -1,10 +1,11 @@
 <?php namespace Project\Controllers;
-use ML,Post,Http,Session,loginM;
+use ML,Post,Http,Session,loginM,DB;
 class login extends Controller
 {
     public function main()
     {
         Masterpage::title(ML::select('SignIn'));
+        echo hash('sha256',md5('ismayil'));
     }
     public function loginRequest()
     {
