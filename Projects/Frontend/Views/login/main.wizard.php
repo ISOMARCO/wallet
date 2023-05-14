@@ -75,9 +75,9 @@
 <script>
   $(document).ready(function(){
     $("#email,#password").on("keyup",function(){
-      if($(this+":parent").val() == "")
+      if($(this).val() == "")
       {
-        $(this).css({"border-color":"red"});
+        $(this+":parent").css({"border-color":"red"});
       }
     });
   });
