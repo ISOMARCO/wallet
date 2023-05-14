@@ -4,7 +4,7 @@ class Home extends Controller
 {
     public function main(string ...$parameters)
     {
-        Masterpage::title('Welcome to The World of Simplicity');
+        Masterpage::title('Home');
         output( Cache::selectAll() );
     } 
     public function exit()
