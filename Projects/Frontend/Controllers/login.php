@@ -4,6 +4,11 @@ class login extends Controller
 {
     public function main()
     {
+        if(Session::Uid())
+        {
+            redirect(URL::base('home'));
+            exit;
+        }
         Masterpage::title(ML::select('SignIn'));
     }
     public function loginRequest()
