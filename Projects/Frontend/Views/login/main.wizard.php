@@ -87,7 +87,6 @@
       }
     });
     $("#loginButton").on("click",function(){
-      alert('okey');
       $.ajax({
         type: "post",
         url: "{{URL::base('login/loginRequest')}}",
