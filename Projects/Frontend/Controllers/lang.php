@@ -4,8 +4,8 @@ class lang extends Controller
 {
     public function main()
     {
-        ML::insert('en','ForgotPassword','Forgot Password');
-        ML::insert('az','ForgotPassword','Şifrəmi Unuttum');
+        ML::insert('en','LoginNullError','You must fill in all the boxes.');
+        ML::insert('az','LoginNullError','Bütün xanaları doldurmalısınız.');
         output(ML::selectAll());
     }
 }

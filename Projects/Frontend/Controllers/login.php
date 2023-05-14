@@ -13,7 +13,8 @@ class login extends Controller
         $password = Post::password();
         if(empty($email) || empty($password))
         {
-            echo json_encode(['error' => ''])
+            echo json_encode(['error' => ML::select('LoginNullError')]);
+            exit;
         }
     }
 }
