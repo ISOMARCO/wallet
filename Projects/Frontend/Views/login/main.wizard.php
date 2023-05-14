@@ -75,7 +75,10 @@
 <script>
   $(document).ready(function(){
     $("#email,#password").on("keyup",function(){
-      alert($(this).val());
+      if($(this).val() == "")
+      {
+        $(this).css({"border":"red"});
+      }
     });
   });
 </script>
