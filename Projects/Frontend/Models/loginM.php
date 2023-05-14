@@ -18,7 +18,7 @@ class loginM extends Model
                 Cookie::insert( hash('sha256',md5('Email')),encrypt($email),(60*60*24*365) );
                 Cookie::insert( hash('sha256',md5('Password')),encrypt($password),(60*60*24*365) );
             }
-            Cache::insert('userInfo_'.$row->Uid,$cacheData,120);
+            Cache::insert('userInfo_'.$row->Uid,$cacheData,(60*60*24*365));
             return $row;
         }
         return NULL;
