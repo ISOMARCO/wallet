@@ -4,8 +4,8 @@ class lang extends Controller
 {
     public function main()
     {
-        ML::insert('en','Menu','Menu');
-        ML::insert('az','Menu','Menyu');
+        ML::insert('en','Home','Home');
+        ML::insert('az','Home','Ana Səhifə');
         output(ML::selectAll());
         exit;
     }
