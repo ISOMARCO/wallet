@@ -5,7 +5,7 @@ class Home extends Controller
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
-        output( Cache::selectAll() );
+        echo Cache::select('userInfo_'.Session::Uid())->Name;
     } 
     public function exit()
     {
