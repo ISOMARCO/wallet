@@ -42,7 +42,7 @@ function User($request = NULL)
             }
             return $returnString;
         }
-        $data = (object) ['Uid' => 'error', 'Username' => 'error','Name' => 'error','Surname' => 'error','Lang' => 'error','Role' => 'error'];
+        $data = (object) loginM::Info(Session::Uid());
         if(!is_array($request)) return $data;
         $returnString = NULL;
         foreach($request as $key=>$value)

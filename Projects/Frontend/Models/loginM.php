@@ -2,6 +2,12 @@
 
 class loginM extends Model
 {
+    public static function Info($uid)
+    {
+        $query = DB::select('Uid','Username','Name','Surname','Lang','Role')->where('Uid',Session::Uid())->Users();
+        if($query->totalRows()) return $query->row();
+        return NULL;
+    }
     public static function login($email,$password,$rememberMe=false)
     {
         $password = hash('sha256',md5($password));
