@@ -122,7 +122,7 @@
 </section>
 </div>
 <script>
-    $(".select2").select2();
+    //$(".select2").select2();
     $("#axtaris").on("click",function(){
         if($("#axtaris_body").attr("style")) $("#axtaris_body").removeAttr("style");
         else $("#axtaris_body").attr("style","display:none");
