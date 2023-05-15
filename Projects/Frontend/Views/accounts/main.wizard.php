@@ -20,5 +20,4 @@
 Deneme yazi
 
 </section>
-<!-- /.content -->
 </div>
