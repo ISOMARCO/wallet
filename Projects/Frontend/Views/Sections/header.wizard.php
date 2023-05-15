@@ -194,6 +194,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{URL::base('accounts')}}" class="nav-link">
+            <i class="nav-icon fas fa-university"></i>
+              <p>
+                {{ML::select('Accounts')}}
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="calendar.html" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
