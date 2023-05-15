@@ -31,17 +31,14 @@
         <div class="col-md-3">
             <select class="select2" name="musteri" style="width:100%">
                 <option value="">Heç biri</option>
-                @for($i=0;$i<count($musteriler);$i++)
-                <option value="{{$musteriler[$i]->id}}">{{$musteriler[$i]->ad}}</option>
-                @endfor
+                <option value="">Ismayil</option>
+                
             </select>
         </div>
         <div class="col-md-3">
             <select class="select2" name="erazi" style="width:100%">
                 <option value="">Heç biri</option>
-                @for($i=0;$i<count($eraziler);$i++)
-                <option value="{{$eraziler[$i]->id}}">{{$eraziler[$i]->ad}}</option>
-                @endfor
+                <option value="">Baku</option>
             </select>
         </div>
         <div class="col-md-1"><button type="submit" class="btn btn-outline-secondary"><i class="fas fa-search"></i></button></div>
