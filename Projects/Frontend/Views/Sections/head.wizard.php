@@ -6,5 +6,7 @@
 <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
 <!-- Theme style -->
 <link rel="stylesheet" href="dist/css/adminlte.min.css">
+<!-- select2 -->
+<link rel="stylesheet" href="plugins/select2/css/select2.min.css">
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
