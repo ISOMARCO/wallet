@@ -33,8 +33,22 @@ function User($request = NULL)
     {
         if(loginM::makeUserCache())
         {
-            return json_decode(Cache::select('userInfo_'.Session::Uid()));
+            $data = json_decode(Cache::select('userInfo_'.Session::Uid()));
+            if(!is_array($request)) return $data;
+            $returnString = NULL;
+            foreach($request as $key=>$value)
+            {
+                $returnString .= $data->$key.$value;
+            }
+            return $returnString;
         }
-        return (object) ['Uid' => 'error', 'Username' => 'error','Name' => 'error','Surname' => 'error','Lang' => 'error','Role' => 'error'];
+        $data = (object) ['Uid' => 'error', 'Username' => 'error','Name' => 'error','Surname' => 'error','Lang' => 'error','Role' => 'error'];
+        if(!is_array($request)) return $data;
+        $returnString = NULL;
+        foreach($request as $key=>$value)
+        {
+            $returnString .= $data->$key.$value;
+        }
+        return $returnString;
     }
 }
