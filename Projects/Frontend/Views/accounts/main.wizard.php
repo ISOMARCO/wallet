@@ -31,14 +31,14 @@
         <div class="col-md-3">
             <select class="select2" name="musteri" style="width:100%">
                 <option value="">Heç biri</option>
-                <option value="">Ismayil</option>
+                <option value="Ismayil">Ismayil</option>
                 
             </select>
         </div>
         <div class="col-md-3">
-            <select class="select2" name="erazi" style="width:100%">
+            <select class="select2" id="select2" name="erazi" style="width:100%">
                 <option value="">Heç biri</option>
-                <option value="">Baku</option>
+                <option value="Baku">Baku</option>
             </select>
         </div>
         <div class="col-md-1"><button type="submit" class="btn btn-outline-secondary"><i class="fas fa-search"></i></button></div>
