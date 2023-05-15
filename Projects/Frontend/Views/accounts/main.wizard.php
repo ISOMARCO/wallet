@@ -20,7 +20,7 @@
 <div class="card">
 <div class="card-header">
     <span class="float-right">
-        <a href="javascript:void(0)" class="btn btn-outline-primary">Create Account <i class="fas fa-plus"></i></a> 
+        <a href="{{URL::base('accounts/create')}}" class="btn btn-outline-primary">Create Account <i class="fas fa-plus"></i></a> 
         <button type="button" class="btn btn-outline-secondary" id="searchButton">Search <i class="fas fa-search"></i></button>
     </span>
 </div>
