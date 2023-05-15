@@ -16,11 +16,18 @@ function Decrypt($string)
     $iv = substr(hash('sha256', $secret_iv), 0, 16);
     return openssl_decrypt($string,$method,$secret_key,false,$iv);
 }
-function User()
+function User($request = null)
 {
     if(!Cache::select('userInfo_'.Session::Uid()))
     {
-        return json_decode(Cache::select('userInfo_'.Session::Uid()));
+        $data = json_decode(Cache::select('userInfo_'.Session::Uid()));
+        if($request == NULL) return $data;
+        $returnString = NULL;
+        foreach($request as $key=>$value)
+        {
+            $returnString .= $data->$key.$value;
+        }
+        return $returnString;
     }
     if(Session::Uid())
     {
