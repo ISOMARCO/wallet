@@ -12,7 +12,7 @@ class Initialize extends Controller
             if($email && $password)
             {
                 $login = loginM::login( $email,$password );
-                if(empty($login))
+                if(empty($login)) #if change password
                 {
                     Cookie::delete( hash('sha256',md5('Email')) );
                     Cookie::delete( hash('sha256',md5('Password')) );
