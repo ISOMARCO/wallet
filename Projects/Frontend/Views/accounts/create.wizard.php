@@ -23,10 +23,10 @@
             <span id="msg" style="font-weight:bold"></span>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <label for="nov" class="input-group-text">Növü <i class="fas fa-dolly-flatbed"></i></label>
+                    <label for="name" class="input-group-text">Name <i class="fas fa-piggy-bank"></i></label>
                 </div>
-                <select name="nov" id="nov" class="form-control">
-                    <option value="icarə">İcarə</option>
+                <select name="name" id="name" class="form-control">
+                    <option value="icarə">RabitaBank</option>
                 </select>
             </div>
             <div class="input-group mb-3">
