@@ -20,7 +20,7 @@
 <div class="card">
 <div class="card-header">
     <span class="float-right">
-        <a href="{{URL::base('icare/elave_et?nov=icarə')}}" class="btn btn-outline-primary">Create Account <i class="fas fa-plus"></i></a> 
+        <a href="javascript:void(0)" class="btn btn-outline-primary">Create Account <i class="fas fa-plus"></i></a> 
         <button type="button" class="btn btn-outline-secondary" id="axtaris">Search <i class="fas fa-search"></i></button>
     </span>
 </div>
