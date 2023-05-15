@@ -17,14 +17,6 @@
     </div><!-- /.container-fluid -->
 </section>
 <section class="content">
-<div class="card">
-<div class="card-header">
-    <span class="float-right">
-        <!-- <a href="javascript:void(0)" class="btn btn-outline-primary">Create Account <i class="fas fa-plus"></i></a>  -->
-        <!-- <button type="button" class="btn btn-outline-secondary" id="searchButton">Search <i class="fas fa-search"></i></button> -->
-    </span>
-</div>
-<div class="card-body">
     <div class="card card-info mt-2">
         <div class="card-header">Account Əlavə Et</div>
         <div class="card-body">
@@ -95,9 +87,6 @@
             <button type="button" class="btn btn-default float-right" id="reset">SIFIRLA <i class="fas fa-ban"></i></button>
         </div>
     </div>
-
-    
-</div>
 </section>
 </div>
 <script>
