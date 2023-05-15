@@ -21,11 +21,11 @@
 <div class="card-header">
     <span class="float-right">
         <a href="javascript:void(0)" class="btn btn-outline-primary">Create Account <i class="fas fa-plus"></i></a> 
-        <button type="button" class="btn btn-outline-secondary" id="axtaris">Search <i class="fas fa-search"></i></button>
+        <button type="button" class="btn btn-outline-secondary" id="searchButton">Search <i class="fas fa-search"></i></button>
     </span>
 </div>
 <div class="card-body">
-    <div class="row mb-3" id="search_body" style="display:none">
+    <div class="row mb-3" id="searchBody" style="display:none">
         <div class="col-md-2"><input type="text" name="qaime" class="form-control" placeholder="Qaimə №" autocomplete="off"></div>
         <div class="col-md-3"><input type="date" name="tarix" id="tarix" class="form-control"></div>
         <div class="col-md-3">
@@ -124,9 +124,9 @@
 <script>
     //$(".select2").select2();
 $(document).ready(function(){
-    $("#axtaris").on("click",function(){
-        if($("#axtaris_body").attr("style")) $("#axtaris_body").removeAttr("style");
-        else $("#axtaris_body").attr("style","display:none");
+    $("#searchButton").on("click",function(){
+        if($("#searchBody").attr("style")) $("#searchBody").removeAttr("style");
+        else $("#searchBody").attr("style","display:none");
     });
 }); 
 </script>
