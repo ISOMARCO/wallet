@@ -46,7 +46,7 @@
 <div class="card collapsed-card">
     <div class="card-header">
     <h3 class="card-title">
-        <img src="{{FILES_DIR.'Accounts/KapitalBankBirbank.png'}}" style="width:40px;height:25px;" class="img-fluid" alt="Kapital Bank Birbank">
+        <img src="{{FILES_DIR.'Accounts/KapitalBankBirbank.svg'}}" style="width:40px;height:25px;" class="img-fluid" alt="Kapital Bank Birbank">
         Kapital Bank Birbank
     </h3>
 
