@@ -20,7 +20,7 @@
 <div class="card collapsed-card">
     <div class="card-header">
     <h3 class="card-title">
-        <img src="{{FILES_DIR.'Accounts/rabitabank.webp'}}" class="img-fluid img-thumbnail" alt="Rabita Bank">
+        <img src="{{FILES_DIR.'Accounts/rabitabank.webp'}}" style="width:30px;height:30px;" class="img-fluid img-thumbnail" alt="Rabita Bank">
         Rabita Bank Credit
     </h3>
 
