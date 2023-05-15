@@ -29,7 +29,7 @@
         <div class="col-md-2"><input type="text" name="qaime" class="form-control" placeholder="Qaimə №" autocomplete="off"></div>
         <div class="col-md-3"><input type="date" name="tarix" id="tarix" class="form-control"></div>
         <div class="col-md-3">
-            <select class="select2" name="musteri">
+            <select class="select2 form-control" name="musteri" style="width:100%">
                 <option value="">Heç biri</option>
                 <option value="">Ismayil</option>
                 
