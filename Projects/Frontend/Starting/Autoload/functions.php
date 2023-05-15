@@ -18,7 +18,7 @@ function Decrypt($string)
 }
 function User($request = NULL)
 {
-    if(!Cache::select('userInfo_'.Session::Uid()))
+    if(Cache::select('userInfo_'.Session::Uid()))
     {
         $data = json_decode(Cache::select('userInfo_'.Session::Uid()));
         if(!is_array($request)) return $data;
@@ -31,7 +31,7 @@ function User($request = NULL)
     }
     if(Session::Uid())
     {
-        if(!loginM::makeUserCache())
+        if(loginM::makeUserCache())
         {
             $data = json_decode(Cache::select('userInfo_'.Session::Uid()));
             if(!is_array($request)) return $data;
