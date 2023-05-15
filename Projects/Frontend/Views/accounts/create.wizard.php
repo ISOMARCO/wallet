@@ -25,23 +25,75 @@
     </span>
 </div>
 <div class="card-body">
-    <div class="row mb-3" id="searchBody" style="display:none">
-        <div class="col-md-2"><input type="text" name="qaime" class="form-control" placeholder="Qaimə №" autocomplete="off"></div>
-        <div class="col-md-3"><input type="date" name="tarix" id="tarix" class="form-control"></div>
-        <div class="col-md-3">
-            <select class="select2" name="musteri" style="width:100%">
-                <option value="">Heç biri</option>
-                <option value="Ismayil">Ismayil</option>
-                
-            </select>
+    <div class="card card-info mt-2">
+        <div class="card-header">Account Əlavə Et</div>
+        <div class="card-body">
+            <span id="msg" style="font-weight:bold"></span>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label for="nov" class="input-group-text">Növü <i class="fas fa-dolly-flatbed"></i></label>
+                </div>
+                <select name="nov" id="nov" class="form-control">
+                    <option value="icarə">İcarə</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label for="musteri" class="input-group-text">Müştəri <i class="fas fa-user-tie"></i></label>
+                </div>
+                <select name="musteri" id="musteri" class="select2 form-control">
+                    <option value="">Musteri</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label for="tarix" class="input-group-text">Tarix <i class="far fa-calendar-alt"></i></label>
+                </div>
+                <input type="date" name="tarix" id="tarix" class="form-control">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label for="erazi" class="input-group-text">Ərazi <i class="fas fa-map-marked-alt"></i></label>
+                </div>
+                <select name="erazi" id="erazi" class="select2 form-control">
+                    <option value="">Erazi</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label for="unvan" class="input-group-text">Ünvan <i class="fas fa-location-arrow"></i></label>
+                </div>
+                <input type="text" class="form-control" id="unvan" name="unvan">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label for="nisan" class="input-group-text">Nişan <i class="fas fa-truck"></i></label>
+                </div>
+                <input type="text" class="form-control" id="nisan" name="nisan">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label for="avto" class="input-group-text">Avto <i class="fas fa-car"></i></label>
+                </div>
+                <input type="text" class="form-control" id="avto" name="avto">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label for="surucu" class="input-group-text">Sürücü <i class="far fa-id-card"></i></label>
+                </div>
+                <input type="text" class="form-control" id="surucu" name="surucu">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label for="qeyd" class="input-group-text">Qeyd <i class="fas fa-clipboard"></i></label>
+                </div>
+                <textarea name="qeyd" id="qeyd" rows="2" class="form-control"></textarea>
+            </div>
         </div>
-        <div class="col-md-3">
-            <select class="select2" id="select2" name="erazi" style="width:100%">
-                <option value="">Heç biri</option>
-                <option value="Baku">Baku</option>
-            </select>
+        <div class="card-footer">
+            <button type="button" class="btn btn-info" id="gonder">GÖNDƏR <i class="far fa-paper-plane"></i></button>
+            <button type="button" class="btn btn-default float-right" id="reset">SIFIRLA <i class="fas fa-ban"></i></button>
         </div>
-        <div class="col-md-1"><button type="submit" class="btn btn-outline-secondary"><i class="fas fa-search"></i></button></div>
     </div>
 
     
