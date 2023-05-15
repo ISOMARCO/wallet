@@ -54,7 +54,7 @@
             </div>
           </div>
           <div class="col-4">
-            <button type="button" class="btn btn-primary btn-block" id="loginButton">{{ML::select('SignIn')}} <i class="fa-solid fa-right-to-bracket"></i></button>
+            <button type="submit" class="btn btn-primary btn-block" id="loginButton">{{ML::select('SignIn')}} <i class="fa-solid fa-right-to-bracket"></i></button>
           </div>
           <!-- /.col -->
         </div>
