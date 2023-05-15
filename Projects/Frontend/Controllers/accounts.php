@@ -6,4 +6,8 @@ class accounts extends Controller
     {
         Masterpage::title('Accounts');
     }
+    public function create()
+    {
+        Masterpage::title("Create");
+    }
 }
