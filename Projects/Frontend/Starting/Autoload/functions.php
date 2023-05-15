@@ -29,20 +29,9 @@ function User($request = NULL)
         }
         return $returnString;
     }
-    if(Session::Uid())
+    if(loginM::makeUserCache())
     {
-        if(loginM::makeUserCache())
-        {
-            $data = json_decode(Cache::select('userInfo_'.Session::Uid()));
-            if(!is_array($request)) return $data;
-            $returnString = NULL;
-            foreach($request as $key=>$value)
-            {
-                $returnString .= $data->$key.$value;
-            }
-            return $returnString;
-        }
-        $data = (object) loginM::Info(Session::Uid());
+        $data = json_decode(Cache::select('userInfo_'.Session::Uid()));
         if(!is_array($request)) return $data;
         $returnString = NULL;
         foreach($request as $key=>$value)
@@ -51,4 +40,12 @@ function User($request = NULL)
         }
         return $returnString;
     }
+    $data = (object) loginM::Info(Session::Uid());
+    if(!is_array($request)) return $data;
+    $returnString = NULL;
+    foreach($request as $key=>$value)
+    {
+        $returnString .= $data->$key.$value;
+    }
+    return $returnString;
 }
