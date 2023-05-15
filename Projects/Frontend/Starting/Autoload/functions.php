@@ -24,6 +24,9 @@ function User()
     }
     if(Session::Uid())
     {
-        return loginM::makeUserCache();
+        if(loginM::makeUserCache())
+        {
+            return json_decode(Cache::select('userInfo_'.Session::Uid()));
+        }
     }
 }
