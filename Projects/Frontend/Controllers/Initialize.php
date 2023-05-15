@@ -11,7 +11,7 @@ class Initialize extends Controller
             $password = Cookie::select( hash('sha256',md5('Password')) );
             if($email && $password)
             {
-                exit('ok');
+                echo json_encode(['error'=>'okey']);exit;
                 $login = loginM::login( $email,$password );
                 if(empty($login)) #if change password
                 {
