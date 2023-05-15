@@ -16,7 +16,7 @@
     </div>
     </div><!-- /.container-fluid -->
 </section>
-
+<section class="content">
 Deneme yazi
 
 </section>
