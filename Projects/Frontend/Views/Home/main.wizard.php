@@ -22,7 +22,7 @@
       <h3 class="card-title">Title</h3>
 
       <div class="card-tools">
-        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse" aria-expanded="false">
           <i class="fas fa-minus"></i>
         </button>
         <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
