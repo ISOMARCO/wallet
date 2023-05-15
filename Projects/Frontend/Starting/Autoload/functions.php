@@ -20,7 +20,7 @@ function User()
 {
     if(Cache::select('userInfo_'.Session::Uid()))
     {
-        return Cache::select('userInfo_'.Session::Uid());
+        return json_decode(Cache::select('userInfo_'.Session::Uid()));
     }
     return [];
 }
