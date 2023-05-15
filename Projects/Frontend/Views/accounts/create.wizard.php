@@ -10,14 +10,14 @@
         <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="{{URL::base('accounts')}}">{{ML::select('Accounts')}}</a></li>
-            <li class="breadcrumb-item active">Blank Page</li>
+            <li class="breadcrumb-item active">Account yarat</li>
         </ol>
         </div>
     </div>
     </div><!-- /.container-fluid -->
 </section>
 <section class="content">
-    <div class="card card-info mt-2">
+    <div class="card card-info">
         <div class="card-header">Account Əlavə Et</div>
         <div class="card-body">
             <span id="msg" style="font-weight:bold"></span>
