@@ -22,5 +22,5 @@ function User()
     {
         return Cache::select('userInfo_'.Session::Uid());
     }
-    
+    return [];
 }

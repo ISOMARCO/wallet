@@ -10,6 +10,7 @@ class login extends Controller
             exit;
         }
         Masterpage::title(ML::select('SignIn'));
+        output( User() );
     }
     public function loginRequest()
     {

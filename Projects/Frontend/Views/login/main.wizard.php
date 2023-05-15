@@ -92,11 +92,14 @@
         url: "{{URL::base('login/loginRequest')}}",
         data: $("#loginForm").serialize(),
         dataType: "json",
-        success: function(e){
+        success: function(e)
+        {
           if(e.error){
             $(".login-box-msg").addClass("text-danger");
             $(".login-box-msg").text(e.error);
-          }else {
+          }
+          else 
+          {
             $("input, button").attr("disabled","disabled");
             $(".login-box-msg").addClass("text-success");
             $(".login-box-msg").text(e.success);
