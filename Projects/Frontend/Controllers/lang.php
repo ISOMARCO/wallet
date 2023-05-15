@@ -4,8 +4,8 @@ class lang extends Controller
 {
     public function main()
     {
-        ML::insert('en','LoginSuccessfully','You are redirected to the home page...');
-        ML::insert('az','LoginSuccessfully','Ana səhifəyə yönləndirilirsiniz...');
+        ML::insert('en','Accounts','Accounts');
+        ML::insert('az','Accounts','Hesablar');
         output(ML::selectAll());
         exit;
     }
