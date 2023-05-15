@@ -18,13 +18,6 @@
 </section>
 <section class="content">
 <div class="card">
-<div class="card-header">
-    <h5 class="float-left"><i class="fas fa-arrow-circle-right"></i> İcarəyə Verilən</h5>
-    <span class="float-right">
-        <a href="{{URL::base('icare/elave_et?nov=icarə')}}" class="btn btn-outline-primary">Yeni Qaimə <i class="fas fa-plus"></i></a> 
-        <button type="button" class="btn btn-outline-secondary" id="axtaris">Axtarış <i class="fas fa-search"></i></button>
-    </span>
-</div>
 <div class="card-body">
     <div class="card collapsed-card">
         <div class="card-header">
