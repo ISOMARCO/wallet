@@ -21,7 +21,7 @@
     <div class="card-header">
     <h3 class="card-title">
         <picture>
-            <source srcset="{{FILES_DIR.'Accounts/rabitabank.webp'}}" type="image/svg+xml">
+            <source srcset="{{FILES_DIR.'Accounts/rabitabank.webp'}}" type="image/svg+xml" style="width:30px;height:30px;">
             <img src="{{FILES_DIR.'Accounts/rabitabank.webp'}}" class="img-fluid img-thumbnail" alt="Rabita Bank">
         </picture>
         Rabita Bank Credit
