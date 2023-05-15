@@ -47,7 +47,7 @@
     <div class="card collapsed-card">
         <div class="card-header">
         <h3 class="card-title">
-            <img src="{{FILES_DIR.'Accounts/rabitabank.svg'}}" style="width:48px;height:30px;" class="img-fluid" alt="Rabita Bank">
+            <img src="{{FILES_DIR.'Accounts/rabitabank.svg'}}" style="width:30px;height:30px;" class="img-fluid" alt="Rabita Bank">
             Rabita Bank Credit
         </h3>
 
@@ -72,7 +72,7 @@
     <div class="card collapsed-card">
         <div class="card-header">
         <h3 class="card-title">
-            <img src="{{FILES_DIR.'Accounts/birbank.svg'}}" style="width:30px;height:48px;" class="img-fluid" alt="Kapital Bank Birbank">
+            <img src="{{FILES_DIR.'Accounts/birbank.svg'}}" style="width:30px;height:30px;" class="img-fluid" alt="Kapital Bank Birbank">
             Kapital Bank Birbank
         </h3>
 
@@ -97,7 +97,7 @@
     <div class="card collapsed-card">
         <div class="card-header">
         <h3 class="card-title">
-            <img src="{{FILES_DIR.'Accounts/ucard.webp'}}" style="width:48px;height:30px;" class="img-fluid" alt="Unibank Ucard">
+            <img src="{{FILES_DIR.'Accounts/ucard.webp'}}" style="width:30px;height:30px;" class="img-fluid" alt="Unibank Ucard">
             Unibank Ucard
         </h3>
 
