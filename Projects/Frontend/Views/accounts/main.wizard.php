@@ -19,7 +19,7 @@
 <section class="content">
 <div class="card collapsed-card">
     <div class="card-header">
-    <h3 class="card-title"><img src="{{FILES_DIR.'Accounts/rabitabank.webp'}}" style="width:40px;height:40px;" class="img-fluid">Rabita Bank Credit</h3>
+    <h3 class="card-title"><img src="{{FILES_DIR.'Accounts/rabitabank.webp'}}" class="img-fluid rounded">Rabita Bank Credit</h3>
 
     <div class="card-tools">
         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
