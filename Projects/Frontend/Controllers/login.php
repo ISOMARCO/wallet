@@ -28,7 +28,6 @@ class login extends Controller
             echo json_encode(['error' => ML::select('LoginAuthenticationError')]);
             exit;
         }
-        Session::insert('Uid',$login->Uid);
         echo json_encode(['success' => ML::select('LoginSuccessfully')]);
     }
 }
