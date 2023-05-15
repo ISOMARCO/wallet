@@ -146,7 +146,7 @@
     <div class="card collapsed-card">
         <div class="card-header">
         <h3 class="card-title">
-            <img src="{{FILES_DIR.'Accounts/usdt.svg'}}" style="width:48px;height:30px;" class="img-fluid" alt="Unibank Ucard">
+            <img src="{{FILES_DIR.'Accounts/usdt.svg'}}" style="width:30px;height:30px;" class="img-fluid" alt="Unibank Ucard">
             USDT
         </h3>
         <div class="card-tools">
