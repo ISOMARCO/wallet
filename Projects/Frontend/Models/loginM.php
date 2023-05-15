@@ -22,7 +22,7 @@ class loginM extends Model
         }
         return NULL;
     }
-    public static function makeUserCache($data = NULL)
+    public static function makeUserCache($data = NULL, $jsonEncode = true)
     {
         if($data == NULL)
         {
@@ -31,6 +31,7 @@ class loginM extends Model
             Users()->row();
             return Cache::insert('userInfo_'.Session::Uid(),json_encode($row),(60*60*24*365));
         }
-        return Cache::insert('userInfo_'.Session::Uid(),json_encode($data),(60*60*24*365));
+        if($jsonEncode === true) $data = json_encode($data);
+        return Cache::insert('userInfo_'.Session::Uid(),$data,(60*60*24*365));
     }
 }
