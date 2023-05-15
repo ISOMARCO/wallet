@@ -21,7 +21,7 @@ function User($request = NULL)
     if(!Cache::select('userInfo_'.Session::Uid()))
     {
         $data = json_decode(Cache::select('userInfo_'.Session::Uid()));
-        if($request == NULL) return $data;
+        if(!is_array($request)) return $data;
         $returnString = NULL;
         foreach($request as $key=>$value)
         {
