@@ -25,7 +25,7 @@
                 <div class="input-group-prepend">
                     <label for="name" class="input-group-text">Name <i class="fas fa-piggy-bank"></i></label>
                 </div>
-                <select name="name" id="name" class="form-control">
+                <select name="name" id="name" class="form-control select2">
                     <option value="icarə">RabitaBank</option>
                 </select>
             </div>
