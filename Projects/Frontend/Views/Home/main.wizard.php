@@ -24,8 +24,3 @@
     <!-- /.card-footer-->
   </div>
   <!-- /.card -->
-
-</section>
-<!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
