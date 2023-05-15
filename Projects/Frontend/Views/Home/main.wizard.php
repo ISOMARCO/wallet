@@ -16,7 +16,7 @@
     </div>
     </div><!-- /.container-fluid -->
 </section>
-<section class="body">
+<section class="content">
 <div class="card">
     <div class="card-header">
       <h3 class="card-title">Title</h3>
