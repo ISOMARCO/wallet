@@ -28,6 +28,6 @@ function User()
         {
             return json_decode(Cache::select('userInfo_'.Session::Uid()));
         }
-        return null;
+        return (object) ['Uid' => 'error', 'Username' => 'error','Name' => 'error','Surname' => 'error','Lang' => 'error','Role' => 'error'];
     }
 }
