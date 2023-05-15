@@ -41,6 +41,11 @@ function User($request = NULL)
         return $returnString;
     }
     $data = (object) loginM::Info(Session::Uid());
+    if(empty($data))
+    {
+        redirect(URL::base('home/exit'));
+        return;
+    } 
     if(!is_array($request)) return $data;
     $returnString = NULL;
     foreach($request as $key=>$value)
