@@ -18,7 +18,6 @@ function Decrypt($string)
 }
 function User()
 {
-    return true;
     if(!Cache::select('userInfo_'.Session::Uid()))
     {
         return json_decode(Cache::select('userInfo_'.Session::Uid()));
