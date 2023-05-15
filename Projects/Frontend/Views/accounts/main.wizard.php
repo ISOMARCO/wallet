@@ -25,6 +25,28 @@
     </span>
 </div>
 <div class="card-body">
+    <div class="row mb-3" id="search_body" style="display:none">
+        <div class="col-md-2"><input type="text" name="qaime" class="form-control" placeholder="Qaimə №" autocomplete="off"></div>
+        <div class="col-md-3"><input type="date" name="tarix" id="tarix" class="form-control"></div>
+        <div class="col-md-3">
+            <select class="select2" name="musteri" style="width:100%">
+                <option value="">Heç biri</option>
+                @for($i=0;$i<count($musteriler);$i++)
+                <option value="{{$musteriler[$i]->id}}">{{$musteriler[$i]->ad}}</option>
+                @endfor
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select class="select2" name="erazi" style="width:100%">
+                <option value="">Heç biri</option>
+                @for($i=0;$i<count($eraziler);$i++)
+                <option value="{{$eraziler[$i]->id}}">{{$eraziler[$i]->ad}}</option>
+                @endfor
+            </select>
+        </div>
+        <div class="col-md-1"><button type="submit" class="btn btn-outline-secondary"><i class="fas fa-search"></i></button></div>
+    </div>
+
     <div class="card collapsed-card">
         <div class="card-header">
         <h3 class="card-title">
@@ -102,3 +124,10 @@
 </div>
 </section>
 </div>
+<script>
+    $(".select2").select2();
+    $("#axtaris").on("click",function(){
+        if($("#axtaris_body").attr("style")) $("#axtaris_body").removeAttr("style");
+        else $("#axtaris_body").attr("style","display:none");
+    });
+</script>
