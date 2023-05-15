@@ -5,7 +5,7 @@ class Home extends Controller
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
-        output( json_encode(['Name' => 'Ismayil'])->Name );
+        output( json_decode(json_encode(['Name' => 'Ismayil']))->Name );
     } 
     public function exit()
     {
