@@ -47,7 +47,7 @@ function User($request = NULL)
         $returnString = NULL;
         foreach($request as $key=>$value)
         {
-            $returnString .= $data->$key.$value;
+            #$returnString .= $data->$key.$value;
         }
         return $returnString;
     }
