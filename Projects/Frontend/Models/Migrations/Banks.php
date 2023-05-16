@@ -14,6 +14,7 @@ class InternalMigrateBanks extends ZN\Database\Migration
             'Code' => [DB::varchar(20),DB::unique(),DB::notNull()],
 			'Name' => [DB::varchar(20),DB::null()],
             'Picture' => [DB::varchar('200'),DB::null()],
+            'Style' => [DB::varchar('50'),DB::null()],
             'Active' => [DB::tinyInt(),DB::null(),DB::defaultValue('1')]
 		]);
 	}
