@@ -28,7 +28,7 @@
                 <select name="name" id="name" class="form-control">
                     @foreach($banks as $value)
                     <img src="{{$value->Picture}}" style="{{$value->Style}}"> {{$value->Name}}
-                        <option value="{{$value->Code}}" data-image="{{$value->Picture}}">{{$value->Name}}</option>
+                        <option value="{{$value->Code}}" data-image="{{encrypt($value->Picture)}}">{{$value->Name}}</option>
                     @endforeach
                 </select>
             </div>
