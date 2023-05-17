@@ -26,7 +26,9 @@
                     <label for="name" class="input-group-text">Name <i class="fas fa-piggy-bank"></i></label>
                 </div>
                 <select name="name" id="select2" class="form-control" style="height:auto">
-                    <option value="icarə">RabitaBank</option>
+                    @foreach($banks as $value)
+                        <option value="{{$value->Code}}">{{$value->Name}}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="input-group mb-3">

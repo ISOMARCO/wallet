@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use Session,Cache;
+use Session,Cache,accountsM;
 class accounts extends Controller
 {
     public function main()
@@ -9,5 +9,6 @@ class accounts extends Controller
     public function create()
     {
         Masterpage::title("Create");
+        View::banks(accountsM::getBanks());
     }
 }
