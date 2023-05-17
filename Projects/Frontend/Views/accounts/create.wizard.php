@@ -33,7 +33,7 @@
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <label for="type" class="input-group-text">Type &nbps;&nbsp;<i class="far fa-credit-card"></i></label>
+                    <label for="type" class="input-group-text">Type &nbsp;&nbsp;<i class="far fa-credit-card"></i></label>
                 </div>
                 <select name="type" id="type" class="form-control">
                     <option value="DEBIT">Debit</option>
