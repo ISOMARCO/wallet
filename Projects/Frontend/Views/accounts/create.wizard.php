@@ -23,7 +23,7 @@
             <span id="msg" style="font-weight:bold"></span>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <label for="name" class="input-group-text">Name&nbsp;&nbsp;<img src="" style="width:20px;height:20px;" id="bankNameImg"></label>
+                    <label for="name" class="input-group-text">Bank&nbsp;&nbsp;<img src="" style="width:20px;height:20px;" id="bankNameImg"></label>
                 </div>
                 <select name="name" id="name" class="form-control">
                     @foreach($banks as $value)
@@ -33,10 +33,12 @@
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <label for="musteri" class="input-group-text">Müştəri <i class="fas fa-user-tie"></i></label>
+                    <label for="type" class="input-group-text">Type <i class="far fa-credit-card"></i></label>
                 </div>
-                <select name="musteri" id="musteri" class="select2 form-control">
-                    <option value="">Musteri</option>
+                <select name="type" id="type" class="form-control">
+                    <option value="DEBIT">Debit</option>
+                    <option value="CREDIT">Credit</option>
+                    <option value="CRYPTOCURRENCY">Crypto Currency</option>
                 </select>
             </div>
             <div class="input-group mb-3">
