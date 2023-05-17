@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use Session,Cache,accountsM;
+use accountsM;
 class accounts extends Controller
 {
     public function main()
