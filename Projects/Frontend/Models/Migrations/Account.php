@@ -8,6 +8,7 @@ class InternalMigrateAccount extends ZN\Database\Migration
 	public function up()
 	{
 		# Default Query
+		DBForge::createIndex('UserAccountIndex','Account','User');
 		return $this->createTable
 		([
 			'Id' => [DB::int(11),DB::primaryKey(), DB::autoIncrement(),DB::notNull()],
