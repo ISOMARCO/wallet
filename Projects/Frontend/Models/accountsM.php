@@ -23,6 +23,8 @@ class accountsM extends Model
             'Uid' => uniqid(uniqid().'_'),
             'Name' => $data['Name'],
             'Bank_Code' => $data['Bank_Code'],
+            'Type' => strtoupper($data['type']),
+            'Credit_Amount' => $data['credit_amount'],
             'User' => $user
         ]);
     }
