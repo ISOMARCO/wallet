@@ -111,7 +111,7 @@ $(document).ready(function(){
         });
     });
     $("#balance").on("keyup",function(){
-        $("#credit_amount").val($(this).val());
+        $("#credit_amount").val($("#balance").val());
     });
     $("#reset").on("click",function(){
         $("input, textarea").val("");
