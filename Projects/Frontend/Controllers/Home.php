@@ -5,6 +5,7 @@ class Home extends Controller
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
+        accountsM::addBank(['Code' => 'RABITABANK','Name' => 'Rabitə Bank', 'Picture' => 'rabitabank.svg', 'Style' => 'width:30px;height:30px;']);
     } 
     public function exit()
     {
