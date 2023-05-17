@@ -54,12 +54,6 @@
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <label for="qeyd" class="input-group-text">Qeyd <i class="fas fa-clipboard"></i></label>
-                </div>
-                <textarea name="qeyd" id="qeyd" rows="2" class="form-control"></textarea>
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
                     <label for="currency" class="input-group-text">Currency &nbsp;<i class="fas fa-dollar-sign"></i></label>
                 </div>
                 <select name="currency" id="currency" class="form-control">
@@ -68,6 +62,12 @@
                     <option value="EUR">EUR</option>
                     <option value="TL">TL</option>
                 </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label for="qeyd" class="input-group-text">Qeyd <i class="fas fa-clipboard"></i></label>
+                </div>
+                <textarea name="qeyd" id="qeyd" rows="2" class="form-control"></textarea>
             </div>
         </div>
         <div class="card-footer">
