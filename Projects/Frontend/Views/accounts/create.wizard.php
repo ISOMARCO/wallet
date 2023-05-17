@@ -98,7 +98,7 @@ $(document).ready(function(){
     $("#name").on("change",function(){
         var str = "";
         $( "select option:selected" ).each(function(){
-            str+=$(this).attr("value");
+            str+=$("option").attr("value");
         });
         alert(str);
     });
