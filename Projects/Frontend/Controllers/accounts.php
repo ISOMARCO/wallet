@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use accountsM;
+use Http,accountsM;
 class accounts extends Controller
 {
     public function main()
@@ -13,5 +13,10 @@ class accounts extends Controller
     {
         Masterpage::title("Create");
         View::banks(accountsM::getBanks());
+    }
+    public function createAccount()
+    {
+        Http::isAjax() or exit("Bad Request");
+        
     }
 }
