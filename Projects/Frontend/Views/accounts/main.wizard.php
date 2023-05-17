@@ -61,7 +61,7 @@
         </div>
         </div>
         <div class="card-body">
-        Start creating your amazing application!
+        Balance: {{$value->Balance}}
         </div>
         <div class="card-footer">
         Footer
