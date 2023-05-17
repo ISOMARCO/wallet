@@ -80,5 +80,8 @@ $(document).ready(function(){
             }
         });
     });
+    $("#reset").on("click",function(){
+        $("input, textarea").val("");
+    });
 }); 
 </script>
