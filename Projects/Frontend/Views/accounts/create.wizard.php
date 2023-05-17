@@ -91,18 +91,16 @@ $(document).ready(function(){
     var img = $("#bank option").attr("data-image");
     $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
     $("#select2").select2();
-    var name = $("#name").val();
     $("#bank").on("change",function(){
         $( "#bank option:selected" ).each(function(){
-            $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text()+" "+name);
+            $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text());
             var img = $(this).attr("data-image");
             $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
         });
     });
     $("#type").on("change",function(){
         $( "#type option:selected" ).each(function(){
-            alert($("#name").val().split( name )[1]);
-            $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text()+" "+$("#name").val().split( name )[1]);
+            $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text());
             if($(this).attr("value") == "CREDIT") {
                 $("#credit_amount_div").removeAttr("style");
                 $("#balance").val($("#credit_amount").val());
