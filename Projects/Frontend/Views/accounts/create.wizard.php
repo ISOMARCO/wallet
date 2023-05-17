@@ -89,7 +89,7 @@
 $(document).ready(function(){
     $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text());
     $("#name").on("keyup",function(){
-        alert($("#name").val());
+        alert($("#name").val().split(' '));
     });
     var img = $("#bank option").attr("data-image");
     $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
