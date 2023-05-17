@@ -87,20 +87,20 @@
 </div>
 <script>
 $(document).ready(function(){
-    var name = $("#bank option:selected").text();
-    alert(name);
+    $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text());
     var img = $("#bank option").attr("data-image");
     $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
     $("#select2").select2();
     $("#bank").on("change",function(){
         $( "#bank option:selected" ).each(function(){
-            name.val($(this).text());
+            $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text());
             var img = $(this).attr("data-image");
             $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
         });
     });
     $("#type").on("change",function(){
         $( "#type option:selected" ).each(function(){
+            $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text());
             if($(this).attr("value") == "CREDIT") {
                 $("#credit_amount_div").removeAttr("style");
                 $("#balance").val($("#credit_amount").val());
