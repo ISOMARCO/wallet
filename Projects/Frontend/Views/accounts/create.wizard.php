@@ -95,8 +95,12 @@
 <script>
 $(document).ready(function(){
     $("#select2").select2();
-    $("#name option").change(function(){
-        alert($(this).attr("value"));
+    $("#name option").on("change",function(){
+        var str = "";
+        $( "select option:selected" ).each(function(){
+            str+=$(this).attr("value");
+        });
+        alert(str);
     });
 }); 
 </script>
