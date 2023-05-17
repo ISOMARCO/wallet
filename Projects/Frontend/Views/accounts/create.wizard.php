@@ -25,7 +25,7 @@
                 <div class="input-group-prepend">
                     <label for="name" class="input-group-text">Name <i class="fas fa-piggy-bank"></i></label>
                 </div>
-                <select name="name" id="select2" class="form-control" style="height:auto">
+                <select name="name" class="form-control">
                     @foreach($banks as $value)
                         <option value="{{$value->Code}}">{{$value->Name}}</option>
                     @endforeach
