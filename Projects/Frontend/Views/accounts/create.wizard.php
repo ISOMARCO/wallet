@@ -40,7 +40,7 @@
                     <option value="CREDIT">Credit</option>
                 </select>
             </div>
-            <div class="input-group mb-3" style="display:none">
+            <div class="input-group mb-3" id="credit_amount_div" style="display:none">
                 <div class="input-group-prepend">
                     <label for="credit_amount" class="input-group-text">Credit Amount<i class="fas fa-hand-holding-usd"></i></label>
                 </div>
@@ -113,8 +113,11 @@ $(document).ready(function(){
     $("#type").on("change",function(){
         var str = "";
         $( "#type option:selected" ).each(function(){
-            var img = $(this).attr("data-image");
-            $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
+            if($(this).attr("value") == "CREDIT") {
+                $("#credit_amount_div").removeAttr("style");
+            } else {
+                $("#credit_amount_div").attr("style","display:none");
+            }
         });
     });
 }); 
