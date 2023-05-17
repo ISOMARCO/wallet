@@ -61,7 +61,7 @@
         </div>
         </div>
         <div class="card-body">
-        Balance: {{sprintf("%02d",round($value->Balance,2))}}
+        Balance: {{sprintf("%0.02d",round($value->Balance,2))}}
         </div>
         <div class="card-footer">
         Footer
