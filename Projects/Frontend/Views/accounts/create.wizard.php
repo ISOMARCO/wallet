@@ -23,7 +23,7 @@
             <span id="msg" style="font-weight:bold"></span>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <label for="name" class="input-group-text">Name <img src="" style="width:24px;height:15px;" id="bankNameImg"></label>
+                    <label for="name" class="input-group-text">Name&nbsp;&nbsp;<img src="" style="width:20px;height:20px;" id="bankNameImg"></label>
                 </div>
                 <select name="name" id="name" class="form-control">
                     @foreach($banks as $value)
