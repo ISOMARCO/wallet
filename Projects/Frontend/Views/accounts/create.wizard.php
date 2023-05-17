@@ -40,11 +40,11 @@
                     <option value="CREDIT">Credit</option>
                 </select>
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group mb-3" style="display:none">
                 <div class="input-group-prepend">
                     <label for="credit_amount" class="input-group-text">Credit Amount<i class="fas fa-hand-holding-usd"></i></label>
                 </div>
-                <input type="number" class="form-control" id="credit_amount" name="credit_amount">
+                <input type="number" class="form-control" id="credit_amount" name="credit_amount" value="500">
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
