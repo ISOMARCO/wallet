@@ -48,6 +48,12 @@
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
+                    <label for="balance" class="input-group-text">Balance<i class="fas fa-hand-holding-usd"></i></label>
+                </div>
+                <input type="number" class="form-control" id="balance" name="balance">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
                     <label for="qeyd" class="input-group-text">Qeyd <i class="fas fa-clipboard"></i></label>
                 </div>
                 <textarea name="qeyd" id="qeyd" rows="2" class="form-control"></textarea>
@@ -75,8 +81,10 @@ $(document).ready(function(){
         $( "#type option:selected" ).each(function(){
             if($(this).attr("value") == "CREDIT") {
                 $("#credit_amount_div").removeAttr("style");
+                $("#balance").val($("#credit_amount").val());
             } else {
                 $("#credit_amount_div").attr("style","display:none");
+                $("#balance").val(0);
             }
         });
     });
