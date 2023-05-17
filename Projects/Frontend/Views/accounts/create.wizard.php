@@ -23,11 +23,11 @@
             <span id="msg" style="font-weight:bold"></span>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <label for="name" class="input-group-text">Name <i class="fas fa-piggy-bank"></i></label>
+                    <label for="name" class="input-group-text">Name <img src="" style="width:30px;height:30px;" id="bankNameImg"></label>
                 </div>
                 <select name="name" id="name" class="form-control">
                     @foreach($banks as $value)
-                        <option value="{{$value->Code}}" data-image="{{encrypt($value->Picture)}}">{{$value->Name}}</option>
+                        <option value="{{$value->Code}}" data-image="{{$value->Picture}}">{{$value->Name}}</option>
                     @endforeach
                 </select>
             </div>
@@ -97,7 +97,8 @@ $(document).ready(function(){
     $("#name").on("change",function(){
         var str = "";
         $( "#name option:selected" ).each(function(){
-            alert($(this).attr("data-image"));
+            var img = $(this).attr("data-image");
+            $("#bankNameImg").attr("src",img);
         });
     });
 }); 
