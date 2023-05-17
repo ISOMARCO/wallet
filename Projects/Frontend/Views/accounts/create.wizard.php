@@ -48,44 +48,6 @@
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <label for="tarix" class="input-group-text">Tarix <i class="far fa-calendar-alt"></i></label>
-                </div>
-                <input type="date" name="tarix" id="tarix" class="form-control">
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label for="erazi" class="input-group-text">Ərazi <i class="fas fa-map-marked-alt"></i></label>
-                </div>
-                <select name="erazi" id="erazi" class="select2 form-control">
-                    <option value="">Erazi</option>
-                </select>
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label for="unvan" class="input-group-text">Ünvan <i class="fas fa-location-arrow"></i></label>
-                </div>
-                <input type="text" class="form-control" id="unvan" name="unvan">
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label for="nisan" class="input-group-text">Nişan <i class="fas fa-truck"></i></label>
-                </div>
-                <input type="text" class="form-control" id="nisan" name="nisan">
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label for="avto" class="input-group-text">Avto <i class="fas fa-car"></i></label>
-                </div>
-                <input type="text" class="form-control" id="avto" name="avto">
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label for="surucu" class="input-group-text">Sürücü <i class="far fa-id-card"></i></label>
-                </div>
-                <input type="text" class="form-control" id="surucu" name="surucu">
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
                     <label for="qeyd" class="input-group-text">Qeyd <i class="fas fa-clipboard"></i></label>
                 </div>
                 <textarea name="qeyd" id="qeyd" rows="2" class="form-control"></textarea>
