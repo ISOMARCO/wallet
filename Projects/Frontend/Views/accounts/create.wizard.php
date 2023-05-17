@@ -49,13 +49,13 @@
                 </div>
                 <div class="input-group mb-3" id="credit_amount_div" style="display:none">
                     <div class="input-group-prepend">
-                        <label for="credit_amount" class="input-group-text">Credit Amount<i class="fas fa-hand-holding-usd"></i></label>
+                        <label for="credit_amount" class="input-group-text">Credit Amount&nbsp;<i class="fas fa-hand-holding-usd"></i></label>
                     </div>
                     <input type="number" class="form-control" id="credit_amount" name="credit_amount" value="500">
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="balance" class="input-group-text">Balance<i class="fas fa-hand-holding-usd"></i></label>
+                        <label for="balance" class="input-group-text">Balance&nbsp;<i class="fas fa-hand-holding-usd"></i></label>
                     </div>
                     <input type="number" class="form-control" id="balance" name="balance" value="0">
                 </div>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="qeyd" class="input-group-text">Qeyd <i class="fas fa-clipboard"></i></label>
+                        <label for="qeyd" class="input-group-text">Qeyd&nbsp;<i class="fas fa-clipboard"></i></label>
                     </div>
                     <textarea name="qeyd" id="qeyd" rows="2" class="form-control"></textarea>
                 </div>
