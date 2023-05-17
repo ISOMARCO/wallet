@@ -17,7 +17,7 @@
     </div><!-- /.container-fluid -->
 </section>
 <section class="content"> 
-    <form method="post">
+    <form method="post" id="createForm">
         <div class="card card-info">
             <div class="card-header">Account Əlavə Et</div>
             <div class="card-body">
@@ -105,7 +105,15 @@ $(document).ready(function(){
         $("input, textarea").val("");
     });
     $("#insert").on("click",function(){
-
+        $.ajax({
+            type:"post",
+            url:"{{URL::base('accounts/createAccount')}}",
+            data:$("#createForm").serialize(),
+            dataType:"json",
+            success:function(){
+                alert(e.success);
+            }
+        });
     });
 }); 
 </script>
