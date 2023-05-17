@@ -27,7 +27,6 @@
                 </div>
                 <select name="name" id="name" class="form-control">
                     @foreach($banks as $value)
-                    <img src="{{$value->Picture}}" style="{{$value->Style}}"> {{$value->Name}}
                         <option value="{{$value->Code}}" data-image="{{encrypt($value->Picture)}}">{{$value->Name}}</option>
                     @endforeach
                 </select>
@@ -98,9 +97,7 @@ $(document).ready(function(){
     $("#name").on("change",function(){
         var str = "";
         $( "#name option:selected" ).each(function(){
-            if($("option").attr("selected")){
-                alert($(this).attr("data-image"));
-            }
+            alert($(this).attr("data-image"));
         });
     });
 }); 
