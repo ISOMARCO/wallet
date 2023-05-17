@@ -64,7 +64,7 @@
         Balance: {{number_format(round($value->Balance,2),2)}}
         </div>
         <div class="card-footer">
-        Footer
+            <button type="button" class="btn btn-primary">Edit <i class="fas fa-edit"></i></button>
         </div>
     </div>
     @endforeach
