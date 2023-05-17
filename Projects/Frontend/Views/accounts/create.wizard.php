@@ -104,14 +104,12 @@ $(document).ready(function(){
     $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
     $("#select2").select2();
     $("#name").on("change",function(){
-        var str = "";
         $( "#name option:selected" ).each(function(){
             var img = $(this).attr("data-image");
             $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
         });
     });
     $("#type").on("change",function(){
-        var str = "";
         $( "#type option:selected" ).each(function(){
             if($(this).attr("value") == "CREDIT") {
                 $("#credit_amount_div").removeAttr("style");
