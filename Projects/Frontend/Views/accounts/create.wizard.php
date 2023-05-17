@@ -26,7 +26,7 @@
                     <label for="name" class="input-group-text">Name <i class="fas fa-piggy-bank"></i></label>
                 </div>
                 @foreach($banks as $value)
-                <img src="{{$value->Picture}}" style="{{$value->Style}}"> {{$value->Name}}
+                <img src="{{URL::base($value->Picture)}}" style="{{$value->Style}}"> {{$value->Name}}
                 @endforeach
                 <select name="name" id="name" class="form-control">
                     @foreach($banks as $value)
