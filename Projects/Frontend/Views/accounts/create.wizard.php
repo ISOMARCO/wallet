@@ -58,6 +58,17 @@
                 </div>
                 <textarea name="qeyd" id="qeyd" rows="2" class="form-control"></textarea>
             </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label for="type" class="input-group-text">Currency &nbsp;<i class="fas fa-dollar-sign"></i></label>
+                </div>
+                <select name="type" id="type" class="form-control">
+                    <option value="AZN">AZN</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="TL">TL</option>
+                </select>
+            </div>
         </div>
         <div class="card-footer">
             <button type="button" class="btn btn-info" id="gonder">GÖNDƏR <i class="far fa-paper-plane"></i></button>

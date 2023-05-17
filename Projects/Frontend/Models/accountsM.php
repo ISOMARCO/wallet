@@ -25,6 +25,8 @@ class accountsM extends Model
             'Bank_Code' => $data['Bank_Code'],
             'Type' => strtoupper($data['type']),
             'Credit_Amount' => $data['credit_amount'],
+            'Currency' => $data['currency'],
+            'Balance' => $data['balance'],
             'User' => $user
         ]);
     }
