@@ -96,7 +96,7 @@
 $(document).ready(function(){
     $("#select2").select2();
     $("#name").change(function(){
-        alert($(this));
+        alert($(this).val());
     });
 }); 
 </script>
