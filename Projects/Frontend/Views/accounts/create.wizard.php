@@ -45,7 +45,7 @@
                     <div class="input-group-prepend">
                         <label for="name" class="input-group-text">Name&nbsp;<i class="fas fa-piggy-bank"></i></label>
                     </div>
-                    <input type="text" class="form-control" id="name" name="name" value="0">
+                    <input type="text" class="form-control" id="name" name="name">
                 </div>
                 <div class="input-group mb-3" id="credit_amount_div" style="display:none">
                     <div class="input-group-prepend">
@@ -87,11 +87,13 @@
 </div>
 <script>
 $(document).ready(function(){
+    var name = $("#name").val();
     var img = $("#bank option").attr("data-image");
     $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
     $("#select2").select2();
     $("#bank").on("change",function(){
         $( "#bank option:selected" ).each(function(){
+            name.val($(this).text());
             var img = $(this).attr("data-image");
             $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
         });
