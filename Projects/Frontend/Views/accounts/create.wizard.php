@@ -60,9 +60,9 @@
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <label for="type" class="input-group-text">Currency &nbsp;<i class="fas fa-dollar-sign"></i></label>
+                    <label for="currency" class="input-group-text">Currency &nbsp;<i class="fas fa-dollar-sign"></i></label>
                 </div>
-                <select name="type" id="type" class="form-control">
+                <select name="currency" id="currency" class="form-control">
                     <option value="AZN">AZN</option>
                     <option value="USD">USD</option>
                     <option value="EUR">EUR</option>
