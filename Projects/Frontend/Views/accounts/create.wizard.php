@@ -27,7 +27,7 @@
                 </div>
                 <select name="name" class="form-control">
                     @foreach($banks as $value)
-                        <option value="{{$value->Code}}">{{$value->Name}}</option>
+                        <option value="{{$value->Code}}"><img src="{{$value->Picture}}" style="{{$value->Style}}"> {{$value->Name}}</option>
                     @endforeach
                 </select>
             </div>
