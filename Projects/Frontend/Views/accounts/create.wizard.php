@@ -91,7 +91,7 @@ $(document).ready(function(){
     var img = $("#bank option").attr("data-image");
     $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
     $("#select2").select2();
-    var name = $("#name").val().split( $("#name").val() )[1];
+    var name = $("#name").val();
     $("#bank").on("change",function(){
         $( "#bank option:selected" ).each(function(){
             $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text()+" "+name);
@@ -101,7 +101,7 @@ $(document).ready(function(){
     });
     $("#type").on("change",function(){
         $( "#type option:selected" ).each(function(){
-            $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text()+" "+name);
+            $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text()+" "+$("#name").val().split( name )[1]);
             if($(this).attr("value") == "CREDIT") {
                 $("#credit_amount_div").removeAttr("style");
                 $("#balance").val($("#credit_amount").val());
