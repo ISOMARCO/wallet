@@ -98,7 +98,7 @@ $(document).ready(function(){
         var str = "";
         $( "#name option:selected" ).each(function(){
             var img = $(this).attr("data-image");
-            $("#bankNameImg").attr("src",img);
+            $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
         });
     });
 }); 
