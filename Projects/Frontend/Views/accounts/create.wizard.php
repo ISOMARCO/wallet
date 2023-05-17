@@ -50,7 +50,7 @@
                 <div class="input-group-prepend">
                     <label for="balance" class="input-group-text">Balance<i class="fas fa-hand-holding-usd"></i></label>
                 </div>
-                <input type="number" class="form-control" id="balance" name="balance">
+                <input type="number" class="form-control" id="balance" name="balance" value="0">
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
