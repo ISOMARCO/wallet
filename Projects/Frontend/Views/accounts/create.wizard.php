@@ -24,9 +24,9 @@
                 <span id="msg" style="font-weight:bold"></span>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="name" class="input-group-text">Bank&nbsp;&nbsp;<img src="" style="width:20px;height:20px;" id="bankNameImg"></label>
+                        <label for="bank" class="input-group-text">Bank&nbsp;&nbsp;<img src="" style="width:20px;height:20px;" id="bankNameImg"></label>
                     </div>
-                    <select name="name" id="name" class="form-control">
+                    <select name="bank" id="bank" class="form-control">
                         @foreach($banks as $value)
                             <option value="{{$value->Code}}" data-image="{{$value->Picture}}">{{$value->Name}}</option>
                         @endforeach
@@ -40,6 +40,12 @@
                         <option value="DEBIT">Debit</option>
                         <option value="CREDIT">Credit</option>
                     </select>
+                </div>
+                <div class="input-group mb-3" id="credit_amount_div" style="display:none">
+                    <div class="input-group-prepend">
+                        <label for="credit_amount" class="input-group-text">Credit Amount<i class="fas fa-hand-holding-usd"></i></label>
+                    </div>
+                    <input type="number" class="form-control" id="credit_amount" name="credit_amount" value="500">
                 </div>
                 <div class="input-group mb-3" id="credit_amount_div" style="display:none">
                     <div class="input-group-prepend">
@@ -81,11 +87,11 @@
 </div>
 <script>
 $(document).ready(function(){
-    var img = $("#name option").attr("data-image");
+    var img = $("#bank option").attr("data-image");
     $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
     $("#select2").select2();
-    $("#name").on("change",function(){
-        $( "#name option:selected" ).each(function(){
+    $("#bank").on("change",function(){
+        $( "#bank option:selected" ).each(function(){
             var img = $(this).attr("data-image");
             $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
         });
