@@ -101,6 +101,7 @@ $(document).ready(function(){
     });
     $("#type").on("change",function(){
         $( "#type option:selected" ).each(function(){
+            alert($("#name").val().split( name )[1]);
             $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text()+" "+$("#name").val().split( name )[1]);
             if($(this).attr("value") == "CREDIT") {
                 $("#credit_amount_div").removeAttr("style");
