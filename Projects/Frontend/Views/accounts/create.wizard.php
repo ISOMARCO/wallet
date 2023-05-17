@@ -88,8 +88,9 @@
 <script>
 $(document).ready(function(){
     $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text());
+    var name = $("#name").val();
     $("#name").on("keyup",function(){
-        alert($("#name").val().split(' '));
+        alert($("#name").val().split( name ));
     });
     var img = $("#bank option").attr("data-image");
     $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
