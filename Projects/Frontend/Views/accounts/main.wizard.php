@@ -61,7 +61,7 @@
         </div>
         </div>
         <div class="card-body">
-        Balance: {{number_format(round($value->Balance,2),2)}}
+        Balance: {{number_format(round($value->Balance,2),2)}}<br>
         Borc: <span class="text-danger">{{number_format(round($value->Balance,2),2)-300}}</span>
         </div>
         <div class="card-footer">
