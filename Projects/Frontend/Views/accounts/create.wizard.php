@@ -25,9 +25,6 @@
                 <div class="input-group-prepend">
                     <label for="name" class="input-group-text">Name <i class="fas fa-piggy-bank"></i></label>
                 </div>
-                @foreach($banks as $value)
-                <img src="{{URL::base($value->Picture)}}" style="{{$value->Style}}"> {{$value->Name}}
-                @endforeach
                 <select name="name" id="name" class="form-control">
                     @foreach($banks as $value)
                     <img src="{{$value->Picture}}" style="{{$value->Style}}"> {{$value->Name}}
@@ -98,5 +95,8 @@
 <script>
 $(document).ready(function(){
     $("#select2").select2();
+    $("#name").change(function(){
+        alert($(this));
+    });
 }); 
 </script>
