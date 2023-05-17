@@ -43,9 +43,9 @@
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="balance" class="input-group-text">Name<i class="fas fa-hand-holding-usd"></i></label>
+                        <label for="name" class="input-group-text">Name&nbsp;<i class="fas fa-piggy-bank"></i></label>
                     </div>
-                    <input type="number" class="form-control" id="balance" name="balance" value="0">
+                    <input type="text" class="form-control" id="name" name="name" value="0">
                 </div>
                 <div class="input-group mb-3" id="credit_amount_div" style="display:none">
                     <div class="input-group-prepend">
