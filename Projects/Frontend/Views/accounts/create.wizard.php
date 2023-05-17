@@ -95,8 +95,8 @@
 <script>
 $(document).ready(function(){
     $("#select2").select2();
-    $("#name").change(function(){
-        alert($(this+" option").attr("value"));
+    $("#name option").change(function(){
+        alert($(this).attr("value"));
     });
 }); 
 </script>
