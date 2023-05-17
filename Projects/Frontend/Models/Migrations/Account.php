@@ -13,6 +13,7 @@ class InternalMigrateAccount extends ZN\Database\Migration
 			'Id' => [DB::int(11),DB::primaryKey(), DB::autoIncrement(),DB::notNull()],
             'Uid' => [DB::varchar(20),DB::unique(),DB::notNull()],
 			'Name' => [DB::varchar(20),DB::null()],
+			'Bank_Code' => [DB::varchar(30),DB::null()]
 			'User' => [DB::varchar(30),DB::null()],
             'Active' => [DB::tinyInt(),DB::null(),DB::defaultValue('1')]
 		]);
