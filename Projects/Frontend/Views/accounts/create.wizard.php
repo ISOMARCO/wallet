@@ -38,7 +38,6 @@
                 <select name="type" id="type" class="form-control">
                     <option value="DEBIT">Debit</option>
                     <option value="CREDIT">Credit</option>
-                    <option value="CRYPTOCURRENCY">Crypto Currency</option>
                 </select>
             </div>
             <div class="input-group mb-3">
