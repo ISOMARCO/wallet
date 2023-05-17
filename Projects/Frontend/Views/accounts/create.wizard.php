@@ -110,8 +110,8 @@ $(document).ready(function(){
             }
         });
     });
-    $("#balance").on("keyup",function(){
-        $("#credit_amount").val($("#balance").val());
+    $("#credit_amount").on("keyup",function(){
+        $("#balance").val($(this).val());
     });
     $("#reset").on("click",function(){
         $("input, textarea").val("");
