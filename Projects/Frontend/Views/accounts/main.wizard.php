@@ -43,7 +43,32 @@
         </div>
         <div class="col-md-1"><button type="submit" class="btn btn-outline-secondary"><i class="fas fa-search"></i></button></div>
     </div>
+    @foreach($accounts as $value)
+    <div class="card collapsed-card">
+        <div class="card-header">
+        <h3 class="card-title">
+            <img src="{{URL::base($value->Picture)}}" style="{{$value->Style}}" class="img-fluid" alt="{{$value->Name}}">
+            {{$value->Name}}
+        </h3>
 
+        <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+            <i class="fas fa-plus"></i>
+            </button>
+            <button type="button" class="btn btn-tool text-danger" data-card-widget="remove" title="Remove">
+            <i class="fas fa-times"></i>
+            </button>
+        </div>
+        </div>
+        <div class="card-body">
+        Start creating your amazing application!
+        </div>
+        <div class="card-footer">
+        Footer
+        </div>
+    </div>
+    @endforeach
+    <!--
     <div class="card collapsed-card">
         <div class="card-header">
         <h3 class="card-title">
@@ -63,7 +88,6 @@
         <div class="card-body">
         Start creating your amazing application!
         </div>
-        <!-- /.card-body -->
         <div class="card-footer">
         Footer
         </div>
@@ -88,7 +112,6 @@
         <div class="card-body">
         Start creating your amazing application!
         </div>
-        <!-- /.card-body -->
         <div class="card-footer">
         Footer
         </div>
@@ -113,7 +136,6 @@
         <div class="card-body">
         Start creating your amazing application!
         </div>
-        <!-- /.card-body -->
         <div class="card-footer">
         Footer
         </div>
@@ -137,7 +159,6 @@
         <div class="card-body">
         Start creating your amazing application!
         </div>
-        <!-- /.card-body -->
         <div class="card-footer">
         Footer
         </div>
@@ -161,11 +182,10 @@
         <div class="card-body">
         Start creating your amazing application!
         </div>
-        <!-- /.card-body -->
         <div class="card-footer">
         Footer
         </div>
-    </div>
+    </div> -->
 </div>
 </section>
 </div>
