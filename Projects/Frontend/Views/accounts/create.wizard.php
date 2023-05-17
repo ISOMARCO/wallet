@@ -88,16 +88,13 @@
 <script>
 $(document).ready(function(){
     $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text());
-    var name = $("#name").val();
-    $("#name").on("keyup",function(){
-        alert($("#name").val().split( name )[1]);
-    });
     var img = $("#bank option").attr("data-image");
     $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
     $("#select2").select2();
+    var name = $("#name").val().split( $("#name").val() )[1];
     $("#bank").on("change",function(){
         $( "#bank option:selected" ).each(function(){
-            $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text());
+            $("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text()+" "+name);
             var img = $(this).attr("data-image");
             $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
         });
