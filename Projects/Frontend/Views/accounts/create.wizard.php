@@ -42,6 +42,12 @@
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
+                    <label for="credit_amount" class="input-group-text">Credit Amount<i class="fas fa-hand-holding-usd"></i></label>
+                </div>
+                <input type="number" class="form-control" id="credit_amount" name="credit_amount">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
                     <label for="tarix" class="input-group-text">Tarix <i class="far fa-calendar-alt"></i></label>
                 </div>
                 <input type="date" name="tarix" id="tarix" class="form-control">
@@ -100,6 +106,13 @@ $(document).ready(function(){
     $("#name").on("change",function(){
         var str = "";
         $( "#name option:selected" ).each(function(){
+            var img = $(this).attr("data-image");
+            $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
+        });
+    });
+    $("#type").on("change",function(){
+        var str = "";
+        $( "#type option:selected" ).each(function(){
             var img = $(this).attr("data-image");
             $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
         });
