@@ -96,9 +96,12 @@
 $(document).ready(function(){
     $("#select2").select2();
     $("#name").on("change",function(){
-        if($("#name option").attr("selected")){
-            alert($(this).attr("value"));
-        }
+        var str = "";
+        $( "#name option:selected" ).each(function(){
+            if($("option").attr("selected")){
+                alert($(this).attr("value"));
+            }
+        });
     });
 }); 
 </script>
