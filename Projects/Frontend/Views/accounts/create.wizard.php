@@ -96,11 +96,9 @@
 $(document).ready(function(){
     $("#select2").select2();
     $("#name").on("change",function(){
-        var str = "";
-        $( "select option:selected" ).each(function(){
-            str+=$("option").attr("value");
-        });
-        alert(str);
+        if($("#name option").attr("selected")){
+            alert($(this).attr("value"));
+        }
     });
 }); 
 </script>
