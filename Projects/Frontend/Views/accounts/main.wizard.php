@@ -48,7 +48,7 @@
         <div class="card-header">
         <h3 class="card-title">
             <img src="{{URL::base($value->Picture)}}" style="{{$value->Style}}" class="img-fluid" alt="{{$value->Name}}">
-            {{$value->Name}}
+            {{round($value->Name,2)}}
         </h3>
 
         <div class="card-tools">
