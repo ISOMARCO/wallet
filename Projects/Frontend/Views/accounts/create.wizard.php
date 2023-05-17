@@ -87,7 +87,7 @@
 </div>
 <script>
 $(document).ready(function(){
-    var name = $("#bank option").text();
+    var name = $("#bank option:selected").text();
     alert(name);
     var img = $("#bank option").attr("data-image");
     $("#bankNameImg").attr("src","{{URL::base('"+img+"');}}");
