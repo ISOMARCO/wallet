@@ -15,8 +15,8 @@ class InternalMigrateSubCategory extends ZN\Database\Migration
             'Category_Uid' => [DB::varchar(30),DB::null()],
 			'Parent_Uid' => [DB::varchar(30),DB::null()],
             'Child_Uid' => [DB::varchar(30),DB::null()],
-            'User' => [DB::varchar(30),DB::null()],
-            'Active' => [DB::tinyInt(1),DB::defaultValue(' 0')]
+            'User' => [DB::varchar(30),DB::null()]#,
+            #'Active' => [DB::tinyInt(1),DB::defaultValue(' 0')]
 		]);
 	}
 
