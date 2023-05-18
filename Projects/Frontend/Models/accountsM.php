@@ -32,6 +32,8 @@ class accountsM extends Model
     }
     public static function getUserAccounts()
     {
-        return DB::where('Account.User',Session::Uid())->select('Account.Name','Banks.Picture','Banks.Style','Account.Balance')->leftJoin('Banks.Code','Account.Bank_Code')->Account()->result();
+        return DB::where('Account.User',Session::Uid())->
+        select('Account.Name','Banks.Picture','Banks.Style','Account.Balance')->
+        leftJoin('Banks.Code','Account.Bank_Code')->Account()->result();
     }
 }
