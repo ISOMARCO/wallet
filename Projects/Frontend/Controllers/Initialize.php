@@ -4,7 +4,7 @@ class Initialize extends Controller
 {
     public function main()
     {
-        ML::lang("en");
+        ML::lang('az');
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'lang') 
         {
             $email = Cookie::select( hash('sha256',md5('Email')) );
