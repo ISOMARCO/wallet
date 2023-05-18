@@ -4,8 +4,8 @@ class lang extends Controller
 {
     public function main()
     {
-        ML::insert('en','Accounts','Accounts');
-        ML::insert('az','Accounts','Hesablar');
+        ML::insert('en','Category','Categories');
+        ML::insert('az','Accounts','Kateqoriyalar');
         output(ML::selectAll());
         exit;
     }

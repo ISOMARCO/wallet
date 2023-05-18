@@ -194,6 +194,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{URL::base('category')}}" class="nav-link">
+            <i class="nav-icon fas fa-cubes"></i>
+              <p>
+                {{ML::select('Category')}}
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{URL::base('home/exit')}}" class="nav-link">
             <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
