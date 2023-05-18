@@ -8,7 +8,7 @@ class InternalMigrateSubCategory extends ZN\Database\Migration
 	public function up()
 	{
 		# Default Query
-		$this->createTable
+		return $this->createTable
 		([
 			'Id' => [DB::int(11),DB::primaryKey(), DB::autoIncrement(),DB::notNull()],
             'Uid' => [DB::varchar(30),DB::unique(),DB::notNull()],
