@@ -1,12 +1,12 @@
 <?php namespace Project\Controllers;
-use Http,accountsM,MigrateSubCategory;
+use Http,accountsM,MigrateSub_Category;
 class accounts extends Controller
 {
     public function main()
     {
         Masterpage::title('Accounts');
         View::accounts(accountsM::getUserAccounts());
-        #MigrateSubCategory::up();
+        MigrateSub_Category::up();
     }
     public function create()
     {

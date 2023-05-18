@@ -1,5 +1,5 @@
 <?php
-class InternalMigrateSubCategory extends ZN\Database\Migration
+class InternalMigrateSub_Category extends ZN\Database\Migration
 {
 	# Class/Table Name
 	const table = __CLASS__;
