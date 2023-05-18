@@ -1,6 +1,6 @@
 <?php namespace Project\Controllers;
 
-class Home extends Controller
+class Category extends Controller
 {
     public function main()
     {
