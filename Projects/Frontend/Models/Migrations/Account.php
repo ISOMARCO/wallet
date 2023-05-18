@@ -21,7 +21,7 @@ class InternalMigrateAccount extends ZN\Database\Migration
 			'Balance' => [DB::double(),DB::null(),DB::defaultValue(' 0')],
 			'About' => [DB::varchar(250),DB::null()],
 			'User' => [DB::varchar(30),DB::null()],
-            'Active' => [DB::tinyInt(),DB::null(),DB::defaultValue('1')]
+            'Active' => [DB::tinyInt(1),DB::null(),DB::defaultValue('1')]
 		]);
 	}
 
