@@ -11,12 +11,12 @@ class InternalMigrateSubCategory extends ZN\Database\Migration
 		return $this->createTable
 		([
 			'Id' => [DB::int(11),DB::primaryKey(), DB::autoIncrement(),DB::notNull()],
-            'Uid' => [DB::varchar(30),DB::unique(),DB::notNull()]#,
-            #'Category_Uid' => [DB::varchar(30),DB::null()],
-			// 'Parent_Uid' => [DB::varchar(30),DB::null()],
-            // 'Child_Uid' => [DB::varchar(30),DB::null()],
-            // 'User' => [DB::varchar(30),DB::null()],
-            // 'Active' => [DB::tinyInt(1),DB::defaultValue(' 0')]
+            'Uid' => [DB::varchar(30),DB::unique(),DB::notNull()],
+            'Category_Uid' => [DB::varchar(30),DB::null()],
+			'Parent_Uid' => [DB::varchar(30),DB::null()],
+            'Child_Uid' => [DB::varchar(30),DB::null()],
+            'User' => [DB::varchar(30),DB::null()],
+            'Active' => [DB::tinyInt(1),DB::defaultValue(' 0')]
 		]);
 	}
 
