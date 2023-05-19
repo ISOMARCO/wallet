@@ -17,10 +17,10 @@
 <section class="content">
     <table class="table table-bordered">
         <thead>
-            <tr>
-                <th style="width:1%">#</th>
-                <th>Name</th>
-                <th>Action</th>
+            <tr class="row">
+                <th class="col-md-1">#</th>
+                <th class="col-md-10">Name</th>
+                <th class="col-md-1">Action</th>
             </tr>    
         </thead>
         <tbody>
