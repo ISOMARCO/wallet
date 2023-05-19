@@ -32,3 +32,11 @@
 
 </section>
 </div>
+<script>
+$(document).ready(function(){
+    $('.fa-arrow-right').on('click',function(){
+        $(this).addClass('fa-arrow-down');
+        $(this).removeClass($(this));
+    });
+});
+</script>
