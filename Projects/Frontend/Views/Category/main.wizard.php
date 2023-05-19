@@ -23,9 +23,9 @@
             </tr>    
         </thead>
         <tbody>
-            <tr>
+            <tr id="categoryName">
                 <td><i class="fas fa-arrow-right" style="cursor:pointer"></i>&nbsp;Market</td>
-                <td><button type="button" class="btn btn-primary">Edit</button></td>
+                <td><button type="button" class="btn btn-primary btn-link">Edit</button></td>
             </tr>
         </tbody>
     </table>
@@ -34,13 +34,6 @@
 </div>
 <script>
 $(document).ready(function(){
-    $('.fa-arrow-right').on('click',function(){
-        $(this).addClass('fa-arrow-down');
-        $('.fa-arrow-down').removeClass('fa-arrow-right');
-    });
-    $('.fa-arrow-down').on('click',function(){
-        $(this).addClass('fa-arrow-right');
-        $('.fa-arrow-right').removeClass('fa-arrow-down');
-    });
+    
 });
 </script>
