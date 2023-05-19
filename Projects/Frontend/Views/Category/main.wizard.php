@@ -3,7 +3,7 @@
     <div class="container-fluid">
     <div class="row mb-2">
         <div class="col-sm-6">
-        <h1>Accounts</h1>
+        <!-- <h1>Accounts</h1> -->
         </div>
         <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
@@ -20,7 +20,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Expandable Table Tree</h3>
+                <h3 class="card-title">{{ML::select('Category')}}</h3>
             </div>
             <div class="card-body p-0">
             <table class="table table-hover">
