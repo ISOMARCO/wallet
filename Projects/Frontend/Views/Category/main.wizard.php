@@ -35,9 +35,8 @@
 <script>
 $(document).ready(function(){
     $('.fa-arrow-right').on('click',function(){
-        alert('ok');
         $(this).addClass('fa-arrow-down');
-        $(this).removeClass($(this));
+        $('fa-arrow-down').removeClass('fa-arrow-right');
     });
 });
 </script>
