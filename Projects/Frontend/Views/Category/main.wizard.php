@@ -36,7 +36,7 @@
 $(document).ready(function(){
     $('.fa-arrow-right').on('click',function(){
         $(this).addClass('fa-arrow-down');
-        $('fa-arrow-down').removeClass('fa-arrow-right');
+        $('.fa-arrow-down').removeClass('fa-arrow-right');
     });
 });
 </script>
