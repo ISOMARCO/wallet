@@ -17,7 +17,7 @@
 <section class="content">
     <table class="table table-bordered">
         <thead>
-            <tr class="row">
+            <tr>
                 <th class="col-md-1">#</th>
                 <th class="col-md-10">Name</th>
                 <th class="col-md-1">Action</th>
