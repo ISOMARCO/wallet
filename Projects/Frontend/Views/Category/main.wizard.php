@@ -34,6 +34,8 @@
 </div>
 <script>
 $(document).ready(function(){
-    
+    $("#categoryName td i").on("click",function(){
+        alert($(this).attr('class'));
+    });
 });
 </script>
