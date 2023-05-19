@@ -27,7 +27,7 @@
             <tr>
                 <th>1</th>
                 <th>Market</th>
-                <th><button type="btn btn-primary">Edit</button></th>
+                <th><button type="button" class="btn btn-primary">Edit</button></th>
             </tr>
         </tbody>
     </table>
