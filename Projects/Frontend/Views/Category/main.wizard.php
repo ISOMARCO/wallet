@@ -29,7 +29,7 @@
                 <tr>
                     <td class="border-0">183</td>
                 </tr>
-                <tr data-widget="expandable-table" aria-expanded="true">
+                <tr data-widget="expandable-table" aria-expanded="false">
                     <td>
                     <i class="expandable-table-caret fas fa-caret-right fa-fw"></i>
                     219
