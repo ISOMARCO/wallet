@@ -20,9 +20,8 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-            <h3 class="card-title">Expandable Table Tree</h3>
+                <h3 class="card-title">Expandable Table Tree</h3>
             </div>
-            <!-- ./card-header -->
             <div class="card-body p-0">
             <table class="table table-hover">
                 <tbody>
