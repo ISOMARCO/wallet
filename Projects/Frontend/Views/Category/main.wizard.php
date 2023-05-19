@@ -38,5 +38,9 @@ $(document).ready(function(){
         $(this).addClass('fa-arrow-down');
         $('.fa-arrow-down').removeClass('fa-arrow-right');
     });
+    $('.fa-arrow-down').on('click',function(){
+        $(this).addClass('fa-arrow-right');
+        $('.fa-arrow-right').removeClass('fa-arrow-down');
+    });
 });
 </script>
