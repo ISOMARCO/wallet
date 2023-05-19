@@ -18,7 +18,7 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th class="col-md-10">Name</th>
+                <th class="col-md-11">Name</th>
                 <th class="col-md-1">Action</th>
             </tr>    
         </thead>
