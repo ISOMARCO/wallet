@@ -24,8 +24,8 @@
         </thead>
         <tbody>
             <tr>
-                <th>Market</th>
-                <th><button type="button" class="btn btn-primary">Edit</button></th>
+                <td>Market</td>
+                <td><button type="button" class="btn btn-primary">Edit</button></td>
             </tr>
         </tbody>
     </table>
