@@ -24,7 +24,11 @@
         </thead>
         <tbody>
             <tr id="categoryName">
-                <td><i class="fas fa-arrow-right" style="cursor:pointer" class="deneme"></i>&nbsp;Market</td>
+                <td><i class="fas fa-arrow-right" style="cursor:pointer" id="deneme1"></i>&nbsp;Market</td>
+                <td><button type="button" class="btn btn-link">Edit</button></td>
+            </tr>
+            <tr id="categoryName">
+                <td><i class="fas fa-arrow-right" style="cursor:pointer" id="deneme2"></i>&nbsp;Market</td>
                 <td><button type="button" class="btn btn-link">Edit</button></td>
             </tr>
         </tbody>
