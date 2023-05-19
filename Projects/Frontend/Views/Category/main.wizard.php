@@ -18,14 +18,12 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th class="col-md-1">#</th>
                 <th class="col-md-10">Name</th>
                 <th class="col-md-1">Action</th>
             </tr>    
         </thead>
         <tbody>
             <tr>
-                <th>1</th>
                 <th>Market</th>
                 <th><button type="button" class="btn btn-primary">Edit</button></th>
             </tr>
