@@ -23,11 +23,11 @@
             </tr>    
         </thead>
         <tbody>
-            <tr id="categoryName">
+            <tr id="categoryName" class="c1">
                 <td><i class="fas fa-arrow-right" style="cursor:pointer"></i>&nbsp;Market</td>
                 <td><button type="button" class="btn btn-link">Edit</button></td>
             </tr>
-            <tr id="categoryName">
+            <tr id="categoryName" class="c2">
                 <td><i class="fas fa-arrow-right" style="cursor:pointer"></i>&nbsp;Market</td>
                 <td><button type="button" class="btn btn-link">Edit</button></td>
             </tr>
