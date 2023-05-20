@@ -27,6 +27,10 @@
                 <td><i class="fas fa-arrow-right" style="cursor:pointer" id="deneme1"></i>&nbsp;Market</td>
                 <td><button type="button" class="btn btn-link">Edit</button></td>
             </tr>
+            <tr id="categoryName" style="display:none" class="deneme1">
+                <td><i class="fas fa-arrow-right" style="cursor:pointer" id="deneme1"></i>&nbsp;Market</td>
+                <td><button type="button" class="btn btn-link">Edit</button></td>
+            </tr>
             <tr id="categoryName">
                 <td><i class="fas fa-arrow-right" style="cursor:pointer" id="deneme2"></i>&nbsp;Market</td>
                 <td><button type="button" class="btn btn-link">Edit</button></td>
@@ -39,7 +43,8 @@
 <script>
 $(document).ready(function(){
     $("#categoryName td i").on("click",function(){
-        alert($(this).attr('id'));
+        var id = $(this).attr('id');
+        $("."+id).show();
     });
 });
 </script>
