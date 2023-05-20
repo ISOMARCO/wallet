@@ -39,7 +39,7 @@
 <script>
 $(document).ready(function(){
     $("#categoryName td i").on("click",function(){
-        alert($(this).attr('class'));
+        alert($(this).attr('id'));
     });
 });
 </script>
