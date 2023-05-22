@@ -44,7 +44,7 @@
         <div class="col-md-1"><button type="submit" class="btn btn-outline-secondary"><i class="fas fa-search"></i></button></div>
     </div>
     @foreach($accounts as $value)
-    <div class="card collapsed-card" style="background-color: #7BBE42">
+    <div class="card collapsed-card">
         <div class="card-header">
         <h3 class="card-title">
             <img src="{{URL::base($value->Picture)}}" style="{{$value->Style}}" class="img-fluid" alt="{{$value->Name}}">
@@ -60,7 +60,7 @@
             </button>
         </div>
         </div>
-        <div class="card-body">
+        <div class="card-body" style="background-color: #7BBE42">
         Balance: {{number_format(round($value->Balance,2),2)}}<br>
         Borc: <span class="text-danger">{{number_format(round($value->Balance,2),2)-300}}</span>
         </div>
