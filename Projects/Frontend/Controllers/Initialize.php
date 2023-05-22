@@ -7,8 +7,8 @@ class Initialize extends Controller
         ML::lang('az');
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'lang') 
         {
-            $email = Cookie::select( hash('sha256',md5('Email')) );
-            $password = Cookie::select( hash('sha256',md5('Password')) );
+            $email = decrypt( Cookie::select( hash('sha256',md5('Email')) ) );
+            $password = decrypt( Cookie::select( hash('sha256',md5('Password')) ) );
             if($email && $password)
             {
                 $login = loginM::login( $email,$password );
