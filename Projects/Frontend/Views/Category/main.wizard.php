@@ -168,8 +168,8 @@
     <div class="card collapsed-card">
         <div class="card-header">
         <h3 class="card-title">
-        <i class="fas fa-arrow-up"></i>&nbsp;<i class="fas fa-shopping-basket"></i>
-            Market
+        <i class="fab fa-amazon"></i>
+            Amazon
         </h3>
 
         <div class="card-tools">
@@ -289,12 +289,11 @@
     <div class="card collapsed-card">
         <div class="card-header">
         <h3 class="card-title">
-        <i class="fas fa-arrow-up"></i>&nbsp;<i class="fas fa-shopping-basket"></i>
-            Market
+        <i class="fas fa-utensils"></i>
+            Kafe Restoran
         </h3>
 
         <div class="card-tools">
-            <i class="fas fa-shopping-basket"></i>
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
             <i class="fas fa-plus"></i>
             </button>
