@@ -165,7 +165,7 @@
     </div>
 
 
-    <div class="card collapsed-card">
+    <div class="card collapsed-card" style="margin-left:3px;">
         <div class="card-header">
         <h3 class="card-title">
             <i class="fas fa-shopping-basket"></i>
