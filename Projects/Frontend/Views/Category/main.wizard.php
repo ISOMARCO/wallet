@@ -163,7 +163,7 @@
     </div>
 
 
-    <div class="card collapsed-card" style="margin-left:2px;">
+    <div class="card collapsed-card" style="margin-left:10px;">
         <div class="card-header">
         <h3 class="card-title">
         <i class="fab fa-amazon"></i>
@@ -285,7 +285,7 @@
         </div>
     </div>
     
-    <div class="card collapsed-card" style="margin-left:4px;">
+    <div class="card collapsed-card" style="margin-left:20px;">
         <div class="card-header">
         <h3 class="card-title">
         <i class="fab fa-amazon"></i>
@@ -407,7 +407,7 @@
         </div>
     </div>
 
-    <div class="card collapsed-card" style="margin-left:6px;">
+    <div class="card collapsed-card" style="margin-left:30px;">
         <div class="card-header">
         <h3 class="card-title">
         <i class="fab fa-amazon"></i>
