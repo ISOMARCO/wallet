@@ -60,7 +60,33 @@
         </div>
         </div>
         <div class="card-body">
-            Xerclenen: 100
+            
+        <div class="card collapsed-card">
+        <div class="card-header">
+        <h3 class="card-title">
+            <i class="fas fa-shopping-basket"></i>
+            Market
+        </h3>
+
+        <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+            <i class="fas fa-plus"></i>
+            </button>
+            <button type="button" class="btn btn-tool text-danger" data-card-widget="remove" title="Remove">
+            <i class="fas fa-times"></i>
+            </button>
+        </div>
+        </div>
+        <div class="card-body">
+            
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-primary" style="float:left">Edit&nbsp;<i class="fas fa-edit"></i></button>
+            <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">Delete&nbsp;<i class="fas fa-trash"></i></button>
+        </div>
+    </div>
+
+
         </div>
         <div class="card-footer">
             <button type="button" class="btn btn-primary" style="float:left">Edit&nbsp;<i class="fas fa-edit"></i></button>
