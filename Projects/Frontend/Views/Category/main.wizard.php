@@ -294,6 +294,7 @@
         </h3>
 
         <div class="card-tools">
+            <i class="fas fa-shopping-basket"></i>
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
             <i class="fas fa-plus"></i>
             </button>
