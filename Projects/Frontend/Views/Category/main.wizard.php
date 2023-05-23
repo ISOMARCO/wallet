@@ -183,27 +183,7 @@
         <div class="card-body">
             
         
-        <div class="card collapsed-card ml-2">
-        <div class="card-header">
-        <h3 class="card-title">
-        <i class="fab fa-amazon"></i>
-            Amazon
-        </h3>
-
-        <div class="card-tools">
-            <i class="fas fa-shopping-basket"></i>
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-            <i class="fas fa-plus"></i>
-            </button>
-            <button type="button" class="btn btn-tool text-danger" data-card-widget="remove" title="Remove">
-            <i class="fas fa-times"></i>
-            </button>
-        </div>
-        </div>
-        <div class="card-body">
-            
         
-
 
 
 
@@ -267,7 +247,7 @@
             </div>
         </div>
 
-        <div class="card collapsed-card ml-2">
+        <div class="card collapsed-card">
             <div class="card-header">
             <h3 class="card-title">
                 <i class="fas fa-shopping-basket"></i>
@@ -304,6 +284,28 @@
             <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">Delete&nbsp;<i class="fas fa-trash"></i></button>
         </div>
     </div>
+    
+    <div class="card collapsed-card ml-4">
+        <div class="card-header">
+        <h3 class="card-title">
+        <i class="fab fa-amazon"></i>
+            Amazon
+        </h3>
+
+        <div class="card-tools">
+            <i class="fas fa-shopping-basket"></i>
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+            <i class="fas fa-plus"></i>
+            </button>
+            <button type="button" class="btn btn-tool text-danger" data-card-widget="remove" title="Remove">
+            <i class="fas fa-times"></i>
+            </button>
+        </div>
+        </div>
+        <div class="card-body">
+            
+        
+        
 
 
 
