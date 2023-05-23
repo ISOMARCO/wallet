@@ -46,7 +46,7 @@
         <div class="col-md-1">
             <a href="javascript:void(0)"><i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="col-md-11">
+        <div class="col-sm-11">
             <div class="card collapsed-card">
                 <div class="card-header">
                 <h3 class="card-title font-weight-bold">
