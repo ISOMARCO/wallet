@@ -407,7 +407,7 @@
         </div>
     </div>
 
-    <div class="card collapsed-card ml-6">
+    <div class="card collapsed-card" style="margin-left:6px;">
         <div class="card-header">
         <h3 class="card-title">
         <i class="fab fa-amazon"></i>
