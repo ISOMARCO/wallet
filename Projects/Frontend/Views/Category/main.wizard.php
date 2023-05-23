@@ -46,7 +46,7 @@
     <div class="card collapsed-card">
         <div class="card-header">
         <h3 class="card-title">
-        <i class="fas fa-arrow-right"></i><i class="fas fa-shopping-basket"></i>
+        <a href="javascript:void(0)"><i class="fas fa-arrow-right"></i></a><i class="fas fa-shopping-basket"></i>
             Market
         </h3>
 
