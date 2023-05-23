@@ -41,9 +41,9 @@
         </div>
         <div class="col-md-1"><button type="submit" class="btn btn-outline-secondary"><i class="fas fa-search"></i></button></div>
     </div>
-    <div class="card collapsed-card" style="border:2px">
+    <div class="card collapsed-card">
         <div class="card-header">
-        <h3 class="card-title">
+        <h3 class="card-title font-weight-bold">
         <a href="javascript:void(0)"><i class="fas fa-arrow-right"></i></a>&nbsp;<i class="fas fa-shopping-basket"></i>
             Market
         </h3>
