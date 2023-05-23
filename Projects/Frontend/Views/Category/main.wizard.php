@@ -165,10 +165,10 @@
     </div>
 
 
-    <div class="card collapsed-card" style="margin-left:3px;">
+    <div class="card collapsed-card ml-5">
         <div class="card-header">
         <h3 class="card-title">
-            <i class="fas fa-shopping-basket"></i>
+        <i class="fas fa-arrow-up"></i>&nbsp;<i class="fas fa-shopping-basket"></i>
             Market
         </h3>
 
