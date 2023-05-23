@@ -165,7 +165,7 @@
     </div>
 
 
-    <div class="card collapsed-card ml-1">
+    <div class="card collapsed-card ml-2">
         <div class="card-header">
         <h3 class="card-title">
         <i class="fab fa-amazon"></i>
@@ -287,7 +287,7 @@
         </div>
     </div>
 
-    <div class="card collapsed-card ml-1">
+    <div class="card collapsed-card ml-2">
         <div class="card-header">
         <h3 class="card-title">
         <i class="fas fa-utensils"></i>
