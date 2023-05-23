@@ -43,7 +43,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <a href="javascript:void(0)"><i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="col-sm-11">
