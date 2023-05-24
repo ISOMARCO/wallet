@@ -10,11 +10,11 @@ class categoryM extends Model
     }
     public static function addCategory($data=[],$parentCategory=NULL)
     {
-        DB::transaction(function() use($data,$parentCategory){
+        return DB::transaction(function() use($data,$parentCategory){
             $uid = uniqid(uniqid().'_');
             $type = 'MAIN';
             if($parentCategory != NULL) $type = 'SUB'; 
-            DB::insert('Category',[
+            return DB::insert('Category',[
                 'Uid' => $uid,
                 'Name' => $data['Name'],
                 'Type' => $type,
@@ -31,6 +31,5 @@ class categoryM extends Model
                 ]);
             }
         });
-        return DB::stringQuery();
     }
 }
