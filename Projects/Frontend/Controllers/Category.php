@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use ML,categoryM;
+use ML,categoryM,Http;
 class Category extends Controller
 {
     public function main()
@@ -10,5 +10,10 @@ class Category extends Controller
     {
         Masterpage::title("Create Category");
         View::allCategoryByUser(categoryM::getAllCategoryByUser());
+    }
+    public function createRequest()
+    {
+        Http::isAjax() or exit("Bad Request");
+        
     }
 }
