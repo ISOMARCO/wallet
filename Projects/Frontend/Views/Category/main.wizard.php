@@ -47,7 +47,7 @@
         <div class="card-header">
             <div class="row">
                 <div class="col-md-1">
-                    <a href="javascript:void(0)"><i class="fas fa-arrow-circle-right fa-2x"></i></a>
+                    <a href="javascript:void(0)"><i class="fas fa-arrow-circle-right fa-lg"></i></a>
                 </div>
                 <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
