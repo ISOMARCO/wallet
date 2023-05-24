@@ -20,9 +20,17 @@ class categoryM extends Model
                 'Type' => $type,
                 'User' => Session::Uid()
             ]);
-            
+            if($parentCategory != NULL)
+            {
+                DB::insert('Sub_Category',[
+                    'Uid' => uniqid(uniqid().'_'),
+                    'Category_Uid' => $parentCategory,
+                    'ParentUid' => $parentCategory,
+                    'Child_Uid' => $uid,
+                    'User' => Session::Uid()
+                ]);
+            }
         });
-        if($transaction) return $transaction;
-        return DB::error();
+        return $transaction;
     }
 }
