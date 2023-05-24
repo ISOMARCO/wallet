@@ -31,6 +31,6 @@ class categoryM extends Model
                 ]);
             }
         });*/
-        return DB::query('START TRANSACTION; INSERT INTO Category (Uid,Name,Type,User) VALUES("ABCCC","Market","MAIN","'.Session::Uid().'");INSERT INTO Category (Uid,Name,Type,User) VALUES("ABCCC2","Araz Market","MAIN","'.Session::Uid().'");COMMIT;')->stringQuery();
+        return DB::query('START TRANSACTION; INSERT INTO Category (Uid,Name,Type,User) VALUES("ABCCC","Market","MAIN","'.Session::Uid().'");INSERT INTO Category (Uid,Name,Type,User) VALUES("ABCCC2","Araz Market","MAIN","'.Session::Uid().'");COMMIT;')->row();
     }
 }
