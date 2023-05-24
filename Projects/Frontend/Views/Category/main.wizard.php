@@ -45,7 +45,7 @@
     
     <div class="card collapsed-card">
         <div class="card-header">
-            <div class="row border-1">
+            <div class="row" style="border:1 px solid #ddd">
                 <div class="col-md-1">
                     <i class="fas fa-shopping-basket"></i>
                 </div>
