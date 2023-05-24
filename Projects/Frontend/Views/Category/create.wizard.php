@@ -24,7 +24,7 @@
                 <span id="msg" style="font-weight:bold"></span>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="bank" class="input-group-text">Bank&nbsp;&nbsp;<img src="" style="width:20px;height:20px;" id="bankNameImg"></label>
+                        <label for="bank" class="input-group-text">Bank</label>
                     </div>
                     <select name="bank" id="bank" class="form-control">
                         <option value="">Market</option>
