@@ -21,6 +21,11 @@ class Category extends Controller
             echo json_encode(['error' => 'Ad bos buraxila bilmez']);
             exit;
         }
-        categoryM::addCategory(['Name' => $name,]);
+        if(!categoryM::addCategory(['Name' => $name])) 
+        {
+            echo json_encode(['error' => 'DB ERROR']);
+            exit;
+        }
+        echo json_encode(['success' => 'SUCCESS']);
     }
 }
