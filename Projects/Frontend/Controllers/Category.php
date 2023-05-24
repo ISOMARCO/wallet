@@ -8,7 +8,7 @@ class Category extends Controller
     }
     public function create()
     {
-        echo categoryM::getCategory('MAIN');
+        echo categoryM::getCategory('main');
         Masterpage::title("Create Category");
     }
 }
