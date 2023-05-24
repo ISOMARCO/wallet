@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-info" id="insert">GÖNDƏR <i class="far fa-paper-plane"></i></button>
+                <button type="button" class="btn btn-info" id="insert">GÖNDƏR <i class="far fa-paper-plane"></i></button>
                 <button type="button" class="btn btn-default float-right" id="reset">SIFIRLA <i class="fas fa-ban"></i></button>
             </div>
         </div>
