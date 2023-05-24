@@ -13,7 +13,7 @@ class categoryM extends Model
         $uid = uniqid(uniqid().'_');
         $type = 'MAIN';
         if($parentCategory != NULL) $type = 'SUB'; 
-        $transaction = DB::transStart()->transQuery('INSERT INTO Category SET Uid = "'.$uid.'"')->transQuery('INSERT INTO Category SET Uid = "'.$uid.'sdsd"')->transEnd();
+        return $transaction = DB::transStart()->transQuery('INSERT INTO Category SET Uid = "'.$uid.'"')->transQuery('INSERT INTO Category SET Uid = "'.$uid.'sdsd"')->transEnd();
         DB::insert('Category',[
             'Uid' => $uid,
             'Name' => $data['Name'],
