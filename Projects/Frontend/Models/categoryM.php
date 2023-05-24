@@ -22,8 +22,8 @@ class categoryM extends Model
         ]);
         if($parentCategory != NULL)
         {
-            /*$categoryType = DB::select('Type')->where('Uid',$parentCategory)->Category()->row();
-            if($categoryType->Type == 'MAIN')
+            $categoryType = DB::select('Type')->where('Uid',$parentCategory)->Category()->row();
+            /*if($categoryType->Type == 'MAIN')
             {
                 $mainCategory = $parentCategory;
             }
