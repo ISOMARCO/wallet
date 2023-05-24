@@ -28,7 +28,7 @@
                     </div>
                     <select name="bank" id="bank" class="form-control">
                         <option value="">-</option>
-                        @foreach($getAllCategoryByUser as $value)
+                        @foreach($allCategoryByUser as $value)
                         <option value="{{$value->Uid}}">{{$value->Name}}</option>
                         @endforeach 
                     </select>
