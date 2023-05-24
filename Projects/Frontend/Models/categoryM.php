@@ -6,6 +6,6 @@ class categoryM extends Model
     {
         $query = DB::where('User',Session::Uid());
         if($type == NULL) $query->where('Type',$type);
-        return $query->Category();
+        return $query->Category()->stringQuery();
     }
 }
