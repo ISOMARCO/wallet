@@ -17,7 +17,7 @@
     </div><!-- /.container-fluid -->
 </section>
 <section class="content"> 
-    <form method="post" id="createForm">
+    <form method="post" id="createForm" action="{{URL::base('Category/createRequest')}}">
         <div class="card card-info">
             <div class="card-header">Category Əlavə Et</div>
             <div class="card-body">
