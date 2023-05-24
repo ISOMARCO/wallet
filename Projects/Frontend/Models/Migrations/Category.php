@@ -15,7 +15,7 @@ class InternalMigrateCategory extends ZN\Database\Migration
 			'Name' => [DB::longText(),DB::null()],
 			'Type' => [DB::varchar(5), DB::null(), DB::defaultValue('MAIN')],
             'User' => [DB::varchar(30),DB::null()],
-			'Active' => [DB::tinyInt(1),DB::defaultValue(' 0')]
+			'Active' => [DB::tinyInt(1),DB::defaultValue('1')]
 		]);
         return DBForge::createFulltextIndex('NameIndex','Category','Name');
 	}
