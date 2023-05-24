@@ -59,7 +59,7 @@ $(document).ready(function(){
             success:function(e){
                 if(e.error)
                 {
-                    alert(e.error);
+                    console.log(e.error);
                 }
                 else 
                 {
