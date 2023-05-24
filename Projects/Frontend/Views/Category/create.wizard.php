@@ -24,9 +24,9 @@
                 <span id="msg" style="font-weight:bold"></span>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="bank" class="input-group-text">Category&nbsp;<i class="fas fa-cube"></i></label>
+                        <label for="category" class="input-group-text">Category&nbsp;<i class="fas fa-cube"></i></label>
                     </div>
-                    <select name="bank" id="bank" class="form-control">
+                    <select name="category" id="category" class="form-control">
                         <option value="">Nothing</option>
                         @foreach($allCategoryByUser as $value)
                         <option value="{{$value->Uid}}">{{$value->Name}}</option>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="type" class="input-group-text">Name&nbsp;<i class="fas fa-edit"></i></label>
+                        <label for="name" class="input-group-text">Name&nbsp;<i class="fas fa-edit"></i></label>
                     </div>
                     <input type="text" class="form-control" id="name" name="name">
                 </div>
