@@ -11,6 +11,7 @@ class categoryM extends Model
     public static function addCategory($data=[],$parentCategory=NULL)
     {
         return DB::transaction(function(){
+            $parentCategory = $parentCategory;
             $uid = uniqid(uniqid().'_');
             $type = 'MAIN';
             if($parentCategory != NULL) $type = 'SUB'; 
