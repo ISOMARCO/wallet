@@ -16,8 +16,7 @@
     </div>
     </div><!-- /.container-fluid -->
 </section>
-<section class="content"> 
-    {{categoryM::getAllCategoryByUser()->stringQuery()}}
+<section class="content">
     <form method="post" id="createForm" action="{{URL::base('Category/createRequest')}}">
         <div class="card card-info">
             <div class="card-header">Category Əlavə Et</div>
@@ -29,7 +28,9 @@
                     </div>
                     <select name="category" id="category" class="form-control">
                         <option value="">Nothing</option>
-                        
+                        @foreach($allCategoryByUser as $value)
+                        <option value="{{$value->Uid}}">{{$value->Name}}</option>
+                        @endforeach 
                     </select>
                 </div>
                 <div class="input-group mb-3">
