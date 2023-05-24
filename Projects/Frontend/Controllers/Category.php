@@ -9,6 +9,6 @@ class Category extends Controller
     public function create()
     {
         Masterpage::title("Create Category");
-        View::allCategoryByUser(categoryM::getAllCategoryByUser('main'));
+        View::allCategoryByUser(categoryM::getAllCategoryByUser());
     }
 }
