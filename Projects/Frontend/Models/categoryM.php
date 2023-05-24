@@ -15,9 +15,9 @@ class categoryM extends Model
             // $type = 'MAIN';
             #if($parentCategory != NULL) $type = 'SUB'; 
             DB::insert('Category',[
-                'Uid' => $uid,
+                'Uid' => 'ABCCC',
                 'Name' => $data['Name'],
-                'Type' => $type,
+                'Type' => 'MAIN',
                 'User' => Session::Uid()
             ]);
             // #if($parentCategory != NULL)
