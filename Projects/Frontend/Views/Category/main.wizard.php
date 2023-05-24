@@ -45,19 +45,25 @@
     
     <div class="card collapsed-card">
         <div class="card-header">
-        <h3 class="card-title font-weight-bold">
-        <i class="fas fa-shopping-basket"></i>
-            Market
-        </h3>
-
-        <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-            <i class="fas fa-plus"></i>
-            </button>
-            <button type="button" class="btn btn-tool text-danger" data-card-widget="remove" title="Remove">
-            <i class="fas fa-times"></i>
-            </button>
-        </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <div class="col-md-10">
+                    <h3 class="card-title font-weight-bold">
+                    <i class="fas fa-shopping-basket"></i>
+                        Market
+                    </h3>
+                </div>  
+                <div class="col-md-1 card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-plus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool text-danger" data-card-widget="remove" title="Remove">
+                    <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="card-body">
             
