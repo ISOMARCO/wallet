@@ -58,14 +58,6 @@ $(document).ready(function(){
             dataType:"json",
             success:function(e){
                 console.log(e.error);
-                if(e.error)
-                {
-                    console.log(e.error);
-                }
-                else 
-                {
-                    console.log(e.success);
-                }
             }
         });
     });
