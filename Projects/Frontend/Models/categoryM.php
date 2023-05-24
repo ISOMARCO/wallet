@@ -13,7 +13,7 @@ class categoryM extends Model
         return DB::transaction(function() use($data,$parentCategory){
             $uid = uniqid(uniqid().'_');
             $type = 'MAIN';
-            if($parentCategory != NULL) $type = 'SUB'; 
+            #if($parentCategory != NULL) $type = 'SUB'; 
             DB::insert('Category',[
                 'Uid' => $uid,
                 'Name' => $data['Name'],
