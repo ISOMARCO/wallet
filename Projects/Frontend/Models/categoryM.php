@@ -1,8 +1,11 @@
 <?php 
 
-public static function getCategory($type=NULL)
+class categoryM extends Model 
 {
-    $query = DB::where('User',Session::Uid());
-    if($type == NULL) $query->where('Type',$type);
-    return $query->Category();
+    public static function getCategory($type=NULL)
+    {
+        $query = DB::where('User',Session::Uid());
+        if($type == NULL) $query->where('Type',$type);
+        return $query->Category();
+    }
 }
