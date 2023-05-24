@@ -18,13 +18,13 @@ class categoryM extends Model
                 'Type' => $data['Type'],
                 'User' => Session::Uid()
             ]);
-            if($category != NULL)
+            if($parentCategory != NULL)
             {
                 DB::insert('Sub_Category',[
                     'Uid' => uniqid(uniqid().'_'),
-                    'Category_Uid' => $uid,
-                    'ParentUid' => $uid,
-                    'Child_Uid' => NULL,
+                    'Category_Uid' => $parentCategory,
+                    'ParentUid' => $parentCategory,
+                    'Child_Uid' => $uid,
                     'User' => Session::Uid()
                 ]);
             }
