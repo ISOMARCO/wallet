@@ -48,18 +48,3 @@
     </form>
 </section>
 </div>
-<script>
-$(document).ready(function(){
-    $("#insert").on("click",function(){
-        $.ajax({
-            type:"post",
-            url:"{{URL::base('Category/createRequest')}}",
-            data:$("#createForm").serialize(),
-            dataType:"json",
-            success:function(e){
-                console.log(e.error);
-            }
-        });
-    });
-}); 
-</script>
