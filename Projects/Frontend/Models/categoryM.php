@@ -30,6 +30,7 @@ class categoryM extends Model
                     'User' => Session::Uid()
                 ]);
             }
+            return true;
         });
     }
 }
