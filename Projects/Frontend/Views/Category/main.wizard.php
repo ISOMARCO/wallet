@@ -47,7 +47,7 @@
         <div class="card-header">
             <div class="row">
                 <div class="col-md-1">
-                    <i class="fas fa-shopping-basket"></i>
+                    <i class="fas fa-arrow-circle-down"></i>
                 </div>
                 <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
