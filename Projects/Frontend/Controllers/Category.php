@@ -10,7 +10,7 @@ class Category extends Controller
     {
         Masterpage::title("Create Category");
         View::allCategoryByUser(categoryM::getAllCategoryByUser());
-        output(DB::select('Category_Uid')->where('Parent_Uid','646e5abe3d0c3_646e5abe3d0c4')->Sub_Category()->row());
+        output(DB::select('Uid')->where('Uid','646e5abe3d0c3_646e5abe3d0c4')->Category()->row());
     }
     public function createRequest()
     {
