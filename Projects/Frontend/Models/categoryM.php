@@ -6,7 +6,7 @@ class categoryM extends Model
     {
         $query = DB::select('Uid','Name')->where('User',Session::Uid());
         if($type != NULL) $query->where('Type',strtoupper($type));
-        return $query->where('Active','1')->Category()->result();
+        return $query->where('Active','1')->Category()->stringQuery();
     }
     public static function addCategory($data=[],$parentCategory=NULL)
     {
