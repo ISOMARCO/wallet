@@ -13,7 +13,7 @@ class Category extends Controller
     }
     public function createRequest()
     {
-        #Http::isAjax() or exit("Bad Request");
+        Http::isAjax() or exit("Bad Request");
         $category = Post::category();
         $name = Post::name();
         if($name == NULL)
