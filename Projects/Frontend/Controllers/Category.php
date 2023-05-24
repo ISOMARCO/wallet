@@ -6,4 +6,8 @@ class Category extends Controller
     {
         Masterpage::title(ML::select('Category'));
     }
+    public function create()
+    {
+        Masterpage::title("Create Category");
+    }
 }
