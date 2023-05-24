@@ -13,6 +13,7 @@ class InternalMigrateCategory extends ZN\Database\Migration
 			'Id' => [DB::int(11),DB::primaryKey(), DB::autoIncrement(),DB::notNull()],
             'Uid' => [DB::varchar(30),DB::unique(),DB::notNull()],
 			'Name' => [DB::longText(),DB::null()],
+			'Type' => [DB::varchar(5), DB::null(), DB::defaultValue('MAIN')],
             'User' => [DB::varchar(30),DB::null()],
 			'Active' => [DB::tinyInt(1),DB::defaultValue(' 0')]
 		]);
