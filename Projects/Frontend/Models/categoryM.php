@@ -31,13 +31,7 @@ class categoryM extends Model
             {
                 $mainCategory = DB::select('Category_Uid')->where('Parent_Uid',$parentCategory)->Sub_Category()->row()->Category_Uid;
             }
-            $transaction->insert('Sub_Category',[
-                'Uid' => uniqid(uniqid().'_'),
-                'Category_Uid' => $mainCategory,
-                'Parent_Uid' => $parentCategory,
-                'Child_Uid' => $uid,
-                'User' => Session::Uid()
-            ]);
+            
         }
         return $transaction->transEnd();
 
