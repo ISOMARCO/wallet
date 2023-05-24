@@ -23,15 +23,15 @@ class categoryM extends Model
         if($parentCategory != NULL)
         {
             $categoryType = DB::select('Type')->where('Uid',$parentCategory)->Category()->row();
-            /*if($categoryType->Type == 'MAIN')
+            return $categoryType;
+            if($categoryType->Type == 'MAIN')
             {
                 $mainCategory = $parentCategory;
             }
             else 
             {
                 $mainCategory = DB::select('Category_Uid')->where('Parent_Uid',$parentCategory)->Sub_Category()->row()->Category_Uid;
-            }*/
-            $mainCategory = $parentCategory;
+            }
             $transaction->insert('Sub_Category',[
                 'Uid' => uniqid(uniqid().'_'),
                 'Category_Uid' => $mainCategory,
