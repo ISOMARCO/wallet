@@ -29,7 +29,7 @@ class categoryM extends Model
             }
             else 
             {
-                $mainCategory = DB::select('Category_Uid')->where('Parent_Uid',$parentCategory)->Sub_Category()->stringQuery();
+                $mainCategory = DB::query( DB::select('Category_Uid')->where('Parent_Uid',$parentCategory)->Sub_Category()->stringQuery() )->row()->Category_Uid;
                 return $mainCategory;
             }
             $transaction->insert('Sub_Category',[
