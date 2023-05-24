@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use ML;
+use ML,categoryM;
 class Category extends Controller
 {
     public function main()
@@ -8,6 +8,7 @@ class Category extends Controller
     }
     public function create()
     {
+        echo categoryM::getCategory();
         Masterpage::title("Create Category");
     }
 }
