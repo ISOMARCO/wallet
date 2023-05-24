@@ -16,7 +16,7 @@ class categoryM extends Model
         DB::insert('Sub_Category',[
             'Uid' => uniqid(uniqid().'_'),
             'Category_Uid' => $parentCategory,
-            'ParentUid' => $parentCategory,
+            'Parent_Uid' => $parentCategory,
             'Child_Uid' => $uid,
             'User' => Session::Uid()
         ]);
