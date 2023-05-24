@@ -63,7 +63,7 @@ $(document).ready(function(){
                 }
                 else 
                 {
-                    alert(e.success);
+                    console.log(e.success);
                 }
             }
         });
