@@ -27,9 +27,7 @@
                         <label for="bank" class="input-group-text">Bank&nbsp;&nbsp;<img src="" style="width:20px;height:20px;" id="bankNameImg"></label>
                     </div>
                     <select name="bank" id="bank" class="form-control">
-                        @foreach($banks as $value)
-                            <option value="{{$value->Code}}" data-image="{{$value->Picture}}">{{$value->Name}}</option>
-                        @endforeach
+                        <option value="">Market</option>
                     </select>
                 </div>
                 <div class="input-group mb-3">
