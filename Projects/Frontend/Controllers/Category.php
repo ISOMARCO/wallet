@@ -16,6 +16,10 @@ class Category extends Controller
         Http::isAjax() or exit("Bad Request");
         $category = Post::category();
         $name = Post::name();
-        echo json_encode(['error' => $category]);
+        if($name == NULL)
+        {
+            echo json_encode(['error' => 'Ad bos buraxila bilmez']);
+            exit;
+        }
     }
 }
