@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use ML,categoryM,Http,Post;
+use ML,categoryM,Http,Post,DB;
 class Category extends Controller
 {
     public function main()
@@ -23,7 +23,7 @@ class Category extends Controller
         }
         if(!categoryM::addCategory(['Name' => $name])) 
         {
-            echo json_encode(['error' => 'DB ERROR']);
+            echo json_encode(['error' => DB::error()]);
             exit;
         }
         echo json_encode(['success' => 'SUCCESS']);
