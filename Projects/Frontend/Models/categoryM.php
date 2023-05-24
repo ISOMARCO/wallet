@@ -10,7 +10,7 @@ class categoryM extends Model
     }
     public static function addCategory($data=[],$parentCategory=NULL)
     {
-        return DB::transaction(function() use($data,$parentCategory){
+        /*return DB::transaction(function() use($data,$parentCategory){
             $uid = uniqid(uniqid().'_');
             $type = 'MAIN';
             if($parentCategory != NULL) $type = 'SUB'; 
@@ -30,6 +30,7 @@ class categoryM extends Model
                     'User' => Session::Uid()
                 ]);
             }
-        });
+        });*/
+        return DB::query('START TRANSACTION; INSERT INTO Category (Uid,Name,Type,User) VALUES("ABCCC","Market","MAIN","'.Session::Uid().'");INSERT INTO Category (Uid,Name,Type,User) VALUES("ABCCC2","Araz Market","MAIN","'.Session::Uid().'");COMMIT;');
     }
 }
