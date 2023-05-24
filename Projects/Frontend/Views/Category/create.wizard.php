@@ -51,7 +51,6 @@
 <script>
 $(document).ready(function(){
     $("#insert").on("click",function(){
-        alert($("#createForm").serialize());
         $.ajax({
             type:"post",
             url:"{{URL::base('Category/createRequest')}}",

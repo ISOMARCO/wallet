@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use ML,categoryM,Http;
+use ML,categoryM,Http,Post;
 class Category extends Controller
 {
     public function main()
