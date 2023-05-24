@@ -26,7 +26,7 @@ class categoryM extends Model
                     'Uid' => uniqid(uniqid().'_'),
                     'Category_Uid' => $parentCategory,
                     'Parent_Uid' => $parentCategory,
-                    'Child_Uid' => $uid,
+                    'Child_Uid' => 'ABC',
                     'User' => Session::Uid()
                 ]);
             #}
