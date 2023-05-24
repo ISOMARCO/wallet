@@ -24,10 +24,13 @@
                 <span id="msg" style="font-weight:bold"></span>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="bank" class="input-group-text">Bank</label>
+                        <label for="bank" class="input-group-text">Category</label>
                     </div>
                     <select name="bank" id="bank" class="form-control">
-                        <option value="">Market</option>
+                        <option value="">-</option>
+                        @foreach($getAllCategoryByUser as $value)
+                        <option value="{{$value->Uid}}">{{$value->Name}}</option>
+                        @endforeach 
                     </select>
                 </div>
                 <div class="input-group mb-3">

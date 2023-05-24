@@ -2,10 +2,10 @@
 
 class categoryM extends Model 
 {
-    public static function getCategory($type=NULL)
+    public static function getAllCategoryByUser($type=NULL)
     {
-        $query = DB::where('User',Session::Uid());
+        $query = DB::select('Uid','Name')->where('User',Session::Uid());
         if($type != NULL) $query->where('Type',strtoupper($type));
-        return $query->Category()->stringQuery();
+        return $query->where('Active','1')->Category()->result();
     }
 }
