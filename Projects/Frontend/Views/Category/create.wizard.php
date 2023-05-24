@@ -27,7 +27,7 @@
                         <label for="bank" class="input-group-text">Category</label>
                     </div>
                     <select name="bank" id="bank" class="form-control">
-                        <option value="">-</option>
+                        <option value="">Nothing</option>
                         @foreach($allCategoryByUser as $value)
                         <option value="{{$value->Uid}}">{{$value->Name}}</option>
                         @endforeach 
