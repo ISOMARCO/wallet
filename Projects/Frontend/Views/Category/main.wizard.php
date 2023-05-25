@@ -85,7 +85,7 @@
                 </div>
                 <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
-                    <img src="{{'aa'}}" alt="">
+                    <img src="{{FILES_DIR.'/Categories/LC_Waikiki.png')}}" alt="">
                         LC WAIKIKI
                     </h3>
                 </div>  
