@@ -29,7 +29,7 @@ class categoryM extends Model
             #}
            # else 
             #{
-                $mainCategory = DB::select('Category_Uid')->where('Parent_Uid',$parentCategory)->Sub_Category()->resultJson();
+                $mainCategory = DB::select('Category_Uid')->where('Parent_Uid',$parentCategory)->Sub_Category()->value();
                 return $mainCategory;
             #}
             $transaction->insert('Sub_Category',[
