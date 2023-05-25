@@ -76,7 +76,7 @@
             <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">Delete&nbsp;<i class="fas fa-trash"></i></button>
         </div>
     </div>
-
+    {{FILES_DIR.'/Categories/LC_Waikiki.png')}}
     <div class="card collapsed-card">
         <div class="card-header">
             <div class="row">
