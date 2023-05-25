@@ -22,15 +22,15 @@ class categoryM extends Model
         ]);
         if($parentCategory != NULL)
         {
-            #$categoryType = DB::query( DB::select('Type')->where('Uid',$parentCategory)->Category()->stringQuery() )->row()->Type;
-            #if($categoryType == 'MAIN')
-            #{
+            $categoryType = DB::query( DB::select('Type')->where('Uid',$parentCategory)->Category()->stringQuery() )->row()->Type;
+            if($categoryType == 'MAIN')
+            {
                 $mainCategory = $parentCategory;
-            #}
-           # else 
-            #{
+            }
+            else 
+            {
                 return DB::query( DB::select('Category_Uid')->where('Child_Uid',$parentCategory)->Sub_Category()->stringQuery() )->value();
-            #}
+            }
             $transaction->insert('Sub_Category',[
                 'Uid' => uniqid(uniqid().'_'),
                 'Category_Uid' => $mainCategory,
