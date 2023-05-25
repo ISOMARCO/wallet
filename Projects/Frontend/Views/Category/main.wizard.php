@@ -86,7 +86,7 @@
                 </div>
                 <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
-                    <img src="{{FILES_DIR.'Categories/LC_WAIKIKI.png'}}" alt="">
+                    <img src="{{URL::base(FILES_DIR.'Categories/LC_WAIKIKI.png')}}" alt="">
                         LC WAIKIKI
                     </h3>
                 </div>  
