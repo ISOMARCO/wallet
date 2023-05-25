@@ -76,7 +76,7 @@
             <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">Delete&nbsp;<i class="fas fa-trash"></i></button>
         </div>
     </div>
-    {{URL::base(FILES_DIR.'/Categories/LC_Waikiki.png')}}
+    
     <div class="card collapsed-card">
         <div class="card-header">
             <div class="row">
@@ -85,7 +85,7 @@
                 </div>
                 <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
-                    <img src="{{URL::base(FILES_DIR.'/Categories/LC_Waikiki.png')}}" alt="">
+                    <img src="{{URL::base(FILES_DIR.'/Categories/LC_Waikiki.png')}}" alt="" style="width:30px;height:30px;">
                         LC WAIKIKI
                     </h3>
                 </div>  
