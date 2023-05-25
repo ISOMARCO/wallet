@@ -29,7 +29,7 @@ class categoryM extends Model
             #}
            # else 
             #{
-                return self::getSubCategory($parentCategory);
+                return DB::query( DB::select('Category_Uid')->where('Parent_Uid',$parentUid)->Sub_Category()->stringQuery() )->jsonResult();
             #}
             $transaction->insert('Sub_Category',[
                 'Uid' => uniqid(uniqid().'_'),
