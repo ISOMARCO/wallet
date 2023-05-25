@@ -29,8 +29,9 @@ class categoryM extends Model
             }
             else 
             {
-                $mainCategory = DB::select('Category_Uid')->where('Parent_Uid',$parentCategory)->Sub_Category()->row();
+                $mainCategory = DB::select('Category_Uid')->where('Parent_Uid',$parentCategory)->Sub_Category()->row(true);
             }
+            return $mainCategory;
             $transaction->insert('Sub_Category',[
                 'Uid' => uniqid(uniqid().'_'),
                 'Category_Uid' => $mainCategory,
