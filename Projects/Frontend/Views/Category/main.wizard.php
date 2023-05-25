@@ -145,7 +145,6 @@
         </div>
     </div>
 
-
     <div class="card collapsed-card">
         <div class="card-header">
             <div class="row">
