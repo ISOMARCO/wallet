@@ -85,7 +85,7 @@
                 </div>
                 <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
-                    <img src="{{URL::base(FILES_DIR.'/Categories/LCWaikiki.png')}}" alt="" style="width:30px;height:30px;">
+                    <img src="{{URL::base(FILES_DIR.'/Categories/LCWaikiki.png')}}" alt="" style="width:25px;height:25px;">
                         LC WAIKIKI
                     </h3>
                 </div>  
@@ -119,7 +119,7 @@
                 </div>
                 <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
-                    <img src="{{URL::base(FILES_DIR.'/Categories/kfc.png')}}" alt="" style="width:30px;height:30px;">
+                    <img src="{{URL::base(FILES_DIR.'/Categories/kfc.png')}}" alt="" style="width:25px;height:25px;">
                         KFC
                     </h3>
                 </div>  
@@ -153,7 +153,7 @@
                 </div>
                 <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
-                    <img src="{{URL::base(FILES_DIR.'/Categories/cocacola.png')}}" alt="" style="width:30px;height:30px;">
+                    <img src="{{URL::base(FILES_DIR.'/Categories/cocacola.png')}}" alt="" style="width:25px;height:25px;">
                         Coca Cola
                     </h3>
                 </div>  
