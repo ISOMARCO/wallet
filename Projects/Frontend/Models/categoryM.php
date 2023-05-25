@@ -41,9 +41,10 @@ class categoryM extends Model
         }
         return $transaction->transEnd();
 
-        public static function getSubCategory($parentUid)
-        {
-            return DB::select('Category_Uid')->where('Parent_Uid',$parentUid)->Sub_Category()->value();
-        }
+        
+    }
+    public static function getSubCategory($parentUid)
+    {
+        return DB::select('Category_Uid')->where('Parent_Uid',$parentUid)->Sub_Category()->value();
     }
 }
