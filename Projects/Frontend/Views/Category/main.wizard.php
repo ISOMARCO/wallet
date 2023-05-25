@@ -77,7 +77,6 @@
         </div>
     </div>
 
-    <img src="{{URL::base(FILES_DIR.'Categories/LC_WAIKIKI.png')}}" alt="">
     <div class="card collapsed-card">
         <div class="card-header">
             <div class="row">
