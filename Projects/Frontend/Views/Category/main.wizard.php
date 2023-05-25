@@ -144,7 +144,8 @@
             <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">Delete&nbsp;<i class="fas fa-trash"></i></button>
         </div>
     </div>
-    <img src="{{URL::base(FILES_DIR.'/Categories/cocacola.png')}}" alt="" style="width:30px;height:30px;">
+
+    
     <div class="card collapsed-card">
         <div class="card-header">
             <div class="row">
