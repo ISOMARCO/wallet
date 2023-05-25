@@ -8,9 +8,9 @@ class loginM extends Model
         if($query->totalRows()) return $query->row();
         return NULL;
     }
-    public static function login($email,$password,$rememberMe=false)
+    public static function login($email,$password,$rememberMe=false,$hash = true)
     {
-        $password = hash('sha256',md5($password));
+        if($hash === true) $password = hash('sha256',md5($password));
         $query = DB::select('Uid','Username','Name','Surname','Lang','Role')->
         where('Email',$email)->
         where('Password',$password)->

@@ -4,9 +4,6 @@ class Initialize extends Controller
 {
     public function main()
     {
-        $email = decrypt( Cookie::select( hash('sha256',md5('Email')) ) );
-        $password = decrypt( Cookie::select( hash('sha256',md5('Password')) ) );
-        echo $email." ".$password;
         ML::lang('az');
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'lang') 
         {
@@ -14,7 +11,7 @@ class Initialize extends Controller
             $password = decrypt( Cookie::select( hash('sha256',md5('Password')) ) );
             if($email && $password)
             {
-                $login = loginM::login( $email,$password );
+                $login = loginM::login( $email,$password, false, false );
                 if(empty($login)) #if change password
                 {
                     Cookie::delete( hash('sha256',md5('Email')) );
