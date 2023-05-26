@@ -47,15 +47,15 @@
         <div class="card-header">
             <div class="row">
                 <div class="col-md-1 col-sm-1">
-                    <a href="javascript:void(0)"><i class="fas fa-arrow-circle-right fa-lg"></i></a>
+                    <a href="javascript:void(0)" style="margin:0; padding: 0"><i class="fas fa-arrow-circle-right fa-lg"></i></a>
                 </div>
-                <div class="col-md-10 col-sm-9">
+                <div class="col-md-10 col-sm-10">
                     <h3 class="card-title font-weight-bold">
                     <i class="fas fa-shopping-basket"></i>
                         Market
                     </h3>
                 </div>  
-                <div class="col-md-1 col-sm-1 card-tools">
+                <div class="card-tools col-md-1 col-sm-1">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-plus"></i>
                     </button>
