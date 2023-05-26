@@ -593,9 +593,9 @@
                 <div class="col-md-1">
                     <a href="javascript:void(0)"><i class="fas fa-arrow-circle-right fa-lg"></i></a>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
-                    <img src="{{URL::base(FILES_DIR.'/Categories/tiktok.svg')}}" alt="" style="width:25px;height:25px;" class="img-responsive">
+                    <img src="{{URL::base(FILES_DIR.'/Categories/tiktok.svg')}}" alt="" style="width:25px;height:25px;margin:0;padding:0;" class="img-responsive">
                         Tiktok
                     </h3>
                 </div>  
