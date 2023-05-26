@@ -383,6 +383,74 @@
         </div>
     </div>
 
+    <div class="card collapsed-card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-1">
+                    <a href="javascript:void(0)"><i class="fas fa-arrow-circle-right fa-lg"></i></a>
+                </div>
+                <div class="col-md-10">
+                    <h3 class="card-title font-weight-bold">
+                    <img src="{{URL::base(FILES_DIR.'/Categories/googleplaystore.svg')}}" alt="" style="width:25px;height:25px;">
+                        Google Play Store
+                    </h3>
+                </div>  
+                <div class="col-md-1 card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-plus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool text-danger" data-card-widget="remove" title="Remove">
+                    <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            
+        
+
+
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-primary" style="float:left">Edit&nbsp;<i class="fas fa-edit"></i></button>
+            <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">Delete&nbsp;<i class="fas fa-trash"></i></button>
+        </div>
+    </div>
+
+    <div class="card collapsed-card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-1">
+                    <a href="javascript:void(0)"><i class="fas fa-arrow-circle-right fa-lg"></i></a>
+                </div>
+                <div class="col-md-10">
+                    <h3 class="card-title font-weight-bold">
+                    <img src="{{URL::base(FILES_DIR.'/Categories/googledrive.svg')}}" alt="" style="width:25px;height:25px;">
+                        Google Drive
+                    </h3>
+                </div>  
+                <div class="col-md-1 card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-plus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool text-danger" data-card-widget="remove" title="Remove">
+                    <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            
+        
+
+
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-primary" style="float:left">Edit&nbsp;<i class="fas fa-edit"></i></button>
+            <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">Delete&nbsp;<i class="fas fa-trash"></i></button>
+        </div>
+    </div>
+
 
 </div>
 </section>
