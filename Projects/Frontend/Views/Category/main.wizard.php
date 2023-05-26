@@ -187,7 +187,7 @@
                 </div>
                 <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
-                    <img src="{{URL::base(FILES_DIR.'/Categories/mcdonalds.jpg')}}" alt="" style="width:25px;height:25px;">
+                    <img src="{{URL::base(FILES_DIR.'/Categories/mcdonalds.svg')}}" alt="" style="width:25px;height:25px;">
                         MC Donalds
                     </h3>
                 </div>  
