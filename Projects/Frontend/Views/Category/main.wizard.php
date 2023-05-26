@@ -595,17 +595,17 @@
                 </div>
                 <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
-                    <img src="{{URL::base(FILES_DIR.'/Categories/tiktok.svg')}}" alt="" style="width:25px;height:25px;">
+                    <img src="{{URL::base(FILES_DIR.'/Categories/tiktok.svg')}}" alt="" style="width:25px;height:25px;margin:0;padding:0;">
                         Tiktok
                     </h3>
                 </div>  
                 <div class="card-tools">
                     <div class="col-md-1">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                    <i class="fas fa-plus"></i>
+                        <i class="fas fa-plus"></i>
                     </button>
                     <button type="button" class="btn btn-tool text-danger" data-card-widget="remove" title="Remove">
-                    <i class="fas fa-times"></i>
+                        <i class="fas fa-times"></i>
                     </button>
                     </div>
                 </div>
