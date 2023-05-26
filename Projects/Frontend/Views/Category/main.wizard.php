@@ -119,7 +119,7 @@
                 </div>
                 <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
-                    <img src="{{URL::base(FILES_DIR.'/Categories/kfc.png')}}" alt="" style="width:25px;height:25px;">
+                    <img src="{{URL::base(FILES_DIR.'/Categories/kfc.svg')}}" alt="" style="width:25px;height:25px;">
                         KFC
                     </h3>
                 </div>  
