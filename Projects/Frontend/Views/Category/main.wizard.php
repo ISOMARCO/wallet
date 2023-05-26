@@ -595,7 +595,7 @@
                 </div>
                 <div class="col-md-10 col-sm-6">
                     <h3 class="card-title font-weight-bold">
-                    <img src="{{URL::base(FILES_DIR.'/Categories/tiktok.svg')}}" alt="" style="width:25px;height:25px;padding:0;" class="img-responsive img-fluid">
+                    <img src="{{URL::base(FILES_DIR.'/Categories/tiktok.svg')}}" alt=""  class="img-responsive img-fluid">
                         Tiktok
                     </h3>
                 </div>  
