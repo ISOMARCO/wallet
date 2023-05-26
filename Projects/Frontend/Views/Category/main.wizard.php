@@ -255,7 +255,7 @@
                 </div>
                 <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
-                    <img src="{{URL::base(FILES_DIR.'/Categories/applemusic.svg')}}" alt="" style="width:30px;height:30px;">
+                    <img src="{{URL::base(FILES_DIR.'/Categories/applemusic.svg')}}" alt="" style="width:25px;height:25px;">
                         Apple Music
                     </h3>
                 </div>  
