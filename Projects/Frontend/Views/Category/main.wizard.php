@@ -47,11 +47,11 @@
         <div class="card-header">
             <!-- <div class="row"> -->
                 <!-- <div class="col-md-1 col-sm-1"> -->
-                    <a href="javascript:void(0)"><i class="fas fa-arrow-circle-right fa-lg"></i></a>
+                    
                 <!-- </div> -->
                 <!-- <div class="col-md-10 col-sm-10"> -->
-                    <h3 class="card-title font-weight-bold">
-                    <i class="fas fa-shopping-basket"></i>
+                    <h3 class="card-title">
+                    <a href="javascript:void(0)"><i class="fas fa-arrow-circle-right fa-lg"></i></a> <i class="fas fa-shopping-basket"></i>
                         Market
                     </h3>
                 <!-- </div>   -->
