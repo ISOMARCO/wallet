@@ -587,8 +587,8 @@
         </div>
     </div>
 
-    <div class="card collapsed-card row">
-        <div class="card-header col-md-12">
+    <div class="card collapsed-card">
+        <div class="card-header">
             <div class="row">
                 <div class="col-md-1">
                     <a href="javascript:void(0)"><i class="fas fa-arrow-circle-right fa-lg"></i></a>
