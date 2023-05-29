@@ -6,7 +6,6 @@ class accounts extends Controller
     {
         Masterpage::title('Accounts');
         View::accounts(accountsM::getUserAccounts());
-        MigrateSub_Category::up();
     }
     public function create()
     {
