@@ -13,7 +13,7 @@ class InternalMigrateOperations extends ZN\Database\Migration
 		([
 			'Id' => [DB::int(11),DB::primaryKey(), DB::autoIncrement(),DB::notNull()],
             'Document_Number' => [DB::bigInt(20),DB::unique(),DB::null()],
-            'Type' => [DB::varchar(15), DB::null(), DB::defaultValue('Positive')],
+            'Type' => [DB::varchar(15), DB::null(), DB::defaultValue('POSITIVE')],
             'Description' => [DB::longText(),DB::null()],
             'Category_Uid' => [DB::varchar(30),DB::null()],
 			'Amount' => [DB::double(),DB::null(), DB::defaultValue(' 0')],
