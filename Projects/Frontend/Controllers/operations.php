@@ -5,7 +5,7 @@ class operations extends Controller
     public function main()
     {
         Masterpage::title(ML::select('Operations'));
-        MigrateOperations::down();
+        #MigrateOperations::down();
         MigrateOperations::up();
     }
     public function create()
