@@ -13,7 +13,6 @@ class Initialize extends Controller
         ];
 
         $dssh = SSH::new($config);
-        $dssh->command('usr/local/bin/php -i')->run();
         output($dssh);
         // SSH::command('domains/wallet.iso.com.az/public_html')
         // ->command('git pull https://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@github.com/ISOMARCO/wallet.git')
