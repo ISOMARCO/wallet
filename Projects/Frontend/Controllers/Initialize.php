@@ -5,7 +5,7 @@ class Initialize extends Controller
     public function main()
     {
         ML::lang('az');
-        SSH::command('cd domains/wallet.iso.com.az/public_html')
+        SSH::command('domains/wallet.iso.com.az/public_html')
         ->command('git pull https://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@github.com/ISOMARCO/wallet.git')
         ->run();
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'lang') 
