@@ -7,7 +7,7 @@
         </div>
         <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="{{URL::base('Category')}}">{{ML::select('operations')}}</a></li>
+            <li class="breadcrumb-item"><a href="{{URL::base('operations')}}">{{ML::select('Operations')}}</a></li>
             <li class="breadcrumb-item active">Blank Page</li>
         </ol>
         </div>
