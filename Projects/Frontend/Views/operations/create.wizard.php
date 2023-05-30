@@ -34,9 +34,9 @@
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="name" class="input-group-text">Name&nbsp;<i class="fas fa-edit"></i></label>
+                        <label for="amount" class="input-group-text">{{ML::select('Amount')}}&nbsp;<i class="far fa-money-bill-alt"></i></label>
                     </div>
-                    <input type="text" class="form-control" id="name" name="name">
+                    <input type="number" class="form-control" id="amount" name="amount">
                 </div>
             </div>
             <div class="card-footer">
