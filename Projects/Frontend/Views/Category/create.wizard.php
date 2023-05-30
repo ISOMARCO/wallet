@@ -5,12 +5,12 @@
     <div class="container-fluid">
     <div class="row mb-2">
         <div class="col-sm-6">
-        <h1>Category Create</h1>
+        <h1>{{ML::select('CreateCategory')}}</h1>
         </div>
         <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="{{URL::base('Category')}}">{{ML::select('Category')}}</a></li>
-            <li class="breadcrumb-item active">Category yarat</li>
+            <li class="breadcrumb-item active">{{ML::select('CreateCategory')}}</li>
         </ol>
         </div>
     </div>
@@ -19,12 +19,12 @@
 <section class="content">
     <form method="post" id="createForm" action="{{URL::base('Category/createRequest')}}">
         <div class="card card-info">
-            <div class="card-header">Category Əlavə Et</div>
+            <div class="card-header">{{ML::select('CreateCategory')}}</div>
             <div class="card-body">
                 <span id="msg" style="font-weight:bold"></span>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="category" class="input-group-text">Category&nbsp;<i class="fas fa-cube"></i></label>
+                        <label for="category" class="input-group-text">{{ML::select('Category')}}&nbsp;<i class="fas fa-cube"></i></label>
                     </div>
                     <select name="category" id="category" class="form-control">
                         <option value="">Nothing</option>
