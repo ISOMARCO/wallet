@@ -42,7 +42,7 @@
                     <div class="input-group-prepend">
                         <label for="date" class="input-group-text">{{ML::select('Date')}}&nbsp;<i class="far fa-calendar-alt"></i></label>
                     </div>
-                    <input type="date" class="form-control" id="date" name="date">
+                    <input type="date" class="form-control" id="date" name="date" placeholder="dd-mm-yyyy">
                 </div>
             </div>
             <div class="card-footer">
