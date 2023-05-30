@@ -28,6 +28,6 @@ class Initialize extends Controller
         
         Masterpage::headPage('Sections/head')
                   ->bodyPage('Sections/body')
-                  ->browserIcon(FILES_DIR . 'favicon.ico');
+                  ->browserIcon(FILES_DIR . 'favicon.svg');
     }
 }
