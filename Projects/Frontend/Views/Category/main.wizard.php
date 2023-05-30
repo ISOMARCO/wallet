@@ -324,7 +324,7 @@
                 <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
                     <img src="{{URL::base(FILES_DIR.'/Categories/icloud.svg')}}" alt="" style="width:25px;height:25px;">
-                        ICloud
+                        iCloud
                     </h3>
                 </div>  
                 <div class="col-md-1 card-tools">
