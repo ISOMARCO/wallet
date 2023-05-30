@@ -5,12 +5,12 @@
     <div class="container-fluid">
     <div class="row mb-2">
         <div class="col-sm-6">
-        <h1>Category Create</h1>
+        <h1>{{ML::select('CreateOperations')}}</h1>
         </div>
         <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="{{URL::base('Category')}}">{{ML::select('Category')}}</a></li>
-            <li class="breadcrumb-item active">Category yarat</li>
+            <li class="breadcrumb-item"><a href="{{URL::base('operations')}}">{{ML::select('Operations')}}</a></li>
+            <li class="breadcrumb-item active">{{ML::select('CreateOperations')}}</li>
         </ol>
         </div>
     </div>
