@@ -38,6 +38,12 @@
                     </div>
                     <input type="number" class="form-control" id="amount" name="amount">
                 </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label for="date" class="input-group-text">{{ML::select('Date')}}&nbsp;<i class="far fa-calendar-alt"></i></label>
+                    </div>
+                    <input type="date" class="form-control" id="date" name="date">
+                </div>
             </div>
             <div class="card-footer">
                 <button type="button" class="btn btn-info" id="insert">{{ML::select('Submit')}} <i class="far fa-paper-plane"></i></button>
