@@ -18,8 +18,8 @@
 <div class="card">
 <div class="card-header">
     <span class="float-right">
-        <a href="{{URL::base('Category/create')}}" class="btn btn-outline-primary">ML::select('CreateOperations') <i class="fas fa-plus"></i></a> 
-        <button type="button" class="btn btn-outline-secondary" id="searchButton">ML::select('Search') <i class="fas fa-search"></i></button>
+        <a href="{{URL::base('Category/create')}}" class="btn btn-outline-primary">{{ML::select('CreateOperations')}} <i class="fas fa-plus"></i></a> 
+        <button type="button" class="btn btn-outline-secondary" id="searchButton">{{ML::select('Search')}} <i class="fas fa-search"></i></button>
     </span>
 </div>
 <div class="card-body">
