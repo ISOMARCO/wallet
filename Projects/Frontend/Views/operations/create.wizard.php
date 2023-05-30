@@ -28,7 +28,9 @@
                     </div>
                     <select name="category" id="category" class="form-control">
                         <option value="">Nothing</option>
-                        <option value="">DEMO</option>
+                        @foreach($allCategoryByUser as $value)
+                        <option value="{{$value->Uid}}">{{$value->Name}}</option>
+                        @endforeach 
                     </select>
                 </div>
                 <div class="input-group mb-3">
