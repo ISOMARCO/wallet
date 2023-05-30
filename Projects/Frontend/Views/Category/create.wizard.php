@@ -35,7 +35,7 @@
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="name" class="input-group-text">Name&nbsp;<i class="fas fa-edit"></i></label>
+                        <label for="name" class="input-group-text">{{ML::select('Name')}}&nbsp;<i class="fas fa-edit"></i></label>
                     </div>
                     <input type="text" class="form-control" id="name" name="name">
                 </div>

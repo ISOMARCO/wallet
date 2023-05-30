@@ -6,10 +6,10 @@ class lang extends Controller
     {
         #ML::delete('en','Category');
         #ML::delete('az','Category');
-        ML::insert('en','Name','Name');
-        ML::insert('az','Name','Ad');
-        ML::insert('en','Categories','Categories');
-        ML::insert('az','Categories','Kateqoriyalar');
+        ML::insert('en','Submit','Submit');
+        ML::insert('az','Submit','Göndər');
+        ML::insert('en','Reset','Reset');
+        ML::insert('az','Reset','Sıfırla');
         output(ML::selectAll());
         exit;
     }
