@@ -221,7 +221,7 @@
                 </div>
                 <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
-                    <img src="{{URL::base(FILES_DIR.'/Categories/wolt.png')}}" alt="" style="width:30px;height:30px;">
+                    <img src="{{URL::base(FILES_DIR.'/Categories/wolt.svg')}}" alt="" style="width:25px;height:25px;">
                         Wolt
                     </h3>
                 </div>  
