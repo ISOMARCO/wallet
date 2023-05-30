@@ -6,8 +6,8 @@ class lang extends Controller
     {
         ML::insert('en','Operations','Operations');
         ML::insert('az','Operations','Əməliyyatlar');
-        ML::delete('en','operations');
-        ML::delete('az','operations');
+        #ML::delete('en','operations');
+        #ML::delete('az','operations');
         output(ML::selectAll());
         exit;
     }
