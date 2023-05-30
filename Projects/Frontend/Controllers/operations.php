@@ -5,6 +5,7 @@ class operations extends Controller
     public function main()
     {
         Masterpage::title(ML::select('Operations'));
+        echo "okey";
     }
     public function create()
     {
