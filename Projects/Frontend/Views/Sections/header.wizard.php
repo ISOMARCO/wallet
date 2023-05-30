@@ -203,7 +203,7 @@
           </li>
           <li class="nav-item">
             <a href="{{URL::base('operations')}}" class="nav-link">
-            <i class="nav-icon fa-solid fa-receipt"></i>
+              <i class="nav-icon fas fa-receipt"></i>
               <p>
                 {{ML::select('operations')}}
               </p>
