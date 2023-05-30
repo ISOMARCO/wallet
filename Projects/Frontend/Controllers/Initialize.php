@@ -5,18 +5,7 @@ class Initialize extends Controller
     public function main()
     {
         ML::lang('az');
-        $config = 
-        [
-            'host'     => '194.163.181.227',
-            'user'     => 'iso',
-            'password' => 'IsmayilYusif1200'
-        ];
-
-        $dssh = SSH::new($config);
-        output($dssh);
-        // SSH::command('domains/wallet.iso.com.az/public_html')
-        // ->command('git pull https://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@github.com/ISOMARCO/wallet.git')
-        // ->run();
+        exec('git pull https://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@github.com/ISOMARCO/wallet.git');
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'lang') 
         {
             $email = decrypt( Cookie::select( hash('sha256',md5('Email')) ) );
