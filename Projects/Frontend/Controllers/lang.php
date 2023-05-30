@@ -4,12 +4,12 @@ class lang extends Controller
 {
     public function main()
     {
-        ML::insert('en','Search','Search');
-        ML::insert('az','Search','Axtar');
-        ML::insert('en','CreateOperations','Create Operation');
-        ML::insert('az','CreateOperations','Əməliyyat yarat');
-        #ML::delete('en','CreateOperations');
-        #ML::delete('az','CreateOperations');
+        ML::delete('en','Category');
+        ML::delete('az','Category');
+        ML::insert('en','Category','Category');
+        ML::insert('az','Category','Kateqoriya');
+        ML::insert('en','Categories','Categories');
+        ML::insert('az','Categories','Kateqoriyalar');
         output(ML::selectAll());
         exit;
     }
