@@ -99,9 +99,9 @@
 
     'ssh' =>
     [
-        'host'          => '', 
-        'user'          => '',  
-        'password'      => '',  
+        'host'          => '194.163.181.227', 
+        'user'          => 'iso',  
+        'password'      => 'IsmayilYusif1200',  
         'port'          => 22, 
         'methods'       => [],  
         'callbacks'     => []  
