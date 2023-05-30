@@ -6,10 +6,10 @@ class lang extends Controller
     {
         ML::insert('en','Search','Search');
         ML::insert('az','Search','Axtar');
-        #ML::insert('en','CreateOperations','Əməliyyat yarat');
-        #ML::insert('az','Search','Axtar');
-        ML::delete('en','CreateOperations');
-        ML::delete('az','CreateOperations');
+        ML::insert('en','CreateOperations','Create Operation');
+        ML::insert('az','CreateOperations','Əməliyyat yarat');
+        #ML::delete('en','CreateOperations');
+        #ML::delete('az','CreateOperations');
         output(ML::selectAll());
         exit;
     }
