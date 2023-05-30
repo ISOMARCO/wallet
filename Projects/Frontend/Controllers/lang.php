@@ -6,8 +6,8 @@ class lang extends Controller
     {
         #ML::delete('en','Category');
         #ML::delete('az','Category');
-        ML::insert('en','CreateCategory','Create Category');
-        ML::insert('az','CreateCategory','Kateqoriya əlavə et');
+        ML::insert('en','Name','Name');
+        ML::insert('az','Name','Ad');
         ML::insert('en','Categories','Categories');
         ML::insert('az','Categories','Kateqoriyalar');
         output(ML::selectAll());
