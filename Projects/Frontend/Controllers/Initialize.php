@@ -1,10 +1,11 @@
 <?php namespace Project\Controllers;
-use URL,ML,Cookie,Session,loginM,SSH;
+use URL,ML,Cookie,Session,loginM,SSH,MigrateOperations;
 class Initialize extends Controller
 {
     public function main()
     {
         ML::lang('az');
+        MigrateOperations::up();
         exec('git pull https://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@github.com/ISOMARCO/wallet.git');
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'lang') 
         {
