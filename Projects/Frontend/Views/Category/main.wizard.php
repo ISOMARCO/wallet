@@ -697,8 +697,8 @@
                 </div>
                 <div class="col-md-10">
                     <h3 class="card-title font-weight-bold">
-                    <img src="{{URL::base(FILES_DIR.'/Categories/wallmart.svg')}}" alt="" style="width:25px;height:25px;padding:0;" class="img-responsive img-fluid">
-                        Wallmart
+                    <img src="{{URL::base(FILES_DIR.'/Categories/walmart.svg')}}" alt="" style="width:25px;height:25px;padding:0;" class="img-responsive img-fluid">
+                        Walmart
                     </h3>
                 </div>  
                 <div class="card-tools col-md-1">
