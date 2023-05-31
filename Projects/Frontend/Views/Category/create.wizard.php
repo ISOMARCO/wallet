@@ -35,7 +35,7 @@
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="type" class="input-group-text">{{ML::select('Type')}}&nbsp;<i class="fas fa-cube"></i></label>
+                        <label for="type" class="input-group-text">{{ML::select('Type')}}&nbsp;<i class="fas fa-comment-dollar"></i></label>
                     </div>
                     <select name="type" id="type" class="form-control">
                         <option value="POSITIVE">Gəlir</option> 
