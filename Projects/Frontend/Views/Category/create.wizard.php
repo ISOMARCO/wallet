@@ -14,7 +14,7 @@
         </ol>
         </div>
     </div>
-    </div><!-- /.container-fluid -->
+    </div>
 </section>
 <section class="content">
     <form method="post" id="createForm" action="{{URL::base('Category/createRequest')}}">
@@ -29,8 +29,17 @@
                     <select name="category" id="category" class="form-control">
                         <option value="">Nothing</option>
                         @foreach($allCategoryByUser as $value)
-                        <option value="{{$value->Uid}}">{{$value->Name}}</option>
+                            <option value="{{$value->Uid}}">{{$value->Name}}</option>
                         @endforeach 
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label for="type" class="input-group-text">{{ML::select('Type')}}&nbsp;<i class="fas fa-cube"></i></label>
+                    </div>
+                    <select name="type" id="type" class="form-control">
+                        <option value="POSITIVE">Gəlir</option> 
+                        <option value="NEGATIVE">Xərc</option>
                     </select>
                 </div>
                 <div class="input-group mb-3">
