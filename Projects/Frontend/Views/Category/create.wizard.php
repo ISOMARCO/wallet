@@ -95,5 +95,12 @@ $(document).ready(function(){
         $("#selected_icon img").attr("src","");
         $("#name").val("");
     });
+    $("#reset").on("click",function(){
+        $("#category_icons").show();
+        $("#selected_icon").hide();
+        $("#selected_icon input").attr("value","");
+        $("#selected_icon img").attr("src","");
+        $("input").val("");
+    });
 }); 
 </script>
