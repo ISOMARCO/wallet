@@ -48,9 +48,9 @@
                     </div>
                     <input type="text" class="form-control" id="name" name="name">
                 </div>
-                <div class="row">
+                <div class="row" id="category_icons">
                     @foreach($categoryImages as $value)
-                        <div class="col-1 col-sm-3 mb-2"><img src="{{URL::base(FILES_DIR.'Categories/'.$value)}}" alt="" style="width:25px;height:25px;cursor: pointer;"></div>
+                        <div class="col-1 col-sm-3 mb-2" id="icon"><img src="{{URL::base(FILES_DIR.'Categories/'.$value)}}" alt="" style="width:25px;height:25px;cursor: pointer;"></div>
                     @endforeach
                 </div>
             </div>
@@ -74,6 +74,9 @@ $(document).ready(function(){
                 console.log(e.error);
             }
         });
+    });
+    $("#icon").on("click",function(){
+        alert($(this).attr("src"));
     });
 }); 
 </script>
