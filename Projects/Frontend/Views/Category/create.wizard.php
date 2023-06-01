@@ -48,9 +48,11 @@
                     </div>
                     <input type="text" class="form-control" id="name" name="name">
                 </div>
-                <!-- <div class="row">
-                    <div class="col-md-1"></div>
-                </div> -->
+                <div class="row">
+                    @foreach($categoryImages as $value)
+                        <div class="col-md-1"><img src="{{URL::base(FILES_DIR.'Categories/'.$value)}}" alt="" style="width:25px;height:25px;"></div>
+                    @endforeach
+                </div>
             </div>
             <div class="card-footer">
                 <button type="button" class="btn btn-info" id="insert">{{ML::select('Submit')}} <i class="far fa-paper-plane"></i></button>

@@ -10,7 +10,7 @@ class Category extends Controller
     {
         Masterpage::title("Create Category");
         View::allCategoryByUser(categoryM::getAllCategoryByUser());
-        output(Folder::files('Projects/Frontend/Resources/Files/Categories'));
+        View::categoryImages(Folder::files('Projects/Frontend/Resources/Files/Categories'));
     }
     public function createRequest()
     {
