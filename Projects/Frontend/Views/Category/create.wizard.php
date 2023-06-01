@@ -85,6 +85,7 @@ $(document).ready(function(){
         $("#selected_icon").show();
         $("#selected_icon input").attr("value",$(this).attr("src"));
         $("#selected_icon img").attr("src",$(this).attr("src"));
+        $("#name").val($(this).attr("title"));
         //alert($(this).attr("src"));
     });
     $("#unselect_icon").on("click",function(){
