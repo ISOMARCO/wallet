@@ -85,15 +85,17 @@ $(document).ready(function(){
         $("#selected_icon").show();
         $("#selected_icon input").attr("value",$(this).attr("src"));
         $("#selected_icon img").attr("src",$(this).attr("src"));
-        $("#name").val($(this).attr("title"));
-        //alert($(this).attr("src"));
+        if($("#name").val() == NULL)
+        {
+            $("#name").val($(this).attr("title"));
+        }
     });
     $("#unselect_icon").on("click",function(){
         $("#category_icons").show();
         $("#selected_icon").hide();
         $("#selected_icon input").attr("value","");
         $("#selected_icon img").attr("src","");
-        $("#name").val("");
+        //$("#name").val("");
     });
     $("#reset").on("click",function(){
         $("#category_icons").show();
