@@ -48,6 +48,9 @@
                     </div>
                     <input type="text" class="form-control" id="name" name="name">
                 </div>
+                <!-- <div class="row">
+                    <div class="col-md-1"></div>
+                </div> -->
             </div>
             <div class="card-footer">
                 <button type="button" class="btn btn-info" id="insert">{{ML::select('Submit')}} <i class="far fa-paper-plane"></i></button>

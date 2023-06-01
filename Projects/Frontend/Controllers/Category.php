@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use ML,categoryM,Http,Post,DB;
+use ML,categoryM,Http,Post,DB,Folder;
 class Category extends Controller
 {
     public function main()
@@ -10,6 +10,7 @@ class Category extends Controller
     {
         Masterpage::title("Create Category");
         View::allCategoryByUser(categoryM::getAllCategoryByUser());
+        output(Folder::files('Projects/Frontend/Resources/Files/Categories'));
     }
     public function createRequest()
     {
