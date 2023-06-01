@@ -76,7 +76,7 @@ $(document).ready(function(){
         });
     });
     $("#category_icons").on("click",function(){
-        alert($(this+" img").attr("src"));
+        alert($(this).find("img").attr("src"));
     });
 }); 
 </script>
