@@ -50,7 +50,7 @@
                 </div>
                 <div class="row">
                     @foreach($categoryImages as $value)
-                        <div class="col-md-1"><img src="{{URL::base(FILES_DIR.'Categories/'.$value)}}" alt="" style="width:25px;height:25px;"></div>
+                        <div class="col-md-1 mb-2"><img src="{{URL::base(FILES_DIR.'Categories/'.$value)}}" alt="" style="width:25px;height:25px;"></div>
                     @endforeach
                 </div>
             </div>
