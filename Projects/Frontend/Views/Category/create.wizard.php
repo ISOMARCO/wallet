@@ -76,7 +76,7 @@ $(document).ready(function(){
         });
     });
     $("#icon").on("click",function(){
-        console.log($(this).attr("src"));
+        alert($(this).attr("src"));
     });
 }); 
 </script>
