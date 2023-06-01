@@ -49,9 +49,7 @@
                     <input type="text" class="form-control" id="name" name="name">
                 </div>
                 <div class="input-group mb-3" id="selected_icon" style="display:none">
-                    <div class="input-group-prepend">
-                        <label for="picture" class="input-group-text">{{ML::select('Picture')}}&nbsp;<i class="fas fa-edit"></i></label>
-                    </div>
+                    
                     <input type="hidden" value="">
                     <img src="" alt="" style="width:25px; height:25px; cursor: pointer;" id="unselect_icon">
                 </div>
