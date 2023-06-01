@@ -53,7 +53,7 @@
                         <label for="picture" class="input-group-text">{{ML::select('Picture')}}&nbsp;<i class="fas fa-edit"></i></label>
                     </div>
                     <input type="hidden" value="">
-                    <img src="" alt="" style="width:25px;height:25px;">
+                    <img src="" alt="" style="width:25px;height:25px;" id="unselect_icon">
                 </div>
                 <div class="row" id="category_icons">
                     @foreach($categoryImages as $value)
@@ -88,6 +88,12 @@ $(document).ready(function(){
         $("#selected_icon input").attr("value",$(this).attr("src"));
         $("#selected_icon img").attr("src",$(this).attr("src"));
         //alert($(this).attr("src"));
+    });
+    $("#unselect_icon").on("click",function(){
+        $("#category_icons").show();
+        $("#selected_icon").hide();
+        $("#selected_icon input").attr("value","");
+        $("#selected_icon img").attr("src","");
     });
 }); 
 </script>
