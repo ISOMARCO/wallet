@@ -75,8 +75,8 @@ $(document).ready(function(){
             }
         });
     });
-    $("#icon").on("click",function(){
-        alert($(this).find("img").attr("src"));
+    $("#icon img").on("click",function(){
+        alert($(this).attr("src"));
     });
 }); 
 </script>
