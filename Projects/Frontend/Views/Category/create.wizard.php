@@ -53,7 +53,7 @@
                         <label for="picture" class="input-group-text">{{ML::select('Picture')}}&nbsp;<i class="fas fa-edit"></i></label>
                     </div>
                     <input type="hidden" value="">
-                    <img src="" alt="" style="width:25px;height:25px;" id="unselect_icon">
+                    <img src="" alt="" style="width:25px; height:25px; cursor: pointer;" id="unselect_icon">
                 </div>
                 <div class="row" id="category_icons">
                     @foreach($categoryImages as $value)
