@@ -48,7 +48,14 @@
                     </div>
                     <input type="text" class="form-control" id="name" name="name">
                 </div>
-                <div class="row">
+                <div class="input-group mb-3" id="selected_icon" style="display:none">
+                    <div class="input-group-prepend">
+                        <label for="picture" class="input-group-text">{{ML::select('Picture')}}&nbsp;<i class="fas fa-edit"></i></label>
+                    </div>
+                    <input type="hidden" value="">
+                    <img src="" alt="">
+                </div>
+                <div class="row" id="category_icons">
                     @foreach($categoryImages as $value)
                         <div class="col-1 col-sm-1 mb-2" id="icon"><img src="{{URL::base(FILES_DIR.'Categories/'.$value)}}" alt="" style="width:25px;height:25px;cursor: pointer;"></div>
                     @endforeach
@@ -76,7 +83,11 @@ $(document).ready(function(){
         });
     });
     $("#icon img").on("click",function(){
-        alert($(this).attr("src"));
+        $("#category_icons").hide();
+        $("#selected_icon").show();
+        $("#selected_icon input").attr("value",$(this).attr("src"));
+        $("#selected_icon img").attr("src",$(this).attr("src"));
+        //alert($(this).attr("src"));
     });
 }); 
 </script>
