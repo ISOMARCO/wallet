@@ -28,7 +28,7 @@
       Swal.fire({
       title: "{{ML::select('ExitAlertMessage')}}",
       text: "",
-      icon: 'danger',
+      icon: 'question',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
