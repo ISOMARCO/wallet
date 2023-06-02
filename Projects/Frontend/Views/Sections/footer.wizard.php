@@ -25,7 +25,7 @@
 <script>
   $(document).ready(function(){
     $("#navExitButton").on("click",function(){
-      if(Swal.fire({
+      Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
       icon: 'warning',
@@ -35,20 +35,9 @@
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
-          'success'
-        )
+        window.location.href = "{{URL::base('home/exit')}}";
       }
-    }))
-    {
-      alert('okey');
-    }
-    else
-    {
-      alert('no');
-    }
+    }));
     });
   });
 </script>
