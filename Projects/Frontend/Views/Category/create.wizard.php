@@ -95,7 +95,7 @@ $(document).ready(function(){
         $("#selected_icon").hide();
         $("#selected_icon input").attr("value","");
         $("#selected_icon img").attr("src","");
-        //$("#name").val("");
+        $("#name").val("");
     });
     $("#reset").on("click",function(){
         $("#category_icons").show();
