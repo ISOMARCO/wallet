@@ -6,10 +6,10 @@ class lang extends Controller
     {
         #ML::delete('en','Category');
         #ML::delete('az','Category');
-        ML::insert('en','ExitAlertMessage','Are you sure to exit ?');
-        ML::insert('az','ExitAlertMessage','Çıxmaq istədiyinizdən əminsiniz ?');
-        #ML::insert('en','Reset','Reset');
-        #ML::insert('az','Reset','Sıfırla');
+        ML::i1nsert('en','Yes','Yes');
+        ML::insert('az','Yes','Bəli');
+        ML::insert('en','No','No');
+        ML::insert('az','No','Xeyr');
         output(ML::selectAll());
         exit;
     }
