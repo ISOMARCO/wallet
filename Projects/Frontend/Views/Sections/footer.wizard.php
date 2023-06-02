@@ -37,7 +37,7 @@
       if (result.isConfirmed) {
         window.location.href = "{{URL::base('home/exit')}}";
       }
-    }));
+    })
     });
   });
 </script>
