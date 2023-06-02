@@ -8,8 +8,8 @@ class lang extends Controller
         #ML::delete('az','Category');
         ML::i1nsert('en','Yes','Yes');
         ML::insert('az','Yes','Bəli');
-        ML::insert('en','No','No');
-        ML::insert('az','No','Xeyr');
+        #ML::insert('en','No','No');
+        #ML::insert('az','No','Xeyr');
         output(ML::selectAll());
         exit;
     }
