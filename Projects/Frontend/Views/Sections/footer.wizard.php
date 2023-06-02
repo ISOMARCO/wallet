@@ -26,13 +26,14 @@
   $(document).ready(function(){
     $("#navExitButton").on("click",function(){
       Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: "{{ML::select('ExitAlertMessage')}}",
+      text: "",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonText: "{{ML::select('Yes')}}",
+      cancelButtonText: "{{ML::select('No')}}"
     }).then((result) => {
       if (result.isConfirmed) {
         window.location.href = "{{URL::base('home/exit')}}";
