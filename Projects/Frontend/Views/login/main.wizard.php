@@ -101,6 +101,7 @@
           else 
           {
             $("input, button").attr("disabled","disabled");
+            $(".login-box-msg").removeClass("text-danger");
             $(".login-box-msg").addClass("text-success");
             $(".login-box-msg").text(e.success);
             setTimeout(function(){window.location.href="{{URL::base('home')}}";},2500);
