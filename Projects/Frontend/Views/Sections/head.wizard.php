@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="dist/css/adminlte.min.css">
 <!-- select2 -->
 <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
+<!-- sweet alert2 -->
+<link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
-<!-- select2 -->
-<script src="plugins/select2/js/select2.min.js"></script>
