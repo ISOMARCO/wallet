@@ -243,7 +243,7 @@ class DriverForge
      * 
      * @return string
      */
-    public function ($indexName, $table, $columns, $uniq = NULL)
+    public function createIndex($indexName, $table, $columns, $uniq = NULL)
     {
         return 'CREATE ' . $uniq . ' INDEX ' . $indexName . ' ON ' . $table . ' (' . $columns . ');';
     }
