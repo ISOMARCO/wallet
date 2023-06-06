@@ -109,7 +109,7 @@ $(document).ready(function(){
     });
     $("#category").on("change",function(){
         $( "#category option:selected" ).each(function(){
-            //$("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text());
+            alert($(this).attr('value'));
             var img = $(this).attr("data-image");
             $(".fa-cube").hide();
             $("#category_image").attr("src","{{URL::base('"+img+"');}}");
