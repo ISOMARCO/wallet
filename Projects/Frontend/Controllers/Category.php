@@ -22,9 +22,13 @@ class Category extends Controller
         $picture = FILES_DIR.'/Categories/'.$picture;
         if($name == NULL)
         {
-            echo json_encode(['error' => 'Ad bos buraxila bilmez']);
+            echo json_encode(['error' => ML::select('AddCategoryNullNameErrorMessage')]);
             exit;
         }
-        echo json_encode([ 'error' =>categoryM::addCategory(['Name' => $name, 'Entry_Type' => $type, 'Picture' => $picture],$category) ]);
+        if(!categoryM::addCategory(['Name' => $name, 'Entry_Type' => $type, 'Picture' => $picture],$category))
+        {
+            echo json_encode(['error' => ML::select('AddCategoryErrorMessage')]);
+        }
+        echo json_encode(['success' => ML::select('AddCategorySuccessMessage')]);
     }
 }
