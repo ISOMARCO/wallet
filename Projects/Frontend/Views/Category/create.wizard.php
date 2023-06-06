@@ -109,12 +109,20 @@ $(document).ready(function(){
     });
     $("#category").on("change",function(){
         $( "#category option:selected" ).each(function(){
-            if(!$(this).attr('value')) alert("ok");
-            var img = $(this).attr("data-image");
-            $(".fa-cube").hide();
-            $("#category_image").attr("src","{{URL::base('"+img+"');}}");
-            $("#category_image").attr("alt",img);
-            $("#category_image").show();
+            if(!$(this).attr('value')) 
+            {
+                $(".fa-cube").show();
+                $("#category_image").hide();
+            }
+            else 
+            {
+                var img = $(this).attr("data-image");
+                $(".fa-cube").hide();
+                $("#category_image").attr("src","{{URL::base('"+img+"');}}");
+                $("#category_image").attr("alt",img);
+                $("#category_image").show();
+            }
+            
         });
     });
 }); 
