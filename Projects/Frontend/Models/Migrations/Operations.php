@@ -9,7 +9,7 @@ class InternalMigrateOperations extends ZN\Database\Migration
 	{
 		# Default Query
 
-		$this->createTable
+		return $this->createTable
 		([
 			'Id' => [DB::int(11),DB::primaryKey(), DB::autoIncrement(),DB::notNull()],
             'Document_Number' => [DB::bigInt(20),DB::unique(),DB::null()],
@@ -20,7 +20,7 @@ class InternalMigrateOperations extends ZN\Database\Migration
             'Note' => [DB::text(1000), DB::null()],
             'User' => [DB::varchar(30), DB::null()]
 		]);
-        return DBForge::createFulltextIndex('DescriptionIndex','Operations','Description');
+        //return DBForge::createFulltextIndex('DescriptionIndex','Operations','Description');
 	}
 
 	# Down
