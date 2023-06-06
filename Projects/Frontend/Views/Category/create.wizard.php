@@ -113,6 +113,7 @@ $(document).ready(function(){
             var img = $(this).attr("data-image");
             $(".fa-cube").hide();
             $("#category_image").attr("src","{{URL::base('"+img+"');}}");
+            $("#category_image").attr("alt",img);
             $("#category_image").show();
         });
     });
