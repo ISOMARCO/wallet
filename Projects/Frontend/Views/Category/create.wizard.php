@@ -83,7 +83,7 @@ $(document).ready(function(){
     $("#icon img").on("click",function(){
         $("#category_icons").hide();
         $("#selected_icon").show();
-        $("#selected_icon input").attr("value",$(this).attr("src"));
+        $("#selected_icon input").attr("value",$(this).attr("alt"));
         $("#selected_icon img").attr("src",$(this).attr("src"));
         $("#selected_icon img").attr("alt",$(this).attr("alt"));
         if($("#name").val() == "")
