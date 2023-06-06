@@ -22,7 +22,7 @@ class InternalMigrateAccount extends ZN\Database\Migration
 			'User' => [DB::varchar(30),DB::null()],
             'Active' => [DB::tinyInt(1),DB::null(),DB::defaultValue('1')]
 		]);
-		return DBForge::createIndex('UserAccountIndex','Account','User');
+		//return DBForge::createIndex('UserAccountIndex','Account','User');
 	}
 
 	# Down
