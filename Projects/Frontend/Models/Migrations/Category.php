@@ -8,7 +8,7 @@ class InternalMigrateCategory extends ZN\Database\Migration
 	public function up()
 	{
 		# Default Query
-		return $this->createTable
+		$this->createTable
 		([
 			'Id' => [DB::int(11),DB::primaryKey(), DB::autoIncrement(),DB::notNull()],
             'Uid' => [DB::varchar(30),DB::unique(),DB::notNull()],
@@ -18,7 +18,7 @@ class InternalMigrateCategory extends ZN\Database\Migration
             'User' => [DB::varchar(30),DB::null()],
 			'Active' => [DB::tinyInt(1),DB::defaultValue('1')]
 		]);
-		DBForge::createIndex("searchByUser","Category","User");
+		DBForge::createIndex("searchByUser","Category","Active,User");
         return DBForge::createFulltextIndex('NameIndex','Category','Name');
 	}
 
