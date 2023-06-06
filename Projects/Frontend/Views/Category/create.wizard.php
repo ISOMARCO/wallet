@@ -91,6 +91,7 @@ $(document).ready(function(){
                     text: e.success,
                     icon: 'success'
                     });
+                    setTimeout(function(){window.location.href="{{URL::base('category')}}";},2500);
                 }
             }
         });
