@@ -55,7 +55,7 @@
                 </div>
                 <div class="row" id="category_icons">
                     @foreach($categoryImages as $value)
-                        <div class="col-3 col-sm-2 col-md-1 mb-2" id="icon"><img src="{{URL::base(FILES_DIR.'Categories/'.$value)}}" alt="" style="max-width:50px;height:50px;cursor: pointer;" title="{{str_replace('_',' ',ucfirst(explode('.',$value)[0]))}}" class="img-thumbnail img-fluid1"></div>
+                        <div class="col-3 col-sm-2 col-md-1 mb-2" id="icon"><img src="{{URL::base(FILES_DIR.'Categories/'.$value)}}" alt="{{$value}}" style="max-width:50px;height:50px;cursor: pointer;" title="{{str_replace('_',' ',ucfirst(explode('.',$value)[0]))}}" class="img-thumbnail img-fluid1"></div>
                     @endforeach
                 </div>
             </div>
