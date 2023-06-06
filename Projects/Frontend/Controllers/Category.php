@@ -28,6 +28,7 @@ class Category extends Controller
         if(!categoryM::addCategory(['Name' => $name, 'Entry_Type' => $type, 'Picture' => $picture],$category))
         {
             echo json_encode(['error' => ML::select('AddCategoryErrorMessage')]);
+            exit;
         }
         echo json_encode(['success' => ML::select('AddCategorySuccessMessage')]);
     }
