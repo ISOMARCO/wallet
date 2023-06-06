@@ -35,7 +35,7 @@
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="type" class="input-group-text">{{ML::select('Type')}}&nbsp;<i class="fas fa-comment-dollar text-danger"></i></label>
+                        <label for="type" class="input-group-text">{{ML::select('Type')}}&nbsp;<i class="fas fa-comment-dollar text-success"></i></label>
                     </div>
                     <select name="type" id="type" class="form-control">
                         <option value="POSITIVE">Gəlir</option> 
@@ -121,6 +121,21 @@ $(document).ready(function(){
                 $("#category_image").attr("src","{{URL::base('"+img+"');}}");
                 $("#category_image").attr("alt",img);
                 $("#category_image").show();
+            }
+            
+        });
+    });
+    $("#type").on("change",function(){
+        $( "#type option:selected" ).each(function(){
+            if($(this).attr('value') == "POSITIVE") 
+            {
+                $(".fa-comment-dollar").removeClass("text-danger");
+                $(".fa-comment-dollar").addClass("text-success");
+            }
+            else 
+            {
+                $(".fa-comment-dollar").removeClass("text-success");
+                $(".fa-comment-dollar").addClass("text-danger");
             }
             
         });
