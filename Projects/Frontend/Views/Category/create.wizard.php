@@ -70,6 +70,7 @@
 <script>
 $(document).ready(function(){
     $("#insert").on("click",function(){
+        $("button").attr("disabled","disabled");
         $.ajax({
             type:"post",
             url:"{{URL::base('Category/createRequest')}}",
@@ -83,6 +84,7 @@ $(document).ready(function(){
                     text: e.error,
                     icon: 'error'
                     });
+                    $("button").removeAttr("disabled");
                 }
                 else 
                 {
