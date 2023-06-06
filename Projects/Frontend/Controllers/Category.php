@@ -1,10 +1,11 @@
 <?php namespace Project\Controllers;
-use ML,categoryM,Http,Post,DB,Folder;
+use ML,categoryM,Http,Post,Folder;
 class Category extends Controller
 {
     public function main()
     {
         Masterpage::title(ML::select('Category'));
+        View::categories(categoryM::getAllCategoryByUser());
     }
     public function create()
     {
