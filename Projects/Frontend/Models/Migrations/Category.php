@@ -15,6 +15,7 @@ class InternalMigrateCategory extends ZN\Database\Migration
 			'Name' => [DB::longText(),DB::null()],
 			'Type' => [DB::varchar(5), DB::null(), DB::defaultValue('MAIN')],
 			'Entry_Type' => [DB::varchar(15), DB::null(), DB::defaultValue('NEGATIVE')],
+			'Picture' => [DB::varchar(255), DB::null()],
             'User' => [DB::varchar(30),DB::null()],
 			'Active' => [DB::tinyInt(1),DB::defaultValue('1')]
 		]);
