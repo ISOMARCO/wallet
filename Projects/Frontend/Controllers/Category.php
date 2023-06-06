@@ -8,6 +8,7 @@ class Category extends Controller
         #View::categories(categoryM::getAllCategoryByUser());
         View::categories([]);
         MigrateCategory::up();
+        exit;
     }
     public function create()
     {
