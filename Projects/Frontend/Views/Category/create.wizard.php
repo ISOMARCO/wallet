@@ -24,7 +24,7 @@
                 <span id="msg" style="font-weight:bold"></span>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="category" class="input-group-text">{{ML::select('Category')}}&nbsp;<i class="fas fa-cube"></i><img src="" alt="" style="display:none;width:25px;height:25px;" id="category_image"></label>
+                        <label for="category" class="input-group-text">{{ML::select('Category')}}&nbsp;<i class="fas fa-cube"></i><img src="" alt="" style="display:none;width:20px;height:20px;" id="category_image"></label>
                     </div>
                     <select name="category" id="category" class="form-control">
                         <option value="">Nothing</option>
