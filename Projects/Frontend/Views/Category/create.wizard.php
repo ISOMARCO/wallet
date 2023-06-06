@@ -84,6 +84,14 @@ $(document).ready(function(){
                     icon: 'error'
                     });
                 }
+                else 
+                {
+                    Swal.fire({
+                    title: "",
+                    text: e.success,
+                    icon: 'success'
+                    });
+                }
             }
         });
     });
