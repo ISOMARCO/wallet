@@ -6,8 +6,8 @@ class lang extends Controller
     {
         #ML::delete('en','Category');
         #ML::delete('az','Category');
-        ML::insert('en','AddCategorySuccessMessage','Category successfully added. You are being redirected to the Categories page...');
-        ML::insert('az','AddCategorySuccessMessage','Kateqoriya uğurla əlavə edildi. Kateqoriyalar səhifəsinə yönləndirilirsiniz...');
+        ML::insert('en','AddCategoryUnknownErrorMessage','Please try again');
+        ML::insert('az','AddCategoryUnknownErrorMessage','Zəhmət olmasa yenidən cəhd edin');
         ML::insert('en','AddCategoryNullNameErrorMessage','The name cannot be left blank.');
         ML::insert('az','AddCategoryNullNameErrorMessage','Ad boş buraxıla bilməz.');
         output(ML::selectAll());
