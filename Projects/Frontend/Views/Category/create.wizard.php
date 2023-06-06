@@ -24,12 +24,12 @@
                 <span id="msg" style="font-weight:bold"></span>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="category" class="input-group-text">{{ML::select('Category')}}&nbsp;<i class="fas fa-cube"></i></label>
+                        <label for="category" class="input-group-text">{{ML::select('Category')}}&nbsp;<i class="fas fa-cube"></i><img src="" alt="" style="display:none" id="category_image"></label>
                     </div>
                     <select name="category" id="category" class="form-control">
                         <option value="">Nothing</option>
                         @foreach($allCategoryByUser as $value)
-                            <option value="{{$value->Uid}}">{{$value->Name}}</option>
+                            <option value="{{$value->Uid}}" data-image="{{$value->Picture}}">{{$value->Name}}</option>
                         @endforeach 
                     </select>
                 </div>
@@ -106,6 +106,13 @@ $(document).ready(function(){
         $("#selected_icon img").attr("src","");
         $("input").val("");
         $("#category").val($("#category option:first").val());
+    });
+    $("#category").on("change",function(){
+        $( "#category option:selected" ).each(function(){
+            //$("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text());
+            var img = $(this).attr("data-image");
+            $("#category_image").attr("src","{{URL::base('"+img+"');}}");
+        });
     });
 }); 
 </script>
