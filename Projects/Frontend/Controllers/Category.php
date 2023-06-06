@@ -6,7 +6,7 @@ class Category extends Controller
     {
         Masterpage::title(ML::select('Category'));
         #View::categories(categoryM::getAllCategoryByUser());
-        #MigrateCategory::up();
+        MigrateCategory::up();
     }
     public function create()
     {
