@@ -85,6 +85,7 @@ $(document).ready(function(){
         $("#selected_icon").show();
         $("#selected_icon input").attr("value",$(this).attr("src"));
         $("#selected_icon img").attr("src",$(this).attr("src"));
+        $("#selected_icon img").attr("alt",$(this).attr("alt"));
         if($("#name").val() == "")
         {
             $("#name").val($(this).attr("title"));
@@ -95,6 +96,7 @@ $(document).ready(function(){
         $("#selected_icon").hide();
         $("#selected_icon input").attr("value","");
         $("#selected_icon img").attr("src","");
+        $("#selected_icon img").attr("alt","");
         $("#name").val("");
     });
     $("#reset").on("click",function(){
