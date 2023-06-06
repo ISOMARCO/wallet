@@ -111,7 +111,9 @@ $(document).ready(function(){
         $( "#category option:selected" ).each(function(){
             //$("#name").val($("#bank option:selected").text()+" "+$("#type option:selected").text());
             var img = $(this).attr("data-image");
+            $(".fa-cube").hide();
             $("#category_image").attr("src","{{URL::base('"+img+"');}}");
+            $("#category_image").show();
         });
     });
 }); 
