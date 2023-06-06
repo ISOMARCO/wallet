@@ -8,8 +8,8 @@ class lang extends Controller
         #ML::delete('az','Category');
         ML::insert('en','AddCategoryUnknownErrorMessage','Please try again');
         ML::insert('az','AddCategoryUnknownErrorMessage','Zəhmət olmasa yenidən cəhd edin');
-        ML::insert('en','AddCategoryNullNameErrorMessage','The name cannot be left blank.');
-        ML::insert('az','AddCategoryNullNameErrorMessage','Ad boş buraxıla bilməz.');
+        ML::insert('en','Error','Error');
+        ML::insert('az','Error','Xəta');
         output(ML::selectAll());
         exit;
     }
