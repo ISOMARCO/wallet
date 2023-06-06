@@ -18,6 +18,8 @@ class categoryM extends Model
             'Uid' => $uid,
             'Name' => $data['Name'],
             'Type' => $type,
+            'Entry_Type' => $data['Entry_Type'],
+            'Picture' => $data['Picture'],
             'User' => Session::Uid()
         ]);
         if($parentCategory != NULL)

@@ -50,7 +50,7 @@
                 </div>
                 <div class="input-group mb-3" id="selected_icon" style="display:none">
                     
-                    <input type="hidden" value="">
+                    <input type="hidden" value="" name="picture">
                     <img src="" alt="" style="width:50px; height:50px; cursor: pointer;" id="unselect_icon">
                 </div>
                 <div class="row" id="category_icons">

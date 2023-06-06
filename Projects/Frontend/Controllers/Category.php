@@ -17,11 +17,14 @@ class Category extends Controller
         Http::isAjax() or exit("Bad Request");
         $category = Post::category();
         $name = Post::name();
+        $picture = Post::picture();
+        $type = Post::type();
+        $picture = FILES_DIR.'/Categories/'.$picture;
         if($name == NULL)
         {
             echo json_encode(['error' => 'Ad bos buraxila bilmez']);
             exit;
         }
-        echo json_encode([ 'error' =>categoryM::addCategory(['Name' => $name],$category) ]);
+        echo json_encode([ 'error' =>categoryM::addCategory(['Name' => $name, 'Entry_Type' => $type, 'Picture' => $picture],$category) ]);
     }
 }
