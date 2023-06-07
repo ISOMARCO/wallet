@@ -19,7 +19,7 @@ class categoryM extends Model
             'Type' => $data['Type'],
             'Picture' => $data['Picture'],
             'Parent_Category' => $parentCategory,
-            'User' => User()->Username,
+            'User' => Session::Uid(),
             'Created_Date' => date('Y-m-d H:i:s')
         ]);
         return $transaction->transEnd();
