@@ -1,11 +1,11 @@
 <?php namespace Project\Controllers;
-use Cookie,Session,URL,Cache,MigrateGoods;
+use Cookie,Session,URL,Cache,MigrateCategory;
 class Home extends Controller
 {
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
-        MigrateGoods::up();
+        MigrateCategory::up();
     } 
     public function exit()
     {
