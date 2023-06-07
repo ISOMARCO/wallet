@@ -17,7 +17,7 @@ class categoryM extends Model
             'Name' => $data['Name'],
             'Type' => $data['Type'],
             'Picture' => $data['Picture'],
-            'Parent_Category' => $parentCategory,
+            'Parent_Category' => "NULL",
             'User' => Session::Uid(),
             'Created_Date' => date('Y-m-d H:i:s')
         ]);
