@@ -8,7 +8,7 @@ class categoryM extends Model
         if($type != NULL) $query->where('Type',strtoupper($type));
         return $query->where('Active','1')->Category()->result();
     }
-    public static function addCategory($data=[],$parentCategory=NULL)
+    public static function addCategory($data=[],$parentCategory="NULL")
     {
         $uid = uniqid(uniqid().'_');
         $transaction = DB::transStart();
@@ -17,7 +17,7 @@ class categoryM extends Model
             'Name' => $data['Name'],
             'Type' => $data['Type'],
             'Picture' => $data['Picture'],
-            'Parent_Category' => "NULL",
+            'Parent_Category' => $parentCategory,
             'User' => Session::Uid(),
             'Created_Date' => date('Y-m-d H:i:s')
         ]);
