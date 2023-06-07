@@ -19,7 +19,7 @@ class categoryM extends Model
             'Type' => $data['Type'],
             'Picture' => $data['Picture'],
             'Parent_Category' => $parentCategory,
-            'User' => json_decode(User())['Username'],
+            'User' => User(),
             'Created_Date' => date('Y-m-d H:i:s')
         ]);
         return $transaction->transEnd();
