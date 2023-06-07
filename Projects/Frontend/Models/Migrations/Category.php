@@ -16,7 +16,9 @@ class InternalMigrateCategory extends ZN\Database\Migration
 			'Type' => [DB::varchar(5), DB::null(), DB::defaultValue('MAIN')],
 			'Entry_Type' => [DB::varchar(15), DB::null(), DB::defaultValue('NEGATIVE')],
 			'Picture' => [DB::varchar(255), DB::null()],
+			'Parent_Category' => [DB::varchar(30), DB::null()],
             'User' => [DB::varchar(30),DB::null()],
+			'Created_Date' => [DB::dateTime(), DB::null()],
 			'Active' => [DB::tinyInt(1),DB::defaultValue('1')]
 		]);
 		#DBForge::createIndex("searchByUser","Category","User");
