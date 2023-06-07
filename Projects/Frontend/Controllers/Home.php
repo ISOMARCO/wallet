@@ -5,7 +5,7 @@ class Home extends Controller
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
-        echo User();
+        output(User());
     } 
     public function exit()
     {
