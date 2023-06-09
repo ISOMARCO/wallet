@@ -48,7 +48,7 @@
                         <div class="input-group-prepend">
                             <label for="{{$lang->Code}}" class="input-group-text">{{$lang->Name}}</label>
                         </div>
-                        <input type="text" class="form-control" id="{{$lang->Code}}" name="{{$lang->Code}}" value="{{checkEmptyArray($words[$lang->Code][$key])}}">
+                        <input type="text" class="form-control" id="{{$lang->Code}}" name="{{$lang->Code}}" value="{{isset($words[$lang->Code][$key]) ? $words[$lang->Code][$key] : ''}}">
                         <input type="hidden" name="key" value="{{$key}}">
                     </div>
                 @endforeach
