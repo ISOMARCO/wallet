@@ -111,7 +111,10 @@ $(document).ready(function(){
             data: $("#insertLanguageForm").serialize(),
             dataType: "json",
             success:function(e){
-                alert(e.success);
+                if(e.success)
+                {
+                    alert("SUCCESS");
+                }
             }
         });
     });
