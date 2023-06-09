@@ -23,8 +23,7 @@
     </span>
 </div>
 <div class="card-body">
-    @foreach($languages as $lang)
-    @foreach($words[$lang->Code] as $key => $word)
+    @foreach($words[$lang[0]->Code] as $key => $word)
         <div class="card collapsed-card">
             <div class="card-header">
                 <div class="row">
@@ -58,7 +57,6 @@
                 <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">Delete&nbsp;<i class="fas fa-trash"></i></button>
             </div>
         </div>
-    @endforeach
     @endforeach
 </div>
 </section>
