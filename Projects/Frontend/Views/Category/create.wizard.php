@@ -94,14 +94,14 @@ $(document).ready(function(){
                     icon: 'success'
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            alert("ok");
+                            $("#category_icons").show();
+                            $("#selected_icon").hide();
+                            $("#selected_icon input").attr("value","");
+                            $("#selected_icon img").attr("src","");
+                            $("input").val("");
+                            $("button").removeAttr("disabled");
                         }
                     });
-                    $("#category_icons").show();
-                    $("#selected_icon").hide();
-                    $("#selected_icon input").attr("value","");
-                    $("#selected_icon img").attr("src","");
-                    $("input").val("");
                     $("#category").val($("#category option:first").val());
                     //setTimeout(function(){window.location.href="{{URL::base('Category/create')}}";},2500);
                 }
