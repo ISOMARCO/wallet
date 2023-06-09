@@ -42,6 +42,8 @@ class translation extends Controller
     {
         Http::isAjax() or exit;
         $key = Post::key();
+        echo json_encode(['success' => $key]);
+        return;
         $languages = translationM::languages()->result();
         foreach($languages as $lang)
         {

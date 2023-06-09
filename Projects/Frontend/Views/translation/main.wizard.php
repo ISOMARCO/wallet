@@ -130,8 +130,8 @@ $(document).ready(function(){
             success:function(e){
                 if(e.success)
                 {
-                    //alert(e.success);
-                    setTimeout(function(){window.location.href="{{URL::base('translation')}}";},500);
+                    alert(e.success);
+                    //setTimeout(function(){window.location.href="{{URL::base('translation')}}";},500);
                 }
             }
         });
