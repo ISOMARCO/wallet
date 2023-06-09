@@ -101,7 +101,7 @@ $(document).ready(function(){
         </form>
         `);
     });
-    $("#cancelButton").on("click",'#cancellButton',function(e){
+    $(document).on('click', '#cancellButton', function(e) {
         e.preventDefault();
         alert("ok");
     });
