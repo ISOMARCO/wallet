@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use translationM, ML;
+use translationM, ML, Http, Post;
 class translation extends Controller
 {
     public function main()

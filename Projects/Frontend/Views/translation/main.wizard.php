@@ -105,7 +105,6 @@ $(document).ready(function(){
         $("#insertLanguageForm").remove();
     });
     $(document).on('click', '#saveButton', function() {
-        alert("ok");
         $.ajax({
             type: "post",
             url: "{{URL::base('translation/createRequest')}}",
