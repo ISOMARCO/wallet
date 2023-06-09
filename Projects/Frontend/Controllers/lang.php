@@ -7,7 +7,7 @@ class lang extends Controller
         $all = ML::selectAll();
         foreach($all['en'] as $value)
         {
-            echo $value."<br>";
+            echo $key." ".$value."<br>";
         }
         exit;
     }
