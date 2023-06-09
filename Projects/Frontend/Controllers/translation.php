@@ -6,15 +6,14 @@ class translation extends Controller
     {
         Masterpage::title("Translation");
         $languages = translationM::languages()->result();
-        output($languages);exit;
         $words = ML::selectAll();
         foreach($words[$languages[0]->Code] as $key => $value)
         {
             echo $key."<br>";
-            foreach($languages as $lang)
-            {
-                echo $lang->Name." ".$words[$lang->Code][$key]."<br>";
-            }
+            // foreach($languages as $lang)
+            // {
+            //     echo $lang->Name." ".$words[$lang->Code][$key]."<br>";
+            // }
         }
         exit;
         View::words($words);
