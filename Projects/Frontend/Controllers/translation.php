@@ -38,4 +38,16 @@ class translation extends Controller
         echo json_encode(['success' => true, 'key' => $key]);
         return;
     }
+    public function deleteRequest()
+    {
+        Http::isAjax() or exit;
+        $key = Post::key();
+        $languages = translationM::languages()->result();
+        foreach($languages as $lang)
+        {
+            ML::delete($lang,$key);
+        }
+        echo json_encode(['success' => true]);
+        return;
+    }
 }

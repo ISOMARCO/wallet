@@ -22,6 +22,7 @@
     </span>
 </div>
 <div class="card-body" id="createArea">
+    <form method="post" id="wordsForm">
     @foreach($words[$languages[0]->Code] as $key => $value)
         <div class="card collapsed-card">
             <div class="card-header">
@@ -48,15 +49,17 @@
                             <label for="{{$lang->Code}}" class="input-group-text">{{$lang->Name}}</label>
                         </div>
                         <input type="text" class="form-control" id="{{$lang->Code}}" name="{{$lang->Code}}" value="{{$words[$lang->Code][$key]}}">
+                        <input type="hidden" name="key" value="{{$key}}">
                     </div>
                 @endforeach
             </div>
             <div class="card-footer">
-                <button type="button" class="btn btn-primary" style="float:left">Edit&nbsp;<i class="fas fa-edit"></i></button>
-                <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">Delete&nbsp;<i class="fas fa-trash"></i></button>
+                <button type="button" class="btn btn-primary" id="editButton" style="float:left">Edit&nbsp;<i class="fas fa-edit"></i></button>
+                <button type="button" class="btn btn-danger" id="deleteButton" style="float:right" onclick="return confirm('Are you sure?')">Delete&nbsp;<i class="fas fa-trash"></i></button>
             </div>
         </div>
     @endforeach
+    </form>
 </div>
 </section>
 </div>
@@ -113,42 +116,21 @@ $(document).ready(function(){
             success:function(e){
                 if(e.success)
                 {
-                    $("#insertLanguageForm").remove();
-                    $("#createArea").prepend(`
-                    <div class="card collapsed-card">
-                        <div class="card-header">
-                            <div class="row">
-                                <div class="col-1 col-sm-1">
-                                    <a href="javascript:void(0)"><i class="fas fa-arrow-circle-right fa-lg"></i></a>
-                                </div>
-                                <div class="col-10 col-sm-10">
-                                    <h3 class="card-title font-weight-bold">
-                                        `+e.key+`
-                                    </h3>
-                                </div>  
-                                <div class="card-tools col-1 col-sm-1">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                    <i class="fas fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            @foreach($languages as $lang)
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <label for="{{$lang->Code}}" class="input-group-text">{{$lang->Name}}</label>
-                                    </div>
-                                    <input type="text" class="form-control" id="{{$lang->Code}}" name="{{$lang->Code}}" value="{{$words[$lang->Code]['RememberMe']}}">
-                                </div>
-                            @endforeach
-                        </div>
-                        <div class="card-footer">
-                            <button type="button" class="btn btn-primary" style="float:left">Edit&nbsp;<i class="fas fa-edit"></i></button>
-                            <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">Delete&nbsp;<i class="fas fa-trash"></i></button>
-                        </div>
-                    </div>
-                    `);
+                    setTimeout(function(){window.location.href="{{URL::base('translation')}}";},500);
+                }
+            }
+        });
+    });
+    $("#deleteButton").on("click",function(){
+        $.ajax({
+            type: "post",
+            url: "{{URL::base('translation/deleteRequest')}}",
+            data: $("#wordsForm").serialize(),
+            dataType: "json",
+            success:function(e){
+                if(e.success)
+                {
+                    setTimeout(function(){window.location.href="{{URL::base('translation')}}";},500);
                 }
             }
         });
