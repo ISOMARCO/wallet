@@ -116,7 +116,7 @@ $(document).ready(function(){
             success:function(e){
                 if(e.success)
                 {
-                    setTimeout(function(){window.location.href="{{URL::base('translation')}}";},500);
+                    window.location.href="{{URL::base('translation')}}";
                 }
             }
         });
@@ -130,8 +130,7 @@ $(document).ready(function(){
             success:function(e){
                 if(e.success)
                 {
-                    alert(e.success);
-                    //setTimeout(function(){window.location.href="{{URL::base('translation')}}";},500);
+                    window.location.href="{{URL::base('translation')}}";
                 }
             }
         });
