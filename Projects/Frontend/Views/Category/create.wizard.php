@@ -104,9 +104,9 @@ $(document).ready(function(){
                             $(".fa-cube").show();
                             $(".fa-comment-dollar").removeClass("text-danger").addClass("text-success");
                             $("#type").val($("#type option:first").val());
+                            $("#category").val($("#category option:first").val());
                         }
                     });
-                    $("#category").val($("#category option:first").val());
                 }
             }
         });
