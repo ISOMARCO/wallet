@@ -107,7 +107,6 @@ $(document).ready(function(){
                         }
                     });
                     $("#category").val($("#category option:first").val());
-                    //setTimeout(function(){window.location.href="{{URL::base('Category/create')}}";},2500);
                 }
             }
         });
