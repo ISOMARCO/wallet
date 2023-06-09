@@ -41,8 +41,8 @@ class translation extends Controller
     public function deleteRequest()
     {
         Http::isAjax() or exit;
-        $key = Post::key();
-        echo json_encode(['success' => $key]);
+        #$key = Post::key();
+        echo json_encode(['success' => 'ok']);
         return;
         $languages = translationM::languages()->result();
         foreach($languages as $lang)
