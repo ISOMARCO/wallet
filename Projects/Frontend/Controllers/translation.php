@@ -6,7 +6,7 @@ class translation extends Controller
     {
         Masterpage::title("Translation");
         $words = ML::selectAll();
-        output(array_keys($words['en']));exit;
+        output(array_keys($words));exit;
         $languages = translationM::languages()->result();
         while(true)
         {
