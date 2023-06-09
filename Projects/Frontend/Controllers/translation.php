@@ -7,7 +7,10 @@ class translation extends Controller
         Masterpage::title("Translation");
         $languages = translationM::languages()->result();
         $words = ML::selectAll();
-        echo count($words);
+        for($i=0;$i<count($words);$i++)
+        {
+            echo $words[$languages[$i]->Code]['RememberMe'];
+        }
         output($words);exit;
         View::words(  );
         View::languages();
