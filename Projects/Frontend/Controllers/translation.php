@@ -6,6 +6,7 @@ class translation extends Controller
     {
         Masterpage::title("Translation");
         $ml = ML::selectAll();
+        output($ml['en']);
         for($i = 0; $i < count($ml['en']); $i++)
         {
             echo $ml[$i]['en']['RememberMe'];
