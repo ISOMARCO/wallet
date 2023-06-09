@@ -7,7 +7,7 @@ class lang extends Controller
         $all = ML::selectAll();
         for($i = 0; $i < count($all['en']); $i++)
         {
-            echo $all['en'][$i]."<br>";1
+            echo $all[$i]."<br>";1
         }
         exit;
     }
