@@ -47,7 +47,7 @@ class translation extends Controller
         $languages = translationM::languages()->result();
         foreach($languages as $lang)
         {
-            ML::delete($lang->Code,$key);
+            ML::delete($lang->Code, $key);
         }
         echo json_encode(['success' => true]);
         return;
