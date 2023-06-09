@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use translationM, ML, Http, Post;
+use translationM, ML, Http, Post, Method;
 class translation extends Controller
 {
     public function main()
@@ -26,7 +26,7 @@ class translation extends Controller
         $key = Post::key();
         foreach($languages as $lang)
         {
-            echo json_encode(['success' => Post::$lang->Code]);
+            echo json_encode(['success' => Method::post($lang->Code)]);
             return;
             #ML::insert($lang->Code, $key, Post::select($lang->Code));
         }
