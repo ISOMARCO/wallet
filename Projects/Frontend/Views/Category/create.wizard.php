@@ -96,7 +96,6 @@ $(document).ready(function(){
                         if (result.isConfirmed) {
                             alert("ok");
                         }
-                        })
                     });
                     $("#category_icons").show();
                     $("#selected_icon").hide();
