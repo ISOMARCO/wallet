@@ -7,15 +7,6 @@ class translation extends Controller
         Masterpage::title("Translation");
         View::words( ML::selectAll() );
         View::languages(translationM::languages()->result());
-        $words = ML::selectAll();
         exit;
-        $languages = translationM::languages()->result();
-        while(true)
-        {
-            foreach($languages as $value) 
-            {
-                echo $words[$value->Code]
-            }
-        }
     }
 }
