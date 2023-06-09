@@ -23,7 +23,7 @@
     </span>
 </div>
 <div class="card-body">
-    @for($i = 0; $i < count($words['en']); $i++)
+    @foreach($words['en'] as $key => $word)
         <div class="card collapsed-card">
             <div class="card-header">
                 <div class="row">

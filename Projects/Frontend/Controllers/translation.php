@@ -5,13 +5,17 @@ class translation extends Controller
     public function main()
     {
         Masterpage::title("Translation");
-        $ml = ML::selectAll();
-        output($ml['en']);exit;
-        for($i = 0; $i < count($ml['en']); $i++)
+        $words = ML::selectAll();
+        output(array_keys($words['en']));
+        $languages = translationM::languages()->result();
+        while(true)
         {
-            echo $ml[$i]['en']['RememberMe'];
-        }exit;
-        View::words( ML::selectAll() );
-        View::languages(translationM::languages()->result());
+            foreach($languages as $value) 
+            {
+                echo $words[$value]
+            }
+        }
+        #View::words( ML::selectAll() );
+        #View::languages(translationM::languages()->result());
     }
 }
