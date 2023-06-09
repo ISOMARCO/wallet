@@ -35,6 +35,7 @@ class translation extends Controller
                 ML::insert($lang->Code, $key, 'ERROR');
             }
         }
-        echo json_encode(['success' => true]);
+        echo json_encode(['success' => true, 'key' => $key]);
+        return;
     }
 }
