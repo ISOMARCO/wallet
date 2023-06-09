@@ -140,7 +140,7 @@ $(document).ready(function(){
                                     <div class="input-group-prepend">
                                         <label for="{{$lang->Code}}" class="input-group-text">{{$lang->Name}}</label>
                                     </div>
-                                    <input type="text" class="form-control" id="{{$lang->Code}}" name="{{$lang->Code}}" value="{{$words[$lang->Code]['+key+']}}">
+                                    <input type="text" class="form-control" id="{{$lang->Code}}" name="{{$lang->Code}}" value="{{$words[$lang->Code][`+e.key+`]}}">
                                 </div>
                             @endforeach
                         </div>
