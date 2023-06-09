@@ -1,9 +1,10 @@
 <?php namespace Project\Controllers;
-use Cookie,Session,URL,Cache;
+use Cookie,Session,URL,Cache,MigrateLanguages;
 class Home extends Controller
 {
     public function main(string ...$parameters)
     {
+        MigrateLanguages::up();
         Masterpage::title('Home');
     } 
     public function exit()
