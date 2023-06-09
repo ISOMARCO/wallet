@@ -24,7 +24,7 @@
 </div>
 <div class="card-body">
     @foreach($languages as $lang)
-    @foreach($words[$lang] as $key => $word)
+    @foreach($words[$lang->Code] as $key => $word)
         <div class="card collapsed-card">
             <div class="card-header">
                 <div class="row">
