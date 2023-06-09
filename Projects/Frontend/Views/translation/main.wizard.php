@@ -122,7 +122,6 @@ $(document).ready(function(){
         });
     });
     $(document).on("click", "#deleteButton", function(){
-        alert('deleted');
         $.ajax({
             type: "post",
             url: "{{URL::base('translation/deleteRequest')}}",
