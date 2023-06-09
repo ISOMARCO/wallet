@@ -23,7 +23,7 @@
     </span>
 </div>
 <div class="card-body">
-    @foreach($words['en'] as $key => $word)
+    @foreach($words[$languages[0]->Code] as $key => $value)
         <div class="card collapsed-card">
             <div class="card-header">
                 <div class="row">
@@ -43,12 +43,12 @@
                 </div>
             </div>
             <div class="card-body">
-                @foreach($languages as $value)
+                @foreach($languages as $lang)
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label for="{{$value->Code}}" class="input-group-text">{{$value->Name}}</label>
+                            <label for="{{$lang->Code}}" class="input-group-text">{{$lang->Name}}</label>
                         </div>
-                        <input type="text" class="form-control" id="{{$value->Code}}" name="{{$value->Code}}">
+                        <input type="text" class="form-control" id="{{$lang->Code}}" name="{{$lang->Code}}" value="{{$words[$lang->Code][$key]}}">
                     </div>
                 @endforeach
             </div>
