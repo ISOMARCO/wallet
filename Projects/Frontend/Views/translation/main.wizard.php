@@ -121,7 +121,7 @@ $(document).ready(function(){
             }
         });
     });
-    $("#deleteButton").on("click",function(){
+    $(document).on("click", "#deleteButton", function(){
         alert('deleted');
         $.ajax({
             type: "post",
