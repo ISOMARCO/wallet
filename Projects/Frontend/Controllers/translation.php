@@ -26,7 +26,7 @@ class translation extends Controller
         $key = Post::key();
         foreach($languages as $lang)
         {
-            echo json_encode(['success' => Post::select($lang->Code)]);
+            echo json_encode(['success' => Post::$lang->Code]);
             return;
             #ML::insert($lang->Code, $key, Post::select($lang->Code));
         }
