@@ -95,7 +95,7 @@ $(document).ready(function(){
             </div>
             <div class="card-footer">
                 <button type="button" class="btn btn-primary" style="float:left" id="saveButton">Save&nbsp;<i class="fas fa-edit"></i></button>
-                <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')" id="cancelButton">Cancel&nbsp;<i class="fas fa-ban"></i></button>
+                <button type="button" class="btn btn-danger" style="float:right" id="cancelButton">Cancel&nbsp;<i class="fas fa-ban"></i></button>
             </div>
         </div>
         </form>
