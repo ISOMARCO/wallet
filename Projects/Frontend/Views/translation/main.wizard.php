@@ -55,7 +55,7 @@
             </div>
             <div class="card-footer">
                 <button type="button" class="btn btn-primary" id="editButton" style="float:left">Edit&nbsp;<i class="fas fa-edit"></i></button>
-                <button type="button" class="btn btn-danger" id="deleteButton" style="float:right" onclick="return confirm('Are you sure?')">Delete&nbsp;<i class="fas fa-trash"></i></button>
+                <button type="button" class="btn btn-danger" id="deleteButton" style="float:right">Delete&nbsp;<i class="fas fa-trash"></i></button>
             </div>
         </div>
     @endforeach
