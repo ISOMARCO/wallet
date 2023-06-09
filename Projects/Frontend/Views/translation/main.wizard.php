@@ -64,8 +64,8 @@
 $(document).ready(function(){
     $("#create").on("click",function(){
         $("#createArea").prepend(`
-        <div class="card collapsed-card">
         <form method="post" id="insertLanguageForm">
+        <div class="card collapsed-card">
             <div class="card-header">
                 <div class="row">
                     <div class="col-1 col-sm-1">
@@ -73,7 +73,7 @@ $(document).ready(function(){
                     </div>
                     <div class="col-10 col-sm-10">
                         <h3 class="card-title font-weight-bold">
-                            <input type="text" name="key" class="form-control" style="width:100%">
+                            <input type="text" name="key" class="form-control">
                         </h3>
                     </div>  
                     <div class="card-tools col-1 col-sm-1">
@@ -97,8 +97,8 @@ $(document).ready(function(){
                 <button type="button" class="btn btn-primary" style="float:left" id="saveButton">Save&nbsp;<i class="fas fa-edit"></i></button>
                 <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')" id="cancelButton">Cancel&nbsp;<i class="fas fa-ban"></i></button>
             </div>
-        </form>
         </div>
+        </form>
         `);
     });
 }); 
