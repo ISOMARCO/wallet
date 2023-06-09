@@ -6,9 +6,10 @@ class translation extends Controller
     {
         Masterpage::title("Translation");
         $languages = translationM::languages()->result();
-        View::words( ML::selectAll() );
-        View::keys(array_keys($languages));
-        View::languages($languages);
+        $words = ML::selectAll();
+        output($words);exit;
+        View::words(  );
+        View::languages();
         
         exit;
     }
