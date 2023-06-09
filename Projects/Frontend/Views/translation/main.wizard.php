@@ -45,9 +45,9 @@
             @foreach($languages as $value)
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label for="{{$value['Code']}}" class="input-group-text">{{$value['Name']}}</label>
+                        <label for="{{$value->Code}}" class="input-group-text">{{$value->Name}}</label>
                     </div>
-                    <input type="text" class="form-control" id="{{$value['Code']}}" name="{{$value['Code']}}">
+                    <input type="text" class="form-control" id="{{$value->Code}}" name="{{$value->Code}}">
                 </div>
             @endforeach
         </div>
