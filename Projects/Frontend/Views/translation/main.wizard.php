@@ -65,7 +65,7 @@ $(document).ready(function(){
     $("#create").on("click",function(){
         $("#createArea").prepend(`
         <form method="post" id="insertLanguageForm">
-        <div class="card collapsed-card">
+        <div class="card collapsed-card" id="insertLanguageCard">
             <div class="card-header">
                 <div class="row">
                     <div class="col-1 col-sm-1">
@@ -102,7 +102,7 @@ $(document).ready(function(){
         `);
     });
     $("#cancelButton").on("click",function(){
-        $("#createArea").first().remove();
+        $("#insertLanguageCard").remove();
     });
 }); 
 </script>
