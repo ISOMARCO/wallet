@@ -93,7 +93,13 @@ $(document).ready(function(){
                     text: e.success,
                     icon: 'success'
                     });
-                    setTimeout(function(){window.location.href="{{URL::base('category')}}";},2500);
+                    $("#category_icons").show();
+                    $("#selected_icon").hide();
+                    $("#selected_icon input").attr("value","");
+                    $("#selected_icon img").attr("src","");
+                    $("input").val("");
+                    $("#category").val($("#category option:first").val());
+                    //setTimeout(function(){window.location.href="{{URL::base('Category/create')}}";},2500);
                 }
             }
         });
