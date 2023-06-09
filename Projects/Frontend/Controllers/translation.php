@@ -11,7 +11,7 @@ class translation extends Controller
         {
             foreach($words[$val] as $key => $value)
             {
-                echo $key." ".$value."<br>";
+                echo $value->Name."<br>";
             }
         }
         exit;
