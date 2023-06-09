@@ -16,7 +16,5 @@ class translation extends Controller
         }*/
         View::words($words);
         View::languages($languages);
-        
-        exit;
     }
 }
