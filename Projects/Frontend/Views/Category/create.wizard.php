@@ -100,6 +100,10 @@ $(document).ready(function(){
                             $("#selected_icon img").attr("src","");
                             $("input").val("");
                             $("button").removeAttr("disabled");
+                            $("#category_image").hide();
+                            $(".fa-cube").show();
+                            $(".fa-comment-dollar").removeClass("text-danger").addClass("text-success");
+                            $("#type").val($("#type option:first").val());
                         }
                     });
                     $("#category").val($("#category option:first").val());
@@ -134,6 +138,8 @@ $(document).ready(function(){
         $("#selected_icon img").attr("src","");
         $("input").val("");
         $("#category").val($("#category option:first").val());
+        $("#category_image").hide();
+        $(".fa-cube").show();
     });
     $("#category").on("change",function(){
         $( "#category option:selected" ).each(function(){
