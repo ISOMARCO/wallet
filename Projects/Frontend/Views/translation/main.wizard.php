@@ -101,10 +101,9 @@ $(document).ready(function(){
         </form>
         `);
     });
-    
+    $(document).on('click', '#cancellButton', function() {
+        alert("ok");
+    });
 }); 
-$(document).on('click', '#cancellButton', function(e) {
-    e.preventDefault();
-    alert("ok");
-});
+
 </script>
