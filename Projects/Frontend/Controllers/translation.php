@@ -41,11 +41,23 @@ class translation extends Controller
     public function deleteRequest()
     {
         Http::isAjax() or exit;
-        $key = Post::key();
         $languages = translationM::languages()->result();
         foreach($languages as $lang)
         {
+            $key = Method::post('key_'.$lang->Code);
             ML::delete($lang->Code, $key);
+        }
+        echo json_encode(['success' => true]);
+        return;
+    }
+    public function updateRequest()
+    {
+        Http::isAjax() or exit;
+        $languages = translationM::languages()->result();
+        foreach($languages as $lang)
+        {
+            $key = Method::post('key_'.$lang->Code);
+            ML::update($lang->Code, $key, Method::post($lang->Code));
         }
         echo json_encode(['success' => true]);
         return;
