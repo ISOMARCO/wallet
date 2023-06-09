@@ -73,7 +73,7 @@ $(document).ready(function(){
                     </div>
                     <div class="col-10 col-sm-10">
                         <h3 class="card-title font-weight-bold">
-                            <input type="text" name="key" class="form-control">
+                            <input type="text" name="key" class="form-control" style="width:100%">
                         </h3>
                     </div>  
                     <div class="card-tools col-1 col-sm-1">
