@@ -5,9 +5,11 @@ class translation extends Controller
     public function main()
     {
         Masterpage::title("Translation");
+        $languages = translationM::languages()->result();
         View::words( ML::selectAll() );
-        View::languages(translationM::languages()->result());
-        output(array_keys(ML::selectAll()['en']));
+        View::keys(array_keys(ML::selectAll()[$languages[0]->Code]));
+        View::languages();
+        
         exit;
     }
 }
