@@ -11,7 +11,7 @@ class translation extends Controller
         {
             foreach($languages as $lang)
             {
-                echo $words[$lang->Code]['RememberMe'];
+                echo $words[$lang->Code][$key]."<br>";
             }
         }
         View::words(  );
