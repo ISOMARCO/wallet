@@ -57,7 +57,7 @@
                 <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">Delete&nbsp;<i class="fas fa-trash"></i></button>
             </div>
         </div>
-    @endfor
+    @endforeach
 </div>
 </section>
 </div>
