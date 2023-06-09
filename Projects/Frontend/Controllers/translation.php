@@ -19,4 +19,14 @@ class translation extends Controller
         View::words($words);
         View::languages($languages);
     }
+    public function createRequest()
+    {
+        Http::isAjax() or exit;
+        $languages = translationM::languages()->result();
+        $key = Post::key();
+        foreach($languages as $lang)
+        {
+            ML::insert($lang->Code, $key, Post::select($lang->Code));
+        }
+    }
 }

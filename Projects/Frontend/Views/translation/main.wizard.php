@@ -104,6 +104,17 @@ $(document).ready(function(){
     $(document).on('click', '#cancelButton', function() {
         $("#insertLanguageForm").remove();
     });
+    $(document).on('click', '#saveButton', function() {
+        $.ajax({
+            type: "post",
+            url: "{{URL::base('translation/createRequest')}}",
+            data: $("#insertLanguageForm").serialize(),
+            dataType: "json",
+            success:function(e){
+                alert(e.success);
+            }
+        });
+    });
 }); 
 
 </script>
