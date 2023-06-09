@@ -4,7 +4,8 @@ class lang extends Controller
 {
     public function main()
     {
-        echo ML::table();
+        $all = ML::selectAll();
+        output($all);
         exit;
     }
 }
