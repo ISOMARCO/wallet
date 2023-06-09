@@ -9,8 +9,7 @@ class translation extends Controller
         $languages = translationM::languages()->result();
         foreach($languages as $val)
         {
-            echo $val->Code;exit;
-            foreach($words[$val] as $key => $value)
+            foreach($words[$val->Code] as $key => $value)
             {
                 echo $value."<br>";
             }
