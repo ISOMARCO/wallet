@@ -122,18 +122,21 @@ $(document).ready(function(){
         });
     });
     $(document).on("click", "#deleteButton", function(){
-        $.ajax({
-            type: "post",
-            url: "{{URL::base('translation/deleteRequest')}}",
-            data: $("#wordsForm").serialize(),
-            dataType: "json",
-            success:function(e){
-                if(e.success)
-                {
-                    window.location.href="{{URL::base('translation')}}";
+        if(confirm("Are you sure ?"))
+        {
+            $.ajax({
+                type: "post",
+                url: "{{URL::base('translation/deleteRequest')}}",
+                data: $("#wordsForm").serialize(),
+                dataType: "json",
+                success:function(e){
+                    if(e.success)
+                    {
+                        window.location.href="{{URL::base('translation')}}";
+                    }
                 }
-            }
-        });
+            });
+        }
     });
 }); 
 
