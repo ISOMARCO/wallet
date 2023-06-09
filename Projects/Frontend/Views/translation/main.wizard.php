@@ -23,7 +23,8 @@
     </span>
 </div>
 <div class="card-body">
-    @foreach($words as $key => $word)
+    @foreach($languages as $lang)
+    @foreach($words[$lang] as $key => $word)
         <div class="card collapsed-card">
             <div class="card-header">
                 <div class="row">
@@ -58,7 +59,7 @@
             </div>
         </div>
     @endforeach
-
+    @endforeach
 </div>
 </section>
 </div>
