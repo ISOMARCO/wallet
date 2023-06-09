@@ -5,7 +5,7 @@ class lang extends Controller
     public function main()
     {
         $all = ML::selectAll();
-        foreach($all['en'] as $value)
+        foreach($all['en'] as $key=>$value)
         {
             echo $key." ".$value."<br>";
         }
