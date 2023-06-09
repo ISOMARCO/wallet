@@ -7,15 +7,6 @@ class translation extends Controller
         Masterpage::title("Translation");
         $languages = translationM::languages()->result();
         $words = ML::selectAll();
-        // foreach($words[$languages[0]->Code] as $key => $value)
-        // {
-        //     echo $key."<br>";
-        //     // foreach($languages as $lang)
-        //     // {
-        //     //     echo $lang->Name." ".$words[$lang->Code][$key]."<br>";
-        //     // }
-        // }
-        // exit;
         View::words($words);
         View::languages($languages);
     }
@@ -57,7 +48,7 @@ class translation extends Controller
         foreach($languages as $lang)
         {
             $key = Method::post('key_'.$lang->Code);
-            ML::delete($lang->Code, $key);
+            #ML::delete($lang->Code, $key);
             ML::insert($lang->Code, $key, Method::post($lang->Code));
         }
         echo json_encode(['success' => true]);
