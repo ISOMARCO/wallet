@@ -50,12 +50,6 @@
                     <input type="text" class="form-control" id="{{$value['Code']}}" name="{{$value['Code']}}">
                 </div>
             @endforeach
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label for="name" class="input-group-text">Name</label>
-                </div>
-                <input type="text" class="form-control" id="name" name="name">
-            </div>
         </div>
         <div class="card-footer">
             <button type="button" class="btn btn-primary" style="float:left">Edit&nbsp;<i class="fas fa-edit"></i></button>
