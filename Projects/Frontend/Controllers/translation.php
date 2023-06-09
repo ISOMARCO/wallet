@@ -26,9 +26,15 @@ class translation extends Controller
         $key = Post::key();
         foreach($languages as $lang)
         {
-            echo json_encode(['success' => Method::post($lang->Code)]);
-            return;
-            #ML::insert($lang->Code, $key, Post::select($lang->Code));
+            if(Method::post($lang->Code))
+            {
+                ML::insert($lang->Code, $key, Method::post($lang->Code));
+            }
+            else 
+            {
+                ML::insert($lang->Code, $key, 'ERROR');
+            }
         }
+        echo json_encode(['success' => true]);
     }
 }
