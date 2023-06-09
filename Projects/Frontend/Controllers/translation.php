@@ -9,7 +9,7 @@ class translation extends Controller
         $words = ML::selectAll();
         foreach($words[$languages[0]->Code] as $key => $value)
         {
-            foreach($languages->Code as $lang)
+            foreach($languages[0]->Code as $lang)
             {
                 echo $words[$lang]['RememberMe'];
             }
