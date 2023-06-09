@@ -123,7 +123,7 @@ $(document).ready(function(){
                                 </div>
                                 <div class="col-10 col-sm-10">
                                     <h3 class="card-title font-weight-bold">
-                                        {{$key}}
+                                        `+e.key+`
                                     </h3>
                                 </div>  
                                 <div class="card-tools col-1 col-sm-1">
@@ -139,7 +139,7 @@ $(document).ready(function(){
                                     <div class="input-group-prepend">
                                         <label for="{{$lang->Code}}" class="input-group-text">{{$lang->Name}}</label>
                                     </div>
-                                    <input type="text" class="form-control" id="{{$lang->Code}}" name="{{$lang->Code}}" value="{{$words[$lang->Code][}}+e.key+{{]}}">
+                                    <input type="text" class="form-control" id="{{$lang->Code}}" name="{{$lang->Code}}" value="{{$words[$lang->Code]['`+e.key+`']}}">
                                 </div>
                             @endforeach
                         </div>
