@@ -18,7 +18,7 @@ class translation extends Controller
         // exit;
         View::words($words);
         View::languages($languages);
-        if(ML::select('ru','AddCategorySuccessMessage')) echo "okey";
+        if(isset(ML::select('ru','AddCategorySuccessMessage'))) echo "okey";
         else echo 'no';
     }
     public function createRequest()
