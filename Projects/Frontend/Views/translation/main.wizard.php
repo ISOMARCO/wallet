@@ -63,7 +63,7 @@
 <script>
 $(document).ready(function(){
     $("#create").on("click",function(){
-        $("#createArea").append("<span>Demo</span>");
+        $("#createArea").prepend("<span>Demo</span>");
     });
 }); 
 </script>
