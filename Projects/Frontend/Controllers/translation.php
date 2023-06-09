@@ -4,7 +4,6 @@ class translation extends Controller
 {
     public function main()
     {
-        output(translationM::languages()->result());exit;
         View::languages(translationM::languages());
     }
 }
