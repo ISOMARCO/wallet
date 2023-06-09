@@ -23,7 +23,7 @@
     </span>
 </div>
 <div class="card-body">
-    @foreach($words['en'] as $key => $word)
+    @for($i = 0; $i < count($words['en']); $i++)
         <div class="card collapsed-card">
             <div class="card-header">
                 <div class="row">
@@ -32,7 +32,7 @@
                     </div>
                     <div class="col-10 col-sm-10">
                         <h3 class="card-title font-weight-bold">
-                            RememberMe
+                            {{$key}}
                         </h3>
                     </div>  
                     <div class="card-tools col-1 col-sm-1">
@@ -57,7 +57,7 @@
                 <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">Delete&nbsp;<i class="fas fa-trash"></i></button>
             </div>
         </div>
-    @endforeach
+    @endfor
 </div>
 </section>
 </div>
