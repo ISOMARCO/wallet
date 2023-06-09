@@ -102,7 +102,7 @@ $(document).ready(function(){
         `);
     });
     $("#cancelButton").on("click",function(){
-        $("#insertLanguageCard").remove();
+        $("#insertLanguageForm").hide();
     });
 }); 
 </script>
