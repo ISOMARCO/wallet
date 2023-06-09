@@ -5,7 +5,10 @@ class lang extends Controller
     public function main()
     {
         $all = ML::selectAll();
-        echo count($all['en']);
+        foreach($all['en'] as $value)
+        {
+            echo $value."<br>";
+        }
         exit;
     }
 }
