@@ -11,7 +11,7 @@ class translation extends Controller
         {
             for($i = 0; $i < count($words); $i++)
             {
-                echo $words[$words[$i]][$key];
+                echo $words[$i];
             }
         }
         #output($words);exit;
