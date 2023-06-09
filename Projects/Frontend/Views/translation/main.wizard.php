@@ -23,7 +23,7 @@
     </span>
 </div>
 <div class="card-body">
-    @foreach($words['en']->Code] as $key => $word)
+    @foreach($words['en'] as $key => $word)
         <div class="card collapsed-card">
             <div class="card-header">
                 <div class="row">
