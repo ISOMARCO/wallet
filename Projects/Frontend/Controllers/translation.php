@@ -7,7 +7,7 @@ class translation extends Controller
         Masterpage::title("Translation");
         View::words( ML::selectAll() );
         View::languages(translationM::languages()->result());
-        output(ML::selectAll()['en']);
+        output(array_keys(ML::selectAll()['en']));
         exit;
     }
 }
