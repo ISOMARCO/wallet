@@ -6,5 +6,9 @@ class translation extends Controller
     {
         Masterpage::title("Translation");
         View::languages(translationM::languages());
+        foreach(translationM::languages() as $value)
+        {
+            echo $value['Name'];
+        }
     }
 }
