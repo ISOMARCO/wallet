@@ -7,7 +7,7 @@
         </div>
         <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="{{URL::base('Category')}}">{{ML::select('Category')}}</a></li>
+            <li class="breadcrumb-item"><a href="{{URL::base('translation')}}">{{ML::select('Translation')}}</a></li>
             <li class="breadcrumb-item active">Blank Page</li>
         </ol>
         </div>
@@ -18,8 +18,7 @@
 <div class="card">
 <div class="card-header">
     <span class="float-right">
-        <a href="{{URL::base('Category/create')}}" class="btn btn-outline-primary">Create Category <i class="fas fa-plus"></i></a> 
-        <button type="button" class="btn btn-outline-secondary" id="searchButton">Search <i class="fas fa-search"></i></button>
+        <a href="javascript:void(0)" class="btn btn-outline-primary">Create Translation <i class="fas fa-plus"></i></a> 
     </span>
 </div>
 <div class="card-body">
