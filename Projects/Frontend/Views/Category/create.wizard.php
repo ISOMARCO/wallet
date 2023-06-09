@@ -92,6 +92,11 @@ $(document).ready(function(){
                     title: "",
                     text: e.success,
                     icon: 'success'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            alert("ok");
+                        }
+                        })
                     });
                     $("#category_icons").show();
                     $("#selected_icon").hide();
