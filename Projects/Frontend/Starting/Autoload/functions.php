@@ -54,3 +54,8 @@ function User($request = NULL)
     }
     return $returnString;
 }
+function checkEmptyArray($string = NULL)
+{  
+    if(isset($string)) return $string;
+    return NULL;
+}
