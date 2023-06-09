@@ -101,5 +101,8 @@ $(document).ready(function(){
         </form>
         `);
     });
+    $("#cancelButton").on("click",function(){
+        $("#insertLanguageForm").hide();
+    });
 }); 
 </script>
