@@ -9,7 +9,7 @@ class translation extends Controller
         $words = ML::selectAll();
         View::words($words);
         View::languages($languages);
-        if(ML::select('ru','AddCategorySuccessMessage') != NULL) echo ML::select('ru','AddCategorySuccessMessage');
+        if(ML::select('AddCategorySuccessMessage', 'ru') != NULL) echo ML::select('ru','AddCategorySuccessMessage');
         else echo 'no';
     }
     public function createRequest()
