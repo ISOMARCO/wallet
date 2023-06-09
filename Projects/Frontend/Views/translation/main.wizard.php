@@ -18,10 +18,10 @@
 <div class="card">
 <div class="card-header">
     <span class="float-right">
-        <a href="javascript:void(0)" class="btn btn-outline-primary">Create Translation <i class="fas fa-plus"></i></a> 
+        <a href="javascript:void(0)" class="btn btn-outline-primary" id="create">Create Translation <i class="fas fa-plus"></i></a> 
     </span>
 </div>
-<div class="card-body">
+<div class="card-body" id="createArea">
     @foreach($words[$languages[0]->Code] as $key => $value)
         <div class="card collapsed-card">
             <div class="card-header">
@@ -62,6 +62,8 @@
 </div>
 <script>
 $(document).ready(function(){
-    
+    $("#create").on("click",function(){
+        $("#createArea").append("<span>Demo</span>");
+    });
 }); 
 </script>
