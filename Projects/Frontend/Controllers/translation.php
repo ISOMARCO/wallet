@@ -9,7 +9,7 @@ class translation extends Controller
         $words = ML::selectAll();
         View::words($words);
         View::languages($languages);
-        systemSettingsM::defaultLanguage();
+        echo systemSettingsM::defaultLanguage();
     }
     public function createRequest()
     {
