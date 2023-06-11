@@ -145,7 +145,6 @@ $(document).ready(function(){
             e.preventDefault();
             if(confirm("Are you sure ?"))
             {
-                e.preventDefault();
                 var data = $(this).serialize();
                 $.ajax({
                     type: "post",
