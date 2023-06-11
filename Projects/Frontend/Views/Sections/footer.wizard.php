@@ -51,7 +51,7 @@
               success:function(e){
                   if(e.success)
                   {
-                      window.location.href="{{URL::base('translation')}}";
+                      window.location.href="{{URL::base(CURRENT_CONTROLLER)}}";
                   }
               }
           });  
