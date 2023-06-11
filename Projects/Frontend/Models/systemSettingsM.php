@@ -25,8 +25,8 @@ class systemSettingsM extends Model
         $transaction->where('Code', $lang)->update('Languages', [
             'Is_Default' => '1'
         ]);
-        $transaction->transEnd();
         Cache::delete("SystemDefaultLanguage");
-        return self::makeDefaultLanguageCache();
+        self::makeDefaultLanguageCache();
+        return $transaction->transEnd();
     }
 }
