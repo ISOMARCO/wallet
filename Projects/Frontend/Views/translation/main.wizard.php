@@ -49,7 +49,6 @@
                             <label for="{{$lang->Code}}" class="input-group-text">{{$lang->Name}}</label>
                         </div>
                         <input type="text" class="form-control" id="{{$lang->Code}}" name="{{$lang->Code}}" value="{{isset($words[$lang->Code][$key]) ? $words[$lang->Code][$key] : ''}}">
-                        <input type="hidden" name="key_{{$lang->Code}}" value="{{$key}}">
                     </div>
                 @endforeach
             </div>
@@ -139,11 +138,11 @@ $(document).ready(function(){
         }
     });
     $(document).on("click", "#editButton", function(){
-        console.log($(this).attr("data-selector"));
+        var dataSelector = $(this).attr("data-selector");
         $.ajax({
             type: "post",
             url: "{{URL::base('translation/updateRequest')}}",
-            data: $("#wordsForm").serialize(),
+            data: {key: dataSelector},
             dataType: "json",
             success:function(e){
                 if(e.success)
