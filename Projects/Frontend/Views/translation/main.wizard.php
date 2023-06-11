@@ -138,14 +138,14 @@ $(document).ready(function(){
             });
         }
     });
-    $(document).on("click", "#editButton", function(){
-        var dataSelector = $(this).attr("data-selector");
-        $("#key").val(dataSelector);
+    $(document).on("click", "#wordsForm", function(){
+        //var dataSelector = $(this).attr("data-selector");
+        //$("#key").val(dataSelector);
         console.log( $("#"+dataSelector+" input").val() );
         $.ajax({
             type: "post",
             url: "{{URL::base('translation/updateRequest')}}",
-            data: $("#wordsForm").serialize(),
+            data: $(this).serialize(),
             dataType: "json",
             success:function(e){
                 if(e.success)
