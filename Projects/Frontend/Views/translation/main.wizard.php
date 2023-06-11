@@ -141,7 +141,7 @@ $(document).ready(function(){
     $(document).on("click", "#wordsForm", function(){
         //var dataSelector = $(this).attr("data-selector");
         //$("#key").val(dataSelector);
-        console.log( $("#"+dataSelector+" input").val() );
+        //console.log( $("#"+dataSelector+" input").val() );
         $.ajax({
             type: "post",
             url: "{{URL::base('translation/updateRequest')}}",
