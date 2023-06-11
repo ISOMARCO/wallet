@@ -8,6 +8,6 @@ class translationM extends Model
     }
     public static function getAllLanguages()
     {
-        return DB::where('Active', '1')->select('Name', 'Code', 'Is_Default')->Languages()->result();
+        return DB::where('Active', '1')->select('Name', 'Code')->Languages()->result();
     }
 }
