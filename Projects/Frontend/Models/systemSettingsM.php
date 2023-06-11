@@ -4,7 +4,7 @@ class systemSettingsM extends Model
 {
     public static function defaultLanguage()
     {
-        return DB::where('Active')->select('Default_Language_Code')->System_Settings()->row();
+        return DB::where('Active','1')->select('Default_Language_Code')->System_Settings()->row();
     }
     public static function makeDefaultLanguageCache()
     {
