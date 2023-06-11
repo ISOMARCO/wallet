@@ -140,7 +140,7 @@ $(document).ready(function(){
                 }
             });
         }
-        elseif(event.target.id == 'deleteButton')
+        else if(event.target.id == 'deleteButton')
         {
             if(confirm("Are you sure ?"))
             {
