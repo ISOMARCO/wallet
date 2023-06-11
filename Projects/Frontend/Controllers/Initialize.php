@@ -31,7 +31,7 @@ class Initialize extends Controller
                   ->bodyPage('Sections/body')
                   ->browserIcon(FILES_DIR . 'favicon.svg');
     }
-    public function changeDefaultLanguage()
+    public function changeDefaultLanguageRequest()
     {
         Http::isAjax() or exit("Bad Request");
         $lang = Post::lang();

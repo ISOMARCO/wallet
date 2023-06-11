@@ -42,10 +42,10 @@
     });
     $("#lang").on("change",function(){
         $( "#lang option:selected" ).each(function(){
-          var data = $(this).attr('value')
+          var data = {lang: $(this).attr('value')};
           $.ajax({
               type: "post",
-              url: "{{URL::base('translation/deleteRequest')}}",
+              url: "{{URL::base('Initialize/changeDefaultLanguageRequest')}}",
               data: data,
               dataType: "json",
               success:function(e){
