@@ -16,7 +16,7 @@ class systemSettingsM extends Model
     {
         $old = self::defaultLanguage();
         $transaction = DB::transStart();
-        $transaction->where('Active', '1')->update("System_Settings",[
+        /*$transaction->where('Active', '1')->update("System_Settings", [
             'Default_Language_Code' => $lang
         ]);
         $transaction->where('Code', $old)->update('Languages', [
@@ -24,7 +24,7 @@ class systemSettingsM extends Model
         ]);
         $transaction->where('Code', $lang)->update('Languages', [
             'Is_Default' => '1'
-        ]);
+        ]);*/
         Cache::delete("SystemDefaultLanguage");
         self::makeDefaultLanguageCache();
         return json_encode('success' => $transaction->transEnd());
