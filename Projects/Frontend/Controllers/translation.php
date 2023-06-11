@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use translationM, ML, Http, Post, Method, systemSettingsM;
+use translationM, ML, Http, Post, Method;
 class translation extends Controller
 {
     public function main()
@@ -9,7 +9,6 @@ class translation extends Controller
         $words = ML::selectAll();
         View::words($words);
         View::languages($languages);
-        echo systemSettingsM::defaultLanguage();
     }
     public function createRequest()
     {
