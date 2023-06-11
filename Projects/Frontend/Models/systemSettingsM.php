@@ -12,4 +12,12 @@ class systemSettingsM extends Model
         if(empty($defaultLanguage)) $defaultLanguage = 'az';
         return Cache::insert('SystemDefaultLanguage',$defaultLanguage,(60*60*24*365));
     }
+    public static function updateDefaultLanguage($lang)
+    {
+        DB::where('Active', '1')->update("System_Settings",[
+            'Default_Language_Code' => $lang
+        ]);
+        Cache::delete("SystemDefaultLanguage");
+        return self::makeDefaultLanguageCache();
+    }
 }

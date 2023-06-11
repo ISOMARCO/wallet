@@ -31,4 +31,8 @@ class Initialize extends Controller
                   ->bodyPage('Sections/body')
                   ->browserIcon(FILES_DIR . 'favicon.svg');
     }
+    public function changeDefaultLanguage()
+    {
+        
+    }
 }

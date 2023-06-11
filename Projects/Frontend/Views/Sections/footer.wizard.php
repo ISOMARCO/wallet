@@ -40,6 +40,23 @@
       }
     })
     });
+    $("#lang").on("change",function(){
+        $( "#lang option:selected" ).each(function(){
+          var data = $(this).attr('value')
+          $.ajax({
+              type: "post",
+              url: "{{URL::base('translation/deleteRequest')}}",
+              data: data,
+              dataType: "json",
+              success:function(e){
+                  if(e.success)
+                  {
+                      window.location.href="{{URL::base('translation')}}";
+                  }
+              }
+          });  
+        });
+    });
   });
 </script>
 </body>
