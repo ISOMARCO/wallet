@@ -9,6 +9,16 @@ class translation extends Controller
         $words = ML::selectAll();
         View::words($words);
         View::languages($languages);
+        if(ML::select('RememberMe', ML::lang('ru')) != 'RememberMe')
+        {
+            ML::update('ru', 'RememberMe', 'Remember Me Russian');
+            echo '15';
+        }
+        else 
+        {
+            ML::insert('ru', 'RememberMe', 'Remember Me Russian');
+            echo '19';
+        }
     }
     public function createRequest()
     {
