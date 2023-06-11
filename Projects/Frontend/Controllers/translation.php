@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use translationM, ML, Http, Post, Method;
+use translationM, ML, Http, Post, Method, DB;
 class translation extends Controller
 {
     public function main()
@@ -9,16 +9,17 @@ class translation extends Controller
         $words = ML::selectAll();
         View::words($words);
         View::languages($languages);
-        /*if(ML::select('RememberMe', ML::lang('ru')) != 'RememberMe')
-        {
-            ML::update('ru', 'RememberMe', 'Запомнить меня');
-            echo '15';
-        }
-        else 
-        {
-            ML::insert('ru', 'RememberMe', 'Запомнить меня');
-            echo '19';
-        }*/
+        $transaction = DB::transStart();
+        $transaction->where('Active', '1')->update("System_Settings", [
+            'Default_Language_Code' => $lang
+        ]);
+        $transaction->where('Code', $old)->update('Languages', [
+            'Is_Default' => '0'
+        ]);
+        $transaction->where('Code', $lang)->update('Languages', [
+            'Is_Default' => '1'
+        ]);
+        echo DB::transEnd();
     }
     public function createRequest()
     {
