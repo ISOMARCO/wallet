@@ -58,6 +58,7 @@
             </div>
         </div>
     @endforeach
+    <input type="hidden" name="key" id="key">
     </form>
 </div>
 </section>
@@ -139,10 +140,11 @@ $(document).ready(function(){
     });
     $(document).on("click", "#editButton", function(){
         var dataSelector = $(this).attr("data-selector");
+        $("#key").val(dataSelector);
         $.ajax({
             type: "post",
             url: "{{URL::base('translation/updateRequest')}}",
-            data: $("#wordsForm").serialize() + "&key = "+dataSelector,
+            data: $("#wordsForm").serialize(),
             dataType: "json",
             success:function(e){
                 if(e.success)
