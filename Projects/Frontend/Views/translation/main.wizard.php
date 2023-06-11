@@ -142,6 +142,7 @@ $(document).ready(function(){
         e.preventDefault();
         if(event.target.id == 'editButton')
         {
+            e.preventDefault();
             var data = $(this).serialize();
             $.ajax({
                 type: "post",
