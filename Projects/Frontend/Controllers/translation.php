@@ -9,7 +9,7 @@ class translation extends Controller
         $words = ML::selectAll();
         View::words($words);
         View::languages($languages);
-        if(ML::select('RememberMe', ML::lang('ru')) != 'RememberMe')
+        /*if(ML::select('RememberMe', ML::lang('ru')) != 'RememberMe')
         {
             ML::update('ru', 'RememberMe', 'Запомнить меня');
             echo '15';
@@ -18,7 +18,7 @@ class translation extends Controller
         {
             ML::insert('ru', 'RememberMe', 'Запомнить меня');
             echo '19';
-        }
+        }*/
     }
     public function createRequest()
     {
