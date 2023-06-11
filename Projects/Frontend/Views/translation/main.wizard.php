@@ -139,7 +139,7 @@ $(document).ready(function(){
         }
     });
     $(document).on("click", "#editButton", function(){
-        $(this).attr("data-selector");
+        console.log($(this).attr("data-selector"));
         $.ajax({
             type: "post",
             url: "{{URL::base('translation/updateRequest')}}",
