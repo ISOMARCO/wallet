@@ -14,9 +14,18 @@ class systemSettingsM extends Model
     }
     public static function updateDefaultLanguage($lang)
     {
-        DB::where('Active', '1')->update("System_Settings",[
+        $old = self::defaultLanguage();
+        $transaction = DB::transStart();
+        $transaction->where('Active', '1')->update("System_Settings",[
             'Default_Language_Code' => $lang
         ]);
+        $transaction->where('Code', $old)->update('Languages', [
+            'Is_Default' => '0'
+        ]);
+        $transaction->where('Code', $lang)->update('Languages', [
+            'Is_Default' => '1'
+        ]);
+        $transaction->transEnd();
         Cache::delete("SystemDefaultLanguage");
         return self::makeDefaultLanguageCache();
     }
