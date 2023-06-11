@@ -6,9 +6,9 @@ class systemSettingsM extends Model
     {
         return DB::where('Active','1')->select('Default_Language_Code')->System_Settings()->row()->Default_Language_Code;
     }
-    public static function makeDefaultLanguageCache()
+    public static function makeDefaultLanguageCache($defaultLanguage = NULL)
     {
-        $defaultLanguage = self::defaultLanguage();
+        if($defaultLanguage == NULL) $defaultLanguage = self::defaultLanguage();
         if(empty($defaultLanguage)) $defaultLanguage = 'az';
         return Cache::insert('SystemDefaultLanguage',$defaultLanguage,(60*60*24*365));
     }
@@ -26,7 +26,7 @@ class systemSettingsM extends Model
             'Is_Default' => '1'
         ]);
         Cache::delete("SystemDefaultLanguage");
-        self::makeDefaultLanguageCache();
+        self::makeDefaultLanguageCache($lang);
         return $transaction->transEnd();
     }
 }
