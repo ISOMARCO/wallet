@@ -42,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card-body">
+            <div class="card-body" id="{{$key}}">
                 @foreach($languages as $lang)
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
@@ -54,7 +54,7 @@
                 @endforeach
             </div>
             <div class="card-footer">
-                <button type="button" class="btn btn-primary" id="editButton" style="float:left">Edit&nbsp;<i class="fas fa-edit"></i></button>
+                <button type="button" class="btn btn-primary" id="editButton" style="float:left" data-selector="{{$key}}">Edit&nbsp;<i class="fas fa-edit"></i></button>
                 <button type="button" class="btn btn-danger" id="deleteButton" style="float:right">Delete&nbsp;<i class="fas fa-trash"></i></button>
             </div>
         </div>
@@ -145,7 +145,7 @@ $(document).ready(function(){
             data: $("#wordsForm").serialize(),
             dataType: "json",
             success:function(e){
-                alert($(this).children().prop());
+                alert($(this).attr("data-selector"));
                 if(e.success)
                 {
                     alert(e.success);
