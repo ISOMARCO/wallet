@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use URL, ML, Cookie, Session,loginM, systemSettingsM, Post;
+use URL, ML, Cookie, Session,loginM, systemSettingsM, Post, Http;
 class Initialize extends Controller
 {
     public function main()
