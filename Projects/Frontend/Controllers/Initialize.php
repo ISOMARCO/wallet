@@ -36,7 +36,6 @@ class Initialize extends Controller
     {
         Http::isAjax() or exit("Bad Request");
         $lang = Post::lang();
-        return json_encode(['success' => $lang]);
         echo json_encode(['success' => systemSettingsM::updateDefaultLanguage($lang)]);
     }
 }
