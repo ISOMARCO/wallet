@@ -55,6 +55,7 @@ class translation extends Controller
     {
         Http::isAjax() or exit;
         $languages = translationM::languages()->result();
+        $s = "";
         foreach($languages as $lang)
         {
             $key = Method::post('key_'.$lang->Code);
