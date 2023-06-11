@@ -58,11 +58,9 @@ function User($request = NULL)
 function defaultLanguage()
 {
     $cacheDefaultLanguage = Cache::select('SystemDefaultLanguage');
-    return $cacheDefaultLanguage;
     if($cacheDefaultLanguage)
     {
-        $data = json_decode($cacheDefaultLanguage);
-        return $data;
+        return $cacheDefaultLanguage;
     }
     systemSettingsM::makeDefaultLanguageCache();
     $defaultLanguage = Cache::select('SystemDefaultLanguage');
