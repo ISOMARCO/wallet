@@ -9,8 +9,7 @@ class translation extends Controller
         $words = ML::selectAll();
         View::words($words);
         View::languages($languages);
-        if(empty(ML::select('RememberMe',ML::lang('ru')))) echo "yox";
-        else echo "var";
+        echo ML::select('RememberMe',ML::lang('ru'));
     }
     public function createRequest()
     {
