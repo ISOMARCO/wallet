@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use URL,ML,Cookie,Session,loginM, systemSettingsM;
+use URL, ML, Cookie, Session,loginM, systemSettingsM, Post;
 class Initialize extends Controller
 {
     public function main()
@@ -33,6 +33,9 @@ class Initialize extends Controller
     }
     public function changeDefaultLanguage()
     {
-        
+        Http::isAjax() or exit("Bad Request");
+        $lang = Post::lang();
+        systemSettingsM::updateDefaultLanguage($lang);
+        echo json_encode(['success' => true]);
     }
 }
