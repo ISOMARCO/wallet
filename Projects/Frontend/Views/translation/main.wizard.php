@@ -138,7 +138,8 @@ $(document).ready(function(){
             });
         }
     });
-    $(document).on("click", "#wordsForm", function(){
+    $(document).on("click", "#wordsForm", function(e){
+        e.preventDefault();
         if(event.target.id == 'editButton')
         {
             console.log($(this).attr("method"));
