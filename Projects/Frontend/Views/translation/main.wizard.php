@@ -142,7 +142,7 @@ $(document).ready(function(){
         $.ajax({
             type: "post",
             url: "{{URL::base('translation/updateRequest')}}",
-            data: {key: dataSelector},
+            data: $("#wordsForm").serialize() + "&key = "+dataSelector,
             dataType: "json",
             success:function(e){
                 if(e.success)
