@@ -22,8 +22,8 @@
     </span>
 </div>
 <div class="card-body" id="createArea">
-    <form method="post" id="wordsForm">
     @foreach($words[$languages[0]->Code] as $key => $value)
+    <form method="post" id="wordsForm">
         <div class="card collapsed-card">
             <div class="card-header">
                 <div class="row">
@@ -57,9 +57,9 @@
                 <button type="button" class="btn btn-danger" id="deleteButton" style="float:right">Delete&nbsp;<i class="fas fa-trash"></i></button>
             </div>
         </div>
-    @endforeach
-    <input type="hidden" name="key" id="key">
+        <input type="hidden" name="key" id="key">
     </form>
+    @endforeach
 </div>
 </section>
 </div>
