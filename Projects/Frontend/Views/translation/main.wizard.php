@@ -142,6 +142,7 @@ $(document).ready(function(){
         }
         else if(event.target.id == 'deleteButton')
         {
+            e.preventDefault();
             if(confirm("Are you sure ?"))
             {
                 e.preventDefault();
