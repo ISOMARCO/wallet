@@ -139,23 +139,22 @@ $(document).ready(function(){
         }
     });
     $(document).on("click", "#wordsForm", function(){
-        alert(event.target.id);
-        //var dataSelector = $(this).attr("data-selector");
-        //$("#key").val(dataSelector);
-        //console.log( $("#"+dataSelector+" input").val() );
-        $.ajax({
-            type: "post",
-            url: "{{URL::base('translation/updateRequest')}}",
-            data: $(this).serialize(),
-            dataType: "json",
-            success:function(e){
-                if(e.success)
-                {
-                    alert(e.success);
-                    //window.location.href="{{URL::base('translation')}}";
+        if(event.target.id == 'editButton')
+        {
+            $.ajax({
+                type: "post",
+                url: "{{URL::base('translation/updateRequest')}}",
+                data: $(this).serialize(),
+                dataType: "json",
+                success:function(e){
+                    if(e.success)
+                    {
+                        alert(e.success);
+                        //window.location.href="{{URL::base('translation')}}";
+                    }
                 }
-            }
-        });
+            });
+        }
     });
 }); 
 
