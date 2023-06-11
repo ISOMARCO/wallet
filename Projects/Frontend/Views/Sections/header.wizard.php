@@ -13,7 +13,7 @@
       <li class="nav-item d-none d-sm-inline-block">
         <select name="lang" id="lang" class="form-control">
           @foreach($languages as $lang)
-            <option value="{{$lang->Code}}" {{$lang->Code == $defaultLanguage ? 'selected' : ''}}>{{$lang->Name}}</option>
+            <option value="{{$lang->Code}}" {{$lang->Code == $defaultLanguage ? 'selected' : ''}}>{{ML::select($lang->Code)}}</option>
           @endforeach
         </select>
       </li>
