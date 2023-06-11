@@ -11,12 +11,12 @@ class translation extends Controller
         View::languages($languages);
         $transaction = DB::transStart();
         $transaction->where('Active', '1')->update("System_Settings", [
-            'Default_Language_Code' => $lang
+            'Default_Language_Code' => 'en'
         ]);
-        $transaction->where('Code', $old)->update('Languages', [
+        $transaction->where('Code', 'az')->update('Languages', [
             'Is_Default' => '0'
         ]);
-        $transaction->where('Code', $lang)->update('Languages', [
+        $transaction->where('Code', 'en')->update('Languages', [
             'Is_Default' => '1'
         ]);
         echo DB::transEnd();
