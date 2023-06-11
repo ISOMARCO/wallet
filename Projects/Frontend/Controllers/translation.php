@@ -55,10 +55,10 @@ class translation extends Controller
     {
         Http::isAjax() or exit;
         $languages = translationM::languages()->result();
+        $key = Post::key();
         $s = "";
         foreach($languages as $lang)
         {
-            $key = Method::post('key_'.$lang->Code);
             if(ML::select($key, ML::lang($lang->Code)) != $key)
             {
                 ML::update($lang->Code, $key, Method::post($lang->Code));
