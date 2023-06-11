@@ -61,12 +61,12 @@ class translation extends Controller
             if(ML::select($key, ML::lang($lang->Code)) != $key)
             {
                 ML::update($lang->Code, $key, Method::post($lang->Code));
-                $s = '64';
+                if($lang->Code == 'ru') $s = '64';
             }
             else 
             {
                 ML::insert($lang->Code, $key, Method::post($lang->Code));
-                $s = '69';
+                if($lang->Code == 'ru') $s = '69';
             }
         }
         echo json_encode(['success' => $s]);
