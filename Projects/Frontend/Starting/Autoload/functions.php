@@ -54,3 +54,11 @@ function User($request = NULL)
     }
     return $returnString;
 }
+
+function defaultLanguage()
+{
+    if(Cache::select('SystemDefaultLanguage'))
+    {
+        
+    }
+}

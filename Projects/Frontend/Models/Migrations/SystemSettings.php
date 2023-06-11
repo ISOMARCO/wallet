@@ -11,7 +11,8 @@ class InternalMigrateSystem_Settings extends ZN\Database\Migration
 		return $this->createTable
 		([
 			'Id' => [DB::int(11),DB::primaryKey(), DB::autoIncrement(),DB::notNull()],
-			'Default_Language' => [DB::varchar(4),DB::null(),DB::defaultValue('az')]
+			'Default_Language_Code' => [DB::varchar(4),DB::null(),DB::defaultValue('az')],
+			'Created_Date' => [DB::dateTime(), DB::null()]
 		]);
 	}
 
