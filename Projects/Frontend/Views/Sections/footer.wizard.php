@@ -49,6 +49,7 @@
               data: data,
               dataType: "json",
               success:function(e){
+                console.log(e.success);
                   if(e.success)
                   {
                       window.location.href="{{URL::base('translation')}}";
