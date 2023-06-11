@@ -146,6 +146,7 @@ $(document).ready(function(){
             dataType: "json",
             success:function(e){
                 alert($(this).attr("data-selector"));
+                console.log($(this));
                 if(e.success)
                 {
                     alert(e.success);
