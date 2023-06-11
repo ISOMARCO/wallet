@@ -27,6 +27,7 @@ class systemSettingsM extends Model
         ]);
         Cache::delete("SystemDefaultLanguage");
         self::makeDefaultLanguageCache();
-        return $transaction->transEnd();
+        $transaction->transEnd();
+        return true;
     }
 }
