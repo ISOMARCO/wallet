@@ -59,6 +59,11 @@ function defaultLanguage()
 {
     if(Cache::select('SystemDefaultLanguage'))
     {
-        
+        $data = json_decode(Cache::select('SystemDefaultLanguage'));
+        return $data;
     }
+    systemSettingsM::makeDefaultLanguageCache();
+    $defaultLanguage = Cache::select('SystemDefaultLanguage');
+    if(empty($defaultLanguage)) $defaultLanguage = 'az';
+    return $defaultLanguage;
 }
