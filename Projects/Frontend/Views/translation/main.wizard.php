@@ -57,7 +57,7 @@
                 <button type="button" class="btn btn-danger" id="deleteButton" style="float:right">Delete&nbsp;<i class="fas fa-trash"></i></button>
             </div>
         </div>
-        <input type="hidden" name="key" id="key">
+        <input type="hidden" name="key" id="key" value="{{$key}}">
     </form>
     @endforeach
 </div>
@@ -142,11 +142,11 @@ $(document).ready(function(){
         e.preventDefault();
         if(event.target.id == 'editButton')
         {
-            console.log($(this).serialize());
+            var data = $(this).serialize();
             $.ajax({
                 type: "post",
                 url: "{{URL::base('translation/updateRequest')}}",
-                data: $(this).serialize(),
+                data: data,
                 dataType: "json",
                 success:function(e){
                     if(e.success)
