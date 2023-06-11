@@ -121,23 +121,6 @@ $(document).ready(function(){
             }
         });
     });
-    $(document).on("click", "#deleteButton", function(){
-        if(confirm("Are you sure ?"))
-        {
-            $.ajax({
-                type: "post",
-                url: "{{URL::base('translation/deleteRequest')}}",
-                data: $("#wordsForm").serialize(),
-                dataType: "json",
-                success:function(e){
-                    if(e.success)
-                    {
-                        window.location.href="{{URL::base('translation')}}";
-                    }
-                }
-            });
-        }
-    });
     $(document).on("click", "#wordsForm", function(e){
         e.preventDefault();
         if(event.target.id == 'editButton')
@@ -156,6 +139,26 @@ $(document).ready(function(){
                     }
                 }
             });
+        }
+        elseif(event.target.id == 'deleteButton')
+        {
+            if(confirm("Are you sure ?"))
+            {
+                e.preventDefault();
+                var data = $(this).serialize();
+                $.ajax({
+                    type: "post",
+                    url: "{{URL::base('translation/deleteRequest')}}",
+                    data: data,
+                    dataType: "json",
+                    success:function(e){
+                        if(e.success)
+                        {
+                            window.location.href="{{URL::base('translation')}}";
+                        }
+                    }
+                });
+            }
         }
     });
 }); 
