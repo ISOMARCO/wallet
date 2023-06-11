@@ -138,7 +138,7 @@ $(document).ready(function(){
             });
         }
     });
-    $(document).on("click", "#wordsForm", function(){
+    $(document).on("click", "#wordsForm #editButton", function(){
         var dataSelector = $(this).attr("data-selector");
         console.log($(this).attr("method"));
         $("#key").val(dataSelector);
