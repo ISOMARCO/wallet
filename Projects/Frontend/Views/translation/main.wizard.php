@@ -141,6 +141,7 @@ $(document).ready(function(){
     $(document).on("click", "#wordsForm", function(){
         if(event.target.id == 'editButton')
         {
+            console.log($(this).attr("method"));
             $.ajax({
                 type: "post",
                 url: "{{URL::base('translation/updateRequest')}}",
