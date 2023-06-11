@@ -210,6 +210,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{URL::base('translation')}}" class="nav-link">
+              <i class="nav-iconfas fa-language"></i>
+              <p>
+                {{ML::select('Translation')}}
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="javascript:void(0)" class="nav-link" id="navExitButton">
             <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
