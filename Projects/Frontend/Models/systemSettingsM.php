@@ -9,7 +9,6 @@ class systemSettingsM extends Model
     public static function makeDefaultLanguageCache()
     {
         $defaultLanguage = self::defaultLanguage();
-        return $defaultLanguage." okey";
         if(empty($defaultLanguage)) $defaultLanguage = 'az';
         return Cache::insert('SystemDefaultLanguage',$defaultLanguage,(60*60*24*365));
     }
