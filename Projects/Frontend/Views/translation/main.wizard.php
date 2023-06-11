@@ -141,7 +141,7 @@ $(document).ready(function(){
     $(document).on("click", "#editButton", function(){
         var dataSelector = $(this).attr("data-selector");
         $("#key").val(dataSelector);
-        console.log( $(this).parent().parent().attr('class') );
+        console.log( $(this).parent().parent().next().attr('class') );
         $.ajax({
             type: "post",
             url: "{{URL::base('translation/updateRequest')}}",
