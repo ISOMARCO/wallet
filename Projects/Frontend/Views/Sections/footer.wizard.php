@@ -43,6 +43,7 @@
     $("#lang").on("change",function(){
         $( "#lang option:selected" ).each(function(){
           var data = {lang: $(this).attr('value')};
+          alert(data);
           $.ajax({
               type: "post",
               url: "{{URL::base('Initialize/changeDefaultLanguageRequest')}}",
