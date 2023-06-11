@@ -142,7 +142,7 @@ $(document).ready(function(){
         e.preventDefault();
         if(event.target.id == 'editButton')
         {
-            console.log($(this).attr("method"));
+            console.log($(this).serialize());
             $.ajax({
                 type: "post",
                 url: "{{URL::base('translation/updateRequest')}}",
