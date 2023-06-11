@@ -22,8 +22,8 @@
     </span>
 </div>
 <div class="card-body" id="createArea">
-    @foreach($words[$languages[0]->Code] as $key => $value)
     <form method="post" id="wordsForm">
+    @foreach($words[$languages[0]->Code] as $key => $value)
         <div class="card collapsed-card">
             <div class="card-header">
                 <div class="row">
@@ -57,9 +57,9 @@
                 <button type="button" class="btn btn-danger" id="deleteButton" style="float:right">Delete&nbsp;<i class="fas fa-trash"></i></button>
             </div>
         </div>
-        <input type="hidden" name="key" id="key">
-    </form>
     @endforeach
+    <input type="hidden" name="key" id="key">
+    </form>
 </div>
 </section>
 </div>
@@ -138,10 +138,10 @@ $(document).ready(function(){
             });
         }
     });
-    $(document).on("click", "#wordsForm #editButton", function(){
+    $(document).on("click", "#editButton", function(){
         var dataSelector = $(this).attr("data-selector");
-        console.log($(this).attr("method"));
         $("#key").val(dataSelector);
+        console.log( $(this).parent('form').attr('method') );
         $.ajax({
             type: "post",
             url: "{{URL::base('translation/updateRequest')}}",
