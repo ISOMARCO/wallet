@@ -12,8 +12,9 @@
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <select name="lang" id="lang" class="form-control">
-          <option value="az">Azerbaijan</option>
-          <option value="en">English</option>
+          @foreach($languages as $lang)
+          <option value="$lang->Code">{{$lang->Name}}</option>
+          @endforeach
         </select>
       </li>
     </ul>
