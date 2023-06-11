@@ -50,7 +50,7 @@ class translation extends Controller
         foreach($languages as $lang)
         {
             $key = Method::post('key_'.$lang->Code);
-            if(ML::select($lang->Code, $key))
+            if(ML::select($key, ML::lang($lang->Code)) != $key)
             {
                 ML::update($lang->Code, $key, Method::post($lang->Code));
             }
