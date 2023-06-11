@@ -147,6 +147,7 @@ $(document).ready(function(){
             success:function(e){
                 if(e.success)
                 {
+                    alert(e.success);
                     window.location.href="{{URL::base('translation')}}";
                 }
             }
