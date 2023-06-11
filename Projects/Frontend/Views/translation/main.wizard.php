@@ -145,11 +145,11 @@ $(document).ready(function(){
             data: $("#wordsForm").serialize(),
             dataType: "json",
             success:function(e){
-                alert($(this).parent());
+                alert($(this).parent().attr("class"));
                 if(e.success)
                 {
                     alert(e.success);
-                    window.location.href="{{URL::base('translation')}}";
+                    //window.location.href="{{URL::base('translation')}}";
                 }
             }
         });
