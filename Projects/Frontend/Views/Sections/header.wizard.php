@@ -211,7 +211,7 @@
           </li>
           <li class="nav-item">
             <a href="{{URL::base('translation')}}" class="nav-link">
-              <i class="nav-iconfas fa-language"></i>
+              <i class="nav-icon fas fa-language"></i>
               <p>
                 {{ML::select('Translation')}}
               </p>
