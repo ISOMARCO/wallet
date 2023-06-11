@@ -139,6 +139,7 @@ $(document).ready(function(){
         }
     });
     $(document).on("click", "#wordsForm", function(){
+        alert(event.target.id);
         //var dataSelector = $(this).attr("data-selector");
         //$("#key").val(dataSelector);
         //console.log( $("#"+dataSelector+" input").val() );
