@@ -13,7 +13,7 @@
       <li class="nav-item d-none d-sm-inline-block">
         <select name="lang" id="lang" class="form-control">
           @foreach($languages as $lang)
-            <option value="$lang->Code" {{$lang->Is_Default == '1' ? 'selected' : ''}}>{{$lang->Name}}</option>
+            <option value="$lang->Code" >{{$lang->Name}}</option>
           @endforeach
         </select>
       </li>
