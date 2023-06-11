@@ -139,13 +139,13 @@ $(document).ready(function(){
         }
     });
     $(document).on("click", "#editButton", function(){
+        $(this).attr("data-selector");
         $.ajax({
             type: "post",
             url: "{{URL::base('translation/updateRequest')}}",
             data: $("#wordsForm").serialize(),
             dataType: "json",
             success:function(e){
-                alert($(this).attr("data-selector"));
                 if(e.success)
                 {
                     alert(e.success);
