@@ -145,8 +145,7 @@ $(document).ready(function(){
             data: $("#wordsForm").serialize(),
             dataType: "json",
             success:function(e){
-                alert($(this).prop("data-selector"));
-                console.log($(this));
+                alert($(this).attr("data-selector"));
                 if(e.success)
                 {
                     alert(e.success);
