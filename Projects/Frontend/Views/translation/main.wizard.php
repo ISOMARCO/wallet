@@ -36,7 +36,7 @@
                         </h3>
                     </div>  
                     <div class="card-tools col-1 col-sm-1">
-                        <i class="fas fa-sync fa-spin"></i>
+                        <i class="fas fa-sync fa-spin" style="display: none"></i>
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                         <i class="fas fa-plus"></i>
                         </button>
@@ -138,20 +138,19 @@ $(document).ready(function(){
                 data: data,
                 dataType: "json",
                 beforeSend: function(){
-                    console.log('basladi')
+                    collapsedCard.children().children().children().children().eq(2).children().eq(0).show();
                 },
                 success:function(e){
                     if(e.success)
                     {
                         collapsedCard.children().addClass("collapsed-card");
-                        var iconClass = collapsedCard.children().children().children().children().eq(2).children().children().removeClass('fa-minus').addClass('fa-plus');
+                        collapsedCard.children().children().children().children().eq(2).children().eq(1).children().removeClass('fa-minus').addClass('fa-plus');
                         collapsedCard.children().children().eq(1).hide();
                         collapsedCard.children().children().eq(2).hide();
-                        
                     }
                 },
                 complete: function(){
-                    console.log('bitti');
+                    collapsedCard.children().children().children().children().eq(2).children().eq(0).hide();
                 }
             });
         }
