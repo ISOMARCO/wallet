@@ -64,9 +64,9 @@
 </section>
 </div>
 <script>
-$(document).ready(function(e){
-    e.preventDefault();
-    $("#create").on("click",function(){
+$(document).ready(function(){
+    $("#create").on("click",function(e){
+        e.preventDefault();
         $("#createArea").prepend(`
         <form method="post" id="insertLanguageForm">
         <div class="card collapsed-card">
@@ -105,10 +105,12 @@ $(document).ready(function(e){
         </form>
         `);
     });
-    $(document).on('click', '#cancelButton', function() {
+    $(document).on('click', '#cancelButton', function(e) {
+        e.preventDefault();
         $("#insertLanguageForm").remove();
     });
-    $(document).on('click', '#saveButton', function() {
+    $(document).on('click', '#saveButton', function(e) {
+        e.preventDefault();
         $.ajax({
             type: "post",
             url: "{{URL::base('translation/createRequest')}}",
