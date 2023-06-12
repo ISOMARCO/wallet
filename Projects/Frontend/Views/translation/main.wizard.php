@@ -127,7 +127,7 @@ $(document).ready(function(){
         {
             e.preventDefault();
             var data = $(this).serialize();
-            console.log($(this+" i").attr("class"));
+            console.log($(this+" .fa-plus").attr("class"));
             var collapsedCard = $(this);
             $.ajax({
                 type: "post",
