@@ -166,6 +166,9 @@ $(document).ready(function(){
                     url: "{{URL::base('translation/deleteRequest')}}",
                     data: data,
                     dataType: "json",
+                    beforeSend: function(){
+                        collapsedCard.children().children().children().children().eq(2).children().eq(0).show();
+                    },
                     success:function(e){
                         if(e.success)
                         {
