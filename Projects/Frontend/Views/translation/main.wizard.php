@@ -64,7 +64,8 @@
 </section>
 </div>
 <script>
-$(document).ready(function(){
+$(document).ready(function(e){
+    e.preventDefault();
     $("#create").on("click",function(){
         $("#createArea").prepend(`
         <form method="post" id="insertLanguageForm">
