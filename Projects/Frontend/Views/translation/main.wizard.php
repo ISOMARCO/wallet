@@ -137,7 +137,7 @@ $(document).ready(function(){
                     if(e.success)
                     {
                         collapsedCard.children().addClass("collapsed-card");
-                        console.log(collapsedCard.children('i').attr("class"));
+                        //console.log(collapsedCard.children('i').attr("class"));
                         collapsedCard.children().children().eq(1).hide();
                         collapsedCard.children().children().eq(2).hide();
                         
