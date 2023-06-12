@@ -154,6 +154,7 @@ $(document).ready(function(){
             if(confirm("Are you sure ?"))
             {
                 var data = $(this).serialize();
+                var collapsedCard = $(this);
                 $.ajax({
                     type: "post",
                     url: "{{URL::base('translation/deleteRequest')}}",
@@ -162,7 +163,7 @@ $(document).ready(function(){
                     success:function(e){
                         if(e.success)
                         {
-                            window.location.href="{{URL::base('translation')}}";
+                            collapsedCard.children().remove();
                         }
                     }
                 });
