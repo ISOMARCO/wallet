@@ -127,7 +127,7 @@ $(document).ready(function(){
         {
             e.preventDefault();
             var data = $(this).serialize();
-            var collapsedCard = $(this+" .card");
+            var collapsedCard = $(this);
             $.ajax({
                 type: "post",
                 url: "{{URL::base('translation/updateRequest')}}",
@@ -137,6 +137,7 @@ $(document).ready(function(){
                     if(e.success)
                     {
                         //window.location.href="{{URL::base('translation')}}";
+                        alert(collapsedCard.children());
                         collapsedCard.addClass("collapsed-card");
                     }
                 }
