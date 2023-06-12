@@ -137,7 +137,7 @@ $(document).ready(function(){
                     if(e.success)
                     {
                         //window.location.href="{{URL::base('translation')}}";
-                        alert(collapsedCard.children());
+                        alert(collapsedCard.children().attr("class"));
                         collapsedCard.addClass("collapsed-card");
                     }
                 }
