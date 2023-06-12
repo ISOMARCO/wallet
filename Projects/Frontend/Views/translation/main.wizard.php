@@ -138,6 +138,7 @@ $(document).ready(function(){
                     {
                         collapsedCard.children().addClass("collapsed-card");
                         collapsedCard.children().children().eq(1).hide();
+                        collapsedCard.children().children().eq(2).hide();
                     }
                 }
             });
