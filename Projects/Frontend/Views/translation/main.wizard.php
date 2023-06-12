@@ -137,7 +137,7 @@ $(document).ready(function(){
                     if(e.success)
                     {
                         collapsedCard.children().addClass("collapsed-card");
-                        console.log( collapsedCard.children().children().children().children().eq(2).children().children().attr("class") );
+                        var iconClass = collapsedCard.children().children().children().children().eq(2).children().children().removeClass('fa-minus').addClass('fa-plus');
                         collapsedCard.children().children().eq(1).hide();
                         collapsedCard.children().children().eq(2).hide();
                         
