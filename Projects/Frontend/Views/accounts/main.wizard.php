@@ -192,7 +192,6 @@
 </section>
 </div>
 <script>
-$(".select2").select2();
 $(document).ready(function(){
     $("#searchButton").on("click",function(){
         if($("#searchBody").attr("style")) $("#searchBody").removeAttr("style");
