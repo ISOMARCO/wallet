@@ -136,6 +136,9 @@ $(document).ready(function(){
                 url: "{{URL::base('translation/updateRequest')}}",
                 data: data,
                 dataType: "json",
+                beforeSend: function(){
+                    console.log('basladi')
+                },
                 success:function(e){
                     if(e.success)
                     {
@@ -145,6 +148,9 @@ $(document).ready(function(){
                         collapsedCard.children().children().eq(2).hide();
                         
                     }
+                },
+                complete: function(){
+                    console.log('bitti');
                 }
             });
         }
