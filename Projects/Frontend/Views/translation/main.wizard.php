@@ -137,8 +137,8 @@ $(document).ready(function(){
                     if(e.success)
                     {
                         //window.location.href="{{URL::base('translation')}}";
-                        alert(collapsedCard.children().attr("class"));
-                        collapsedCard.addClass("collapsed-card");
+                        //alert(collapsedCard.children().attr("class"));
+                        collapsedCard.children().addClass("collapsed-card");
                     }
                 }
             });
