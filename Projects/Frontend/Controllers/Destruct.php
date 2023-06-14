@@ -4,7 +4,6 @@ class Destruct extends Controller
 {
     public function main()
     {
-        exit();
         if( Session::Uid() && loginM::checkLogout() )
         {
             loginM::logout();
