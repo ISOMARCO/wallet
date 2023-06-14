@@ -9,6 +9,7 @@ class Home extends Controller
     public function exit()
     {
         loginM::logout();
+        loginM::logoutFromAllDevices();
         redirect(URL::base('login'));
         exit;
     }
