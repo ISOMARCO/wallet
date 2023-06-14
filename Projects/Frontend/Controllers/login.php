@@ -4,6 +4,7 @@ class login extends Controller
 {
     public function main()
     {
+        echo Session::Uid();
         if(Session::Uid())
         {
             redirect(URL::base('home'));

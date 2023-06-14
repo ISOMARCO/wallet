@@ -11,7 +11,7 @@ class Initialize extends Controller
         View::languages(translationM::getAllLanguages());
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login') 
         {
-            if(loginM::checkLogout())
+            
             $email = decrypt( Cookie::select( hash('sha256',md5('Email')) ) );
             $password = decrypt( Cookie::select( hash('sha256',md5('Password')) ) );
             if($email && $password)
