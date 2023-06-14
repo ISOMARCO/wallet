@@ -3,6 +3,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <div class="container-fluid">
+      <a href="{{URL::base('Home/exit/1')}}">Bütün cihazlardan çıx</a>
     <div class="row mb-2">
         <div class="col-sm-6">
         <h1>Blank Page accounts</h1>

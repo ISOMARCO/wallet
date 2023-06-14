@@ -6,9 +6,9 @@ class Home extends Controller
     {
         Masterpage::title('Home');
     } 
-    public function exit()
+    public function exit($all = NULL)
     {
-        loginM::logout();
+        loginM::logout($all);
         redirect(URL::base('login'));
         exit;
     }
