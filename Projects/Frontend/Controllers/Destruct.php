@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-class Initialize extends Controller
+class Destruct extends Controller
 {
     public function main()
     {
