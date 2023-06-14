@@ -58,7 +58,7 @@ class loginM extends Model
         {
             Cache::delete('userInfo_'.Session::Uid());
         }
-        if($allDevices === TRUE)
+        if($allDevices == TRUE)
         {
             DB::where('User', Session::Uid())->delete('Sessions');
         }
