@@ -8,7 +8,6 @@ class Destruct extends Controller
         {
             loginM::logout();
             redirect(URL::base("logout"));
-            echo 'ok';
         }
     }
 }
