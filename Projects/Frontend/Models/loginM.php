@@ -1,5 +1,5 @@
 <?php 
-//use Import;
+
 class loginM extends Model
 {
     public static function Info($uid)
@@ -10,7 +10,7 @@ class loginM extends Model
     }
     public static function login($email,$password,$rememberMe=false,$hash = true)
     {
-        //Import::handload('functions');
+        
         if($hash === true) $password = hash('sha256',md5($password));
         $query = DB::select('Uid','Username','Name','Surname','Lang','Role')->
         where('Email',$email)->
@@ -26,11 +26,7 @@ class loginM extends Model
             }
             Session::insert('Uid',$row->Uid);
             self::makeUserCache($row);
-            /*DB::insert('Sessions', [
-                'Ip_Address' => getIpAddress(),
-                'User_Agent' => $_SERVER['HTTP_USER_AGENT'],
-                'User' => Session::Uid()
-            ]);*/
+            
             return $row;
         }
         return NULL;
