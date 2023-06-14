@@ -9,11 +9,6 @@ class Initialize extends Controller
         ML::lang($defaultLanguage);
         View::defaultLanguage($defaultLanguage);
         View::languages(translationM::getAllLanguages());
-        if(Session::Uid() && loginM::checkLogout() == true)
-        {
-            loginM::logout();
-            redirect(URL::base("login"));
-        }
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login') 
         {
             $email = decrypt( Cookie::select( hash('sha256',md5('Email')) ) );
@@ -32,6 +27,11 @@ class Initialize extends Controller
             {
                 redirect(URL::base("login"));
             }
+        }
+        if(Session::Uid() && loginM::checkLogout() == true)
+        {
+            loginM::logout();
+            redirect(URL::base("login"));
         }
         Theme::active('Default');
         
