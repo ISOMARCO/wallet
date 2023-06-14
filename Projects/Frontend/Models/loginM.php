@@ -75,7 +75,7 @@ class loginM extends Model
     }
     public static function checkLogout()
     {
-        $session = DB::select('Id')->where('User', Session::Uid())->where('User_Agent', $_SERVER['HTTP_USER_AGENT'])->totalRows();
+        $session = DB::select('Id')->where('User', Session::Uid())->where('User_Agent', $_SERVER['HTTP_USER_AGENT'])->Sessions()->totalRows();
         if(!$session) return true;
         return false;
     }
