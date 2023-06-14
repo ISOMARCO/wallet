@@ -14,6 +14,6 @@ class Home extends Controller
     }
     public function s404()
     {
-        Masterpage::title('404! File Not Found');
+        Masterpage::title('404 File Not Found!');
     }
 }

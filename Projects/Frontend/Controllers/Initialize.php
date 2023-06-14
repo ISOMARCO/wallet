@@ -9,11 +9,7 @@ class Initialize extends Controller
         ML::lang($defaultLanguage);
         View::defaultLanguage($defaultLanguage);
         View::languages(translationM::getAllLanguages());
-        if(loginM::checkLogout()) 
-        {
-            redirect(URL::base("Home/exit"));
-            exit;
-        }
+        echo loginM::checkLogout();
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login') 
         {
             $email = decrypt( Cookie::select( hash('sha256',md5('Email')) ) );
