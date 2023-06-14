@@ -51,14 +51,21 @@ class loginM extends Model
         if($jsonEncode === true) $data = json_encode($data);
         return Cache::insert('userInfo_'.Session::Uid(),$data,(60*60*24*365));
     }
-    public static function logout()
+    public static function logout($allDevices = FALSE)
     {
         Cookie::deleteAll();
         if(Cache::select('userInfo_'.Session::Uid()))
         {
             Cache::delete('userInfo_'.Session::Uid());
         }
-        DB::where('User', Session::Uid())->where('User_Agent', $_SERVER['HTTP_USER_AGENT'])->delete('Sessions');
+        if($allDevices === TRUE)
+        {
+            DB::where('User', Session::Uid())->delete('Sessions');
+        }
+        else 
+        {
+            DB::where('User', Session::Uid())->where('User_Agent', $_SERVER['HTTP_USER_AGENT'])->delete('Sessions');
+        }
         Session::deleteAll();
         return true;
     }
