@@ -8,10 +8,10 @@ class loginM extends Model
         if($query->totalRows()) return $query->row();
         return NULL;
     }
-    public static function login($email,$password,$rememberMe=false,$hash = true)
+    public static function login($email,$password,$rememberMe=false,$autoLogin = true)
     {
         $userAgent = $_SERVER['HTTP_USER_AGENT'];
-        if($hash === true) $password = hash('sha256',md5($password));
+        if($autoLogin === true) $password = hash('sha256',md5($password));
         $query = DB::select('Uid','Username','Name','Surname','Lang','Role')->
         where('Email',$email)->
         where('Password',$password)->
