@@ -1,5 +1,5 @@
 <?php 
-
+use Import;
 class loginM extends Model
 {
     public static function Info($uid)
