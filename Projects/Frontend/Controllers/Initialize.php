@@ -12,6 +12,7 @@ class Initialize extends Controller
         if(loginM::checkLogout() == true && CURRENT_CONTROLLER != 'login') 
         {
             redirect(URL::base("Home/exit"));
+            exit;
         }
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login') 
         {
