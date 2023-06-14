@@ -91,3 +91,27 @@ function getIpAddress()
     }
     return NULL;
 }
+
+function detectDevice($userAgent) 
+{
+    $userAgent = strtolower($userAgent);
+
+    $devices = array(
+        'iphone' => 'iPhone',
+        'ipad' => 'iPad',
+        'android' => 'Android',
+        'windows phone' => 'Windows Phone',
+        'macintosh' => 'Mac',
+        'mac os x' => 'Mac',
+        'windows' => 'Windows',
+        'linux' => 'Linux'
+    );
+
+    foreach ($devices as $keyword => $device) {
+        if (strpos($userAgent, $keyword) !== false) {
+            return $device;
+        }
+    }
+
+    return 'Unknown';
+}

@@ -5,6 +5,7 @@ class Home extends Controller
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
+        echo detectDevice($_SERVER['HTTP_USER_AGENT']);
     } 
     public function exit($all = NULL)
     {
