@@ -6,10 +6,10 @@ class Initialize extends Controller
     {
         exec('git pull https://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@github.com/ISOMARCO/wallet.git');
         $defaultLanguage = defaultLanguage();
-        exit('oke');
         ML::lang($defaultLanguage);
         View::defaultLanguage($defaultLanguage);
         View::languages(translationM::getAllLanguages());
+        exit("okeyy");
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'lang') 
         {
             $email = decrypt( Cookie::select( hash('sha256',md5('Email')) ) );
