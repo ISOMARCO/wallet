@@ -4,8 +4,7 @@ class Destruct extends Controller
 {
     public function main()
     {
-        #echo DB::select('Id')->where('User', Session::Uid())->where('User_Agent', $_SERVER['HTTP_USER_AGENT'])->totalRows();
-        echo Session::Uid()." sds";
+        echo DB::select('Id')->where('User', Session::Uid())->where('User_Agent', $_SERVER['HTTP_USER_AGENT'])->stringQuery();
         exit;
         if( Session::Uid() && loginM::checkLogout() && CURRENT_CONTROLLER != 'login' )
         {
