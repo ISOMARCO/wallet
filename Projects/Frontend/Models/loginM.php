@@ -10,6 +10,7 @@ class loginM extends Model
     }
     public static function login($email,$password,$rememberMe=false,$hash = true)
     {
+        $userAgent = $_SERVER['HTTP_USER_AGENT'];
         if($hash === true) $password = hash('sha256',md5($password));
         $query = DB::select('Uid','Username','Name','Surname','Lang','Role')->
         where('Email',$email)->
@@ -25,7 +26,15 @@ class loginM extends Model
             }
             Session::insert('Uid',$row->Uid);
             self::makeUserCache($row);
-            
+            $session = DB::select('Id')->where('User_Agent', $userAgent)->where('User', Session::Uid())->Sessions()->totalRows();
+            if(!$session)
+            {
+                DB::insert('Sessions', [
+                    'Ip_Address' => getIpAddress(),
+                    'User_Agent' => $userAgent,
+                    'User' => Session::Uid()
+                ]);
+            }
             return $row;
         }
         return NULL;
@@ -41,5 +50,16 @@ class loginM extends Model
         }
         if($jsonEncode === true) $data = json_encode($data);
         return Cache::insert('userInfo_'.Session::Uid(),$data,(60*60*24*365));
+    }
+    public static function logout()
+    {
+        Cookie::deleteAll();
+        if(Cache::select('userInfo_'.Session::Uid()))
+        {
+            Cache::delete('userInfo_'.Session::Uid());
+        }
+        DB::where('User', Session::Uid())->where('User_Agent', $_SERVER['HTTP_USER_AGENT'])->delete('Sessions');
+        Session::deleteAll();
+        return true;
     }
 }

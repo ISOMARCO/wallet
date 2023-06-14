@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use Cookie, Session, URL, Cache;
+use Cookie, Session, URL, Cache, loginM;
 class Home extends Controller
 {
     public function main(string ...$parameters)
@@ -8,12 +8,7 @@ class Home extends Controller
     } 
     public function exit()
     {
-        Cookie::deleteAll();
-        if(Cache::select('userInfo_'.Session::Uid()))
-        {
-            Cache::delete('userInfo_'.Session::Uid());
-        }
-        Session::deleteAll();
+        loginM::logout();
         redirect(URL::base('login'));
         exit;
     }
