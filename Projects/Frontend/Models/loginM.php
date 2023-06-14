@@ -69,4 +69,8 @@ class loginM extends Model
         Session::deleteAll();
         return true;
     }
+    public static function logoutFromAllDevices($user)
+    {
+        return DB::where('User', $user)->delete('Sessions');
+    }
 }
