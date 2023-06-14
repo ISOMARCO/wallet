@@ -115,3 +115,23 @@ function detectDevice($userAgent)
 
     return 'Unknown';
 }
+
+function detectBrowser($userAgent) {
+    $userAgent = strtolower($userAgent);
+    $browsers = array(
+        'opera' => 'Opera',
+        'opr/' => 'Opera',
+        'edge' => 'Microsoft Edge',
+        'chrome' => 'Google Chrome',
+        'safari' => 'Safari',
+        'firefox' => 'Mozilla Firefox',
+        'trident' => 'Internet Explorer',
+        'msie' => 'Internet Explorer'
+    );
+    foreach ($browsers as $keyword => $browser) {
+        if (strpos($userAgent, $keyword) !== false) {
+            return $browser;
+        }
+    }
+    return 'Unknown';
+}
