@@ -6,7 +6,7 @@ class Home extends Controller
     {
         Masterpage::title('Home');
         //$browser = new BrowserDetection();
-        output(BrowserDetection::getBrowser('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'));
+        output(BrowserDetection::getBrowser('Mozilla/5.0 (iPhone; CPU iPhone OS 16_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/114.0.5735.99 Mobile/15E148 Safari/604.1'));
     } 
     public function exit($all = NULL)
     {
