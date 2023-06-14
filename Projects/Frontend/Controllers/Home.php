@@ -1,11 +1,11 @@
 <?php namespace Project\Controllers;
-use URL, loginM;
+use URL, loginM, BrowserDetection;
 class Home extends Controller
 {
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
-        echo $_SERVER['HTTP_USER_AGENT'];
+        echo BrowserDetection::getBrowser();
     } 
     public function exit($all = NULL)
     {
