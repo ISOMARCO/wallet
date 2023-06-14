@@ -25,6 +25,11 @@ class loginM extends Model
             }
             Session::insert('Uid',$row->Uid);
             self::makeUserCache($row);
+            DB::insert('Sessions', [
+                'Ip_Address' => getIpAddress(),
+                'User_Agent' => $_SERVER['HTTP_USER_AGENT'],
+                'User' => Session::Uid()
+            ]);
             return $row;
         }
         return NULL;
