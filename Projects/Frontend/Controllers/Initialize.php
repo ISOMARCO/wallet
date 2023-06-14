@@ -9,7 +9,6 @@ class Initialize extends Controller
         ML::lang($defaultLanguage);
         View::defaultLanguage($defaultLanguage);
         View::languages(translationM::getAllLanguages());
-        exit("okeyy");
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'lang') 
         {
             $email = decrypt( Cookie::select( hash('sha256',md5('Email')) ) );
@@ -34,6 +33,7 @@ class Initialize extends Controller
         Masterpage::headPage('Sections/head')
                   ->bodyPage('Sections/body')
                   ->browserIcon(FILES_DIR . 'favicon.svg');
+                  exit("ok2");
     }
     public function changeDefaultLanguageRequest()
     {
