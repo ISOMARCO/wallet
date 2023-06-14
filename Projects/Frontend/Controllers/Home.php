@@ -7,6 +7,7 @@ class Home extends Controller
         Masterpage::title('Home');
         //$browser = new BrowserDetection();
         output(BrowserDetection::getBrowser($_SERVER['HTTP_USER_AGENT']));
+        output(BrowserDetection::getOS($_SERVER['HTTP_USER_AGENT']));
     } 
     public function exit($all = NULL)
     {
