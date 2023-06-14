@@ -120,6 +120,7 @@ function detectBrowser($userAgent) {
     $userAgent = strtolower($userAgent);
 
     $browsers = array(
+        'edg' => 'Microsoft Edge Chromium',
         'crios' => 'Google Chrome (iOS)',
         'chrome' => 'Google Chrome',
         'safari' => 'Safari',
