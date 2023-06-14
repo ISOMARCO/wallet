@@ -97,7 +97,7 @@ function detectDevice($userAgent)
     $userAgent = strtolower($userAgent);
 
     $devices = array(
-        'iPhone' => 'iPhone',
+        'iphone' => 'iPhone',
         'ipad' => 'iPad',
         'android' => 'Android',
         'windows phone' => 'Windows Phone',
