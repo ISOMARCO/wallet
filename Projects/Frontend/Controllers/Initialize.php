@@ -33,7 +33,6 @@ class Initialize extends Controller
         Masterpage::headPage('Sections/head')
                   ->bodyPage('Sections/body')
                   ->browserIcon(FILES_DIR . 'favicon.svg');
-                  exit("ok2");
     }
     public function changeDefaultLanguageRequest()
     {
