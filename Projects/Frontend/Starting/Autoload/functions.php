@@ -116,7 +116,8 @@ function detectDevice($userAgent)
     return 'Unknown';
 }
 
-function detectBrowser($userAgent) {
+function detectBrowser($userAgent) 
+{
     $userAgent = strtolower($userAgent);
     $browsers = array(
         'opera' => 'Opera',
