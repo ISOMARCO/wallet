@@ -40,8 +40,3 @@
   </div>
 </section>
 </div>
-<script>
-  $(document).ready(function(){
-    alert(navigator.userAgent);
-  });
-</script>
