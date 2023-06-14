@@ -11,8 +11,8 @@ class Initialize extends Controller
         View::languages(translationM::getAllLanguages());
         if(loginM::checkLogout() == true) 
         {
-            redirect(URL::base("Home/exit"));
-            exit;
+            #redirect(URL::base("Home/exit"));
+            exit('ok');
         }
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login') 
         {
