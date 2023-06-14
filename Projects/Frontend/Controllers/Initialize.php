@@ -30,7 +30,6 @@ class Initialize extends Controller
         }
         if(Session::Uid() && loginM::checkLogout() == true && CURRENT_CONTROLLER != 'login')
         {
-            echo Session::Uid()." session ".loginM::checkLogout();
             loginM::logout();
             redirect(URL::base("login"));
         }
