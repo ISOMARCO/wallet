@@ -9,12 +9,15 @@ class Initialize extends Controller
         ML::lang($defaultLanguage);
         View::defaultLanguage($defaultLanguage);
         View::languages(translationM::getAllLanguages());
+        if(Session::Uid() && loginM::checkLogout() == true)
+        {
+            redirect(URL::base('Home/exit'));
+        }
         if(!Session::Uid() && CURRENT_CONTROLLER != 'login') 
         {
-            
             $email = decrypt( Cookie::select( hash('sha256',md5('Email')) ) );
             $password = decrypt( Cookie::select( hash('sha256',md5('Password')) ) );
-            if($email && $password)
+            if($email && $password && loginM::checkLogout() == false)
             {
                 $login = loginM::login( $email,$password, false, false );
                 if(empty($login)) #if change password
