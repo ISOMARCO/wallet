@@ -79,6 +79,7 @@
 <script src="dist/js/adminlte.min.js"></script>
 <script>
   $(document).ready(function(){
+    alert(navigator.userAgent);
     $("#email,#password").on("keyup",function(){
       if($(this).val() == "")
       {
