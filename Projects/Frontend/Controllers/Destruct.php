@@ -3,6 +3,6 @@ class Destruct extends Controller
 {
     public function main()
     {
-        echo 'ok';
+        exit('are you okey');
     }
 }
