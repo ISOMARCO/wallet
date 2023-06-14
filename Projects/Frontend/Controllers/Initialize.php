@@ -9,7 +9,7 @@ class Initialize extends Controller
         ML::lang($defaultLanguage);
         View::defaultLanguage($defaultLanguage);
         View::languages(translationM::getAllLanguages());
-        if(loginM::checkLogout() == true) 
+        if(loginM::checkLogout() == false) 
         {
             #redirect(URL::base("Home/exit"));
             exit('ok');
