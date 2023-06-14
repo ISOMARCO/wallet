@@ -1,0 +1,53 @@
+<?php
+#----------------------------------------------------------------------
+# This file automatically created and updated
+#----------------------------------------------------------------------
+$classMap['classes']['project\controllers\home'] = 'Projects/Frontend/Controllers/Home.php';
+$classMap['classes']['project\controllers\initialize'] = 'Projects/Frontend/Controllers/Initialize.php';
+$classMap['namespaces']['project\controllers\home'] = 'home';
+$classMap['namespaces']['project\controllers\initialize'] = 'initialize';
+$classMap['classes']['project\controllers\login'] = 'Projects/Frontend/Controllers/login.php';
+$classMap['namespaces']['project\controllers\login'] = 'login';
+$classMap['classes']['project\controllers\lang'] = 'Projects/Frontend/Controllers/lang.php';
+$classMap['namespaces']['project\controllers\lang'] = 'lang';
+$classMap['classes']['internalmigrateusers'] = 'Projects/Frontend/Models/Migrations/Users.php';
+$classMap['classes']['migrateusers'] = 'Projects/Frontend/Resources/Statics/Projects/Frontend/Models/Migrations/InternalMigrateUsers.php';
+$classMap['classes']['internaldatabase'] = 'Projects/Frontend/Libraries/Database/Database.php';
+$classMap['classes']['database'] = 'Projects/Frontend/Resources/Statics/Projects/Frontend/Libraries/Database/InternalDatabase.php';
+$classMap['classes']['databaseadapter'] = 'Projects/Frontend/Libraries/Database/DatabaseAdapter.php';
+$classMap['classes']['mysqladapter'] = 'Projects/Frontend/Libraries/Database/MysqlAdapter.php';
+$classMap['classes']['loginm'] = 'Projects/Frontend/Models/loginM.php';
+$classMap['classes']['project\controllers\accounts'] = 'Projects/Frontend/Controllers/accounts.php';
+$classMap['namespaces']['project\controllers\accounts'] = 'accounts';
+$classMap['classes']['internalmigratebanks'] = 'Projects/Frontend/Models/Migrations/Banks.php';
+$classMap['classes']['migratebanks'] = 'Projects/Frontend/Resources/Statics/Projects/Frontend/Models/Migrations/InternalMigrateBanks.php';
+$classMap['classes']['accountsm'] = 'Projects/Frontend/Models/accountsM.php';
+$classMap['classes']['internalmigrateaccount'] = 'Projects/Frontend/Models/Migrations/Account.php';
+$classMap['classes']['migrateaccount'] = 'Projects/Frontend/Resources/Statics/Projects/Frontend/Models/Migrations/InternalMigrateAccount.php';
+$classMap['classes']['internalmigratecashback'] = 'Projects/Frontend/Models/Migrations/Cashback.php';
+$classMap['classes']['migratecashback'] = 'Projects/Frontend/Resources/Statics/Projects/Frontend/Models/Migrations/InternalMigrateCashback.php';
+$classMap['classes']['internalmigratecategory'] = 'Projects/Frontend/Models/Migrations/SubCategory.php';
+$classMap['classes']['migratecategory'] = 'Projects/Frontend/Resources/Statics/Projects/Frontend/Models/Migrations/InternalMigrateCategory.php';
+$classMap['classes']['internalmigratesub_category'] = 'Projects/Frontend/Models/Migrations/Sub_Category.php';
+$classMap['classes']['migratesub_category'] = 'Projects/Frontend/Resources/Statics/Projects/Frontend/Models/Migrations/InternalMigrateSub_Category.php';
+$classMap['classes']['project\controllers\category'] = 'Projects/Frontend/Controllers/Category.php';
+$classMap['namespaces']['project\controllers\category'] = 'category';
+$classMap['classes']['categorym'] = 'Projects/Frontend/Models/categoryM.php';
+$classMap['classes']['project\controllers\operations'] = 'Projects/Frontend/Controllers/operations.php';
+$classMap['namespaces']['project\controllers\operations'] = 'operations';
+$classMap['classes']['internalmigrateoperations'] = 'Projects/Frontend/Models/Migrations/Operations.php';
+$classMap['classes']['migrateoperations'] = 'Projects/Frontend/Resources/Statics/Projects/Frontend/Models/Migrations/InternalMigrateOperations.php';
+$classMap['classes']['internalmigrategoods'] = 'Projects/Frontend/Models/Migrations/Goods.php';
+$classMap['classes']['migrategoods'] = 'Projects/Frontend/Resources/Statics/Projects/Frontend/Models/Migrations/InternalMigrateGoods.php';
+$classMap['classes']['internalmigratesystem_settings'] = 'Projects/Frontend/Models/Migrations/SystemSettings.php';
+$classMap['classes']['migratesystem_settings'] = 'Projects/Frontend/Resources/Statics/Projects/Frontend/Models/Migrations/InternalMigrateSystem_Settings.php';
+$classMap['classes']['internalmigratelanguages'] = 'Projects/Frontend/Models/Migrations/Languages.php';
+$classMap['classes']['migratelanguages'] = 'Projects/Frontend/Resources/Statics/Projects/Frontend/Models/Migrations/InternalMigrateLanguages.php';
+$classMap['classes']['translationm'] = 'Projects/Frontend/Models/translationM.php';
+$classMap['classes']['project\controllers\translation'] = 'Projects/Frontend/Controllers/translation.php';
+$classMap['namespaces']['project\controllers\translation'] = 'translation';
+$classMap['classes']['systemsettingsm'] = 'Projects/Frontend/Models/systemSettingsM.php';
+$classMap['classes']['internalmigratesessions'] = 'Projects/Frontend/Models/Migrations/Sessions.php';
+$classMap['classes']['migratesessions'] = 'Projects/Frontend/Resources/Statics/Projects/Frontend/Models/Migrations/InternalMigrateSessions.php';
+$classMap['classes']['project\controllers\destruct'] = 'Projects/Frontend/Controllers/Destruct.php';
+$classMap['namespaces']['project\controllers\destruct'] = 'destruct';
