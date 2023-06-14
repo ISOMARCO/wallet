@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use Session, loginM, URL;
+use Session, loginM, URL, DB;
 class Destruct extends Controller
 {
     public function main()
