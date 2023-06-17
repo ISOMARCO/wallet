@@ -14,6 +14,12 @@ class settings extends Controller
     public function logoutDevice()
     {
         $id = Post::id();
-        settingsM::logoutDevice($id);
+        if(settingsM::logoutDevice($id)) 
+        {
+            echo json_encode(['success' => true]);
+            return;
+        }
+        echo json_encode(['success' => false]);
+        return;
     }
 }

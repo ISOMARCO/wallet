@@ -111,14 +111,22 @@ $(document).ready(function(){
                 type: "post",
                 url: "{{URL::base('settings/logoutDevice')}}",
                 data: "'id': "+id,
+                dataType: "json",
                 beforeSend: function(){
                     collapsedCard.children().children().children().eq(2).children().eq(0).show();
                 },
                 success: function(x){
-                    
+                    if(x.success)
+                    {
+                        collapsedCard.remove();
+                    }
+                    else 
+                    {
+                        alert("ERROR");
+                    }
                 },
                 complete: function(){
-                    collapsedCard.remove();
+                    collapsedCard.children().children().children().eq(2).children().eq(0).hide();
                 }
             });
         }
