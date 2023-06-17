@@ -45,12 +45,20 @@
                         <tr>
                             <th>Device Name</th>
                             <td>{{ucfirst(BrowserDetection::getDevice($value->User_Agent)['device_type'])}}</td>
+                        </tr>
+                        <tr>
                             <th>Operating System</th>
                             <td>{{ucfirst(BrowserDetection::getOS($value->User_Agent)['os_title'])}}</td>
+                        </tr>
+                        <tr>
                             <th>Browser Name</th>
                             <td>{{ucfirst(BrowserDetection::getBrowser($value->User_Agent)['browser_name'])}}</td>
+                        </tr> 
+                        <tr>   
                             <th>Ip Address</th>
                             <td>{{$value->Ip_Address}}</td>
+                        </tr>
+                        <tr>
                             <th>Location</th>
                             <td>{{$value->Location}}</td>
                         </tr>
