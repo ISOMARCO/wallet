@@ -29,7 +29,7 @@
                     </div>
                     <div class="col-10 col-sm-10">
                         <h3 class="card-title font-weight-bold">
-                            {{strtoupper(BrowserDetection::getDevice($value->User_Agent)['device_type']." ".BrowserDetection::getOS($value->User_Agent)['os_title']." ".BrowserDetection::getBrowser($value->User_Agent)['browser_name'])}}
+                            {{ucfirst(BrowserDetection::getDevice($value->User_Agent)['device_type']." ".BrowserDetection::getOS($value->User_Agent)['os_title']." ".BrowserDetection::getBrowser($value->User_Agent)['browser_name'])}}
                         </h3>
                     </div>  
                     <div class="card-tools col-1 col-sm-1">
