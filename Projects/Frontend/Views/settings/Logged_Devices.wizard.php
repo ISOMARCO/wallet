@@ -112,15 +112,13 @@ $(document).ready(function(){
                 url: "{{URL::base('settings/logoutDevice')}}",
                 data: "'id': "+id,
                 beforeSend: function(){
-                    collapsedCard.children().children().children().children().eq(2).children().eq(0).show();
-                    console.log(collapsedCard.children().children().children().eq(2).children().eq(0).attr("class"));
+                    collapsedCard.children().children().children().eq(2).children().eq(0).show();
                 },
                 success: function(x){
                     
                 },
                 complete: function(){
                     collapsedCard.remove();
-                    //collapsedCard.children().children().children().children().eq(2).children().eq(0).hide();
                 }
             });
         }
