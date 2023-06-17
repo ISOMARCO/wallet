@@ -107,7 +107,7 @@ $(document).ready(function(){
                 collapsedCard.remove();
             },
             complete: function(){
-                collapsedCard.children().children().children().children().eq(2).children().eq(0).hide();
+                //collapsedCard.children().children().children().children().eq(2).children().eq(0).hide();
             }
         });
     });
