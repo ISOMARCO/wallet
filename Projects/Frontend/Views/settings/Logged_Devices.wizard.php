@@ -51,9 +51,9 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>{{BrowserDetection::getDevice($value->User_Agent)['device_type']}}</td>
-                            <td>{{BrowserDetection::getOS($value->User_Agent)['os_title']}}</td>
-                            <td>{{BrowserDetection::getBrowser($value->User_Agent)['browser_name']}}</td>
+                            <td>{{ucfirst(BrowserDetection::getDevice($value->User_Agent)['device_type'])}}</td>
+                            <td>{{ucfirst(BrowserDetection::getOS($value->User_Agent)['os_title'])}}</td>
+                            <td>{{ucfirst(BrowserDetection::getBrowser($value->User_Agent)['browser_name'])}}</td>
                             <td>{{$value->Ip_Address}}</td>
                         </tr>
                     </tbody>
