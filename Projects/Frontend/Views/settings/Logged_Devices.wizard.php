@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <table class="table table-bordered" style="width:100%; overflow: scroll;">
+                <table class="table table-bordered">
                     <thead>
                         <tr>
                             <th>Device Name</th>
