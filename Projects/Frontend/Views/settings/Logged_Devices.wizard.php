@@ -113,11 +113,13 @@ $(document).ready(function(){
                 data: "'id': "+id,
                 beforeSend: function(){
                     collapsedCard.children().children().children().children().eq(2).children().eq(0).show();
+                    console.log(collapsedCard.children().children().children().children().eq(2).children().eq(0));
                 },
                 success: function(x){
-                    collapsedCard.remove();
+                    
                 },
                 complete: function(){
+                    collapsedCard.remove();
                     //collapsedCard.children().children().children().children().eq(2).children().eq(0).hide();
                 }
             });
