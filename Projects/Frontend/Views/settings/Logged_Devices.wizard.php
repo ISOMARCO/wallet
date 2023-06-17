@@ -41,7 +41,7 @@
             </div>
             <div class="card-body">
                 Ip Address: {{$value->Ip_Address}}<br>
-                Browser: {{BrowserDetection::getBrowser($value->User_Agent)['browser_name']}}
+                Browser: {{strtoupper(BrowserDetection::getBrowser($value->User_Agent)['browser_name'])}}
             </div>
             <div class="card-footer">
                 <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">{{ML::select('Exit')}}&nbsp;<i class="fas fa-sign-out-alt"></i></button>
