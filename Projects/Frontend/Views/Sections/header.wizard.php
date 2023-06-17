@@ -221,7 +221,7 @@
 
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
+              <i class="nav-icon fas fa-cog"></i>
               <p>
                 {{ML::select('Settings')}}
                 <i class="fas fa-angle-left right"></i>
@@ -230,7 +230,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="examples/invoice.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="nav-icon fas fa-desktop"></i>
                   <p>{{ML::select('LoggedDevices')}}</p>
                 </a>
               </li>
