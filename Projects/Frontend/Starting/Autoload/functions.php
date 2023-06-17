@@ -100,6 +100,7 @@ function findLocation($clientIP, $return = [])
     $response = curl_exec($curl); 
     curl_close($curl);  
     $result = json_decode($response, true); 
+    return $result;
     if(is_array($return) && !empty($return))
     {
         $returnString = NULL;
