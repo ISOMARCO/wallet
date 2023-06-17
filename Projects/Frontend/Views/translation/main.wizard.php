@@ -117,8 +117,8 @@ $(document).ready(function(){
             url: "{{URL::base('translation/createRequest')}}",
             data: $("#insertLanguageForm").serialize(),
             dataType: "json",
-            success:function(e){
-                if(e.success)
+            success:function(x){
+                if(x.success)
                 {
                     window.location.href="{{URL::base('translation')}}";
                 }
@@ -140,8 +140,8 @@ $(document).ready(function(){
                 beforeSend: function(){
                     collapsedCard.children().children().children().children().eq(2).children().eq(0).show();
                 },
-                success:function(e){
-                    if(e.success)
+                success:function(x){
+                    if(x.success)
                     {
                         collapsedCard.children().addClass("collapsed-card");
                         collapsedCard.children().children().children().children().eq(2).children().eq(1).children().removeClass('fa-minus').addClass('fa-plus');
@@ -169,8 +169,8 @@ $(document).ready(function(){
                     beforeSend: function(){
                         collapsedCard.children().children().children().children().eq(2).children().eq(0).show();
                     },
-                    success:function(e){
-                        if(e.success)
+                    success:function(x){
+                        if(x.success)
                         {
                             collapsedCard.children().remove();
                         }
