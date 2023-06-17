@@ -5,7 +5,7 @@ class settings extends Controller
     public function main()
     {
         Masterpage::title(ML::select('Settings'));
-        output(BrowserDetection::getBrowser($_SERVER['HTTP_USER_AGENT']));
+        output(BrowserDetection::getBrowser($_SERVER['HTTP_USER_AGENT'])['browser_name']);
     }
     public function Logged_Devices()
     {
