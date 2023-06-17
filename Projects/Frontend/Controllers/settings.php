@@ -10,12 +10,6 @@ class settings extends Controller
     {
         Masterpage::title(ML::select('LoggedDevices'));
         View::loggedDevices(settingsM::loggedDevices());
-        $clientIP = '94.20.178.54';
-        $apiURL = 'https://freegeoip.app/json/'.$clientIP; 
-        $curl = curl_init($apiURL);  
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  
-        $response = curl_exec($curl); 
-        curl_close($curl);  
-        //output(json_decode($response, true)); 
+        //output(findLocation('94.20.178.54')); 
     }
 }
