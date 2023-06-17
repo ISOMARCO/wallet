@@ -105,7 +105,7 @@ function findLocation($clientIP, $return = [])
         $returnString = NULL;
         foreach($return as $key => $value)
         {
-            $returnString .= $result[$key].$value;
+            if(isset($result[$key])) $returnString .= $result[$key].$value;
         }
         return trim($returnString);
     }
