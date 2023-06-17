@@ -60,7 +60,7 @@
                         </tr>
                         <tr>
                             <th>Location</th>
-                            <td>{{$value->Location->country}}</td>
+                            <td>{{$value->Location}}</td>
                         </tr>
                     </thead>
                 </table>
