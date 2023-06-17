@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <table class="table table-bordered">
+                <table class="table table-hover table-responsive-md">
                     <thead>
                         <tr>
                             <th>Device Name</th>
@@ -77,10 +77,6 @@
                         <tr>
                             <th>Organization</th>
                             <td>{{json_decode($value->Location)->org}}</td>
-                        </tr>
-                        <tr>
-                            <th>Location</th>
-                            <td>{{$value->Location}}</td>
                         </tr>
                     </thead>
                 </table>
