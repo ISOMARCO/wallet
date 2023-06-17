@@ -10,7 +10,7 @@ class settings extends Controller
     {
         Masterpage::title(ML::select('LoggedDevices'));
         View::loggedDevices(settingsM::loggedDevices());
-        $apiURL = 'https://freegeoip.app/json/94.20.178.54'; 
+        $apiURL = 'https://api.ipbase.com/v1/json/94.20.178.54'; 
         $curl = curl_init($apiURL);  
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  
         $response = curl_exec($curl); 
