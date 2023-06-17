@@ -229,7 +229,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="examples/invoice.html" class="nav-link">
+                <a href="{{URL::base('settings/Logged_Devices')}}" class="nav-link">
                   <i class="nav-icon fas fa-desktop"></i>
                   <p>{{ML::select('LoggedDevices')}}</p>
                 </a>
