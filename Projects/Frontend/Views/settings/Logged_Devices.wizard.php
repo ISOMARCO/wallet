@@ -59,8 +59,8 @@
                             <td>{{$value->Ip_Address}}</td>
                         </tr>
                         <tr>
-                            <th>Location</th>
-                            <td>{{$value->Location}}</td>
+                            <th>Country</th>
+                            <td>{{json_decode($value->Location)['country']}}</td>
                         </tr>
                     </thead>
                 </table>
