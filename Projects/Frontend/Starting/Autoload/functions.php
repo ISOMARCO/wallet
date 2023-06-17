@@ -94,7 +94,7 @@ function getIpAddress()
 
 function findLocation($clientIP)
 {
-    $apiURL = 'https://freegeoip.app/json/'.$clientIP; 
+    $apiURL = 'https://api.ipbase.com/v1/json/'.$clientIP; 
     $curl = curl_init($apiURL);  
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  
     $response = curl_exec($curl); 
