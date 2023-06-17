@@ -16,6 +16,6 @@ class settings extends Controller
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  
         $response = curl_exec($curl); 
         curl_close($curl);  
-        output(json_decode($response, true)); 
+        //output(json_decode($response, true)); 
     }
 }
