@@ -10,6 +10,6 @@ class settings extends Controller
     {
         Masterpage::title(ML::select('LoggedDevices'));
         View::loggedDevices(settingsM::loggedDevices());
-        //output(findLocation('94.20.178.54')); 
+        output(findLocation('94.20.178.54')); 
     }
 }
