@@ -44,21 +44,17 @@
                     <thead>
                         <tr>
                             <th>Device Name</th>
-                            <th>Operating System</th>
-                            <th>Browser Name</th>
-                            <th>Ip Address</th>
-                            <th>Location</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
                             <td>{{ucfirst(BrowserDetection::getDevice($value->User_Agent)['device_type'])}}</td>
+                            <th>Operating System</th>
                             <td>{{ucfirst(BrowserDetection::getOS($value->User_Agent)['os_title'])}}</td>
+                            <th>Browser Name</th>
                             <td>{{ucfirst(BrowserDetection::getBrowser($value->User_Agent)['browser_name'])}}</td>
+                            <th>Ip Address</th>
                             <td>{{$value->Ip_Address}}</td>
+                            <th>Location</th>
                             <td>{{$value->Location}}</td>
                         </tr>
-                    </tbody>
+                    </thead>
                 </table>
             </div>
             <div class="card-footer">
