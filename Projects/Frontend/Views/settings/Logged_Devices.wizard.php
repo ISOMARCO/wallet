@@ -110,7 +110,7 @@ $(document).ready(function(){
             $.ajax({
                 type: "post",
                 url: "{{URL::base('settings/logoutDevice')}}",
-                data: "'id': "+id,
+                data: {"'id': "+id},
                 dataType: "json",
                 beforeSend: function(){
                     collapsedCard.children().children().children().eq(2).children().eq(0).show();
