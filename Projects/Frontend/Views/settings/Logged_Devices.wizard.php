@@ -56,7 +56,7 @@
                             <td>{{ucfirst(BrowserDetection::getOS($value->User_Agent)['os_title'])}}</td>
                             <td>{{ucfirst(BrowserDetection::getBrowser($value->User_Agent)['browser_name'])}}</td>
                             <td>{{$value->Ip_Address}}</td>
-                            <td>{{findLocation($value->Ip_Address, ['country_name' => ' ', 'region_name' => ' ', 'city' => ' ', 'zip_code' => ' (','latitude' => ', ', 'longitude' => ')'])}}</td>
+                            <td>{{findLocation($value->Ip_Address, ['country' => ' ', 'regionName' => ' ', 'city' => ' ', 'zip' => ' (','lat' => ', ', 'lon' => ')'])}}</td>
                         </tr>
                     </tbody>
                 </table>

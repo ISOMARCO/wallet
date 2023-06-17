@@ -94,7 +94,7 @@ function getIpAddress()
 
 function findLocation($clientIP, $return = [])
 {
-    $apiURL = 'https://api.ipbase.com/v1/json/'.$clientIP; 
+    $apiURL = 'http://ip-api.com/json/'.$clientIP; 
     $curl = curl_init($apiURL);  
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  
     $response = curl_exec($curl); 
