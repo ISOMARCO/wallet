@@ -29,7 +29,7 @@
                     </div>
                     <div class="col-10 col-sm-10">
                         <h3 class="card-title font-weight-bold">
-                            {{strtoupper(BrowserDetection::getDevice($_SERVER['HTTP_USER_AGENT'])['device_type']." ".BrowserDetection::getOS($_SERVER['HTTP_USER_AGENT'])['os_title']." ".BrowserDetection::getBrowser($value->User_Agent)['browser_name'])}}
+                            {{strtoupper(BrowserDetection::getDevice($value->User_Agent)['device_type']." ".BrowserDetection::getOS($value->User_Agent)['os_title']." ".BrowserDetection::getBrowser($value->User_Agent)['browser_name'])}}
                         </h3>
                     </div>  
                     <div class="card-tools col-1 col-sm-1">
@@ -40,8 +40,24 @@
                 </div>
             </div>
             <div class="card-body">
-                Ip Address: {{$value->Ip_Address}}<br>
-                Browser: {{strtoupper(BrowserDetection::getBrowser($value->User_Agent)['browser_name'])}}
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Device Name</th>
+                            <th>Operating System</th>
+                            <th>Browser Name</th>
+                            <th>Ip Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{BrowserDetection::getDevice($value->User_Agent)['device_type']}}</td>
+                            <td>{{BrowserDetection::getOS($value->User_Agent)['os_title']}}</td>
+                            <td>{{BrowserDetection::getBrowser($value->User_Agent)['browser_name']}}</td>
+                            <td>{{$value->Ip_Address}}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="card-footer">
                 <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">{{ML::select('Exit')}}&nbsp;<i class="fas fa-sign-out-alt"></i></button>
