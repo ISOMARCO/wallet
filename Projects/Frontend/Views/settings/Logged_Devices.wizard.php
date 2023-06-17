@@ -21,7 +21,7 @@
 </div>
 <div class="card-body">
     @foreach($loggedDevices as $value)
-        <div class="card collapsed-card">
+        <div class="card collapsed-card" id="card{{$value->Id}}">
             <div class="card-header">
                 <div class="row">
                     <div class="col-1 col-sm-1">
@@ -33,6 +33,7 @@
                         </h3>
                     </div>  
                     <div class="card-tools col-1 col-sm-1">
+                        <i class="fas fa-sync fa-spin" style="display: none"></i>
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                         <i class="fas fa-plus"></i>
                         </button>
@@ -93,7 +94,22 @@
 $(document).ready(function(){
     $(document).on("click", "#exit", function(e){
         e.preventDefault();
-        
+        var id = $(this).attr("data-id");
+        var collapsedCard = $("#card"+id);
+        $.ajax({
+            type: "post",
+            url: "{{URL::base('settings/logoutDevice')}}",
+            data: "'id': "+id,
+            beforeSend: function(){
+                collapsedCard.children().children().children().children().eq(2).children().eq(0).show();
+            },
+            success: function(x){
+                collapsedCard.remove();
+            },
+            complete: function(){
+                collapsedCard.children().children().children().children().eq(2).children().eq(0).hide();
+            }
+        });
     });
 }); 
 </script>
