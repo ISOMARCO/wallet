@@ -116,7 +116,6 @@ $(document).ready(function(){
                     collapsedCard.children().children().children().eq(2).children().eq(0).show();
                 },
                 success: function(x){
-                    alert(x.success);
                     if(x.success)
                     {
                         collapsedCard.remove();
