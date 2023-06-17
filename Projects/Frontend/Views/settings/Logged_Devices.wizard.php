@@ -94,22 +94,35 @@
 $(document).ready(function(){
     $(document).on("click", "#exit", function(e){
         e.preventDefault();
-        var id = $(this).attr("data-id");
-        var collapsedCard = $("#card"+id);
-        $.ajax({
-            type: "post",
-            url: "{{URL::base('settings/logoutDevice')}}",
-            data: "'id': "+id,
-            beforeSend: function(){
-                collapsedCard.children().children().children().children().eq(2).children().eq(0).show();
-            },
-            success: function(x){
-                collapsedCard.remove();
-            },
-            complete: function(){
-                //collapsedCard.children().children().children().children().eq(2).children().eq(0).hide();
-            }
-        });
+        Swal.fire({
+        title: "{{ML::select('ExitAlertMessage')}}",
+        text: "",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: "{{ML::select('Yes')}}",
+        cancelButtonText: "{{ML::select('No')}}"
+        }).then((result) => {
+        if (result.isConfirmed) {
+            var id = $(this).attr("data-id");
+            var collapsedCard = $("#card"+id);
+            $.ajax({
+                type: "post",
+                url: "{{URL::base('settings/logoutDevice')}}",
+                data: "'id': "+id,
+                beforeSend: function(){
+                    collapsedCard.children().children().children().children().eq(2).children().eq(0).show();
+                },
+                success: function(x){
+                    collapsedCard.remove();
+                },
+                complete: function(){
+                    //collapsedCard.children().children().children().children().eq(2).children().eq(0).hide();
+                }
+            });
+        }
+        })
     });
 }); 
 </script>
