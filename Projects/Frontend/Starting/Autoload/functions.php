@@ -99,8 +99,7 @@ function findLocation($clientIP)
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  
     $response = curl_exec($curl); 
     curl_close($curl);  
-    $ipDetails = json_decode($response, true); 
-    return $ipDetails;
+    return json_decode($response, true); 
     /*if(!empty($ipDetails))
     { 
         $countryCode = $ipDetails['country_code']; 
