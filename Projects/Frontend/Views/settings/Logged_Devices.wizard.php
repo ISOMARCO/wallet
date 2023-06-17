@@ -47,6 +47,7 @@
                             <th>Operating System</th>
                             <th>Browser Name</th>
                             <th>Ip Address</th>
+                            <th>Location</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -55,6 +56,7 @@
                             <td>{{ucfirst(BrowserDetection::getOS($value->User_Agent)['os_title'])}}</td>
                             <td>{{ucfirst(BrowserDetection::getBrowser($value->User_Agent)['browser_name'])}}</td>
                             <td>{{$value->Ip_Address}}</td>
+                            <td>{{findLocation($value->Ip_Address, ['country_name', 'region_name'])}}</td>
                         </tr>
                     </tbody>
                 </table>

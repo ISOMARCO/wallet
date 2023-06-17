@@ -92,14 +92,24 @@ function getIpAddress()
     return NULL;
 }
 
-function findLocation($clientIP)
+function findLocation($clientIP, $return = [])
 {
     $apiURL = 'https://api.ipbase.com/v1/json/'.$clientIP; 
     $curl = curl_init($apiURL);  
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  
     $response = curl_exec($curl); 
     curl_close($curl);  
-    return json_decode($response, true); 
+    $result = json_decode($response, true); 
+    if(is_array($return) && !empty($return))
+    {
+        $returnString = NULL;
+        foreach($return as $value)
+        {
+            $returnString .= $result[$value]." ";
+        }
+        return trim($returnString);
+    }
+    return $result;
     /*if(!empty($ipDetails))
     { 
         $countryCode = $ipDetails['country_code']; 
