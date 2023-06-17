@@ -62,6 +62,10 @@
                             <th>Country</th>
                             <td>{{json_decode($value->Location)->country}}</td>
                         </tr>
+                        <tr>
+                            <th>Coordinate</th>
+                            <td>{{json_decode($value->Location)->lat.' '.json_decode($value->Location)->lon}}</td>
+                        </tr>
                     </thead>
                 </table>
             </div>
