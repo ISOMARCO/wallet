@@ -92,35 +92,12 @@ function getIpAddress()
     return NULL;
 }
 
-function findLocation($clientIP, $return = [])
+function findLocation($clientIP)
 {
     $apiURL = 'http://ip-api.com/json/'.$clientIP; 
     $curl = curl_init($apiURL);  
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  
     $response = curl_exec($curl); 
     curl_close($curl);  
-    $result = json_decode($response, true); 
-    if(is_array($return) && !empty($return))
-    {
-        $returnString = NULL;
-        foreach($return as $key => $value)
-        {
-            if(isset($result[$key])) $returnString .= $result[$key].$value;
-        }
-        return trim($returnString);
-    }
-    return $result;
-    /*if(!empty($ipDetails))
-    { 
-        $countryCode = $ipDetails['country_code']; 
-        $countryName = $ipDetails['country_name']; 
-        $regionCode = $ipDetails['region_code']; 
-        $regionName = $ipDetails['region_name']; 
-        $city = $ipDetails['city']; 
-        $zipCode = $ipDetails['zip_code']; 
-        $latitude = $ipDetails['latitude']; 
-        $longitude = $ipDetails['longitude']; 
-        $timeZone = $ipDetails['time_zone'];
-    }*/
-    
+    return $response;
 }

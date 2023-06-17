@@ -29,9 +29,11 @@ class loginM extends Model
             $session = DB::select('Id')->where('User_Agent', $userAgent)->where('User', Session::Uid())->Sessions()->totalRows();
             if(!$session)
             {
+                $ip = getIpAddress();
                 DB::insert('Sessions', [
-                    'Ip_Address' => getIpAddress(),
+                    'Ip_Address' => $ip,
                     'User_Agent' => $userAgent,
+                    'Location' => findLocation($ip),
                     'User' => Session::Uid()
                 ]);
             }
