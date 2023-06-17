@@ -113,7 +113,7 @@ $(document).ready(function(){
                 data: "'id': "+id,
                 beforeSend: function(){
                     collapsedCard.children().children().children().children().eq(2).children().eq(0).show();
-                    console.log(collapsedCard.children().children().children().children().eq(2).children().eq(0).attr("class"));
+                    console.log(collapsedCard.children().children().children().eq(2).children().eq(0).attr("class"));
                 },
                 success: function(x){
                     
