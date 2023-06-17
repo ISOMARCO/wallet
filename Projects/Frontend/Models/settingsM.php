@@ -6,7 +6,7 @@ class settingsM extends Model
     {
         return DB::where('User', Session::Uid())->select('Id', 'Ip_Address', 'User_Agent', 'Location')->Sessions()->result();
     }
-    public static function logoutDevice()
+    public static function logoutDevice($id)
     {
         return DB::where('Id', $id)->delete("Sessions");
     }
