@@ -40,10 +40,7 @@
                 </div>
             </div>
             <div class="card-body">
-                
-            
-
-
+                Ip Address: {{$value->Ip_Address}}
             </div>
             <div class="card-footer">
                 <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">{{ML::select('Exit')}}&nbsp;<i class="fas fa-sign-out-alt"></i></button>
