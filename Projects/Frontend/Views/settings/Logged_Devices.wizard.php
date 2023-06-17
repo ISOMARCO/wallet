@@ -93,7 +93,7 @@
 $(document).ready(function(){
     $(document).on("click", "#exit", function(e){
         e.preventDefault();
-        alert($(this).attr("data-id"));
+        
     });
 }); 
 </script>
