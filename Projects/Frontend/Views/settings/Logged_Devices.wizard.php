@@ -60,7 +60,7 @@
                         </tr>
                         <tr>
                             <th>Country</th>
-                            <td>{{json_decode($value->Location)['country']}}</td>
+                            <td>{{json_decode($value->Location)->country}}</td>
                         </tr>
                     </thead>
                 </table>
