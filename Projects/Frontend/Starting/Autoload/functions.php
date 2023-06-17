@@ -92,51 +92,26 @@ function getIpAddress()
     return NULL;
 }
 
-function detectDevice($userAgent) 
+function findLocation($clientIP)
 {
-    $userAgent = strtolower($userAgent);
-
-    $devices = array(
-        'iphone' => 'iPhone',
-        'ipad' => 'iPad',
-        'android' => 'Android',
-        'windows phone' => 'Windows Phone',
-        'macintosh' => 'Mac',
-        'mac os x' => 'Mac',
-        'windows' => 'Windows',
-        'linux' => 'Linux'
-    );
-
-    foreach ($devices as $keyword => $device) {
-        if (strpos($userAgent, $keyword) !== false) {
-            return $device;
-        }
-    }
-
-    return 'Unknown';
-}
-
-function detectBrowser($userAgent) {
-    $userAgent = strtolower($userAgent);
-
-    $browsers = array(
-        'edg' => 'Microsoft Edge Chromium',
-        'crios' => 'Google Chrome (iOS)',
-        'chrome' => 'Google Chrome',
-        'safari' => 'Safari',
-        'firefox' => 'Mozilla Firefox',
-        'opera' => 'Opera',
-        'opr/' => 'Opera',
-        'edge' => 'Microsoft Edge',
-        'trident' => 'Internet Explorer',
-        'msie' => 'Internet Explorer'
-    );
-
-    foreach ($browsers as $keyword => $browser) {
-        if (strpos($userAgent, $keyword) !== false) {
-            return $browser;
-        }
-    }
-
-    return 'Unknown';
+    $apiURL = 'https://freegeoip.app/json/'.$clientIP; 
+    $curl = curl_init($apiURL);  
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  
+    $response = curl_exec($curl); 
+    curl_close($curl);  
+    $ipDetails = json_decode($response, true); 
+    return $ipDetails;
+    /*if(!empty($ipDetails))
+    { 
+        $countryCode = $ipDetails['country_code']; 
+        $countryName = $ipDetails['country_name']; 
+        $regionCode = $ipDetails['region_code']; 
+        $regionName = $ipDetails['region_name']; 
+        $city = $ipDetails['city']; 
+        $zipCode = $ipDetails['zip_code']; 
+        $latitude = $ipDetails['latitude']; 
+        $longitude = $ipDetails['longitude']; 
+        $timeZone = $ipDetails['time_zone'];
+    }*/
+    
 }
