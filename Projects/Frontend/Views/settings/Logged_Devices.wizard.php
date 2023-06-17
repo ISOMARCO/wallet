@@ -82,7 +82,7 @@
                 </table>
             </div>
             <div class="card-footer">
-                <button type="button" class="btn btn-danger" style="float:right" onclick="return confirm('Are you sure?')">{{ML::select('Exit')}}&nbsp;<i class="fas fa-sign-out-alt"></i></button>
+                <button type="button" id="exit" data-id="{{$value->id}}" class="btn btn-danger" style="float:right">{{ML::select('Exit')}}&nbsp;<i class="fas fa-sign-out-alt"></i></button>
             </div>
         </div>
     @endforeach
@@ -91,6 +91,8 @@
 </div>
 <script>
 $(document).ready(function(){
-    
+    $("#exit").on("click", function(){
+        alert($(this).attr("data-id"));
+    });
 }); 
 </script>
