@@ -17,8 +17,6 @@
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
-<!-- Socket -->
-<script src="{{URL::base('server.js')"></script>
 <!-- select2 -->
 <script src="plugins/select2/js/select2.min.js"></script>
 <!-- sweet alert2 -->
