@@ -8,5 +8,5 @@ io.on('connection', (socket) => {
 });
 
 server.listen(80, () => {
-  console.log('Sunucu çalışıyor: http://localhost:3000');
+  console.log('Sunucu çalışıyor: http://localhost:80');
 });
