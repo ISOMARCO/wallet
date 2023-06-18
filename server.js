@@ -7,6 +7,6 @@ io.on('connection', (socket) => {
   // İşlemleriniz burada gerçekleştirilir
 });
 
-server.listen(80, () => {
-  console.log('Sunucu çalışıyor: http://localhost:80');
+server.listen(80, 'wallet.iso.com.az', () => {
+  console.log('Sunucu çalışıyor: http://wallet.iso.com.az');
 });
