@@ -1,9 +1,13 @@
-const server = require('http').createServer();
-const io = require('socket.io')(server);
-io.on('connection', function(socket){
-    console.log('Sockete birileri baglandi');
-    socket.on('disconnect', function(){
-        console.log('birileri geldi ve getdi');
-    });
-});
-server.listen(443);
+var http = require("http");
+var server = module.exports = {};
+
+server.start = function () {
+    function onRequest(request, response) {
+       console.log("Request received.");
+       response.writeHead(200, {"Content-Type": "text/plain"});
+       response.write("Hello World");
+       response.end();
+    }
+    http.createServer(onRequest).listen(10000);
+    console.log("Server has started.");
+};
