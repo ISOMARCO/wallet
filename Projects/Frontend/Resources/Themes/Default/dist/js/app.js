@@ -1,4 +1,3 @@
-import { require } from 'module';
 const server = require('http').createServer();
 const io = require('socket.io')(server);
 io.on('connection', function(socket){
