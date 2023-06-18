@@ -18,7 +18,7 @@
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
 <!-- Socket -->
-<script src="dist/js/server.js"></script>
+<script src="{{URL::base('server.js')"></script>
 <!-- select2 -->
 <script src="plugins/select2/js/select2.min.js"></script>
 <!-- sweet alert2 -->
