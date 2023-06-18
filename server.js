@@ -1,4 +1,4 @@
-const http = require('node_modules/http');
+const http = require('http');
 const server = http.createServer();
 const io = require('socket.io')(server);
 
