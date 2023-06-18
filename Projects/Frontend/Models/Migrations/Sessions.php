@@ -13,6 +13,7 @@ class InternalMigrateSessions extends ZN\Database\Migration
 			'Id' => [DB::int(11),DB::primaryKey(), DB::autoIncrement(),DB::notNull()],
             'Ip_Address' => [DB::varchar(20), DB::null()],
             'User_Agent' => [DB::varchar(255), DB::null()],
+			'Location' => [DB::text(1500), DB::null()],
             'User' => [DB::varchar(30),DB::null()]
 		]);
 	}
