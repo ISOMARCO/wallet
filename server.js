@@ -7,6 +7,6 @@ io.on('connection', (socket) => {
   // İşlemleriniz burada gerçekleştirilir
 });
 
-server.listen(3000, () => {
+server.listen(80, () => {
   console.log('Sunucu çalışıyor: http://localhost:3000');
 });
