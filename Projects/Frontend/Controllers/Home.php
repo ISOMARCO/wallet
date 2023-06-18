@@ -4,7 +4,6 @@ class Home extends Controller
 {
     public function main(string ...$parameters)
     {
-        exit("ok");
         Masterpage::title('Home');
     } 
     public function exit($all = NULL)
