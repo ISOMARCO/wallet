@@ -228,6 +228,12 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="{{URL::base('settings')}}" class="nav-link">
+                  <i class="nav-icon fas fa-desktop"></i>
+                  <p>{{ML::select('GeneralSettings')}}</p>
+                </a>
+              </li>
               <li class="nav-item">
                 <a href="{{URL::base('settings/Logged_Devices')}}" class="nav-link">
                   <i class="nav-icon fas fa-desktop"></i>
