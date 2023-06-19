@@ -221,7 +221,7 @@
 
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-cog"></i>
+              <i class="nav-icon fas fa-cogs"></i>
               <p>
                 {{ML::select('Settings')}}
                 <i class="fas fa-angle-left right"></i>
@@ -230,7 +230,7 @@
             <ul class="nav nav-treeview">
             <li class="nav-item">
                 <a href="{{URL::base('settings')}}" class="nav-link">
-                  <i class="nav-icon fas fa-desktop"></i>
+                  <i class="fas fa-cog nav-icon"></i>
                   <p>{{ML::select('GeneralSettings')}}</p>
                 </a>
               </li>
