@@ -1,1 +1,0 @@
-{"RememberMe":"Remember me","SignIn":"Sign in","Email":"Email","Password":"Password","Register":"Register","ForgotPassword":"Forgot Password"}
