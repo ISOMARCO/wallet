@@ -5,7 +5,7 @@ class Home extends Controller
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
-        $socket = fsockopen('ssl://wallet.iso.com.az', 8000, $errno, $errstr, 10);
+        $socket = fsockopen('https://wallet.iso.com.az', 8000, $errno, $errstr, 10);
         if (!$socket) 
         {
             echo "Socket connection failed: $errstr ($errno)";
