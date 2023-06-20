@@ -5,29 +5,6 @@ class Home extends Controller
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
-        $host = 'wallet.iso.com.az';
-        $port = 8000;
-
-        // DNS çözümlemesi yapma
-        $ip = gethostbyname($host);
-
-        // Soket bağlantısı kurma
-        $socket = fsockopen($ip, $port, $errno, $errstr, 10);
-        if (!$socket) 
-        {
-            echo "Socket connection failed: $errstr ($errno)";
-        } 
-        else 
-        {
-            fwrite($socket, "Hello, server!");
-            echo "Data sent to the server: Hello, server!";
-            while (!feof($socket)) 
-            {
-                $response = fgets($socket);
-                echo "Data received from the server: $response";
-            }
-            fclose($socket);
-        }
     } 
     public function exit($all = NULL)
     {
