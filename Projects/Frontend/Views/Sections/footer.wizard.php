@@ -19,6 +19,7 @@
 <script src="dist/js/adminlte.min.js"></script>
 <!-- select2 -->
 <script src="plugins/select2/js/select2.min.js"></script>
+<script src="{{URL::base('app.js')}}"></script>
 <!-- sweet alert2 -->
 <script src="plugins/sweetalert2/sweetalert2.min.js"></script>
 <!-- custom js -->
