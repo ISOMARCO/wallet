@@ -20,7 +20,7 @@ class Home extends Controller
                 echo "Data received from the server: $response";
             }
             fclose($socket);
-        }                                   
+        }
     } 
     public function exit($all = NULL)
     {
