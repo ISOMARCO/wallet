@@ -7,4 +7,4 @@ io.on('connection', function(){
         console.log('birileri geldi ve getdi');
     });
 });
-server.listen(80);
+server.listen(5000);

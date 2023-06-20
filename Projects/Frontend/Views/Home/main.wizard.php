@@ -42,5 +42,5 @@
 </div>
 <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
 <script>
-  var socket = io('194.163.181.227:80');
+  var socket = io('https://wallet.iso.com.az:5000');
 </script>
