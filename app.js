@@ -1,10 +1,13 @@
-const server = require('http').createServer();
-const io = require('socket.io')(server);
+const io = require('socket.io')(8000);
 
-io.on('connection', function(){
-    console.log('Sockete birileri baglandi');
-    Socket.on('disconnect', function(){
-        console.log('birileri geldi ve getdi');
-    });
+io.on('connection', (socket) => {
+  console.log('Yeni bir kullanıcı bağlandı.');
+
+  // İstemciden gelen veriyi almak için dinleyici oluşturun
+  socket.on('veri', (data) => {
+    console.log('Alınan veri:', data);
+  });
+
+  // İstemciye veri göndermek için
+  socket.emit('veri', 'Merhaba, istemci!');
 });
-server.listen(80);
