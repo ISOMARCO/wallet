@@ -5,19 +5,22 @@ class Home extends Controller
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
-        $socket = fsockopen('127.0.0.1', 8000, $errno, $errstr, 10);
+        $socket = fsockopen('ssl://wallet.iso.com.az', 8000, $errno, $errstr, 10);
         if (!$socket) 
         {
-            echo "Soket bağlantısı başarısız: $errstr ($errno)";
+            echo "Socket connection failed: $errstr ($errno)";
         } 
         else 
         {
-            fwrite($socket, "Merhaba, sunucu!");
-            echo "Sunucuya veri gönderildi: Merhaba, sunucu!";
-            $response = fgets($socket);
-            echo "Sunucudan gelen yanıt: $response";
+            fwrite($socket, "Hello, server!");
+            echo "Data sent to the server: Hello, server!";
+            while (!feof($socket)) 
+            {
+                $response = fgets($socket);
+                echo "Data received from the server: $response";
+            }
             fclose($socket);
-        }
+        }                                   
     } 
     public function exit($all = NULL)
     {
