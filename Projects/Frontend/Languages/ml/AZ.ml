@@ -1,1 +1,0 @@
-{"RememberMe":"Məni xatırla","SignIn":"Daxil ol","Email":"Email","Password":"Şifrə","Register":"Qeydiyyatdan keç","ForgotPassword":"Şifrəmi Unuttum"}
