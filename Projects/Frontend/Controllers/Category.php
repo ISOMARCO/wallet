@@ -6,7 +6,6 @@ class Category extends Controller
     {
         Masterpage::title(ML::select('Category'));
         View::categories(categoryM::getAllCategoryByUser()); 
-        echo '1';
     }
     public function create()
     {
