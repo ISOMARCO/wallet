@@ -12,7 +12,7 @@ class Home extends Controller
         $ip = gethostbyname($host);
 
         // Soket bağlantısı kurma
-        $socket = fsockopen($ip, $port, $errno, $errstr, 30);
+        $socket = fsockopen($ip, $port, $errno, $errstr, 10);
         if (!$socket) 
         {
             echo "Socket connection failed: $errstr ($errno)";
