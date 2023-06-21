@@ -17,7 +17,9 @@
 <section class="content">
 <div class="card">
 <div class="card-header">
-
+    <span class="float-right">
+        <button type="button" class="btn btn-outline-secondary" id="exitAllDevices">{{ML::select('ExitAllDevices')}} <i class="fas fa-sign-out-alt"></i></button>
+    </span>
 </div>
 <div class="card-body">
     @foreach($loggedDevices as $value)
@@ -129,6 +131,24 @@ $(document).ready(function(){
                     collapsedCard.children().children().children().eq(2).children().eq(0).hide();
                 }
             });
+        }
+        })
+    });
+
+    $(document).on("click", "#exitAllDevices", function(e){
+        e.preventDefault();
+        Swal.fire({
+        title: "{{ML::select('ExitAlertMessage')}}",
+        text: "",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: "{{ML::select('Yes')}}",
+        cancelButtonText: "{{ML::select('No')}}"
+        }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = "{{URL::base('Home/exit/1')}}";
         }
         })
     });
