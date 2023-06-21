@@ -40,8 +40,3 @@
   </div>
 </section>
 </div>
-<script>
-setInterval(function() {
-  console.log("OKEY");
-}, 1000);
-</script>
