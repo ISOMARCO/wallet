@@ -4,7 +4,8 @@ class Webhook extends Controller
 {
     public function main()
     {
-        TelegramBot::setWebhook(URL::base('Webhook'));
+        echo TelegramBot::setWebhook(URL::base('Webhook'));
+        exit;
         $data = TelegramBot::getData();
         if($data->text == 'hello')
         {
