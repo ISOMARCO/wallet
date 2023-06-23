@@ -48,7 +48,7 @@ class InternalTelegramBot
 
     public function getData()
     {
-        $data = json_decode( file_get_contents("php://input") );
+        $data = json_decode( file_get_contents(URL::base('webhook.php')) );
         $this->chatId = $data->message->chat->id;
         return $data->message;
     }
