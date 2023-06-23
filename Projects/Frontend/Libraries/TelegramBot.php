@@ -11,8 +11,4 @@ class InternalTelegramBot
         return $this;
     }
 
-    public function showUrl()
-    {
-        return $this->token;
-    }
 }
