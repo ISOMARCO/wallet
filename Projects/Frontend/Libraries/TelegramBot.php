@@ -37,6 +37,6 @@ class InternalTelegramBot
     {
         return $this->request('setWebhook', [
             'url' => $url
-        ])
+        ]);
     }
 }
