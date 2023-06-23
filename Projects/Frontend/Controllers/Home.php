@@ -1,10 +1,11 @@
 <?php namespace Project\Controllers;
-use URL, loginM;
+use URL, loginM, TelegramBot;
 class Home extends Controller
 {
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
+        echo TelegramBot::setToken('5534810537:AAEfTCYFMsg1qmPsxk3t6Rmnc3Jp8yqurD0')->showUrl;
     } 
     public function exit($all = NULL)
     {
