@@ -11,7 +11,6 @@ class Webhook extends Controller
         {
             // Create Telegram API object
             $telegram = new Longman\TelegramBot\Telegram($bot_api_key, $bot_username);
-
             // Set webhook
             $result = $telegram->setWebhook($hook_url);
             if ($result->isOk()) 
