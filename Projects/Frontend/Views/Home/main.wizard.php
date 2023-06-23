@@ -1,4 +1,3 @@
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 <!-- Content Header (Page header) -->

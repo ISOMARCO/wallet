@@ -12,3 +12,4 @@
 <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
