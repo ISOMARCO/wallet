@@ -5,6 +5,8 @@ class Home extends Controller
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
+        $data = TelegramBot::getData();
+        output($data);
     } 
     public function exit($all = NULL)
     {
