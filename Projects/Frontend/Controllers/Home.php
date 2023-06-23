@@ -5,8 +5,7 @@ class Home extends Controller
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
-        #echo TelegramBot::setWebhook('https://wallet.requestcatcher.com/');
-        echo TelegramBot::getWebhookInfo();
+        echo TelegramBot::setWebhook('https://wallet.requestcatcher.com/');
     } 
     public function exit($all = NULL)
     {
