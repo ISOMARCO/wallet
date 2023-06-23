@@ -5,4 +5,4 @@ io.on('connection', function(socket){
   console.log('sockete birileri baglandi');
 });
 
-server.listen(2052);
+server.listen(8443);
