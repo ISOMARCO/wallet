@@ -21,7 +21,11 @@
     "require": 
     {
         "php": ">=7.2",
+<<<<<<< HEAD
     	"telegram-bot/api": "^3.0"
+=======
+        "telegram-bot/api": "^3.0"
+>>>>>>> a1798e404c21d02f8c87e5f037969e29ca867ded
     },
     "require-dev": 
     {
