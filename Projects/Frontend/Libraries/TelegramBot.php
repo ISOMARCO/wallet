@@ -39,4 +39,9 @@ class InternalTelegramBot
             'url' => $url
         ]);
     }
+
+    public function getWebhookInfo()
+    {
+        return $this->request('getWebhookInfo');
+    }
 }
