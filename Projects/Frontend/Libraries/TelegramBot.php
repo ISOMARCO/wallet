@@ -13,6 +13,6 @@ class InternalTelegramBot
 
     public function showUrl()
     {
-        return API_URL.$this->token;
+        return $this->token;
     }
 }
