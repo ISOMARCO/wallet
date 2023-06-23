@@ -1,15 +1,10 @@
 <?php namespace Project\Controllers;
-use URL, loginM, TelegramBot;
+use URL, loginM;
 class Home extends Controller
 {
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
-        $data = TelegramBot::getData();
-        if($data->text == 'hello')
-        {
-            TelegramBot::sendMessage("Helloo");
-        }
     } 
     public function exit($all = NULL)
     {
