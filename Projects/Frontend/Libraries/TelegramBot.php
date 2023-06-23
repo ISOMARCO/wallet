@@ -4,7 +4,7 @@ class InternalTelegramBot
 {
     const API_URL = 'https://api.telegram.org/bot';
     public $token = '5534810537:AAEfTCYFMsg1qmPsxk3t6Rmnc3Jp8yqurD0';
-    public $chatId;
+    public $chatId = NULL;
 
     public function setToken($token)
     {
@@ -51,5 +51,13 @@ class InternalTelegramBot
         $data = json_decode( file_get_contents("php://input") );
         $this->chatId = $data->message->chat->id;
         return $data->message;
+    }
+
+    public function sendMessage($message)
+    {
+        return $this->request('sendMessage', [
+            'chat_id' => $this->chatId,
+            'text' => $message
+        ]);
     }
 }

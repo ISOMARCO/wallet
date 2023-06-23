@@ -6,7 +6,10 @@ class Home extends Controller
     {
         Masterpage::title('Home');
         $data = TelegramBot::getData();
-        output($data);
+        if($data->text == 'hello')
+        {
+            TelegramBot::sendMessage("Helloo");
+        }
     } 
     public function exit($all = NULL)
     {
