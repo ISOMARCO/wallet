@@ -11,7 +11,7 @@ class InternalTelegramBot
         return $this;
     }
 
-    public function request($method, $posts)
+    public function request($method, $posts = [])
     {
         $url = self::API_URL.$this->token.'/'.$method;
         $ch = curl_init();
@@ -27,7 +27,7 @@ class InternalTelegramBot
 
         $result = curl_exec($ch);
         if (curl_errno($ch)) {
-            echo 'Error:' . curl_error($ch);
+            return 'Error:' . curl_error($ch);
         }
         curl_close($ch);
         return $result;
