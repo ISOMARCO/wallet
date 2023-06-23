@@ -14,7 +14,6 @@ class InternalTelegramBot
     public function request($method, $posts = [])
     {
         $url = self::API_URL.$this->token.'/'.$method;
-        return $url;
         $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_URL, $url);
