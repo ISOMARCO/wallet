@@ -40,3 +40,8 @@
   </div>
 </section>
 </div>
+<script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+<script>
+  var socket = io('http://194.163.181.227:2083');
+  console.log(socket);
+</script>
