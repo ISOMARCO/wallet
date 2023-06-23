@@ -5,7 +5,7 @@ class Home extends Controller
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
-        echo TelegramBot::getWeebhookInfo();
+        echo TelegramBot::getWebhookInfo();
     } 
     public function exit($all = NULL)
     {
