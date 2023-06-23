@@ -42,8 +42,6 @@ class InternalTelegramBot
 
     public function getWebhookInfo()
     {
-        return $this->request('getWebhookInfo', [
-
-        ]);
+        return $this->request('getWebhookInfo');
     }
 }
