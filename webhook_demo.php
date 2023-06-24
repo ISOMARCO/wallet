@@ -107,11 +107,12 @@ elseif(strtolower($data->text) == 'test 4')
 else
 {
     $keyboard = array(
-        array('Demo 1', 'Demo 2'),
-        array('Demo 3', 'Demo 4')
+        array('text' => 'Demo 1', 'callback_data' => 'demo1', 'command' => '/command1'),
+        array('text' => 'Demo 2', 'callback_data' => 'demo2', 'command' => '/command2')
     );
     $markup = array(
         'keyboard' => $keyboard,
+        'text' => 'menu_demo',
         'resize_keyboard' => true
     );
     $telegram->sendMessage('Buttons else', json_encode($markup));
