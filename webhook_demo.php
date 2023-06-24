@@ -75,20 +75,17 @@ $data = $telegram->getData();
 if(strtolower($data->text) == 'hello')
 {  
     $keyboard = array(
-        array(
-            array('text' => 'Buton 1', 'callback_data' => 'button1'),
-            array('text' => 'Buton 2', 'callback_data' => 'button2')
-        ),
-        array(
-            array('text' => 'Buton 3', 'callback_data' => 'button3')
-        )
+        array('Düğme 1', 'Düğme 2'),
+        array('Düğme 3', 'Düğme 4')
     );
+    
+    // Reply Keyboard Markup oluştur
     $markup = array(
-        'inline_keyboard' => $keyboard
+        'keyboard' => $keyboard,
+        'resize_keyboard' => true // Klavyenin boyutunu otomatik olarak ayarla
     );
 
-    $telegram->sendMessage('Inline keyboard ornegi', json_encode($markup));
-    sleep(10);
+    $telegram->sendMessage('Buttons', json_encode($markup));
 }
 elseif(strtolower($data->text) == 'how are you ?')
 {
