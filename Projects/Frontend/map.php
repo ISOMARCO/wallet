@@ -57,3 +57,7 @@ $classMap['classes']['foroco\internalbrowserdetection'] = 'Projects/Frontend/Lib
 $classMap['classes']['browserdetection'] = 'Projects/Frontend/Resources/Statics/Projects/Frontend/Libraries/InternalBrowserDetection.php';
 $classMap['namespaces']['project\controllers\settings'] = 'settings';
 $classMap['namespaces']['foroco\internalbrowserdetection'] = 'internalbrowserdetection';
+$classMap['classes']['project\controllers\webhook'] = 'Projects/Frontend/Controllers/Webhook.php';
+$classMap['classes']['internaltelegrambot'] = 'Projects/Frontend/Libraries/TelegramBot.php';
+$classMap['classes']['telegrambot'] = 'Projects/Frontend/Resources/Statics/Projects/Frontend/Libraries/InternalTelegramBot.php';
+$classMap['namespaces']['project\controllers\webhook'] = 'webhook';
