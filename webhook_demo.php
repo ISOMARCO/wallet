@@ -123,3 +123,4 @@ else
     );
     $telegram->sendMessage('demo', json_encode($markup));
 }
+var_dump( file_get_contents('php://input') );
