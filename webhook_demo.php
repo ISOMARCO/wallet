@@ -95,8 +95,8 @@ if(strtolower($data->text) == 'hello' || strtolower($data->text) == 'demo 1')
 elseif(strtolower($data->text) == 'test 4')
 {
     $keyboard = array(
-        array('Test 1', 'Test 2'),
-        array('Test 3', 'Test 4')
+        array('Login', 'Register'),
+        array('Forgot Password')
     );
     $markup = array(
         'keyboard' => $keyboard,
