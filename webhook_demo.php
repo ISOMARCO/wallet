@@ -1,6 +1,6 @@
 <?php 
 
-class TelegramBot 
+/*class TelegramBot 
 {
     const API_URL = 'https://api.telegram.org/bot';
     public $token = '5534810537:AAEfTCYFMsg1qmPsxk3t6Rmnc3Jp8yqurD0';
@@ -80,7 +80,7 @@ class TelegramBot
 }
 $telegram = new TelegramBot();
 $data = $telegram->getData();
-/*if(strtolower($data->text) == 'hello' || strtolower($data->text) == 'demo 1')
+if(strtolower($data->text) == 'hello' || strtolower($data->text) == 'demo 1')
 {  
     $keyboard = array(
         array('Test 1', 'Test 2'),
