@@ -80,7 +80,7 @@ class TelegramBot
 }
 $telegram = new TelegramBot();
 $data = $telegram->getData();
-if(strtolower($data->text) == 'hello' || strtolower($data->text) == 'demo 1')
+/*if(strtolower($data->text) == 'hello' || strtolower($data->text) == 'demo 1')
 {  
     $keyboard = array(
         array('Test 1', 'Test 2'),
@@ -122,5 +122,21 @@ else
         'resize_keyboard' => true
     );
     $telegram->sendMessage('demo', json_encode($markup));
+}*/
+$ch = curl_init();
+$url = 'https://api.telegram.org/bot5534810537:AAEfTCYFMsg1qmPsxk3t6Rmnc3Jp8yqurD0/getMe';
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($posts));
+
+$headers = array();
+$headers[] = 'Content-Type: application/x-www-form-urlencoded';
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+$result = curl_exec($ch);
+if (curl_errno($ch)) {
+    return 'Error:' . curl_error($ch);
 }
-var_dump( file_get_contents('php://input') );
+curl_close($ch);
+echo json_encode($result);
