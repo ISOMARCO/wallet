@@ -93,7 +93,7 @@ if(strtolower($data->text) == 'hello')
     
     // Reply Keyboard Markup oluştur
     $markup = array(
-        'keyboard' => $keyboard,
+        'keyboard_default' => $keyboard,
         'resize_keyboard' => true // Klavyenin boyutunu otomatik olarak ayarla
     );
 
