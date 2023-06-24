@@ -87,7 +87,7 @@ if(strtolower($data->text) == 'hello')
 
     $telegram->sendMessage('Buttons', json_encode($markup));
 }
-elseif(strtolower($data->text) == 'how are you ?')
+elseif($data->text == 'Düğme 1')
 {
-	$telegram->sendMessage('Fine, thanks');
+    $telegram->sendMessage('Okey');
 }
