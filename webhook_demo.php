@@ -139,4 +139,4 @@ if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
 }
 curl_close($ch);
-echo json_encode($result);
+print_r($result);
