@@ -48,16 +48,33 @@ class InternalTelegramBot
 
     public function getData()
     {
-        $data = json_decode( file_get_contents(URL::base('webhook.php')) );
+        $data = json_decode( file_get_contents("php://input") );
         $this->chatId = $data->message->chat->id;
         return $data->message;
     }
 
-    public function sendMessage($message)
+    public function getCallBackQueryData()
+    {
+        $data = json_decode( file_get_contents("php://input") );
+        $callBackQuery = $data->callback_query;
+        $this->chatId = $callBackQuery->message->chat->id;
+        return $callBackQuery->data;
+    }
+
+    public function sendMessage($message = NULL, $markup = NULL)
     {
         return $this->request('sendMessage', [
             'chat_id' => $this->chatId,
-            'text' => $message
+            'text' => $message,
+            'reply_markup' => $markup
+        ]);
+    }
+
+    public function InlineKeyboardButton()
+    {
+        return $this->request('InlineKeyboardButton', [
+            'text' => 'Login',
+            'callback_data' => 'Men buna basmaq istedim'
         ]);
     }
 }
