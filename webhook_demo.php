@@ -53,11 +53,12 @@ class TelegramBot
         return $data->message;
     }
 
-    public function sendMessage($message)
+    public function sendMessage($message = NULL, $markup = NULL)
     {
         return $this->request('sendMessage', [
             'chat_id' => $this->chatId,
-            'text' => $message
+            'text' => $message,
+            'reply_markup' => $markup
         ]);
     }
 
@@ -73,7 +74,8 @@ $telegram = new TelegramBot();
 $data = $telegram->getData();
 if(strtolower($data->text) == 'hello')
 {
-    $telegram->InlineKeyboardButton();
+    $keyboard = json_encode($telegram->InlineKeyboardButton());
+    $telegram->sendMessage(NULL, $keyboard);
 }elseif(strtolower($data->text) == 'how are you ?')
 {
 	$telegram->sendMessage('Fine, thanks');
