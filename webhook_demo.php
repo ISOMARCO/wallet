@@ -80,10 +80,6 @@ class TelegramBot
 }
 $telegram = new TelegramBot();
 $data = $telegram->getData();
-if($telegram->getCallBackQueryData() == 'Test 1') 
-{
-    $telegram->sendMessage("Beton yetmez");
-}
 if(strtolower($data->text) == 'hello')
 {  
     $keyboard = array(
