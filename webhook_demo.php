@@ -88,6 +88,7 @@ if(strtolower($data->text) == 'hello')
     );
 
     $telegram->sendMessage('Inline keyboard ornegi', json_encode($markup));
+    sleep(10);
 }
 elseif(strtolower($data->text) == 'how are you ?')
 {
