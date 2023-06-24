@@ -99,7 +99,7 @@ else
         array('Demo 3', 'Demo 4')
     );
     $markup = array(
-        'keyboard_default' => $keyboard,
+        'keyboard' => $keyboard,
         'resize_keyboard' => true
     );
     $telegram->sendMessage('Buttons 2', json_encode($markup));
