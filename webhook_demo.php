@@ -73,10 +73,23 @@ class TelegramBot
 $telegram = new TelegramBot();
 $data = $telegram->getData();
 if(strtolower($data->text) == 'hello')
-{
-    $keyboard = json_encode(['inline_keyboard' => $telegram->InlineKeyboardButton()]);
-    $telegram->sendMessage(NULL, $keyboard);    
-}elseif(strtolower($data->text) == 'how are you ?')
+{  
+    $keyboard = array(
+        array(
+            array('text' => 'Buton 1', 'callback_data' => 'button1'),
+            array('text' => 'Buton 2', 'callback_data' => 'button2')
+        ),
+        array(
+            array('text' => 'Buton 3', 'callback_data' => 'button3')
+        )
+    );
+    $markup = array(
+        'inline_keyboard' => $keyboard
+    );
+
+    $telegram->sendMessage('Inline keyboard ornegi', json_encode($markup));
+}
+elseif(strtolower($data->text) == 'how are you ?')
 {
 	$telegram->sendMessage('Fine, thanks');
 }
