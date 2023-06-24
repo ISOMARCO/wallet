@@ -1,6 +1,7 @@
 <?php 
 require_once('Internal/autoload.php');
 use URL;
+echo URL::base('home');
 class TelegramBot 
 {
     const API_URL = 'https://api.telegram.org/bot';
