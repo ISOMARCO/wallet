@@ -1,6 +1,5 @@
 <?php 
 include 'Internal/autoload.php';
-use URL;
 class TelegramBot 
 {
     const API_URL = 'https://api.telegram.org/bot';
@@ -123,5 +122,5 @@ else
         'text' => 'menu_demo',
         'resize_keyboard' => true
     );
-    $telegram->sendMessage(URL::base('home'), json_encode($markup));
+    $telegram->sendMessage('DEMO', json_encode($markup));
 }
