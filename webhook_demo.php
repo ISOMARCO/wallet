@@ -106,10 +106,16 @@ elseif(strtolower($data->text) == 'test 4')
 }
 else
 {
-    $keyboard = array(
-        array('text' => 'Demo 1', 'callback_data' => 'demo1', 'command' => '/command1'),
-        array('text' => 'Demo 2', 'callback_data' => 'demo2', 'command' => '/command2')
-    );
+    $keyboard = [
+        [
+            ['text' => 'Düğme 1', 'callback_data' => 'button1', 'command' => '/command1'],
+            ['text' => 'Düğme 2', 'callback_data' => 'button2', 'command' => '/command2'],
+        ],
+        [
+            ['text' => 'Düğme 3', 'callback_data' => 'button3', 'command' => '/command3'],
+            ['text' => 'Düğme 4', 'callback_data' => 'button4', 'command' => '/command4'],
+        ],
+    ];
     $markup = array(
         'keyboard' => $keyboard,
         'text' => 'menu_demo',
