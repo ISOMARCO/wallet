@@ -80,7 +80,7 @@ class TelegramBot
 }
 $telegram = new TelegramBot();
 $data = $telegram->getData();
-if(strtolower($data->text) == 'hello')
+if(strtolower($data->text) == 'hello' || strtolower($data->text) == 'Demo 1')
 {  
     $keyboard = array(
         array('Test 1', 'Test 2'),
