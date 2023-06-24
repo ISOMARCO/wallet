@@ -88,18 +88,6 @@ if(strtolower($data->text) == 'hello')
         array('Test 3', 'Test 4')
     );
     $markup = array(
-        'keyboard' => $keyboard,
-        'resize_keyboard' => true
-    );
-    $telegram->sendMessage('Buttons', json_encode($markup));
-}
-else
-{
-    $keyboard = array(
-        array('Demo 1', 'Demo 2'),
-        array('Demo 3', 'Demo 4')
-    );
-    $markup = array(
         'keyboard_default' => $keyboard,
         'resize_keyboard' => true
     );
