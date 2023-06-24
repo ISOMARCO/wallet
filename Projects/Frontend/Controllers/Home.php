@@ -5,6 +5,7 @@ class Home extends Controller
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
+        echo file_get_contents(URL::base('webhook_demo.php'));
     } 
     public function exit($all = NULL)
     {
