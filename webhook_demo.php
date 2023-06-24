@@ -92,6 +92,18 @@ if(strtolower($data->text) == 'hello' || strtolower($data->text) == 'demo 1')
     );
     $telegram->sendMessage('Buttons 1', json_encode($markup));
 }
+elseif(strtolower($data->text) == 'test 4')
+{
+    $keyboard = array(
+        array('Test 1', 'Test 2'),
+        array('Test 3', 'Test 4')
+    );
+    $markup = array(
+        'keyboard' => $keyboard,
+        'resize_keyboard' => true
+    );
+    $telegram->sendMessage('Buttons 4', json_encode($markup));
+}
 else
 {
     $keyboard = array(
@@ -102,5 +114,5 @@ else
         'keyboard' => $keyboard,
         'resize_keyboard' => true
     );
-    $telegram->sendMessage('Buttons 2', json_encode($markup));
+    $telegram->sendMessage('Buttons else', json_encode($markup));
 }
