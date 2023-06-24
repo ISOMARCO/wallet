@@ -90,7 +90,7 @@ if(strtolower($data->text) == 'hello')
         'keyboard' => $keyboard,
         'resize_keyboard' => true
     );
-    $telegram->sendMessage('Buttons', json_encode($markup));
+    $telegram->sendMessage('Buttons 1', json_encode($markup));
 }
 else
 {
@@ -102,5 +102,5 @@ else
         'keyboard_default' => $keyboard,
         'resize_keyboard' => true
     );
-    $telegram->sendMessage('Buttons', json_encode($markup));
+    $telegram->sendMessage('Buttons 2', json_encode($markup));
 }
