@@ -136,7 +136,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 $result = curl_exec($ch);
 if (curl_errno($ch)) {
-    return 'Error:' . curl_error($ch);
+    echo 'Error:' . curl_error($ch);
 }
 curl_close($ch);
 echo json_encode($result);
