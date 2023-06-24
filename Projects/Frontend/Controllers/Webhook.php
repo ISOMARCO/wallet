@@ -10,5 +10,6 @@ class Webhook extends Controller
         {
             TelegramBot::sendMessage('Helloo');
         }
+        return;
     }
 }
