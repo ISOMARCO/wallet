@@ -4,6 +4,6 @@ class Webhook extends Controller
 {
     public function main()
     {
-        
+        echo "demo";
     }
 }
