@@ -56,8 +56,9 @@ class TelegramBot
     public function getCallBackQueryData()
     {
         $data = json_decode( file_get_contents("php://input") );
-        $callBackQuery = $data['callback_query'];
-        return $callBackQuery['data'];
+        $callBackQuery = $data->callback_query;
+        $this->chatId = $callBackQuery->message->chat->id;
+        return $callBackQuery->data;
     }
 
     public function sendMessage($message = NULL, $markup = NULL)
@@ -79,7 +80,10 @@ class TelegramBot
 }
 $telegram = new TelegramBot();
 $data = $telegram->getData();
-
+if($telegram->getCallBackQueryData() == 'Test 1') 
+{
+    $telegram->sendMessage("Beton yetmez");
+}
 if(strtolower($data->text) == 'hello')
 {  
     $keyboard = array(
