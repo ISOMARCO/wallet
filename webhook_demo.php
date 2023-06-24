@@ -79,13 +79,29 @@ class TelegramBot
     }
 }
 $telegram = new TelegramBot();
+if($telegram->getCallBackQueryData() == 'Demo 1')
+{
+    $telegram->sendMessage('Halaldi');
+}
 $data = $telegram->getData();
-$telegram->sendMessage('Hellooo');
+
 if(strtolower($data->text) == 'hello')
 {  
     $keyboard = array(
         array('Test 1', 'Test 2'),
         array('Test 3', 'Test 4')
+    );
+    $markup = array(
+        'keyboard' => $keyboard,
+        'resize_keyboard' => true
+    );
+    $telegram->sendMessage('Buttons', json_encode($markup));
+}
+else
+{
+    $keyboard = array(
+        array('Demo 1', 'Demo 2'),
+        array('Demo 3', 'Demo 4')
     );
     $markup = array(
         'keyboard_default' => $keyboard,
