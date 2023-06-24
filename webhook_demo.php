@@ -53,6 +53,13 @@ class TelegramBot
         return $data->message;
     }
 
+    public function getCallBackQueryData()
+    {
+        $data = json_decode( file_get_contents("php://input") );
+        $callBackQuery = $data['callback_query'];
+        return $callBackQuery['data'];
+    }
+
     public function sendMessage($message = NULL, $markup = NULL)
     {
         return $this->request('sendMessage', [
@@ -71,7 +78,12 @@ class TelegramBot
     }
 }
 $telegram = new TelegramBot();
+if($telegram->getCallBackQueryData() == 'Düğme 1')
+{
+    $telegram->sendMessage('Halaldi');
+}
 $data = $telegram->getData();
+
 if(strtolower($data->text) == 'hello')
 {  
     $keyboard = array(
@@ -86,8 +98,4 @@ if(strtolower($data->text) == 'hello')
     );
 
     $telegram->sendMessage('Buttons', json_encode($markup));
-}
-elseif($data->text == 'Düğme 1')
-{
-    $telegram->sendMessage('Okey');
 }
