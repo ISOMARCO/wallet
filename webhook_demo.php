@@ -63,10 +63,10 @@ class TelegramBot
 }
 $telegram = new TelegramBot();
 $data = $telegram->getData();
-if($data->text == 'hello')
+if(strtolower($data->text) == 'hello')
 {
     $telegram->sendMessage('Sanada hello');
-}elseif($data->text == 'how are you ?')
+}elseif(strtolower($data->text) == 'how are you ?')
 {
 	$telegram->sendMessage('Fine, thanks');
 }
