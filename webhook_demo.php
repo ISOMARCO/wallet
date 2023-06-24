@@ -79,10 +79,6 @@ class TelegramBot
     }
 }
 $telegram = new TelegramBot();
-if($telegram->getCallBackQueryData() == 'Demo 1')
-{
-    $telegram->sendMessage('Halaldi');
-}
 $data = $telegram->getData();
 
 if(strtolower($data->text) == 'hello')
