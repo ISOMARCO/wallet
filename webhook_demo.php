@@ -121,5 +121,5 @@ else
         'text' => 'menu_demo',
         'resize_keyboard' => true
     );
-    $telegram->sendMessage(json_encode($telegram->getCallBackQueryData()), json_encode($markup));
+    $telegram->sendMessage($telegram->getCallBackQueryData(), json_encode($markup));
 }
