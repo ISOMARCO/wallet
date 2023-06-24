@@ -80,7 +80,7 @@ class TelegramBot
 }
 $telegram = new TelegramBot();
 $data = $telegram->getData();
-
+$telegram->sendMessage('Hellooo');
 if(strtolower($data->text) == 'hello')
 {  
     $keyboard = array(
