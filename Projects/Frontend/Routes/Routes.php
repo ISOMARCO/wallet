@@ -1,4 +1,4 @@
 <?php
 
 Route::show404('Home/s404');
-Route::direct()->method('post', 'get')->uri('/Webhook');
+Route::change(URL::base('webhook.php'))->uri('Webhook');
