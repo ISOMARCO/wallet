@@ -80,7 +80,6 @@ class TelegramBot
     }
 }
 $telegram = new TelegramBot();
-$telegram->setWebhook('https://wallet.iso.com.az/webhook_demo.php');
 $data = $telegram->getData();
 if(strtolower($data->text) == 'hello' || strtolower($data->text) == 'demo 1')
 {  
