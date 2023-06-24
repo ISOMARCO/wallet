@@ -74,8 +74,8 @@ $telegram = new TelegramBot();
 $data = $telegram->getData();
 if(strtolower($data->text) == 'hello')
 {
-    $keyboard = json_encode($telegram->InlineKeyboardButton());
-    $telegram->sendMessage(NULL, $keyboard);
+    $keyboard = json_encode(['inline_keyboard' => $telegram->InlineKeyboardButton()]);
+    $telegram->sendMessage(NULL, $keyboard);    
 }elseif(strtolower($data->text) == 'how are you ?')
 {
 	$telegram->sendMessage('Fine, thanks');
