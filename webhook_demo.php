@@ -60,12 +60,20 @@ class TelegramBot
             'text' => $message
         ]);
     }
+
+    public function InlineKeyboardButton()
+    {
+        return $this->request('InlineKeyboardButton', [
+            'text' => 'Login',
+            'callback_data' => 'Men buna basmaq istedim'
+        ]);
+    }
 }
 $telegram = new TelegramBot();
 $data = $telegram->getData();
 if(strtolower($data->text) == 'hello')
 {
-    $telegram->sendMessage('Sanada hello');
+    $telegram->InlineKeyboardButton();
 }elseif(strtolower($data->text) == 'how are you ?')
 {
 	$telegram->sendMessage('Fine, thanks');
