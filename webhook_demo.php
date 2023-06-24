@@ -56,7 +56,6 @@ class TelegramBot
     public function getCallBackQueryData()
     {
         $data = json_decode( file_get_contents("php://input") );
-        $this->chatId = $data->message->chat->id;
         $callBackQuery = $data['callback_query'];
         return $callBackQuery['data'];
     }
