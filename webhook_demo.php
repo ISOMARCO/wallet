@@ -1,5 +1,5 @@
 <?php 
-
+require_once('Internal/autoload.php');
 class TelegramBot 
 {
     const API_URL = 'https://api.telegram.org/bot';
