@@ -56,6 +56,7 @@ class TelegramBot
     public function getCallBackQueryData()
     {
         $data = json_decode( file_get_contents("php://input") );
+        $this->chatId = $data->message->chat->id;
         $callBackQuery = $data['callback_query'];
         return $callBackQuery['data'];
     }
@@ -78,7 +79,7 @@ class TelegramBot
     }
 }
 $telegram = new TelegramBot();
-if($telegram->getCallBackQueryData() == 'Düğme 1')
+if($telegram->getCallBackQueryData() == 'Demo 1')
 {
     $telegram->sendMessage('Halaldi');
 }
@@ -87,18 +88,24 @@ $data = $telegram->getData();
 if(strtolower($data->text) == 'hello')
 {  
     $keyboard = array(
-        array('Düğme 1', 'Düğme 2'),
-        array('Düğme 3', 'Düğme 4')
+        array('Test 1', 'Test 2'),
+        array('Test 3', 'Test 4')
     );
-    
-    // Reply Keyboard Markup oluştur
+    $markup = array(
+        'keyboard' => $keyboard,
+        'resize_keyboard' => true
+    );
+    $telegram->sendMessage('Buttons', json_encode($markup));
+}
+else
+{
+    $keyboard = array(
+        array('Demo 1', 'Demo 2'),
+        array('Demo 3', 'Demo 4')
+    );
     $markup = array(
         'keyboard_default' => $keyboard,
-        'resize_keyboard' => true // Klavyenin boyutunu otomatik olarak ayarla
+        'resize_keyboard' => true
     );
-
     $telegram->sendMessage('Buttons', json_encode($markup));
-}elseif(strtolower($data->text) == 'Düğme 1')
-{
-    $telegram->sendMessage('Halaldi');
 }
