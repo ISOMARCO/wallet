@@ -22,7 +22,7 @@ class Webhook extends Controller
                 ]
             ];
             $markup = array(
-                'InlineKeyboardButton' => $keyboard
+                'inline_keyboard_button' => $keyboard
             );
             TelegramBot::sendMessage('Paylas',json_encode($markup));
         }
