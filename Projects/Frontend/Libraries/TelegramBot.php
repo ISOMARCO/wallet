@@ -47,7 +47,7 @@ class InternalTelegramBot
             return 'Error:' . curl_error($ch);
         }
         curl_close($ch);
-        return $result;
+        return json_decode($result);
     }
 
     public function setWebhook($url)
