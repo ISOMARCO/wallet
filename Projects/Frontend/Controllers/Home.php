@@ -7,7 +7,9 @@ class Home extends Controller
         Masterpage::title('Home');
         foreach(DB::Logs()->result() as $value)
         {
-            echo $value->Text."<br>";
+            $data = json_decode($value->Text, true);
+            $chatId = $data['message']['chat']['id'];
+            echo $chatId."<br>";
         }
     } 
     public function exit($all = NULL)
