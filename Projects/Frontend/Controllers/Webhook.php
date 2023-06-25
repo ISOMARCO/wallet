@@ -6,12 +6,19 @@ class Webhook extends Controller
     {
         TelegramBot::sendMessage('demo');
         $data = TelegramBot::getData();
-        DB::insert('Logs', ['Text' => $data]);
+        if(isset($data->callback_query)) 
+        {
+            $command = $data->callback_query->data;
+            if($command == 'share')
+            {
+                TelegramBot::sendMessage('/share');
+            }
+        }
         if($data->message->text == '/start')
         {
             $keyboard = [
                 [
-                    ['text' => 'Share Profile', 'callback_data' => '/share', 'command' => '/share']
+                    ['text' => 'Share Profile', 'callback_data' => 'share']
                 ]
             ];
             $markup = array(
