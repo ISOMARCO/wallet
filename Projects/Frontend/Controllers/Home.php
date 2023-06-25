@@ -1,11 +1,14 @@
 <?php namespace Project\Controllers;
-use URL, loginM, TelegramBot;
+use URL, loginM, TelegramBot, DB;
 class Home extends Controller
 {
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
-        echo TelegramBot::getWebhookInfo();
+        foreach(DB::Logs()->result() as $value)
+        {
+            echo $value->Text."<br>";
+        }
     } 
     public function exit($all = NULL)
     {
