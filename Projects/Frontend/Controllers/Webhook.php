@@ -5,15 +5,6 @@ class Webhook extends Controller
     public function main()
     {
         $data = TelegramBot::getData();
-        if(isset($data->CallbackQuery)) 
-        {
-            DB::insert("Logs", ["Text" => $data]);
-            /*$command = $data->CallbackQuery->data;
-            if($command == 'share_profile')
-            {
-                TelegramBot::sendMessage('/share');
-            }*/
-        }
         if($data->message->text == '/start')
         {
             $keyboard = [
@@ -25,6 +16,10 @@ class Webhook extends Controller
                 'inline_keyboard' => $keyboard
             );
             TelegramBot::sendMessage('Paylas',json_encode($markup));
+        }
+        if($data->CallbackQuery) 
+        {
+            DB::insert("Logs", ["Text" => $data]);
         }
     }
 }
