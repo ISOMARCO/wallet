@@ -8,7 +8,7 @@ class Webhook extends Controller
         if(isset($data->callback_query)) 
         {
             $command = $data->callback_query->data;
-            if($command == 'share')
+            if($command == 'share_profile')
             {
                 TelegramBot::sendMessage('/share');
             }
@@ -17,7 +17,7 @@ class Webhook extends Controller
         {
             $keyboard = [
                 [
-                    ['text' => 'Share Profile', 'callback_data' => 'share']
+                    ['text' => 'Share Profile', 'callback_data' => 'share_profile']
                 ]
             ];
             $markup = array(
