@@ -22,8 +22,8 @@ class Webhook extends Controller
             $dataArray = json_decode($data, true);
             DB::insert("Logs", [
                 "Text" => $data,
-                "Username" => $data['message']['chat']['username'],
-                "ChatId" => $data['message']['chat']['id']
+                "Username" => $dataArray['message']['chat']['username'],
+                "ChatId" => $dataArray['message']['chat']['id']
             ]);
         }
         if(strtolower($data->message->text) == 'hello')
