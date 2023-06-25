@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use TelegramBot, URL;
+use TelegramBot, URL, DB;
 class Webhook extends Controller
 {
     public function main()
@@ -8,7 +8,10 @@ class Webhook extends Controller
         $data = TelegramBot::getData();
         if(strtolower($data->message->text) == 'hello')
         {
-            TelegramBot::sendMessage($data->message);
+            TelegramBot::sendMessage("Hello2");
+            DB::insert("Logs", [
+                "Text" => $data
+            ])
         }
     }
 }
