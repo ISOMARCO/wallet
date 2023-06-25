@@ -14,7 +14,7 @@ class Webhook extends Controller
                 ]
             ];
             $markup = array(
-                'keyboard' => $keyboard,
+                'inline_keyboard' => $keyboard,
                 'text' => 'Share My Profile',
                 'resize_keyboard' => true
             );
