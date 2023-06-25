@@ -19,7 +19,7 @@ class Webhook extends Controller
         }
         if($data->CallbackQuery) 
         {
-            DB::insert("Logs", ["Text" => $data]);
+            DB::insert("Logs", ["Text" => $data." 22"]);
         }
     }
 }
