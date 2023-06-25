@@ -6,7 +6,7 @@ class Webhook extends Controller
     {
         TelegramBot::sendMessage('demo');
         $data = TelegramBot::getData();
-        if(strtolower($data->text) == 'hello')
+        if(strtolower($data->message->text) == 'hello')
         {
             TelegramBot::sendMessage(URL::base('home'));
         }

@@ -66,7 +66,7 @@ class InternalTelegramBot
     {
         $data = json_decode( file_get_contents("php://input") );
         $this->chatId = $data->message->chat->id;
-        return $data->message;
+        return $data;
     }
 
     public function getCallBackQueryData()
