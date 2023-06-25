@@ -14,9 +14,9 @@ class Webhook extends Controller
                         [
                             'text' => 'Profilimi Paylaş',
                             'callback_data' => 'share_profile'
-                        ],
-                    ],
-                ],
+                        ]
+                    ]
+                ]
             ];
             TelegramBot::sendMessage('Profilinizi paylaşmak için aşağıdaki düğmeye basın:',json_encode($keyboard));
             DB::insert("Logs", [
