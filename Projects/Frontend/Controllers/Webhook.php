@@ -17,6 +17,7 @@ class Webhook extends Controller
             );
             TelegramBot::sendMessage('Paylas',json_encode($markup));
         }
+        $data = TelegramBot::getData();
         $data = json_decode($data, true);
         $query = $data['callback_query'];
         $queryData = $query['data'];
