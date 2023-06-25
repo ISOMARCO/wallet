@@ -64,7 +64,7 @@ class InternalTelegramBot
 
     public function getData()
     {
-        $data = json_decode( file_get_contents("php://input"), true );
+        $data = json_decode( file_get_contents("php://input") );
         $this->chatId = $data->message->chat->id;
         DB::insert("Logs", ["Text" => $data]);
         return $data;
