@@ -17,11 +17,15 @@ class Webhook extends Controller
             );
             TelegramBot::sendMessage('Paylas',json_encode($markup));
         }
-        $data = TelegramBot::getData();
         $data = json_decode($data, true);
         $query = $data['callback_query'];
         $queryData = $query['data'];
-        DB::insert("Logs", ['Text' => $queryData]);
-        
+        $id = $query['from']['id'];
+        DB::insert("Logs", ['Text' => $id]);
+        if($queryData == 'share_profile')
+        {
+            DB::insert("Logs", ["Text" => "OK"]);
+            TelegramBot::sendMessage('Okey');
+        }
     }
 }
