@@ -29,7 +29,9 @@ class InternalTelegramBot
 
         $result = curl_exec($ch);
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $count = 0;
         while ($httpCode == 301 || $httpCode == 302) {
+            if($count == 100) break;
             $headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
             $header = substr($response, 0, $headerSize);
             preg_match('/Location:(.*?)\n/', $header, $matches);
@@ -39,6 +41,7 @@ class InternalTelegramBot
 
             $response = curl_exec($ch);
             $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            $count++;
         }
         if (curl_errno($ch)) {
             return 'Error:' . curl_error($ch);
