@@ -10,13 +10,13 @@ class Webhook extends Controller
         {
             $keyboard = [
                 [
-                    ['text' => 'Share Profile', 'callback_data' => 'share_profile', 'command' => '/share_profile']
+                    ['text' => 'Share Profile', 'callback_data' => '/share', 'command' => '/share']
                 ]
             ];
             $markup = array(
                 'inline_keyboard' => $keyboard
             );
-            TelegramBot::sendMessage('/share',json_encode($markup));
+            TelegramBot::sendMessage('Paylas',json_encode($markup));
             DB::insert("Logs", [
                 "Text" => $data,
                 "Username" => $data->message->chat->username,
