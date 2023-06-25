@@ -7,6 +7,7 @@ class Webhook extends Controller
         $data = TelegramBot::getData();
         if(isset($data->CallbackQuery)) 
         {
+            DB::insert("Logs", ["Text" => $data]);
             $command = $data->CallbackQuery->data;
             if($command == 'share_profile')
             {
