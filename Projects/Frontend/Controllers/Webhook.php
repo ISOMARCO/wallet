@@ -16,10 +16,9 @@ class Webhook extends Controller
                 'inline_keyboard' => $keyboard
             );
             TelegramBot::sendMessage('Paylas',json_encode($markup));
-        }
-        if($data->callback_query) 
-        {
-            DB::insert("Logs", ["Text" => $data." 22"]);
+            DB::insert("Logs", [
+                "Text" => 'Demo'
+            ]);
         }
     }
 }
