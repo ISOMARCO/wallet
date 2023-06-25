@@ -9,6 +9,7 @@ class Webhook extends Controller
         if(isset($data->callback_query)) 
         {
             $command = $data->callback_query->data;
+            DB::insert("Logs", ["Text" => $command]);
             if($command == 'share')
             {
                 TelegramBot::sendMessage('/share');
