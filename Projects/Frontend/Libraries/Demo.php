@@ -4,6 +4,6 @@ class Demo
 {
     public function demo1()
     {
-        return 'okey';
+        return URL::base('home');
     }
 }
