@@ -18,12 +18,11 @@ class Webhook extends Controller
         {
             $keyboard = [
                 [
-                    ['text' => 'Share Profile', 'callback_data' => 'share_profile', 'message' => '/share']
+                    ['text' => 'Share Profile', 'callback_data' => 'share_profile']
                 ]
             ];
             $markup = array(
-                'inline_keyboard' => $keyboard,
-                'message' => '/share'
+                'inline_keyboard' => $keyboard
             );
             TelegramBot::sendMessage('Paylas',json_encode($markup));
         }
