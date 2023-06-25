@@ -10,7 +10,7 @@ class Webhook extends Controller
         {
             TelegramBot::sendMessage("Hello2");
             DB::insert("Logs", [
-                "Text" => $data
+                "Text" => json_encode($data)
             ])
         }
     }
