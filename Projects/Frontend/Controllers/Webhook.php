@@ -5,10 +5,10 @@ class Webhook extends Controller
     public function main()
     {
         TelegramBot::sendMessage('demo');
-        /*$data = TelegramBot::getData();
+        $data = TelegramBot::getData();
         if(strtolower($data->text) == 'hello')
         {
             TelegramBot::sendMessage('Helloo');
-        }*/
+        }
     }
 }

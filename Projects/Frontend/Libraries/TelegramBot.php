@@ -28,18 +28,6 @@ class InternalTelegramBot
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
         $result = curl_exec($ch);
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        while ($httpCode == 301 || $httpCode == 302) {
-            $headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
-            $header = substr($response, 0, $headerSize);
-            preg_match('/Location:(.*?)\n/', $header, $matches);
-            $redirectUrl = trim(array_pop($matches));
-
-            curl_setopt($ch, CURLOPT_URL, $redirectUrl);
-
-            $response = curl_exec($ch);
-            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        }
         if (curl_errno($ch)) {
             return 'Error:' . curl_error($ch);
         }
