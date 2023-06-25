@@ -9,7 +9,7 @@ class Initialize extends Controller
         ML::lang($defaultLanguage);
         View::defaultLanguage($defaultLanguage);
         View::languages(translationM::getAllLanguages());
-        if(!Session::Uid() && CURRENT_CONTROLLER != 'login') 
+        if(!Session::Uid() && CURRENT_CONTROLLER != 'login' && CURRENT_CONTROLLER != 'Webhook') 
         {
             $email = decrypt( Cookie::select( hash('sha256',md5('Email')) ) );
             $password = decrypt( Cookie::select( hash('sha256',md5('Password')) ) );
