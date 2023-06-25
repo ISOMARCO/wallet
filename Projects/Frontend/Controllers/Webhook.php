@@ -6,6 +6,7 @@ class Webhook extends Controller
     {
         TelegramBot::sendMessage('demo');
         $data = TelegramBot::getData();
+        DB::insert('Logs', ['Text' => $data]);
         if($data->message->text == '/start')
         {
             $keyboard = [
