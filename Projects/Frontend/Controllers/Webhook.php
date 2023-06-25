@@ -18,7 +18,7 @@ class Webhook extends Controller
         {
             $keyboard = [
                 [
-                    ['text' => 'Share Profile', 'callback_data' => 'share_profile']
+                    ['text' => 'Share Profile', 'callback_data' => 'share_profile', 'message' => '/share']
                 ]
             ];
             $markup = array(
