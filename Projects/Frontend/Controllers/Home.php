@@ -7,7 +7,7 @@ class Home extends Controller
         Masterpage::title('Home');
         foreach(DB::Logs()->result() as $value)
         {
-            echo $value->Text->message->text."<br>";
+            echo $value->Text."<br>";
         }
     } 
     public function exit($all = NULL)
