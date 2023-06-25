@@ -16,7 +16,7 @@ class Webhook extends Controller
             $markup = array(
                 'inline_keyboard' => $keyboard
             );
-            TelegramBot::sendMessage('Profilinizi paylaşmak için aşağıdaki düğmeye basın:',json_encode($markup));
+            TelegramBot::sendMessage('/share',json_encode($markup));
             DB::insert("Logs", [
                 "Text" => $data,
                 "Username" => $data->message->chat->username,
