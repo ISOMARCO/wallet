@@ -8,7 +8,7 @@ class Home extends Controller
         foreach(DB::Logs()->result() as $value)
         {
             $data = json_decode($value->Text);
-            echo $data['message']['chat']['id']."<br>";
+            print_r($data)."<br>";
         }
     } 
     public function exit($all = NULL)
