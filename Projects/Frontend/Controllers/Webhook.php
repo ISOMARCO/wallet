@@ -21,7 +21,6 @@ class Webhook extends Controller
         $query = $data['callback_query'];
         $queryData = $query['data'];
         $id = $query['from']['id'];
-        DB::insert("Logs", ['Text' => $id]);
         if($queryData == 'share_profile')
         {
             DB::insert("Logs", ["Text" => "OK"]);
