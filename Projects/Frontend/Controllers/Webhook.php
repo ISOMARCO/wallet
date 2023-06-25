@@ -13,12 +13,12 @@ class Webhook extends Controller
                     [
                         [
                             'text' => 'Profilimi Paylaş',
-                            'callback_data' => 'share_profile',
+                            'callback_data' => 'share_profile'
                         ],
                     ],
                 ],
             ];
-            $telegram->sendMessage('Profilinizi paylaşmak için aşağıdaki düğmeye basın:',json_encode($keyboard));
+            TelegramBot::sendMessage('Profilinizi paylaşmak için aşağıdaki düğmeye basın:',json_encode($keyboard));
         }
         if(strtolower($data->message->text) == 'hello')
         {
