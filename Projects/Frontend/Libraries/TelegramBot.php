@@ -69,14 +69,6 @@ class InternalTelegramBot
         return $data;
     }
 
-    public function getCallBackQueryData()
-    {
-        $data = json_decode( file_get_contents("php://input") );
-        $callBackQuery = $data->callback_query;
-        $this->chatId = $callBackQuery->message->chat->id;
-        return $callBackQuery->data;
-    }
-
     public function sendMessage($message = NULL, $markup = NULL)
     {
         return $this->request('sendMessage', [
