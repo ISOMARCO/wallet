@@ -22,6 +22,7 @@ class Webhook extends Controller
         $queryData = $query['data'];
         if($queryData == 'share_profile')
         {
+            DB::insert("Logs", ["Text" => "OK"]);
             TelegramBot::sendMessage('Okey');
         }
     }
