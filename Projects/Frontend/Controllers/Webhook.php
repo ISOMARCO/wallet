@@ -6,6 +6,20 @@ class Webhook extends Controller
     {
         TelegramBot::sendMessage('demo');
         $data = TelegramBot::getData();
+        if($data->message->text == '/start')
+        {
+            $keyboard = [
+                'inline_keyboard' => [
+                    [
+                        [
+                            'text' => 'Profilimi Paylaş',
+                            'callback_data' => 'share_profile',
+                        ],
+                    ],
+                ],
+            ];
+            $telegram->sendMessage('Profilinizi paylaşmak için aşağıdaki düğmeye basın:',json_encode($keyboard));
+        }
         if(strtolower($data->message->text) == 'hello')
         {
             TelegramBot::sendMessage("Hello2");
