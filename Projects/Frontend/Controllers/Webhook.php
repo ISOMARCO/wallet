@@ -18,7 +18,7 @@ class Webhook extends Controller
             TelegramBot::sendMessage('Paylas',json_encode($markup));
         }
         $data = json_decode($data, true);
-        $query = $data['callback_query'];
+        $query = $data['callback'];
         $queryData = $query['data'];
         $id = $query['from']['id'];
         if($queryData == 'share_profile')
