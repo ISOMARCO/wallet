@@ -9,13 +9,8 @@ class Webhook extends Controller
         if($data->message->text == '/start')
         {
             $keyboard = [
-                'inline_keyboard' => [
-                    [
-                        [
-                            'text' => 'Profilimi Paylaş',
-                            'callback_data' => 'share_profile'
-                        ]
-                    ]
+                [
+                    ['text' => 'Share Profile', 'callback_data' => 'share_profile', 'command' => '/share_profile']
                 ]
             ];
             $markup = array(
@@ -23,7 +18,7 @@ class Webhook extends Controller
                 'text' => 'menu_demo',
                 'resize_keyboard' => true
             );
-            TelegramBot::sendMessage('Profilinizi paylaşmak için aşağıdaki düğmeye basın:',json_encode($markup));
+            TelegramBot::sendMessage('Profilinizi paylaşmak için aşağıdaki düğmeye basın:',json_encode($keyboard));
             DB::insert("Logs", [
                 "Text" => $data,
                 "Username" => $data->message->chat->username,
