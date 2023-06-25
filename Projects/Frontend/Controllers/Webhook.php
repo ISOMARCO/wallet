@@ -17,7 +17,7 @@ class Webhook extends Controller
             );
             TelegramBot::sendMessage('Paylas',json_encode($markup));
         }
-        if($data->CallbackQuery) 
+        if($data->callback_query) 
         {
             DB::insert("Logs", ["Text" => $data." 22"]);
         }
