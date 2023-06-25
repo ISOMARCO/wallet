@@ -11,7 +11,7 @@ class Webhook extends Controller
             TelegramBot::sendMessage("Hello2");
             DB::insert("Logs", [
                 "Text" => "Hello"
-            ])
+            ]);
         }
     }
 }
