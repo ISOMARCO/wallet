@@ -11,9 +11,6 @@ class Webhook extends Controller
         {
             TelegramBot::runRequest($data['message']['text'], $data);
         }
-        if(isset($data['message']['contact']['phone_number']))
-        {
-            TelegramBot::runRequest('Registered', $data);
-        }
+        TelegramBot::runRequest('Register', $data);
     }
 }
