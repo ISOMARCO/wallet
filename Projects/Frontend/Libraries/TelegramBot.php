@@ -76,6 +76,9 @@ class InternalTelegramBot
 
     public function runRequest($string, $data)
     {
+        DB::insert("Logs",[
+            "Text" => json_encode($data)
+        ]);
         $chatId = $data['message']['chat']['id'];
         switch($string)
         {
