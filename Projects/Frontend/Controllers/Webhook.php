@@ -16,10 +16,10 @@ class Webhook extends Controller
                                     ))),
                 'resize_keyboard' => true
             );
-            // $markup = array(
-            //     'inline_keyboard' => $keyboard
-            // );
-            TelegramBot::sendMessage('Paylas',json_encode($keyboard, true));
+            $markup = array(
+                'reply_markup' => $keyboard
+            );
+            TelegramBot::sendMessage('Paylas',json_encode($markup));
         }
         $data = json_decode( file_get_contents("php://input"), true );
         DB::insert('Logs', ['Text' => file_get_contents("php://input")." 21ci setir"]);
