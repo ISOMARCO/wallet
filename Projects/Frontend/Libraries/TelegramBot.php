@@ -75,15 +75,8 @@ class InternalTelegramBot
         return $this->request('sendMessage', [
             'chat_id' => $this->chatId,
             'text' => $message,
-            'reply_markup' => $markup
-        ]);
-    }
-
-    public function InlineKeyboardButton()
-    {
-        return $this->request('InlineKeyboardButton', [
-            'text' => 'Login',
-            'callback_data' => 'Men buna basmaq istedim'
+            'reply_markup' => $markup,
+            'parse_mode' => 'HTML'
         ]);
     }
 }
