@@ -25,12 +25,12 @@ class Webhook extends Controller
                 'parse_mode' => 'HTML'
             ]);
         }
-        if(isset($data->message->contact->phone_number))
+        if(isset($data['message']['contact']['phone_number']))
         {
             TelegramBot::sendMessage([
                 'chat_id' => $chatId,
                 'text' => 'Registered',
-                'reply_to_message_id' => $data->message->message_id,
+                'reply_to_message_id' => $data['message']['message_id'],
                 'parse_mode' => 'HTML'
             ]);
         }
