@@ -8,10 +8,10 @@ class Webhook extends Controller
     public function main()
     {
         $data = $this->getData();
-        if($this->message->text == '/start')
+        if($this['message']['text'] == '/start')
         {
             $this->sendMessage([
-                'chat_id' => $chatId,
+                #'chat_id' => $chatId,
                 'text' => 'Started'
             ]);
         }
@@ -56,9 +56,9 @@ class Webhook extends Controller
 
     public function getData()
     {
-        $data = json_decode( file_get_contents("php://input") );
-        $this->chatId = $data->message->chat->id;
-        DB::insert('Logs', ['Text' => $data]);
+        $data = json_decode( file_get_contents("php://input"), true );
+        $this->chatId = $data['message']['chat']['id'];
+        DB::insert('Logs', ['Text' => json_encode($data)]);
         return $data;
     }
 
