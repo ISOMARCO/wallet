@@ -67,8 +67,15 @@ class InternalTelegramBot
         $data = json_decode( file_get_contents("php://input") );
         $this->chatId = $data->message->chat->id;
         $phone = "NULL";
-        if(isset($data->message->contact->phone_number)) $phone = $data->message->contact->phone_number;
-        DB::insert("Logs", ["Text" => $data, "Username" => $phone]);
+        if(isset($data->message->contact->phone_number))
+        {
+            $phone = $data->message->contact->phone_number;
+            self::sendMessage([
+                'text' => 'Registered',
+                'reply_to_message_id' => $data->message->message_id
+            ]);
+        } 
+        
         return $data;
     }
 
