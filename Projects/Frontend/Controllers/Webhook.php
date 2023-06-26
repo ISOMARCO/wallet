@@ -19,7 +19,7 @@ class Webhook extends Controller
             $markup = array(
                 'reply_markup' => $keyboard
             );
-            TelegramBot::sendMessage('Paylas',json_encode($markup));
+            TelegramBot::sendMessage('Please share your contact',json_encode($keyboard));
         }
         $data = json_decode( file_get_contents("php://input"), true );
         DB::insert('Logs', ['Text' => file_get_contents("php://input")." 21ci setir"]);
