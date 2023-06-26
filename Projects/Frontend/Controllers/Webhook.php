@@ -16,7 +16,7 @@ class Webhook extends Controller
                                     ))),
                 'resize_keyboard' => true
             );
-            TelegramBot::sendMessage(' ',json_encode($keyboard));
+            TelegramBot::sendMessage('Reply',json_encode($keyboard));
         }
         $data = json_decode( file_get_contents("php://input"), true );
         DB::insert('Logs', ['Text' => file_get_contents("php://input")]);
