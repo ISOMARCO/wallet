@@ -7,8 +7,9 @@ class Webhook extends Controller
     public $chatId = NULL;
     public function main()
     {
-        $data = $this->getData();
-        $chatId = $data['message']['chat']['id'];
+        $this->getData();
+        $data = json_decode($this->selectFromDB(), true);
+        #$chatId = $data['message']['chat']['id'];
         if($data['message']['text'] == '/start')
         {
             $keyboard = array(
@@ -27,13 +28,14 @@ class Webhook extends Controller
                 'parse_mode' => 'HTML'
             ]);
         }
-        elseif(isset($data['message']['contact']['phone_number']))
+        if(isset($data['message']['contact']['phone_number']))
         {
             $this->sendMessage([
                 'chat_id' => $chatId,
                 'text' => 'Sagol'
             ]);
         }
+
     }
     public function request($method, $posts = [])
     {
@@ -92,5 +94,11 @@ class Webhook extends Controller
     {
         if(!isset($data['chat_id'])) $data['chat_id'] = $this->chatId;
         return $this->request('sendMessage', $data);
+    }
+
+    public function selectFromDB()
+    {
+        $data = DB::orderBy()->Logs()->row()->Text;
+        return $data;
     }
 }
