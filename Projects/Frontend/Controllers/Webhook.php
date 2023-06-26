@@ -11,9 +11,20 @@ class Webhook extends Controller
         $chatId = $data['message']['chat']['id'];
         if($data['message']['text'] == '/start')
         {
+            $keyboard = array(
+                "keyboard" => array(
+                                array(
+                                    array(
+                                        "text" => "Press to share your phone",
+                                        "request_contact" => true
+                                    ))),
+                'resize_keyboard' => true
+            );
             $this->sendMessage([
                 'chat_id' => $chatId,
-                'text' => 'Started'
+                'reply_markup' => json_encode($keyboard),
+                'text' => 'Please to share your phone from below button',
+                'parse_mode' => 'HTML'
             ]);
         }
     }
