@@ -70,13 +70,9 @@ class InternalTelegramBot
         return $data;
     }
 
-    public function sendMessage($message = NULL, $markup = NULL)
+    public function sendMessage($data = [])
     {
-        return $this->request('sendMessage', [
-            'chat_id' => $this->chatId,
-            'text' => $message,
-            'reply_markup' => $markup,
-            'parse_mode' => 'HTML'
-        ]);
+        $data['chat_id'] = $this->chatId;
+        return $this->request('sendMessage', $data);
     }
 }
