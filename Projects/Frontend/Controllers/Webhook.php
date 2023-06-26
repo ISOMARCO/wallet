@@ -18,6 +18,7 @@ class Webhook extends Controller
             );
             TelegramBot::sendMessage([
                 'reply_markup' => json_encode($keyboard),
+                'text' => 'Please to share your phone from below button',
                 'parse_mode' => 'HTML'
             ]);
         }
