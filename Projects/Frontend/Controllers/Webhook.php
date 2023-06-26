@@ -9,7 +9,7 @@ class Webhook extends Controller
     {
         $this->getData();
         $data = json_decode($this->selectFromDB(), true);
-        #$chatId = $data['message']['chat']['id'];
+        $chatId = $data['message']['chat']['id'];
         if($data['message']['text'] == '/start')
         {
             $keyboard = array(
