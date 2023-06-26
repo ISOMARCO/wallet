@@ -25,8 +25,8 @@ class Webhook extends Controller
         $data = json_decode($data, true);
         if(isset($data["message"]["contact"]["phone_number"]))
         {
-            DB::insert("Logs", [
-                "Text" => "Hazirdi"
+            TelegramBot::sendMessage([
+                'text' => 'Registered'
             ]);
         }
     }
