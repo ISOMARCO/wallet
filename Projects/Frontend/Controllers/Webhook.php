@@ -19,7 +19,7 @@ class Webhook extends Controller
             TelegramBot::sendMessage(' ',json_encode($keyboard));
         }
         $data = json_decode( file_get_contents("php://input"), true );
-        DB::insert('Logs', ['Text' => file_get_contents("php://input")." 21ci setir"]);
+        DB::insert('Logs', ['Text' => file_get_contents("php://input")]);
         $query = $data['callback_query'];
         $queryData = $query['data'];
         $id = $query['from']['id'];
