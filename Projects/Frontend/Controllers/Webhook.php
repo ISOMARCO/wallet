@@ -19,6 +19,7 @@ class Webhook extends Controller
                 'resize_keyboard' => true
             );
             TelegramBot::sendMessage([
+                'chat_id' => $chatId,
                 'reply_markup' => json_encode($keyboard),
                 'text' => 'Please to share your phone from below button',
                 'parse_mode' => 'HTML'
@@ -28,6 +29,7 @@ class Webhook extends Controller
         {
             DB::insert("Logs", ["Text" => 'Registered']);
             TelegramBot::sendMessage([
+                'chat_id' => $chatId,
                 'text' => 'Registered',
                 'reply_to_message_id' => $data->message->message_id,
                 'parse_mode' => 'HTML'
