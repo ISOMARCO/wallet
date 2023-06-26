@@ -28,7 +28,13 @@ class Webhook extends Controller
             ]);
         }
 
-        #if($data['message'][''])
+        if(isset($data['message']['contact']['phone_number']))
+        {
+            $this->sendMessage([
+                'chat_id' => $chatId,
+                'text' => 'Sagol'
+            ]);
+        }
     }
     public function request($method, $posts = [])
     {
