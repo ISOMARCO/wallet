@@ -12,10 +12,10 @@ class Webhook extends Controller
         if($this['message']['text'] == '/start')
         {
             DB::insert('Logs', ['Text' => 'OKEY']);
-            $this->sendMessage([
+            /*$this->sendMessage([
                 'chat_id' => $chatId,
                 'text' => 'Started'
-            ]);
+            ]);*/
         }
     }
     public function request($method, $posts = [])
