@@ -5,9 +5,13 @@ class Webhook extends Controller
     public function main()
     {
         //$data = TelegramBot::getData();
-        $data = json_decode( file_get_contents("php://input") );
-        DB::insert("Logs", ["Text" => $data]);
-        $chatId = $data->message->chat->id;
+        $data = json_decode( file_get_contents("php://input"), true );
+        #$chatId = $data->message->chat->id;
+        $chatId = $data['message']['chat']['id'];
+        DB::insert("Logs", [
+            "Text" => $chatId
+        ]);
+        exit;
         if($data->message->text == '/start')
         {
             $keyboard = array(
@@ -28,7 +32,6 @@ class Webhook extends Controller
         }
         if(isset($data->message->contact->phone_number))
         {
-            DB::insert("Logs", ["Text" => 'Registered']);
             TelegramBot::sendMessage([
                 'chat_id' => $chatId,
                 'text' => 'Registered',
