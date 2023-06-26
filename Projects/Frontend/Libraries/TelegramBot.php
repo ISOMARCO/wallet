@@ -99,6 +99,7 @@ class InternalTelegramBot
             case "Registered":
                 self::sendMessage([
                     'chatId' => $chatId,
+                    'text' => 'Registered',
                     'reply_to_message_id' => $data->message->message_id
                 ]);
             break;
