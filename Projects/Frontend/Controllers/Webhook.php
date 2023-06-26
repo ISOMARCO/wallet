@@ -25,7 +25,7 @@ class Webhook extends Controller
         if(isset($data->message->contact->phone_number))
         {
             TelegramBot::sendMessage([
-                'Text' => 'Successfully registered'
+                'text' => 'Successfully registered'
             ]);
             DB::insert("Logs", [
                 "Text" => $data->message->contact->phone_number;
