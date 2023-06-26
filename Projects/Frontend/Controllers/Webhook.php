@@ -10,6 +10,9 @@ class Webhook extends Controller
         $this->getData();
         $data = json_decode($this->selectFromDB(), true);
         $chatId = $data['message']['chat']['id'];
+        if(!isset($data['message']['contact']['phone_number'])) $msg = 'yox';
+        else $msg = 'var';
+        DB::insert("Logs", ['Text' => $msg]);
         if($data['message']['text'] == '/start')
         {
             $keyboard = array(
@@ -21,12 +24,10 @@ class Webhook extends Controller
                                     ))),
                 'resize_keyboard' => true
             );
-            if(!isset($data['message']['contact']['phone_number'])) $msg = 'yox';
-            else $msg = 'var';
             $this->sendMessage([
                 'chat_id' => $chatId,
                 'reply_markup' => json_encode($keyboard),
-                'text' => 'Please to share your phone from below button '.$msg,
+                'text' => 'Please to share your phone from below button',
                 'parse_mode' => 'HTML'
             ]);
         }
