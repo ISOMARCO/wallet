@@ -6,6 +6,7 @@ class Webhook extends Controller
     public $token = '5534810537:AAEfTCYFMsg1qmPsxk3t6Rmnc3Jp8yqurD0';
     public $chatId = NULL;
     if(isset($data['message']['contact']['phone_number']))DB::insert('Logs', [ 'Text' => $data['message']['contact']['phone_number'] ]);
+    else DB::insert('Logs', ['Text' => 'OK'])
     public function main()
     {
         $this->getData();
