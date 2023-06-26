@@ -56,6 +56,14 @@ class Webhook extends Controller
         curl_close($ch);
         return json_decode($result);
     }
+
+    public function getData()
+    {
+        $data = json_decode( file_get_contents("php://input") );
+        $this->chatId = $data->message->chat->id;
+        return $data;
+    }
+
     public function setWebhook($url)
     {
         return $this->request('setWebhook', [
