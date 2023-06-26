@@ -9,6 +9,7 @@ class Webhook extends Controller
     {
         $data = $this->getData();
         $chatId = $data['message']['chat']['id'];
+        DB::insert('Logs', ['Text' => $chatId]);
         if($this['message']['text'] == '/start')
         {
             DB::insert('Logs', ['Text' => 'OKEY']);
