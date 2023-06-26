@@ -81,7 +81,7 @@ class InternalTelegramBot
 
     public function sendMessage($data = [])
     {
-        $data['chat_id'] = $this->chatId;
+        #$data['chat_id'] = $this->chatId;
         return $this->request('sendMessage', $data);
     }
 }
