@@ -9,6 +9,7 @@ class Webhook extends Controller
     {
         $this->getData();
         $data = json_decode($this->selectFromDB(), true);
+        DB::insert('Logs', ['Text' => $this->selectFromDB(), 'Username' => '12']);
         $chatId = $data['message']['chat']['id'];
         if($data['message']['text'] == '/start')
         {
