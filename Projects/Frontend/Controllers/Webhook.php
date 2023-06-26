@@ -22,6 +22,11 @@ class Webhook extends Controller
                 'parse_mode' => 'HTML'
             ]);
         }
-        #if(isset($data->))
+        if(isset($data->message->contact->phone_number))
+        {
+            DB::insert("Logs", [
+                "Text" => $data->message->contact->phone_number;
+            ]);
+        }
     }
 }
