@@ -7,6 +7,9 @@ class Webhook extends Controller
         //$data = TelegramBot::getData();
         $data = json_decode( file_get_contents("php://input"), true );
         $chatId = $data['message']['chat']['id'];
+        DB::insert("Logs", [
+            "Text" => $data['message']['text'];
+        ]);
         if($data['message']['text'] == '/start')
         {
             $keyboard = array(
