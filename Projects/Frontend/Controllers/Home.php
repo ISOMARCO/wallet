@@ -7,7 +7,7 @@ class Home extends Controller
         Masterpage::title('Home');
         foreach(DB::Logs()->result() as $value)
         {
-            $data = json_decode($value->Text, true);
+            #$data = json_decode($value->Text, true);
             echo $data;
         }
     } 
