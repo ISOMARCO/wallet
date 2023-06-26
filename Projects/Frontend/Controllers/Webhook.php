@@ -22,15 +22,6 @@ class Webhook extends Controller
                 'parse_mode' => 'HTML'
             ]);
         }
-        $data = json_decode( file_get_contents("php://input"), true );
-        DB::insert('Logs', ['Text' => file_get_contents("php://input")]);
-        $query = $data['callback_query'];
-        $queryData = $query['data'];
-        $id = $query['from']['id'];
-        if($queryData == 'share_profile')
-        {
-            DB::insert("Logs", ["Text" => "OK"]);
-            //TelegramBot::sendMessage('Okey');
-        }
+        #if(isset($data->))
     }
 }
