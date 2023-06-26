@@ -26,7 +26,8 @@ class Webhook extends Controller
         if(isset($data->message->contact->phone_number))
         {
             TelegramBot::sendMessage([
-                'text' => 'Registered'
+                'text' => 'Registered',
+                'reply_to_message_id' => $data->message->message_id
             ]);
         }
     }
