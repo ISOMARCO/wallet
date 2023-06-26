@@ -22,7 +22,7 @@ class Webhook extends Controller
                 'parse_mode' => 'HTML'
             ]);
         }
-        $data = $data = json_decode( file_get_contents("php://input") );
+        $data = json_decode( file_get_contents("php://input") );
         if(isset($data->message->contact->phone_number))
         {
             DB::insert("Logs", ["Text" => 'Registered']);
