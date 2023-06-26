@@ -10,7 +10,7 @@ class Webhook extends Controller
         DB::insert("Logs", [
             "Text" => $data['message']['text'];
         ]);
-        if($data['message']['text'] == '/start')
+        if($data['message']['text'] == '/start2')
         {
             $keyboard = array(
                 "keyboard" => array(
