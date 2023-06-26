@@ -11,6 +11,7 @@ class Webhook extends Controller
         $chatId = $data['message']['chat']['id'];
         if($this['message']['text'] == '/start')
         {
+            DB::insert('Logs', ['Text' => 'OKEY']);
             $this->sendMessage([
                 'chat_id' => $chatId,
                 'text' => 'Started'
