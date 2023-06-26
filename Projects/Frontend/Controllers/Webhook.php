@@ -5,8 +5,6 @@ class Webhook extends Controller
     const API_URL = 'https://api.telegram.org/bot';
     public $token = '5534810537:AAEfTCYFMsg1qmPsxk3t6Rmnc3Jp8yqurD0';
     public $chatId = NULL;
-    if(isset($data['message']['contact']['phone_number']))DB::insert('Logs', [ 'Text' => $data['message']['contact']['phone_number'] ]);
-    else DB::insert('Logs', ['Text' => 'OK'])
     public function main()
     {
         $this->getData();
@@ -23,10 +21,12 @@ class Webhook extends Controller
                                     ))),
                 'resize_keyboard' => true
             );
+            if(!isset($data['message']['contact']['phone_number'])) $msg = 'yox';
+            else $msg = 'var';
             $this->sendMessage([
                 'chat_id' => $chatId,
                 'reply_markup' => json_encode($keyboard),
-                'text' => 'Please to share your phone from below button',
+                'text' => 'Please to share your phone from below button '.$msg,
                 'parse_mode' => 'HTML'
             ]);
         }
