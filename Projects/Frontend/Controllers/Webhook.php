@@ -99,7 +99,7 @@ class Webhook extends Controller
 
     public function selectFromDB()
     {
-        $data = DB::orderBy()->Logs()->row()->Text;
+        $data = DB::orderBy('Id', 'DESC')->Logs()->row()->Text;
         return $data;
     }
 }
