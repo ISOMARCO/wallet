@@ -96,6 +96,12 @@ class InternalTelegramBot
                     'parse_mode' => 'HTML'
                 ]);
             break;
+            case "Registered":
+                self::sendMessage([
+                    'chatId' => $chatId,
+                    'reply_to_message_id' => $data->message->message_id
+                ]);
+            break;
         }
     }
 }
