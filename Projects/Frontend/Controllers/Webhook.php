@@ -17,7 +17,7 @@ class Webhook extends Controller
                 'resize_keyboard' => true
             );
             TelegramBot::sendMessage([
-                'reply_markup' => json_encode($keyboard, true),
+                'reply_markup' => json_encode($keyboard),
                 'parse_mode' => 'HTML'
             ]);
         }
