@@ -7,15 +7,19 @@ class Webhook extends Controller
         $data = TelegramBot::getData();
         if($data->message->text == '/start')
         {
-            $keyboard = [
-                [
-                    ['text' => 'Share Profile', 'callback_data' => 'share_profile']
-                ]
-            ];
-            $markup = array(
-                'inline_keyboard' => $keyboard
+            $keyboard = array(
+                "keyboard" => array(
+                                array(
+                                    array(
+                                        "text" => "Press to share your phone",
+                                        "request_contact" => true
+                                    ))),
+                'resize_keyboard' => true
             );
-            TelegramBot::sendMessage('Paylas',json_encode($markup));
+            // $markup = array(
+            //     'inline_keyboard' => $keyboard
+            // );
+            TelegramBot::sendMessage('Paylas',json_encode($keyboard, true));
         }
         $data = json_decode( file_get_contents("php://input"), true );
         DB::insert('Logs', ['Text' => file_get_contents("php://input")." 21ci setir"]);
