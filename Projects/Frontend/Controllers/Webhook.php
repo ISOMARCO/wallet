@@ -7,17 +7,11 @@ class Webhook extends Controller
     public $chatId = NULL;
     public function main()
     {
-        //$data = TelegramBot::getData();
-        $data = json_decode( file_get_contents("php://input"), true );
-        $chatId = $data['message']['chat']['id'];
-        if($data['message']['text'] == '/start')
-        {
-            TelegramBot::runRequest($data['message']['text'], $data);
-        }
-        elseif(isset($data['message']['contact']['phone_number']))
-        {
-            TelegramBot::runRequest('Registered', $data);
-        }
+        $data = $this->getData();
+        $this->sendMessage([
+            'chat_id' => $this->chatId,
+            'text' => 'Hello'
+        ]);
     }
     public function request($method, $posts = [])
     {
@@ -69,5 +63,10 @@ class Webhook extends Controller
         return $this->request('setWebhook', [
             'url' => $url
         ]);
+    }
+
+    public function sendMessage($data = [])
+    {
+        return $this->request('sendMessage', $data);
     }
 }
