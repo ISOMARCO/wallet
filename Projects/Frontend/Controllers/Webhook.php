@@ -9,7 +9,7 @@ class Webhook extends Controller
     {
         $data = $this->getData();
         $chatId = $data['message']['chat']['id'];
-        /*if($data['message']['text'] == '/start')
+        if($data['message']['text'] == '/start')
         {
             $keyboard = array(
                 "keyboard" => array(
@@ -26,8 +26,8 @@ class Webhook extends Controller
                 'text' => 'Please to share your phone from below button',
                 'parse_mode' => 'HTML'
             ]);
-        }*/
-        if(isset($data['message']['contact']['phone_number']))
+        }
+        elseif(isset($data['message']['contact']['phone_number']))
         {
             $this->sendMessage([
                 'chat_id' => $chatId,
