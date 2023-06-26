@@ -7,12 +7,10 @@ class Webhook extends Controller
         //$data = TelegramBot::getData();
         $data = json_decode( file_get_contents("php://input"), true );
         $chatId = $data['message']['chat']['id'];
-        DB::insert("Logs", [
-            "Text" => $chatId." ".$data['message']['text']
-        ]);
         if($data['message']['text'] == '/start')
         {
-            $keyboard = array(
+            DB::insert("Logs", ["Text" => "OKEY"]);
+            /*$keyboard = array(
                 "keyboard" => array(
                                 array(
                                     array(
@@ -26,7 +24,7 @@ class Webhook extends Controller
                 'reply_markup' => json_encode($keyboard),
                 'text' => 'Please to share your phone from below button',
                 'parse_mode' => 'HTML'
-            ]);
+            ]);*/
         }
         if(isset($data->message->contact->phone_number))
         {
