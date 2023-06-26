@@ -9,7 +9,7 @@ class Webhook extends Controller
         $chatId = $data['message']['chat']['id'];
         if($data['message']['text'] == '/start')
         {
-            $keyboard = array(
+            /*$keyboard = array(
                 "keyboard" => array(
                                 array(
                                     array(
@@ -23,7 +23,8 @@ class Webhook extends Controller
                 'reply_markup' => json_encode($keyboard),
                 'text' => 'Please to share your phone from below button',
                 'parse_mode' => 'HTML'
-            ]);
+            ]);*/
+            TelegramBot::runRequest($data['message']['text'], $data);
         }
         if(isset($data['message']['contact']['phone_number']))
         {

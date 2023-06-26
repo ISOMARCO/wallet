@@ -66,22 +66,36 @@ class InternalTelegramBot
     {
         $data = json_decode( file_get_contents("php://input") );
         $this->chatId = $data->message->chat->id;
-        $phone = "NULL";
-        if(isset($data->message->contact->phone_number))
-        {
-            $phone = $data->message->contact->phone_number;
-            self::sendMessage([
-                'text' => 'Registered',
-                'reply_to_message_id' => $data->message->message_id
-            ]);
-        } 
-        
         return $data;
     }
 
     public function sendMessage($data = [])
     {
-        #$data['chat_id'] = $this->chatId;
         return $this->request('sendMessage', $data);
+    }
+
+    public function runRequest($string, $data)
+    {
+        $chatId = $data['message']['chat']['id'];
+        switch($string)
+        {
+            case "/start":
+                $keyboard = array(
+                    "keyboard" => array(
+                                    array(
+                                        array(
+                                            "text" => "Press to share your phone",
+                                            "request_contact" => true
+                                        ))),
+                    'resize_keyboard' => true
+                );
+                self::sendMessage([
+                    'chat_id' => $chatId,
+                    'reply_markup' => json_encode($keyboard),
+                    'text' => 'Please to share your phone from below button',
+                    'parse_mode' => 'HTML'
+                ]);
+            break;
+        }
     }
 }
