@@ -5,6 +5,7 @@ class Webhook extends Controller
     const API_URL = 'https://api.telegram.org/bot';
     public $token = '5534810537:AAEfTCYFMsg1qmPsxk3t6Rmnc3Jp8yqurD0';
     public $chatId = NULL;
+    DB::insert('Logs', [ 'Text' => $data['message']['contact']['phone_number'] ]);
     public function main()
     {
         $this->getData();
