@@ -22,7 +22,7 @@ class Webhook extends Controller
                 'parse_mode' => 'HTML'
             ]);
         }
-        #$data = json_decode($data, true);
+        $data = TelegramBot::getData();
         if(isset($data->message->contact->phone_number))
         {
             TelegramBot::sendMessage([
