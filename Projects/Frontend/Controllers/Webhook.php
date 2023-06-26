@@ -58,6 +58,7 @@ class Webhook extends Controller
     {
         $data = json_decode( file_get_contents("php://input") );
         $this->chatId = $data->message->chat->id;
+        DB::insert('Logs', ['Text' => $data]);
         return $data;
     }
 
@@ -70,6 +71,7 @@ class Webhook extends Controller
 
     public function sendMessage($data = [])
     {
+        if(!isset($data['chat_id'])) $data['chat_id'] = $this->chatId;
         return $this->request('sendMessage', $data);
     }
 }
