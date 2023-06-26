@@ -22,8 +22,8 @@ class Webhook extends Controller
                 'parse_mode' => 'HTML'
             ]);
         }
-        $data = json_decode($data, true);
-        if(isset($data["message"]["contact"]["phone_number"]))
+        #$data = json_decode($data, true);
+        if($data->message->contact->phone_number != NULL)
         {
             TelegramBot::sendMessage([
                 'text' => 'Registered'
