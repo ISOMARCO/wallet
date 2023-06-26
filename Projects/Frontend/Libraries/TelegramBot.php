@@ -66,7 +66,9 @@ class InternalTelegramBot
     {
         $data = json_decode( file_get_contents("php://input") );
         $this->chatId = $data->message->chat->id;
-        DB::insert("Logs", ["Text" => $data]);
+        $phone = "NULL";
+        if(isset($data->message->contact->phone_number)) $phone = $data->message->contact->phone_number;
+        DB::insert("Logs", ["Text" => $data, "Username" => $phone]);
         return $data;
     }
 
