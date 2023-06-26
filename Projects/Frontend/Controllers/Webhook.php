@@ -27,6 +27,8 @@ class Webhook extends Controller
                 'parse_mode' => 'HTML'
             ]);
         }
+
+        #if($data['message'][''])
     }
     public function request($method, $posts = [])
     {
