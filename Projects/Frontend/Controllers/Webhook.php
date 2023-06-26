@@ -27,7 +27,8 @@ class Webhook extends Controller
         {
             TelegramBot::sendMessage([
                 'text' => 'Registered',
-                'reply_to_message_id' => $data->message->message_id
+                'reply_to_message_id' => $data->message->message_id,
+                'parse_mode' => 'HTML'
             ]);
         }
     }
