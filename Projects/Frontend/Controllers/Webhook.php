@@ -8,10 +8,11 @@ class Webhook extends Controller
     public function main()
     {
         $data = $this->getData();
+        $chatId = $data['message']['chat']['id'];
         if($this['message']['text'] == '/start')
         {
             $this->sendMessage([
-                #'chat_id' => $chatId,
+                'chat_id' => $chatId,
                 'text' => 'Started'
             ]);
         }
