@@ -9,32 +9,37 @@ class Webhook extends Controller
     {
         $data = $this->getData();
         $chatId = $data['message']['chat']['id'];
-        /*if($data['message']['text'] == '/start')
+        while(true)
         {
-            $keyboard = array(
-                "keyboard" => array(
-                                array(
+            if($data['message']['text'] == '/start')
+            {
+                $keyboard = array(
+                    "keyboard" => array(
                                     array(
-                                        "text" => "Press to share your phone",
-                                        "request_contact" => true
-                                    ))),
-                'resize_keyboard' => true
-            );
-            $this->sendMessage([
-                'chat_id' => $chatId,
-                'reply_markup' => json_encode($keyboard),
-                'text' => 'Please to share your phone from below button',
-                'parse_mode' => 'HTML'
-            ]);
-        }*/
-        if($data['message']['contact']['phone_number']  != NULL)
-        {
-            $this->sendMessage([
-                'chat_id' => $chatId,
-                'text' => 'Sagol',
-                'parse_mode' => 'HTML'
-            ]);
+                                        array(
+                                            "text" => "Press to share your phone",
+                                            "request_contact" => true
+                                        ))),
+                    'resize_keyboard' => true
+                );
+                $this->sendMessage([
+                    'chat_id' => $chatId,
+                    'reply_markup' => json_encode($keyboard),
+                    'text' => 'Please to share your phone from below button',
+                    'parse_mode' => 'HTML'
+                ]);
+            }
+            if($data['message']['contact']['phone_number']  != NULL)
+            {
+                $this->sendMessage([
+                    'chat_id' => $chatId,
+                    'text' => 'Sagol',
+                    'parse_mode' => 'HTML'
+                ]);
+            }
+            sleep(10);
         }
+        
 
     }
     public function request($method, $posts = [])
