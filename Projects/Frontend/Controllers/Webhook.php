@@ -27,7 +27,7 @@ class Webhook extends Controller
                 'parse_mode' => 'HTML'
             ]);
         }
-        elseif($data['message']['contact']['phone_number']  != NULL)
+        if($data['message']['contact']['phone_number']  != NULL)
         {
             $this->sendMessage([
                 'chat_id' => $chatId,
