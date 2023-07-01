@@ -1,15 +1,11 @@
 <?php namespace Project\Controllers;
-use URL, loginM, TelegramBot, DB;
+use URL, loginM, TelegramBot;
 class Home extends Controller
 {
     public function main(string ...$parameters)
     {
         Masterpage::title('Home');
-        foreach(DB::Logs()->result() as $value)
-        {
-            #$data = json_decode($value->Text, true);
-            #echo $value->Text."<br>";
-        }
+        print_r(json_decode('{"update_id":711640138,"message":{"message_id":6,"from":{"id":814802441,"is_bot":false,"first_name":"Ismayil","username":"ISOMARCO","language_code":"tr"},"chat":{"id":814802441,"first_name":"Ismayil","username":"ISOMARCO","type":"private"},"date":1688208811,"contact":{"phone_number":"994505534565","first_name":"Ismayil","user_id":814802441}}}', true));
     } 
     public function exit($all = NULL)
     {
