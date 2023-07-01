@@ -7,12 +7,8 @@ class Webhook extends Controller
     public $chatId = NULL;
     public function main()
     {
-        $this->getData();
-        $data = json_decode($this->selectFromDB(), true);
+        $data = $this->getData();
         $chatId = $data['message']['chat']['id'];
-        if(!isset($data['message']['contact']['phone_number'])) $msg = 'yox';
-        else $msg = 'var';
-        DB::insert("Logs", ['Text' => $msg]);
         if($data['message']['text'] == '/start')
         {
             $keyboard = array(
@@ -31,7 +27,7 @@ class Webhook extends Controller
                 'parse_mode' => 'HTML'
             ]);
         }
-        elseif(isset($data['message']['contact']['phone_number']))
+        if(isset($data['message']['contact']['phone_number']))
         {
             $this->sendMessage([
                 'chat_id' => $chatId,
