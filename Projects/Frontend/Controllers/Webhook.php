@@ -34,7 +34,7 @@ class Webhook extends Controller
                 'text' => 'Sanada hello'
             ]);
         }
-        else
+        if(TRUE)
         {
             $this->sendMessage([
                 'chat_id' => $chatId,
