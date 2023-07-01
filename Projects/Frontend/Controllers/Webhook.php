@@ -9,35 +9,31 @@ class Webhook extends Controller
     {
         $data = $this->getData();
         $chatId = $data['message']['chat']['id'];
-        while(true)
+        if($data['message']['text'] == '/start')
         {
-            if($data['message']['text'] == '/start')
-            {
-                $keyboard = array(
-                    "keyboard" => array(
+            $keyboard = array(
+                "keyboard" => array(
+                                array(
                                     array(
-                                        array(
-                                            "text" => "Press to share your phone",
-                                            "request_contact" => true
-                                        ))),
-                    'resize_keyboard' => true
-                );
-                $this->sendMessage([
-                    'chat_id' => $chatId,
-                    'reply_markup' => json_encode($keyboard),
-                    'text' => 'Please to share your phone from below button',
-                    'parse_mode' => 'HTML'
-                ]);
-            }
-            elseif($data['message']['contact']['phone_number']  != NULL)
-            {
-                $this->sendMessage([
-                    'chat_id' => $chatId,
-                    'text' => 'Sagol',
-                    'parse_mode' => 'HTML'
-                ]);
-            }
-            sleep(10);
+                                        "text" => "Press to share your phone",
+                                        "request_contact" => true
+                                    ))),
+                'resize_keyboard' => true
+            );
+            $this->sendMessage([
+                'chat_id' => $chatId,
+                'reply_markup' => json_encode($keyboard),
+                'text' => 'Please to share your phone from below button',
+                'parse_mode' => 'HTML'
+            ]);
+        }
+        elseif($data['message']['contact']['phone_number']  != NULL)
+        {
+            $this->sendMessage([
+                'chat_id' => $chatId,
+                'text' => 'Sagol',
+                'parse_mode' => 'HTML'
+            ]);
         }
         
 
