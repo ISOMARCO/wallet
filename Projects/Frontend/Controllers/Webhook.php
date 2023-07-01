@@ -26,6 +26,12 @@ class Webhook extends Controller
                 'text' => 'Please to share your phone from below button',
                 'parse_mode' => 'HTML'
             ]);
+        }elseif($data['message']['text'] == 'hello')
+        {
+            $this->sendMessage([
+                'chat_id' => $chatId,
+                'text' => 'Sanada hello'
+            ]);
         }
         if($data['message']['contact']['phone_number']  != NULL)
         {
