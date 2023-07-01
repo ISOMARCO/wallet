@@ -7,7 +7,7 @@ class Webhook extends Controller
     public $chatId = NULL;
     public function main()
     {
-        $data = $this->getData();
+        /*$data = $this->getData();
         $chatId = $data['message']['chat']['id'];
         if($data['message']['text'] == '/start')
         {
@@ -34,7 +34,7 @@ class Webhook extends Controller
                 'text' => 'Sagol',
                 'parse_mode' => 'HTML'
             ]);
-        }
+        }*/
         
 
     }
