@@ -6,7 +6,7 @@ class Home extends Controller
     {
         Masterpage::title('Home');
         $arr = json_decode('{"update_id":711640138,"message":{"message_id":6,"from":{"id":814802441,"is_bot":false,"first_name":"Ismayil","username":"ISOMARCO","language_code":"tr"},"chat":{"id":814802441,"first_name":"Ismayil","username":"ISOMARCO","type":"private"},"date":1688208811,"contact":{"phone_number":"994505534565","first_name":"Ismayil","user_id":814802441}}}', true);
-        echo $arr['message']['chat']['phone_number'];
+        echo $arr['message']['contact']['phone_number'];
     } 
     public function exit($all = NULL)
     {
