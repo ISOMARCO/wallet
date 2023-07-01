@@ -34,11 +34,11 @@ class Webhook extends Controller
                 'text' => 'Sanada hello'
             ]);
         }
-        elseif($data['message']['contact']['phone_number']  == '994505534565')
+        else
         {
             $this->sendMessage([
                 'chat_id' => $chatId,
-                'text' => 'Sagol'
+                'text' => 'Sagol '.$data['message']['contact']['phone_number']
             ]);
         }
         
