@@ -63,7 +63,7 @@ class Webhook extends Controller
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         $count = 0;
         while ($httpCode == 301 || $httpCode == 302) {
-            if($count == 100) break;
+            if($count == 200) break;
             $headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
             $header = substr($response, 0, $headerSize);
             preg_match('/Location:(.*?)\n/', $header, $matches);
