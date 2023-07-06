@@ -57,30 +57,7 @@
                             <th>Browser Name</th>
                             <td>{{ucfirst(BrowserDetection::getBrowser($value->User_Agent)['browser_name'])}}</td>
                         </tr> 
-                        <!-- <tr>   
-                            <th>Ip Address</th>
-                            <td>{{$value->Ip_Address}}</td>
-                        </tr>
-                        <tr>
-                            <th>Country</th>
-                            <td>{{json_decode($value->Location)->country}}</td>
-                        </tr>
-                        <tr>
-                            <th>Region</th>
-                            <td>{{json_decode($value->Location)->regionName}}</td>
-                        </tr>
-                        <tr>
-                            <th>City</th>
-                            <td>{{json_decode($value->Location)->city}}</td>
-                        </tr>
-                        <tr>
-                            <th>Coordinate</th>
-                            <td>{{json_decode($value->Location)->lat.', '.json_decode($value->Location)->lon}}</td>
-                        </tr>
-                        <tr>
-                            <th>Organization</th>
-                            <td>{{json_decode($value->Location)->org}}</td>
-                        </tr> -->
+                        
                     </thead>
                 </table>
             </div>
