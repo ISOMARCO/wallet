@@ -57,7 +57,10 @@
                             <th>Browser Name</th>
                             <td>{{ucfirst(BrowserDetection::getBrowser($value->User_Agent)['browser_name'])}}</td>
                         </tr> 
-                        
+                        <tr>
+                            <th>Location</th>
+                            <th>{{$value->Location}}</th>
+                        </tr>
                     </thead>
                 </table>
             </div>
