@@ -61,3 +61,4 @@ $classMap['classes']['project\controllers\webhook'] = 'Projects/Frontend/Control
 $classMap['classes']['internaltelegrambot'] = 'Projects/Frontend/Libraries/TelegramBot.php';
 $classMap['classes']['telegrambot'] = 'Projects/Frontend/Resources/Statics/Projects/Frontend/Libraries/InternalTelegramBot.php';
 $classMap['namespaces']['project\controllers\webhook'] = 'webhook';
+$classMap['classes']['demo'] = 'Projects/Frontend/Libraries/Demo.php';
