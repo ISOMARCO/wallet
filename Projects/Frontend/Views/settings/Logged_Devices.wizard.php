@@ -57,7 +57,7 @@
                             <th>Browser Name</th>
                             <td>{{ucfirst(BrowserDetection::getBrowser($value->User_Agent)['browser_name'])}}</td>
                         </tr> 
-                        <tr>   
+                        <!-- <tr>   
                             <th>Ip Address</th>
                             <td>{{$value->Ip_Address}}</td>
                         </tr>
@@ -80,7 +80,7 @@
                         <tr>
                             <th>Organization</th>
                             <td>{{json_decode($value->Location)->org}}</td>
-                        </tr>
+                        </tr> -->
                     </thead>
                 </table>
             </div>
