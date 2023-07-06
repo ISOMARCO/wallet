@@ -34,15 +34,6 @@ class Webhook extends Controller
                 'text' => 'Sanada hello'
             ]);
         }
-        if(TRUE)
-        {
-            $this->sendMessage([
-                'chat_id' => $chatId,
-                'text' => 'Sagol '.$data['message']['contact']['phone_number']
-            ]);
-        }
-        
-
     }
     public function request($method, $posts = [])
     {
@@ -86,6 +77,10 @@ class Webhook extends Controller
     {
         $data = json_decode( file_get_contents("php://input"), true );
         $this->chatId = $data['message']['chat']['id'];
+        if(isset($data['message']['contact']['phone_number'])) 
+        {
+            $this->sendMessage('Registered successfully');
+        }
         DB::insert('Logs', ['Text' => json_encode($data)]);
         return $data;
     }
