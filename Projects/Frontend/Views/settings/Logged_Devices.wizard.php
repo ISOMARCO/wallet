@@ -63,7 +63,7 @@
                         </tr>
                         <tr>
                             <th>Country</th>
-                            <td>{{json_decode($value->Location)->country}}</td>
+                            <td>{{$value->Location}}</td>
                         </tr>
                         <tr>
                             <th>Region</th>
