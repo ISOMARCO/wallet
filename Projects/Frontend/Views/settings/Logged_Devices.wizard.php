@@ -23,7 +23,10 @@
 </div>
 <div class="card-body">
     @foreach($loggedDevices as $value)
+<<<<<<< HEAD
         {[ $location = json_decode($value->Location, true); print_r($location); ]}
+=======
+>>>>>>> 7786bbc9dd151e0fc52291b680025f479fb0d314
         <div class="card collapsed-card" id="card{{$value->Id}}">
             <div class="card-header">
                 <div class="row">
