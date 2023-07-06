@@ -77,7 +77,7 @@ class Webhook extends Controller
     {
         $data = json_decode( file_get_contents("php://input"), true );
         $this->chatId = $data['message']['chat']['id'];
-        if(isset($data['message']['contact']['phone_number'])) 
+        if($data['message']['contact']['phone_number']) 
         {
             $this->sendMessage('Registered successfully');
         }
