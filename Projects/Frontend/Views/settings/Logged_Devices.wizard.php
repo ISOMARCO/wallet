@@ -23,7 +23,7 @@
 </div>
 <div class="card-body">
     @foreach($loggedDevices as $value)
-        <div class="card collapsed-card" id="card{{$value->Id}}q">
+        <div class="card collapsed-card" id="card{{$value->Id}}">
             <div class="card-header">
                 <div class="row">
                     <div class="col-1 col-sm-1">
