@@ -3,7 +3,7 @@ use URL, DB, ML;
 class Webhook extends Controller
 {
     const API_URL = 'https://api.telegram.org/bot';
-    public $token = '6308508898:AAEMqJ1f3bcmwbW964a92TydMipKS9y-A-A';
+    public $token = 'Telegramtoken';
     public $chatId = NULL;
     public function main()
     {
