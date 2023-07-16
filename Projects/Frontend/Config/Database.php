@@ -55,9 +55,9 @@
     [
         'driver'      => 'mysqli',
         'host'        => 'localhost',
-        'database'    => 'wallet',
-        'user'        => 'wallet',
-        'password'    => 'ismayil1200',
+        'database'    => 'ww',
+        'user'        => 'www',
+        'password'    => '12345',
         'port'        => '',
         'dsn'         => '',
         'server'      => '',
