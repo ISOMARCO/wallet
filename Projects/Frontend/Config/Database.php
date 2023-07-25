@@ -55,9 +55,9 @@
     [
         'driver'      => 'mysqli',
         'host'        => 'localhost',
-        'database'    => 'ww',
-        'user'        => 'www',
-        'password'    => '12345',
+        'database'    => 'wallet',
+        'user'        => 'wallet',
+        'password'    => 'RfYooWlewLCz_qPE',
         'port'        => '',
         'dsn'         => '',
         'server'      => '',
