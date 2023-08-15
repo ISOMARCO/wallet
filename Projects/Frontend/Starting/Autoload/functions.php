@@ -16,6 +16,7 @@ function Decrypt($string)
     $iv = substr(hash('sha256', $secret_iv), 0, 16);
     return openssl_decrypt($string,$method,$secret_key,false,$iv);
 }
+
 function User($request = NULL)
 {
     if(Cache::select('userInfo_'.Session::Uid()))
