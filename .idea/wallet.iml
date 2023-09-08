@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/doctrine/instantiator/src/Doctrine/Instantiator" isTestSource="false" packagePrefix="Doctrine\Instantiator\" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/doctrine/instantiator/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/myclabs/deep-copy/fixtures" isTestSource="true" packagePrefix="DeepCopy\" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/myclabs/deep-copy/src/DeepCopy" isTestSource="false" packagePrefix="DeepCopy\" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/myclabs/deep-copy/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/myclabs/deep-copy/tests/DeepCopyTest" isTestSource="true" packagePrefix="DeepCopyTest\" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/phpunit/php-code-coverage/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/phpunit/php-file-iterator/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/phpunit/php-timer/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/phpunit/php-token-stream/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/code-unit-reverse-lookup/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/comparator/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/diff/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/environment/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/exporter/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/global-state/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/object-enumerator/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/object-reflector/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/recursion-context/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/type/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/phpunit/php-token-stream" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/resource-operations" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/type" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/Internal/package-composer/theseer/tokenizer" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
